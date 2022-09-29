@@ -8,7 +8,8 @@
     <title>Shannon</title>
 </head>
 <body>
-    
+
+<?php include('barrasuperior.php'); ?>
     
 
     <footer>By: TCC Alisson, Eric, Gabriel e João</footer>
