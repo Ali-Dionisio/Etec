@@ -1,0 +1,22 @@
+body{
+    background-image: url("../imagens/Acesso_condmind.jpg");
+    background-repeat: no-repeat;    
+    background-size: 100vw 100vh;
+    background-position: top;
+    background-attachment: fixed;
+    color: white;
+    font-weight: bold;
+}
+.cadastro{
+    padding: 30px;
+    border-radius: 15px;
+    border: 2px solid black;
+    background: rgba(27, 6, 6, 0.5)
+}
+.imglogo{
+    display: flex;
+    float: left;
+}
+.imglogo img{
+    width: 50%;
+}
