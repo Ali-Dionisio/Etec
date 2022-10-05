@@ -30,7 +30,7 @@
 </div>
     </div>
 <div class="d-grid gap-3">
-  <div class="p-2  mx-auto"><button type="button" class="btn btn-dark" style="width: 220px;">Meu Cadastro</button></div>
+  <div class="p-2  mx-auto"><button onclick="meuCadastro()" type="button" class="btn btn-dark" style="width: 220px;">Meu Cadastro</button></div>
   <div class="p-2 mx-auto">  <button type="button" class="btn btn-dark" style="width: 220px;">Minha Vaga</button></div>
   <div class="p-2  mx-auto"><button type="button" class="btn btn-dark" style="width: 220px;">Salão</button></div>
     <div class="p-2 mx-auto"> <button type="button" class="btn btn-dark" style="width: 220px;">Reclame aqui</button></div>
@@ -51,4 +51,5 @@
   </div>
 </div>
 </body>
+<script src="./src/javascript.js"></script>
 </html>
