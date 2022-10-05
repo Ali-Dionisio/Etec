@@ -9,7 +9,6 @@ function login(){
     window.location.href = "login.php";
 }
 function cancelar(){
-    alert("teste");
     window.location.href = "login.php";
 }
 $('.celular').mask('(00)00000-0000');
