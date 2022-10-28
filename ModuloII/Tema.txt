@@ -1,0 +1,16 @@
+COR DE FUNDO
+Gelo
+#F5F9FF
+
+DETALHES
+Azul Claro
+#b571ff
+
+Azul Escuro
+#af45fd
+
+#2F3548
+
+Verde
+#d1e892
+
