@@ -1,0 +1,48 @@
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
+}
+
+h2{
+    width: 59%;
+    background-image: linear-gradient(#2F3548,#d1e892);
+    background-repeat: no-repeat;
+     background-size: 0% 3px;
+     transition: background-size 500ms ease;
+     background-position: left bottom;
+ }
+ h2:hover{
+ background-size: 100% 3px;
+ }
+
+body{
+    display: flex;
+    flex-direction: column;
+    margin: 0 25%;
+    font-family: 'Roboto', sans-serif;
+    background-color: #F5F9FF;
+}
+
+
+
+header{
+    background-color: #2F3548;
+    text-align: center;
+    padding: 30px;
+}
+.conteudo{
+    flex: 1 0 auto;
+    font-size: 30px;
+    text-align: justify;
+  }
+
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 51%;
+    background-color: #2F3548;
+    text-align: center;
+    padding: 30px;
+}
