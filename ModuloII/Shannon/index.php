@@ -21,7 +21,7 @@
                                 <div class="page-title  home text-center ">
                                   <span class="heading-page"> Bem-Vindo a Shannon
                                   </span>
-                                    <p class="mt20">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                                    <p class="mt20">Já pode parar de procurar, somos o que você precisa e somos quem você precisa e poderemos evoluir juntos!</p>
                                 </div>
 
                                 <div class="hexagon-menu clear">
