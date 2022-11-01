@@ -1,7 +1,7 @@
 <style>
     .openMenu button{
     width: 3rem;
-    background: white;
+    background: #b571ff;
     position: absolute;
     right: 1rem;
     top: 0.3rem;
