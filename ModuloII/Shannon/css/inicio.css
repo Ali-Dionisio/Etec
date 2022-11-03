@@ -1,8 +1,10 @@
+   tbody{
+      background-color: #d1e892;
+   }
    *{
         margin:0;
         padding:0;
     }
- .mySlides {display:none;}
  .slide img{
     height: 30rem;
     margin-left:auto;
@@ -15,9 +17,10 @@
  }
  .barraSuperior{
     background: #b571ff;
-    height: 3rem;
+    height: 7rem;
     width: 100%;
     margin-top:0;
+    text-align: center;
  }
  .titulo{
    color:#d1e892;
@@ -27,5 +30,7 @@
  }
  h2{margin:0;}
  .texto{
-   
+   width: 75%;
+   padding: 35px 0 35px 0;
+   line-height: 2rem;
  }

@@ -7,10 +7,12 @@
     <title>Inicio</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="../css/inicio.css">
+
 </head>
 <body>    
 <div class="barraSuperior">
-        <h2 class="titulo">Shannon</h2>
+  <img src="../images/ShannonLogo.png" height="100px" >
+        <h2 class="titulo"></h2>
         <?php include('burger.php') ?>
 </div>
 
@@ -24,7 +26,7 @@
 
   <div class="w3-display-container mySlides">
   <img src="../images/imge3.jpg" style="width:100%">
-  <a href="./contatos.php"><div class="w3-display-bottomcenter w3-large w3-container w3-padding-16 w3-blue">
+  <a href="./quemSomos.php"><div class="w3-display-bottomcenter w3-large w3-container w3-padding-16 w3-blue">
     "A equipe de Milhões"
   </div></a>
 </div>
@@ -35,11 +37,13 @@
 
 <div class="d-flex justify-content-center bd-highlight mb-3">
   <div class="texto">
-    Atua desde 2022 prestando serviços de assessoria condominial com excelência e transparência.
+    Atuamos desde 2022 prestando serviços de assessoria condominial com excelência e transparência.
     Além da vasta e tradicional experiência alcançada ao longo dos anos de atuação, a empresa conta com inovadoras propostas de soluções, gestão e aplicação de tecnologias, demonstrando know how de quem sempre pensa na frente e em prol de seus clientes.
 Nossas premissas na prestação de serviços, se destacam por oferecer soluções completas e adaptáveis ao condomínio e seus condôminos. Nossa equipe técnica é altamente qualificada e composta por profissionais capacitados, dedicados a entender e gerenciar as necessidades de nossos clientes, com responsabilidade e ética.
 Consulte-nos e conheça a empresa que vai mudar o rumo de seu condomínio, tornando-o o melhor ambiente para se viver.
 
+<br>
+<a href="./sobre.php">Mais informações</a>
   </div>
 
 </div>
