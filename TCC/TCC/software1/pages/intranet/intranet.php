@@ -7,7 +7,7 @@
     <title>Intranet</title>
     <style>
          body{
-        background-image: url("imagens/PORTARIA.jpg");
+        background-image: url("../imagens/PORTARIA.jpg");
         background-repeat: no-repeat;    
         background-size: 100vw 100vh;
         background-position: top;
@@ -16,8 +16,7 @@
     </style>
 </head>
 <body>
-      
-<?php include('sidebar.php'); ?>    
+<?php include('./sidebar.php'); ?>    
 
 
 </body>

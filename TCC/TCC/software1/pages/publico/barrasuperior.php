@@ -64,6 +64,6 @@
     <button class="login btn btn-outline-light" onclick="login()" type="submit">Login</button>
   </div>
 </nav>
-<script src="./src/javascript.js"></script>
+<script src="../src/javascript.js"></script>
 </body>
 </html>

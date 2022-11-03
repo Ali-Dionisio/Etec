@@ -14,7 +14,7 @@
 </head>
 <body>
 <button class="btn btn-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-  <img src="imagens\icons8-menu-30.png" alt="">
+  <img src="../imagens/icons8-menu-30.png" alt="">
 </button>
 
 <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
@@ -30,6 +30,7 @@
 </div>
     </div>
 <div class="d-grid gap-3">
+    <div class="p-2 mx-auto">  <button onclick="cadastrar()" type="button" class="btn btn-dark" style="width: 220px;">Cadastrar</button></div>
   <div class="p-2  mx-auto"><button onclick="meuCadastro()" type="button" class="btn btn-dark" style="width: 220px;">Meu Cadastro</button></div>
   <div class="p-2 mx-auto">  <button type="button" class="btn btn-dark" style="width: 220px;">Minha Vaga</button></div>
   <div class="p-2  mx-auto"><button type="button" class="btn btn-dark" style="width: 220px;">Salão</button></div>
@@ -42,7 +43,7 @@
       </button>
       <img src="" alt="">
       <ul class="dropdown-menu" >
-        <li><a class="dropdown-item" href="./index.php">Sair</a></li>
+        <li><a class="dropdown-item" href="../publico/index.php">Sair</a></li>
         <li><a class="dropdown-item" href="#">Another action</a></li>
         <li><a class="dropdown-item" href="#">Something else here</a></li>
       </ul>
@@ -51,5 +52,5 @@
   </div>
 </div>
 </body>
-<script src="./src/javascript.js"></script>
+<script src="../src/javascript.js"></script>
 </html>
