@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produtos</title>
+   
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> <title>Produtos</title>
     <link rel="stylesheet" href="../css/produto.css">
 </head>
 <body>
@@ -40,8 +41,8 @@
 
   </main>
   <footer>
-    <p> Para obter mais informações sobre o o aplicativo entre em contato com nossa equipe</p>
-    <a href="###">Ir para contato</a>
+     <h3> Para obter mais informações sobre o o aplicativo entre em contato com nossa equipe</h3>
+    
 
 
   </footer>
