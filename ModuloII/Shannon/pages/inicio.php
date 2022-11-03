@@ -16,25 +16,35 @@
 
 <div class="slide w3-content w3-display-container ">
   <div class="w3-display-container mySlides">
-  <img src="../images/imge2.jpg" style="width:100%">
-  <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-blue">
+  <img src="../images/loginCondmind.jpg" style="width:100%">
+  <a href="./produtos.php"><div class="w3-display-bottomcenter w3-large w3-container w3-padding-16 w3-blue">
     CondMind é um Sucesso
-  </div>
+  </div></a>
 </div>
 
   <div class="w3-display-container mySlides">
   <img src="../images/imge3.jpg" style="width:100%">
-  <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-blue">
+  <a href="./contatos.php"><div class="w3-display-bottomcenter w3-large w3-container w3-padding-16 w3-blue">
     "A equipe de Milhões"
-  </div>
+  </div></a>
 </div>
 
   <button class="left w3-button w3-blue w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
   <button class="w3-button w3-blue w3-display-right" onclick="plusDivs(1)">&#10095;</button>
 </div>
 
+<div class="d-flex justify-content-center bd-highlight mb-3">
+  <div class="texto">
+    Atua desde 2022 prestando serviços de assessoria condominial com excelência e transparência.
+    Além da vasta e tradicional experiência alcançada ao longo dos anos de atuação, a empresa conta com inovadoras propostas de soluções, gestão e aplicação de tecnologias, demonstrando know how de quem sempre pensa na frente e em prol de seus clientes.
+Nossas premissas na prestação de serviços, se destacam por oferecer soluções completas e adaptáveis ao condomínio e seus condôminos. Nossa equipe técnica é altamente qualificada e composta por profissionais capacitados, dedicados a entender e gerenciar as necessidades de nossos clientes, com responsabilidade e ética.
+Consulte-nos e conheça a empresa que vai mudar o rumo de seu condomínio, tornando-o o melhor ambiente para se viver.
 
+  </div>
 
+</div>
+
+<?php include('footer.php') ?>
 <script src="../js/slideShow.js"></script>
 </body>
 </html>

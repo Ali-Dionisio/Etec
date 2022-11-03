@@ -1,4 +1,7 @@
 <style>
+    body{
+        background-color:#eef4f7;
+    }
     .openMenu button{
     width: 3rem;
     background: #b571ff;
@@ -6,6 +9,7 @@
     right: 1rem;
     top: 0.3rem;
     border: none;
+    cursor: pointer;
 }
 .openMenu img{
     width: 2rem;
