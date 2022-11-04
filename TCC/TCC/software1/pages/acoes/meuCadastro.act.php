@@ -24,7 +24,7 @@
                                 `estadocivil` = '$estadocivil',
                                 `bloco` = '$bloco',
                                 `numero_apartamento` = '$numero_apartamento'
-                                WHERE `tb_morador`.`cod_morador` = '$cod_morador';")){
+                                WHERE `tb_morador`.`cod_morador` = '$codMorador';")){
                             $msg = "Alterado com sucesso!";
                         }else{
                             $msg = "Erro ao alterar!";

@@ -30,8 +30,20 @@
 </div>
     </div>
 <div class="d-grid gap-3">
-    <div class="p-2 mx-auto">  <button onclick="cadastrar()" type="button" class="btn btn-dark" style="width: 220px;">Cadastrar</button></div>
-  <div class="p-2  mx-auto"><button onclick="meuCadastro()" type="button" class="btn btn-dark" style="width: 220px;">Meu Cadastro</button></div>
+  <ul>Cadastro
+    <li>
+      <div class="p-2 mx-auto">  <button onclick="cadastrar()" type="button" class="btn btn-dark" style="width: 220px;">Cadastrar Morador</button></div>
+    </li>
+    <li>
+      <div class="p-2  mx-auto"><button onclick="meuCadastro()" type="button" class="btn btn-dark" style="width: 220px;">Meu Cadastro</button></div>
+    </li>
+    <li>
+      <div class="p-2  mx-auto"><button onclick="cadUsuario()" type="button" class="btn btn-dark" style="width: 220px;">Cadastrar Usuario</button></div>
+    </li>
+      <li>
+      <div class="p-2  mx-auto"><button onclick="alterUsuario()" type="button" class="btn btn-dark" style="width: 220px;">Alterar Usuario</button></div>
+    </li>
+  </ul>
   <div class="p-2 mx-auto">  <button type="button" class="btn btn-dark" style="width: 220px;">Minha Vaga</button></div>
   <div class="p-2  mx-auto"><button type="button" class="btn btn-dark" style="width: 220px;">Salão</button></div>
     <div class="p-2 mx-auto"> <button type="button" class="btn btn-dark" style="width: 220px;">Reclame aqui</button></div>
