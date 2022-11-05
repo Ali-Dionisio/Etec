@@ -40,10 +40,15 @@
     Atuamos desde 2022 prestando serviços de assessoria condominial com excelência e transparência.
     Além da vasta e tradicional experiência alcançada ao longo dos anos de atuação, a empresa conta com inovadoras propostas de soluções, gestão e aplicação de tecnologias, demonstrando know how de quem sempre pensa na frente e em prol de seus clientes.
 Nossas premissas na prestação de serviços, se destacam por oferecer soluções completas e adaptáveis ao condomínio e seus condôminos. Nossa equipe técnica é altamente qualificada e composta por profissionais capacitados, dedicados a entender e gerenciar as necessidades de nossos clientes, com responsabilidade e ética.
-Consulte-nos e conheça a empresa que vai mudar o rumo de seu condomínio, tornando-o o melhor ambiente para se viver.
-
-<br>
+Consulte-nos e conheça a empresa que vai mudar o rumo de seu condomínio, tornando-o o melhor ambiente para se viver. <br>
 <a href="./sobre.php">Mais informações</a>
+
+<div class="video">
+  <iframe width="100%" height="615" src="https://www.youtube.com/embed/N6h4FIr3-Sk?start=1" 
+    title="YouTube video player" frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen></iframe>
+</div>
   </div>
 
 </div>

@@ -110,7 +110,7 @@
             </div>
             <div class="row people">
                 <div class="col-md-6 col-lg-4 item">
-                    <div class="box"><img class="rounded-circle" src="assets/img/1.jpg">
+                    <div class="box"><img class="rounded-circle" src="../images/Ben.jpg">
                         <h3 class="name">Ben Johnson</h3>
                         <p class="title">Musico</p>
                         <p class="description">Existe uma separação, antes e depois do CondMind é o melhor app de condominio que já passou por aqui, agora estamos sempre conectado e podemos agendar o salão de festas, vaga sem ter que tretar com os vizinhos kkkkk. </p>
@@ -118,7 +118,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 item">
-                    <div class="box"><img class="rounded-circle" src="assets/img/2.jpg">
+                    <div class="box"><img class="rounded-circle" src="../images/Emily.jpg">
                         <h3 class="name">Emily Clark</h3>
                         <p class="title">Cabelereira</p>
                         <p class="description">Queria um igual no meu salão. Sistema organizado, limpo e de facíl utilização. </p>
@@ -126,7 +126,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 item">
-                    <div class="box"><img class="rounded-circle" src="assets/img/3.jpg">
+                    <div class="box"><img class="rounded-circle" src="../images/Bob.jpg">
                         <h3 class="name">Bob Marley</h3>
                         <p class="title">Skatista</p>
                         <p class="description">Essa parada é sinistra, sempre indico pros parsas, pode usar que o bagulho é bom, minhas vagas até agora sempre foram cobertas e nunca precisei usar o salão de festas, mas tudo que utilizo nunca deu problema nenhum. </p>
