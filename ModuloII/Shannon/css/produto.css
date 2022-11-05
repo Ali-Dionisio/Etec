@@ -44,8 +44,16 @@ header{
   }
 
 footer{
-    margin-top: 308px;
+    margin-top: 100px;
     background-color: #2F3548;
     text-align: center;
     padding: 10px;
+}
+#imagem{
+    display: flex;
+   margin-left: auto;
+   margin-right: auto;
+    height:450px;
+    width: 1000px;
+    border: #2F3548 solid 2px;
 }

@@ -15,7 +15,7 @@
         Conheça nossos projetos
     </h2>
     <br>
-    <img src="" alt="Imagem CondMind">
+    <img id="imagem" src="../images/loginCondmind.jpg" alt="Imagem CondMind">
    <br><br>
     
     
@@ -34,11 +34,6 @@
          alterar priprietário caso o usuário não deseje ter sua vaga, etnre outras funcionalidades
          
     </p>
-
-
-
-
-
   </main>
   <footer>
      <h3> Para obter mais informações sobre o o aplicativo entre em contato com nossa equipe</h3>
