@@ -1,0 +1,140 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+.menu{
+    width: 100%;
+    height: 60px;
+    background-color: aqua;
+    text-align: center;
+}
+
+.logoQS{
+    display: flex;
+    margin: 10px 0px;
+    height: 300px;
+    background-color: #dcdcdc;
+}
+
+.leadership{
+    margin: 50px 0px 0px 250px;
+    width: 350px;
+    background-color: #ebf2f2;
+    padding: 10px 30px;
+    height: 200px;
+}
+
+.imgLogoShannon2{
+    height: 10px;
+    margin-left: 700px;
+}
+
+.sobre{
+    margin: 0px 0px 0px 0px;
+    width: 100%;
+    padding: 100px 700px 100px 700px;
+    text-align: center;
+    border: solid 3px #ebf2f2;
+}
+
+.alisson{
+    margin: 50px 200px 0px 200px;
+    display: flex;
+    height: 250px;
+    background-color: #ebf2f2;
+}
+
+.imgAlisson{
+    width: 452px;
+    display: flex;
+    margin: 10px;
+}
+
+.nomeAlisson{
+    margin: 5px 0px 0px 50px;
+    height: 5px;
+}
+
+.cargoAlisson{
+    margin-top: 20px;
+    height: 50px;
+}
+
+.eric{
+    margin: 50px 200px 0px 200px;
+    display: flex;
+    height: 250px;
+    background-color: #ebf2f2;
+}
+
+.imgEric{
+    width: 452px;
+    display: flex;
+    margin: 10px;
+}
+
+.nomeEric{
+    margin: 5px 0px 0px 50px;
+    height: 5px;
+}
+
+.cargoEric{
+    margin-top: 20px;
+    height: 50px;
+}
+
+.gabriel{
+    margin: 50px 200px 0px 200px;
+    display: flex;
+    height: 250px;
+    background-color: #ebf2f2;
+}
+
+.imgGabriel{
+    width: 452px;
+    display: flex;
+    margin: 10px;
+}
+
+.nomeGabriel{
+    margin: 5px 0px 0px 50px;
+    height: 5px;
+}
+
+.cargoGabriel{
+    margin-top: 20px;
+    height: 50px;
+}
+
+.joao{
+    margin: 50px 200px 0px 200px;
+    display: flex;
+    height: 250px;
+    background-color: #ebf2f2;
+}
+
+.imgJoao{
+    width: 452px;
+    display: flex;
+    margin: 10px;
+}
+
+.nomeJoao{
+    margin: 5px 0px 0px 50px;
+    height: 5px;
+}
+
+.cargoJoao{
+    margin-top: 20px;
+    height: 50px;
+}
+
+.contato{
+    width: 100%;
+    height: 60px;
+    background-color: aqua;
+    text-align: center;
+}
+
