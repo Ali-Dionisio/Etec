@@ -9,13 +9,16 @@
     <link rel="stylesheet" href="../css/produto.css">
 </head>
 <body>
-  <header><?php include('burger.php') ?></header>
+  <header>
+  <img id="Logo"  src="../images/ShannonLogo.png" alt="">
+  <h1>Shannon</h1>
+    <?php include('burger.php') ?></header>
   <main class="conteudo">
-    <h2>
+  <h2>
         Conheça nossos projetos
-    </h2>
+  </h2>
     <br>
-    <img id="imagem" src="../images/loginCondmind.jpg" alt="Imagem CondMind">
+    <img id="imagem_Principal" src="../images/loginCondmind.jpg" alt="Imagem CondMind">
    <br><br>
     
     
@@ -31,12 +34,12 @@
     <p>
          &nbsp Desenvolvido para navegadores, faz você se manter atualizado 
          em tempo real sobre a condição de sua vaga. Fornece a opção de 
-         alterar priprietário caso o usuário não deseje ter sua vaga, etnre outras funcionalidades
+         alterar priprietário caso o usuário não deseje ter sua vaga, entre outras funcionalidades.
          
     </p>
   </main>
   <footer>
-     <h3> Para obter mais informações sobre o o aplicativo entre em contato com nossa equipe</h3>
+     <h3> Para obter mais informações sobre o aplicativo entre em contato com nossa equipe</h3>
     
 
 
