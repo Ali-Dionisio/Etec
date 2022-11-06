@@ -10,9 +10,12 @@
     <title>Quem Somos</title>
 </head>
 <body>
-    <div class="menu">
-        <h1>ESPAÇO PARA MENU</h1>
-    </div>
+    
+<div class="inicio">
+  <img src="../images/ShannonLogo.png" height="100px" >
+        <h2 class="titulo"></h2>
+        <?php include('burger.php') ?>
+</div>
 
     <div class="logoQS">
             <div class="leadership">
@@ -20,9 +23,6 @@
                     Líderes notáveis com soluções notáveis
                 </h1>
             </div>
-            <div class="imgLogoShannon2">
-                <img src="/images/ShannonLogo2.png" alt="" width="300" height="300">
-                </div>
     </div>
     
     <div class="sobre">
@@ -36,7 +36,7 @@
 
     <div class="alisson">
         <div class="imgAlisson">
-                <img src="/images/exMiniNoney.png" alt="">
+            <img class="rounded-circle" src="../images/exMiniNoney.jpg">
         </div>
         
             <div class="nomeAlisson">
@@ -60,14 +60,14 @@
 
     <div class="eric">
         <div class="imgEric">
-                <img src="/images/exMiniNoney.png" alt="">
+            <img class="rounded-circle" src="../images/exMiniNoney.jpg">
         </div>
         
             <div class="nomeEric">
             <h2>Eric Sanderson</h2>
                 
                 <div class="cargoEric">
-                <b>Aluno 4</b>
+                <b>Aluno 2</b>
                 </div>
 
                     <div class="sobreEric">
@@ -84,7 +84,7 @@
 
     <div class="gabriel">
         <div class="imgGabriel">
-                <img src="/images/exMiniNoney.png" alt="">
+            <img class="rounded-circle" src="../images/exMiniNoney.jpg">
         </div>
         
             <div class="nomeGabriel">
@@ -108,14 +108,14 @@
 
     <div class="joao">
         <div class="imgJoao">
-                <img src="/images/exMiniNoney.png" alt="">
+            <img class="rounded-circle" src="../images/exMiniNoney.jpg">
         </div>
         
             <div class="nomeJoao">
             <h2>João Henrique</h2>
                 
                 <div class="cargoJoao">
-                <b>Aluno 2</b>
+                <b>Aluno 4</b>
                 </div>
 
                     <div class="sobreJoao">
@@ -130,8 +130,8 @@
             </div>
     </div>
 
-    <div class="contato">
-        <h1>ENTRE EM CONTATO</h1>
+    <div class="atualizacao">
+        <h1>Criação e Atualização equipe Shannon</h1>
     </div>
 </body>
 </html>

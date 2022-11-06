@@ -4,6 +4,10 @@
     padding: 0px;
 }
 
+.inicio{
+    background-color: #b571ff;
+}
+
 .menu{
     width: 100%;
     height: 60px;
@@ -15,35 +19,31 @@
     display: flex;
     margin: 10px 0px;
     height: 300px;
-    background-color: #dcdcdc;
+    background-color: #caa1ff;
 }
 
 .leadership{
     margin: 50px 0px 0px 250px;
     width: 350px;
-    background-color: #ebf2f2;
+    background-color: #b571ff;
     padding: 10px 30px;
     height: 200px;
-}
-
-.imgLogoShannon2{
-    height: 10px;
-    margin-left: 700px;
 }
 
 .sobre{
     margin: 0px 0px 0px 0px;
     width: 100%;
-    padding: 100px 700px 100px 700px;
+    padding: 100px 300px 100px 300px;
     text-align: center;
-    border: solid 3px #ebf2f2;
+    border: solid 3px #b571ff;
 }
 
 .alisson{
     margin: 50px 200px 0px 200px;
     display: flex;
-    height: 250px;
+    height: 350px;
     background-color: #ebf2f2;
+    border: solid 1px #b571ff;
 }
 
 .imgAlisson{
@@ -65,8 +65,9 @@
 .eric{
     margin: 50px 200px 0px 200px;
     display: flex;
-    height: 250px;
+    height: 350px;
     background-color: #ebf2f2;
+    border: solid 1px #b571ff;
 }
 
 .imgEric{
@@ -88,8 +89,9 @@
 .gabriel{
     margin: 50px 200px 0px 200px;
     display: flex;
-    height: 250px;
+    height: 350px;
     background-color: #ebf2f2;
+    border: solid 1px #b571ff;
 }
 
 .imgGabriel{
@@ -111,8 +113,9 @@
 .joao{
     margin: 50px 200px 0px 200px;
     display: flex;
-    height: 250px;
+    height: 350px;
     background-color: #ebf2f2;
+    border: solid 1px #b571ff;
 }
 
 .imgJoao{
@@ -131,10 +134,17 @@
     height: 50px;
 }
 
-.contato{
+.atualizacao{
     width: 100%;
     height: 60px;
-    background-color: aqua;
+    background-color: #b571ff;
     text-align: center;
+    font-size: 50%;
 }
+
+.atualizacao h1{
+    color: white;
+}
+
+
 
