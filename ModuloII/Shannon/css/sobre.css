@@ -43,7 +43,6 @@
     text-align: center;
 }
 .page-heading {
-	padding: 210px 0px 130px 0px;
 	text-align: center;
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -58,32 +57,7 @@
     display: table-cell;
     vertical-align:middle
 }
-.about-heading {
-	background-image: url(../images/fundoSobre.jpg);
-}
-.section-heading {
-	text-align: left;
-	margin-bottom: 60px;
-	border-bottom: 1px solid #eee;
-}
 
-.section-heading h2 {
-	font-size: 28px;
-	font-weight: 400;
-	color: #1e1e1e;
-	margin-bottom: 15px;
-}
-.best-features {
-	margin-top: 50px;
-}
-
-.best-features .container .row {
-	border-bottom: 1px solid #eee;
-	padding-bottom: 60px;
-}
-.about-features {
-	margin-top: 40px!important;
-}
 .best-features img {
 	width: 100%;
 	overflow: hidden;

@@ -16,15 +16,6 @@
         <h2 class="titulo"></h2>
         <?php include('burger.php') ?>
 </div>
-
-<div class="page-heading about-heading header-text">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-          </div>
-        </div>
-      </div>
-    </div>
     <div class="best-features about-features">
       <div class="container">
         <div class="row">
