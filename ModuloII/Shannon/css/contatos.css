@@ -1,0 +1,40 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+.inicio{
+    background-color: #b571ff;
+}
+
+.menu{
+    width: 100%;
+    height: 60px;
+    background-color: aqua;
+    text-align: center;
+}
+
+.logoQS{
+    display: flex;
+    margin: 10px 0px;
+    height: 300px;
+    background-color: #caa1ff;
+}
+
+.leadership{
+    margin: 50px 0px 0px 250px;
+    width: 350px;
+    background-color: #b571ff;
+    padding: 10px 30px;
+    height: 200px;
+    border: solid 3px #d1e892;
+}
+
+.sobre{
+    margin: 0px 0px 0px 0px;
+    width: 100%;
+    padding: 100px 300px 100px 300px;
+    text-align: center;
+    border: solid 3px #b571ff;
+}
