@@ -36,96 +36,84 @@
 
     <div class="alisson">
         <div class="imgAlisson">
-            <img class="rounded-circle" src="../images/exMiniNoney.jpg">
+            <img class="rounded-circle" src="../images/alissonShannon.png">
         </div>
         
             <div class="nomeAlisson">
             <h2>Alisson Almeida</h2>
                 
                 <div class="cargoAlisson">
-                <b>Aluno 1</b>
+                <b>DBA</b>
                 </div>
 
                     <div class="sobreAlisson">
-                        <p>O vídeo fornece uma maneira poderosa de ajudá-lo a provar seu argumento. Ao clicar em Vídeo Online,
-                            você pode colar o código de inserção do vídeo que deseja adicionar. Você também pode digitar uma palavra-chave
-                            para pesquisar online o vídeo mais adequado ao seu documento. Para dar ao documento uma aparência profissional,
-                            o Word fornece designs de cabeçalho, rodapé, folha de rosto e caixa de texto que se complementam entre si.
-                            Por exemplo, você pode adicionar uma folha de rosto, um cabeçalho e uma barra lateral correspondentes.
-                            Clique em Inserir e escolha os elementos desejados nas diferentes galerias. Temas e estilos também ajudam a manter
-                            seu documento coordenado.</p>
+                        <p>Alisson Almeida traz mais de 5 anos de experiência em bens embalados para seu papel como Administrador de Banco de Dados
+                             e idealizador do projeto Shannon. Ele tem dois papéis importantes – marido e líder empresarial – que cumprem sua vida 
+                             e ele é motivado por aproveitar os pontos fortes, conhecimentos e perspectivas dos outros. Alisson ocupou vários cargos
+                             de liderança dentro da empresa. Mais recentemente, ele atuou como Back End, liderando as operações diárias na 
+                             recente expansão da empresa e supervisionando todas as operações da Shannon.</p>
                     </div>
             </div>
     </div>
 
     <div class="eric">
         <div class="imgEric">
-            <img class="rounded-circle" src="../images/exMiniNoney.jpg">
+            <img class="rounded-circle" src="../images/ericShannon.png">
         </div>
         
             <div class="nomeEric">
             <h2>Eric Sanderson</h2>
                 
                 <div class="cargoEric">
-                <b>Aluno 2</b>
+                <b>User Experience</b>
                 </div>
 
                     <div class="sobreEric">
-                        <p>O vídeo fornece uma maneira poderosa de ajudá-lo a provar seu argumento. Ao clicar em Vídeo Online,
-                            você pode colar o código de inserção do vídeo que deseja adicionar. Você também pode digitar uma palavra-chave
-                            para pesquisar online o vídeo mais adequado ao seu documento. Para dar ao documento uma aparência profissional,
-                            o Word fornece designs de cabeçalho, rodapé, folha de rosto e caixa de texto que se complementam entre si.
-                            Por exemplo, você pode adicionar uma folha de rosto, um cabeçalho e uma barra lateral correspondentes.
-                            Clique em Inserir e escolha os elementos desejados nas diferentes galerias. Temas e estilos também ajudam a manter
-                            seu documento coordenado.</p>
+                        <p>Eric Sanderson lidera a parte de experiência do usuário, uma importante prioridade estratégica de crescimento para a 
+                           Shannon. Eric é um profissional com profunda experiência operacional e geral de gestão, orientando a direção estratégica,
+                           o aperfeiçoamento e a aceleração do crescimento da satisfação dos nossos usuários.</p>
                     </div>
             </div>
     </div>
 
     <div class="gabriel">
         <div class="imgGabriel">
-            <img class="rounded-circle" src="../images/exMiniNoney.jpg">
+            <img class="rounded-circle" src="../images/gabrielShannon.png">
         </div>
         
             <div class="nomeGabriel">
             <h2>Gabriel Sena</h2>
                 
                 <div class="cargoGabriel">
-                <b>Aluno 3</b>
+                <b>Front End</b>
                 </div>
 
                     <div class="sobreGabriel">
-                        <p>O vídeo fornece uma maneira poderosa de ajudá-lo a provar seu argumento. Ao clicar em Vídeo Online,
-                            você pode colar o código de inserção do vídeo que deseja adicionar. Você também pode digitar uma palavra-chave
-                            para pesquisar online o vídeo mais adequado ao seu documento. Para dar ao documento uma aparência profissional,
-                            o Word fornece designs de cabeçalho, rodapé, folha de rosto e caixa de texto que se complementam entre si.
-                            Por exemplo, você pode adicionar uma folha de rosto, um cabeçalho e uma barra lateral correspondentes.
-                            Clique em Inserir e escolha os elementos desejados nas diferentes galerias. Temas e estilos também ajudam a manter
-                            seu documento coordenado.</p>
+                        <p>Gabriel Sena é líder do nosso time de profissionais responsável pelo Front End dos nossos serviços. Nesse papel, ele é 
+                           responsável por liderar os tudo relacionado a este assunto, incluindo as escalas de trabalhos, as funções de cada colaborador 
+                           e as estratégias de inovação, expansão do portifólio e atualização para fornecer sempre um seviço da mais atual qualidade. Gabriel começou sua carreira
+                           como estudante estagiário e desde então trabalhou em quase todos os cargos existentes na Shannon.</p>
                     </div>
             </div>
     </div>
 
     <div class="joao">
         <div class="imgJoao">
-            <img class="rounded-circle" src="../images/exMiniNoney.jpg">
+            <img class="rounded-circle" src="../images/joaoShannon.png">
         </div>
         
             <div class="nomeJoao">
             <h2>João Henrique</h2>
                 
                 <div class="cargoJoao">
-                <b>Aluno 4</b>
+                <b>Back End</b>
                 </div>
 
                     <div class="sobreJoao">
-                        <p>O vídeo fornece uma maneira poderosa de ajudá-lo a provar seu argumento. Ao clicar em Vídeo Online,
-                            você pode colar o código de inserção do vídeo que deseja adicionar. Você também pode digitar uma palavra-chave
-                            para pesquisar online o vídeo mais adequado ao seu documento. Para dar ao documento uma aparência profissional,
-                            o Word fornece designs de cabeçalho, rodapé, folha de rosto e caixa de texto que se complementam entre si.
-                            Por exemplo, você pode adicionar uma folha de rosto, um cabeçalho e uma barra lateral correspondentes.
-                            Clique em Inserir e escolha os elementos desejados nas diferentes galerias. Temas e estilos também ajudam a manter
-                            seu documento coordenado.</p>
+                        <p>João Henrique lidera uma principais funções dentro da Shannon, a de Back End. Ele é responsável por buscar sempre a
+                            melhor experiência para o usuário e para a organização, impulsionar o crescimento acelerado e sustentável para a
+                            empresa no curto e longo prazo. João tem ampla experiência liderando operações deste tipo, antes de incluir o time da
+                            Shannon ele foi líder de um projeito similar enquanto ainda estudava o curso técnico em Desenvolvimento de Sistemas.</p>
                     </div>
             </div>
     </div>
