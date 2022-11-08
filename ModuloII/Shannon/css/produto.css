@@ -9,7 +9,7 @@ h2{
     margin-left: auto;
     margin-right: auto;
     width: 350px;
-    background-image: linear-gradient(#2F3548,#3471e4);
+    background-image: linear-gradient(#b571ff,#3471e4);
     background-repeat: no-repeat;
      background-size: 0% 3px;
      transition: background-size 500ms ease;
@@ -34,7 +34,7 @@ p{
 }
 
 header{
-    background-color: #2F3548;
+    background-color: #b571ff;
     text-align: center;
     padding: 30px;
     height: 150px;
@@ -47,7 +47,7 @@ header{
 
 footer{
     margin-top: 100px;
-    background-color: #2F3548;
+    background-color: #b571ff;
     text-align: center;
     padding: 10px;
 }
@@ -55,20 +55,14 @@ footer{
     display: flex;
    margin-left: auto;
    margin-right: auto;
-    height:450px;
-    width: 1000px;
-    border: #2F3548 solid 2px;
+    height:950px;
+    width: 1650px;
+    border: #000000 solid 2px;
 }
 #Logo{
-    float: left;
-    display: flex;
-    justify-items: left;
-    height: 75px;
-    width: 75px;
+  margin-left: auto;
+  margin-right: auto;
+    height: 100px;
+    width: 100px;
 }
 
-h1{
- display: flex;
- margin-left: 840px;
-    
-}
