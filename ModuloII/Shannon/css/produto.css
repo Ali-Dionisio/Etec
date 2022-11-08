@@ -23,14 +23,14 @@ h2{
 body{
     display: flex;
     flex-direction: column;
-    font-family: 'Roboto', sans-serif;
     background-color: #F5F9FF;
 }
 
 p{
-    
+    font-family: "Segoe UI",Arial,sans-serif;
     text-align: justify;
     margin: 0 250px;
+    font-size: 20px;
 }
 
 header{
@@ -55,8 +55,8 @@ footer{
     display: flex;
    margin-left: auto;
    margin-right: auto;
-    height:950px;
-    width: 1650px;
+    height:800px;
+    width: 1400px;
     border: #000000 solid 2px;
 }
 #Logo{
@@ -65,4 +65,3 @@ footer{
     height: 100px;
     width: 100px;
 }
-

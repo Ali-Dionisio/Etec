@@ -105,7 +105,7 @@
     <div class="team-boxed">
         <div class="container">
             <div class="intro">
-                <h2 class="text-center">Nossos usuários comentam </h2>
+                <h2 class="text-center">Time </h2>
                 <p class="text-center">Nosso compromisso é com a qualidade e eficiencia. O retorno de cada usuário é bem-vindo.</p>
             </div>
             <div class="row people">
