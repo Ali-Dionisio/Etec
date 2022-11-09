@@ -17,28 +17,22 @@
         <?php include('burger.php') ?>
 </div>
 
-    <h2 class="conteudo">
-        Quem somos
-    </h2>
-
-   <!-- <div class="logoQS">
+    <div class="logoQS">
             <div class="leadership">
                 <h1>
                     Líderes notáveis com soluções notáveis
                 </h1>
             </div>
-    </div> -->
-
-
+    </div>
     
-   <!-- <div class="sobre">
+    <div class="sobre">
         <h4>
             Somos um grupo de 4 amigos que acreditam
             no progresso, ao aplicar a inteligência, 
             o raciocínio e a ciência para encontrar 
             soluções para condôminios e condominos.
         </h4>
-    </div> -->
+    </div>
 
     <div class="alisson">
         <div class="imgAlisson">
@@ -54,7 +48,7 @@
 
                     <div class="sobreAlisson">
                         <p>Alisson Almeida traz mais de 5 anos de experiência em bens embalados para seu papel como Administrador de Banco de Dados
-                             e idealizador do projeto Shannon. Ele tem dois papéis importantes (marido e líder empresarial) que cumprem sua vida 
+                             e idealizador do projeto Shannon. Ele tem dois papéis importantes – marido e líder empresarial – que cumprem sua vida 
                              e ele é motivado por aproveitar os pontos fortes, conhecimentos e perspectivas dos outros. Alisson ocupou vários cargos
                              de liderança dentro da empresa. Mais recentemente, ele atuou como Back End, liderando as operações diárias na 
                              recente expansão da empresa e supervisionando todas as operações da Shannon.</p>

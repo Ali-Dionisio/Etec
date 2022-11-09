@@ -11,20 +11,6 @@
     align-items: center;
 }
 
-.conteudo{
-    margin: 15px auto;
-    width: 350px;
-    background-image: linear-gradient(#b571ff,#b571ff);
-    background-repeat: no-repeat;
-     background-size: 0% 3px;
-     transition: background-size 500ms ease;
-     background-position: center bottom;
-     text-align: center;
- }
- .conteudo:hover{
- background-size: 400px 3px;
- }
-
 .menu{
     width: 100%;
     height: 60px;
@@ -57,7 +43,7 @@
 }
 
 .alisson{
-    margin:20px 200px 0px 200px;
+    margin: 50px 200px 0px 200px;
     display: flex;
     height: 350px;
     background-color: #ebf2f2;
@@ -71,17 +57,13 @@
 }
 
 .nomeAlisson{
-    margin: 35px 0px 0px 50px;
+    margin: 5px 0px 0px 50px;
     height: 5px;
 }
 
 .cargoAlisson{
     margin-top: 20px;
     height: 50px;
-}
-
-.sobreAlisson{
-    margin-right: 100px;
 }
 
 .eric{
@@ -99,17 +81,13 @@
 }
 
 .nomeEric{
-    margin: 35px 0px 0px 50px;
+    margin: 5px 0px 0px 50px;
     height: 5px;
 }
 
 .cargoEric{
     margin-top: 20px;
     height: 50px;
-}
-
-.sobreEric{
-    margin-right: 100px;
 }
 
 .gabriel{
@@ -127,7 +105,7 @@
 }
 
 .nomeGabriel{
-    margin: 35px 0px 0px 50px;
+    margin: 5px 0px 0px 50px;
     height: 5px;
 }
 
@@ -136,12 +114,8 @@
     height: 50px;
 }
 
-.sobreGabriel{
-    margin-right: 100px;
-}
-
 .joao{
-    margin: 50px 200px 50px 200px;
+    margin: 50px 200px 0px 200px;
     display: flex;
     height: 350px;
     background-color: #ebf2f2;
@@ -155,17 +129,13 @@
 }
 
 .nomeJoao{
-    margin: 35px 0px 0px 50px;
+    margin: 5px 0px 0px 50px;
     height: 5px;
 }
 
 .cargoJoao{
     margin-top: 20px;
     height: 50px;
-}
-
-.sobreJoao{
-    margin-right: 100px;
 }
 
 .atualizacao{
