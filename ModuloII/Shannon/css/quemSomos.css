@@ -11,7 +11,7 @@
     align-items: center;
 }
 
-.conteudo{
+.tituloQuemSomos{
     margin: 15px auto;
     width: 350px;
     background-image: linear-gradient(#b571ff,#b571ff);
@@ -21,7 +21,7 @@
      background-position: center bottom;
      text-align: center;
  }
- .conteudo:hover{
+ .tituloQuemSomos:hover{
  background-size: 400px 3px;
  }
 

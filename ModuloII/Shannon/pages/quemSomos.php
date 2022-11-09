@@ -17,7 +17,7 @@
         <?php include('burger.php') ?>
 </div>
 
-    <h2 class="conteudo">
+    <h2 class="tituloQuemSomos">
         Quem somos
     </h2>
 
