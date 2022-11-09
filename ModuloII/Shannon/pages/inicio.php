@@ -15,30 +15,34 @@
         <h2 class="titulo"></h2>
         <?php include('burger.php') ?>
 </div>
-
+<div class="escurecer">
 <main class="conteudo">
   <h2>
         Inicio
   </h2>
 </main>
+
+
 <div class="slide w3-content w3-display-container ">
   <div class="w3-display-container mySlides">
   <img src="../images/loginCondmind.jpg" style="width:100%">
-  <a href="./produtos.php"><div class="w3-display-bottomcenter w3-large w3-container w3-padding-16 w3-blue">
+  <a href="./produtos.php"><div class="cor w3-display-bottomcenter w3-large w3-container w3-padding-16">
     CondMind é um Sucesso
   </div></a>
 </div>
 
   <div class="w3-display-container mySlides">
   <img src="../images/grupo.png" style="width:100%">
-  <a href="./quemSomos.php"><div class="w3-display-bottomcenter w3-large w3-container w3-padding-16 w3-blue">
+  <a href="./quemSomos.php"><div class="cor w3-display-bottomcenter w3-large w3-container w3-padding-16">
     "A equipe de Milhões"
   </div></a>
 </div>
 
-  <button class="left w3-button w3-blue w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-  <button class="w3-button w3-blue w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+  <button class="cor left w3-button  w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="cor w3-button  w3-display-right" onclick="plusDivs(1)">&#10095;</button>
 </div>
+</div>
+
 
 <div class="d-flex justify-content-center bd-highlight mb-3">
   <div class="texto">
