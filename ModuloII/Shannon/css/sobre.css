@@ -42,8 +42,18 @@
     border: solid 3px #b571ff;
 }
 
-.sobreTexto{
-    text-align: center;
+.section-heading{
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    width: 350px;
+    background-image: linear-gradient(#b571ff,#3471e4);
+    background-repeat: no-repeat;
+     background-size: 0% 3px;
+     transition: background-size 500ms ease;
+     background-position: center bottom;
+     text-align: center;
 }
 .page-heading {
 	text-align: center;

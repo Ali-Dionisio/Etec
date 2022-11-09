@@ -1,32 +1,24 @@
    tbody{
       background-color: #d1e892;
    }
-   .cor{
-      background-color: #b571ff;
-      color: white;
-   }
    *{
         margin:0;
         padding:0;
     }
-    img{
-      filter: brightness(70%);
-    }
-    .conteudo {
-      margin-top: 15px;
-      margin-bottom: 20px;
+    .conteudo h2{
+      margin-top: 5px;
       margin-left: auto;
       margin-right: auto;
-      width: 350px;
+      margin-bottom: 15px;
+      width: 400px;
       background-image: linear-gradient(#b571ff,#3471e4);
       background-repeat: no-repeat;
        background-size: 0% 3px;
        transition: background-size 500ms ease;
        background-position: center bottom;
        text-align: center;
-
    }
-   .conteudo:hover{
+   .conteudo h2:hover{
    background-size: 400px 3px;
    }
  .slide img{
@@ -36,7 +28,7 @@
     max-width:100%;
  }
  .slide{
-    margin-top:15px;
+    margin-top:2.5rem;
     max-width: 80%;
  }
  .barraSuperior{
@@ -46,7 +38,6 @@
     margin-top:0;
     text-align: center;
  }
-
  .titulo{
    color:#d1e892;
    text-align: center;
