@@ -5,7 +5,8 @@
     
 }
 
-h2{
+.conteudo h2{
+    margin-top: 15px;
     margin-left: auto;
     margin-right: auto;
     width: 350px;
@@ -16,7 +17,7 @@ h2{
      background-position: center bottom;
      text-align: center;
  }
- h2:hover{
+ .conteudo h2:hover{
  background-size: 400px 3px;
  }
 
@@ -26,31 +27,20 @@ body{
     background-color: #F5F9FF;
 }
 
-p{
+.conteudo p{
     font-family: "Segoe UI",Arial,sans-serif;
     text-align: justify;
     margin: 0 250px;
     font-size: 20px;
 }
 
-header{
-    background-color: #b571ff;
-    text-align: center;
-    padding: 30px;
-    height: 150px;
-}
 .conteudo{
     flex: 1 0 auto;
     font-size: 30px;
     text-align: justify;
   }
 
-footer{
-    margin-top: 100px;
-    background-color: #b571ff;
-    text-align: center;
-    padding: 10px;
-}
+
 #imagem_Principal{
     display: flex;
    margin-left: auto;
@@ -59,9 +49,14 @@ footer{
     width: 1400px;
     border: #000000 solid 2px;
 }
+.inicio{
+    background-color: #b571ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 #Logo{
-  margin-left: auto;
-  margin-right: auto;
+
     height: 100px;
     width: 100px;
 }

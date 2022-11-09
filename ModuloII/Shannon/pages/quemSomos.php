@@ -118,8 +118,6 @@
             </div>
     </div>
 
-    <div class="atualizacao">
-        <h1>Criação e Atualização equipe Shannon</h1>
-    </div>
+    <?php include('footer.php') ?>
 </body>
 </html>

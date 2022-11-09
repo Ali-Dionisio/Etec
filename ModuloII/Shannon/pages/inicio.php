@@ -16,6 +16,11 @@
         <?php include('burger.php') ?>
 </div>
 
+<main class="conteudo">
+  <h2>
+        Inicio
+  </h2>
+</main>
 <div class="slide w3-content w3-display-container ">
   <div class="w3-display-container mySlides">
   <img src="../images/loginCondmind.jpg" style="width:100%">
@@ -25,7 +30,7 @@
 </div>
 
   <div class="w3-display-container mySlides">
-  <img src="../images/grupo.jpg" style="width:100%">
+  <img src="../images/grupo.png" style="width:100%">
   <a href="./quemSomos.php"><div class="w3-display-bottomcenter w3-large w3-container w3-padding-16 w3-blue">
     "A equipe de Milhões"
   </div></a>

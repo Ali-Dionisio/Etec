@@ -11,7 +11,9 @@
 </head>
 <body>
   <header>
-  <img id="Logo"  src="../images/ShannonLogo.png" alt="">
+  <div class="inicio">
+    <img id="Logo"  src="../images/ShannonLogo.png" alt="">
+  </div>
   
     <?php include('burger.php') ?></header>
   <main class="conteudo">
@@ -45,21 +47,6 @@
          
     </p>
   </main>
-  <footer>
-
-       <div class="atualizacao">
-        <h1>Criação e Atualização equipe Shannon</h1>
-    </div>
-    
-
-
-  </footer>
-
-
-
-
-
-
-
+  <?php include('footer.php') ?>
 </body>
 </html>
