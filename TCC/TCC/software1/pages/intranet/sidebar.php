@@ -46,8 +46,8 @@
             <div class='p-2 mx-auto'>  <button type=button class='btn btn-dark style=width: 220px;'>Meu Cadastro</button></div> </a>";
   echo "  </li>";
   echo "  <li>";
-  echo "    <a href =../intranet/cadMorador.php>
-            <div class='p-2 mx-auto'>  <button type=button class='btn btn-dark style=width: 220px;'>Cadastrar Morador</button></div> </a>";
+  echo "    <a href =../intranet/moradores.php>
+            <div class='p-2 mx-auto'>  <button type=button class='btn btn-dark style=width: 220px;'>Moradores</button></div> </a>";
   echo "  </li>";
   echo "  <li>";
   echo "    <a href =../intranet/usuarios.php>

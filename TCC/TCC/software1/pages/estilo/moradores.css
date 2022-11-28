@@ -1,0 +1,61 @@
+.pesquisar{
+    display: flex;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 25px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.pesquisar p{
+    margin-top: 10px;
+    color: white;
+}
+.pesquisar p input{
+    border-radius: 30px;
+    padding: 0px 5px;
+}
+.cadastrar{
+    display: flex;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    width: 40%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    border-radius: 30px;
+    padding: 5px;
+}
+.cadastrar a{
+    color: white;
+    text-decoration: none;
+}
+#result{
+    margin-left: 10rem;
+    margin-right: 10rem;
+}
+.box{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+.box1{
+    width: 40%;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 0 30px ;
+}
+.alterarExcluir{
+    display: flex;
+    justify-content: space-around;
+}
+.alterarExcluir a{
+    color: white;
+    text-decoration: none;
+}
+.risco{
+    border-top: 3px solid white;
+    width: 40%;
+    margin: 0 auto;
+    padding: 10px;
+}

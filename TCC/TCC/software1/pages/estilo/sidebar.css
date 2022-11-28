@@ -5,3 +5,10 @@
 li button{
     width: 15rem;
 }
+body{
+    background-image: url("../imagens/PORTARIA.jpg");
+    background-repeat: no-repeat;    
+    background-size: 100vw 100vh;
+    background-position: top;
+    background-attachment: fixed;
+}
