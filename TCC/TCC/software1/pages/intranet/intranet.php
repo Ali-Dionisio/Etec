@@ -17,7 +17,16 @@
 </head>
 <body>
 <?php include('./sidebar.php'); ?>    
+<?php
+    @session_start();
+    if(isset($SESSIONS['msg'])){
+        echo "<p class=alert> $_SESSION</p>";
+        unset($_SESSION['msg']);
+    }
 
-
+echo "<div class=bemvindo>";
+echo "<h1>Bem Vindo, $_SESSION[nome] </h1>";
+echo "</div>";
+?>
 </body>
 </html>

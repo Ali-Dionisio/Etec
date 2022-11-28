@@ -28,9 +28,9 @@
         }
 ?>
 <?php
-    $codMorador = $_GET['cod'];
+    $codMorador = $_GET['cpf'];
     require('../acoes/connect.php');
-    $busca = mysqli_query($con, "Select * from `tb_morador` where `cod_morador` = '$codMorador'");
+    $busca = mysqli_query($con, "Select * from `tb_morador` where `cpf` = '$codMorador'");
     $morador = mysqli_fetch_array($busca);
 ?>
     <div class="mt-5 container text-center">
@@ -74,13 +74,12 @@
 </div>
 <div class="col-md-4">
     <label for="estadocivil" class="form-label">Estado Civil</label>
-    <select id="estadocivil" value="<?php echo $morador['estadocivil']; ?>" name="estadocivil" class="form-select">
-      <option select ></option>
+    <select id="estadocivil"  name="estadocivil" class="form-select">
+      <option >--<?php echo $morador['estadocivil']; ?></option>
       <option >Solteiro(a)</option>
       <option >Casado(a)</option>
       <option >Viuvo(a)</option>
       <option >Divorciado(a)</option>
-      <option>...</option>
     </select>
 </div>
 <div class="col-md-2">

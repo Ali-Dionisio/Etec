@@ -16,7 +16,7 @@
 <?php include('sidebar.php'); ?>    
 
 <?php
-        session_start();
+        @session_start();
         if(isset($_SESSION['msg'])){
             echo "<p class=alert>$_SESSION[msg]</p>";
             unset( $_SESSION['msg']);
