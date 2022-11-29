@@ -1,0 +1,5 @@
+INSERT INTO tb_usuarios(usuario, senha, funcao)
+VALUES(NEW.CPF, 123, 'morador')
+
+DELETE FROM tb_usuarios 
+WHERE usuario = OLD.cpf
