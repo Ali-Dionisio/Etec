@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 30-Nov-2022 às 14:49
+-- Tempo de geração: 30-Nov-2022 às 19:28
 -- Versão do servidor: 5.7.36
 -- versão do PHP: 7.4.26
 
@@ -46,7 +46,7 @@ CREATE TABLE IF NOT EXISTS `tb_morador` (
   `funcao` varchar(15) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`cod_morador`),
   UNIQUE KEY `cpf` (`cpf`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Extraindo dados da tabela `tb_morador`
@@ -54,8 +54,7 @@ CREATE TABLE IF NOT EXISTS `tb_morador` (
 
 INSERT INTO `tb_morador` (`cod_morador`, `primeiro_nome`, `nome_completo`, `cpf`, `rg`, `dtnascimento`, `celular`, `estadocivil`, `bloco`, `numero_apartamento`, `foto`, `funcao`) VALUES
 (1, 'alisson', 'alisson almeida', '44291300867', '111', '1999-01-20', '992325271', 'Casado(a)', '5', '1', '../imgs/1ac5fbea12c9dc646435a69daa443270.jpg', 'administrador'),
-(11, 'Joao', 'Joao Henrique', '11122233344', '123456', '22112011', '912121212', 'Solteiro', '1', '1', '../imgs/1ac5fbea12c9dc646435a69daa443270.jpg', 'morador'),
-(13, 'Eric', 'Eric Sanderson', '1234', '1', '11222021', '11992325241', 'Solteiro(a)', '1', '2', '../imgs/1ac5fbea12c9dc646435a69daa443270.jpg', 'Porteiro');
+(20, 'Eric', 'Eric Sanderson', '1234', '1234', '1999-12-11', '998989898', 'Casado(a)', '1', '5', '../imgs/79138aabef996a3e41473428c513065d.jpg', 'Morador');
 
 --
 -- Acionadores `tb_morador`
@@ -103,7 +102,7 @@ CREATE TABLE IF NOT EXISTS `tb_usuarios` (
   `funcao` varchar(15) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`cod_usuario`),
   UNIQUE KEY `usuario` (`usuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Extraindo dados da tabela `tb_usuarios`
@@ -111,8 +110,7 @@ CREATE TABLE IF NOT EXISTS `tb_usuarios` (
 
 INSERT INTO `tb_usuarios` (`cod_usuario`, `usuario`, `primeiro_nome`, `senha`, `funcao`) VALUES
 (4, '44291300867', 'Alisson', '21232f297a57a5a743894a0e4a801fc3', 'Administrador'),
-(8, '11122233344', 'Joao', '21232f297a57a5a743894a0e4a801fc3', 'morador'),
-(9, '1234', 'Eric', '21232f297a57a5a743894a0e4a801fc3', 'Porteiro');
+(13, '1234', 'Eric', '21232f297a57a5a743894a0e4a801fc3', 'Morador');
 
 -- --------------------------------------------------------
 

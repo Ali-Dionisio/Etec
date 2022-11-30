@@ -22,7 +22,7 @@
 
 <div class="d-grid gap-3">
 <!-- Logo com link para tela inicial do intranet -->
-<a href="../intranet/intranet"><div class="p-2  mx-auto"><img src="../imagens/CondMind.png" class="logo rounded float-top" alt="..."></a></div>
+<a href="../intranet/intranet"><div class="p-2  mx-auto"><img src="../imagens/CondMind.png" class="logo rounded float-top" alt="Inicio"></a></div>
 </div>
     </div>
 <div class="d-grid gap-3">

@@ -54,7 +54,7 @@
         echo "<p> Senha: $usuario[senha]</p>";
         echo "</div>";
         echo "<div class=alterarExcluir>";
-        echo "<p> <a href =alterar.php?cod=$usuario[cod_usuario]>Alterar</a></p>";
+        echo "<p> <a href =alterarUsuario.php?cod=$usuario[cod_usuario]>Alterar</a></p>";
         echo "<p> <a href =javascript:confirmar($usuario[cod_usuario])>Excluir</a></p>";
         echo "</div>";
         echo "</div>";
@@ -67,7 +67,7 @@
     function confirmar(codigo) {
         resposta = confirm("Deseja excluir o registro "+codigo+"?");
         if(resposta == true){
-            window.location = "excluir.php?cod="+codigo;
+            window.location = "../acoes/excluirUsuario.act.php?cod="+codigo;
         }
     }
 </script>

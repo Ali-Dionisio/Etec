@@ -15,6 +15,7 @@ if(mysqli_query($con, "INSERT INTO `tb_morador` (`cod_morador`,
                                                 `estadocivil`,
                                                 `bloco`,
                                                 `numero_apartamento`,
+                                                `funcao`,
                                                 `foto`)
 VALUES (NULL, 
 '$primeiro_nome',
@@ -26,6 +27,7 @@ VALUES (NULL,
 '$estadocivil', 
 '$bloco', 
 '$numero_apartamento',
+'$funcao',
 '$endereco');")){
    $msg = "<p class=sucesso>Registro gravado com Sucesso</p>";
 }else{
@@ -38,5 +40,5 @@ var_dump($_FILES);
 var_dump($_POST);
 var_dump( $endereco);
 
-header("location:../intranet/cadMorador.php");
+header("location:../intranet/moradores.php");
 

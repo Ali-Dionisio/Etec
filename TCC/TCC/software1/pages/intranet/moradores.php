@@ -1,3 +1,5 @@
+<?php require('sec.php') ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,8 +44,11 @@
     $moradores = mysqli_query($con, "Select * from `tb_morador`");
     while($morador = mysqli_fetch_array($moradores)){
         echo "<div class=box1>";
+        echo "<div class=caixaImagem>";
         echo "<p><img class=imgUsuario src=$morador[foto]></p>";
+        echo "</div>";
         echo "<div class=box>";
+        echo "<p> Codigo Morador: $morador[cod_morador]</p>";
         echo "<p> Primeiro Nome: $morador[primeiro_nome]</p>";
         echo "<p> Nome: $morador[nome_completo]</p>";
         echo "</div>";
@@ -57,6 +62,7 @@
         echo "<p> Estado Civil: $morador[estadocivil]</p>";
         echo "<p> Bloco: $morador[bloco]</p>";
         echo "<p> Nº: $morador[numero_apartamento]</p>";
+        echo "<p> Função: $morador[funcao]</p>";
         echo "</div>";
         echo "<div class=alterarExcluir>";
         echo "<p> <a href =alterarMorador.php?cod=$morador[cod_morador]>Alterar</a></p>";
@@ -72,7 +78,7 @@
     function confirmar(codigo) {
         resposta = confirm("Deseja excluir o registro "+codigo+"?");
         if(resposta == true){
-            window.location = "excluir.php?cod="+codigo;
+            window.location = "../acoes/excluirMorador.act.php?cod="+codigo;
         }
     }
 </script>

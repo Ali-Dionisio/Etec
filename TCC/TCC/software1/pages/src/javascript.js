@@ -17,6 +17,9 @@ function cancelarMorador() {
 function cancelarIntra() {
     window.location.href = "../intranet/intranet.php";
 }
+function cancelarUsuario() {
+    window.location.href = "../intranet/usuarios.php";
+}
 function meuCadastro(){
     window.location.href = "meuCadastro.php";
 }

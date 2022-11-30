@@ -84,7 +84,7 @@
 </div>
 <div class="col-md-4">
     <label for="estadocivil" class="form-label">Função</label>
-    <select type="text" id="funcao" name="estadocivil" class="form-select">
+    <select type="text" id="funcao" name="funcao" class="form-select">
       <option select ></option>
       <option >Morador</option>
       <option >Administrador</option>
