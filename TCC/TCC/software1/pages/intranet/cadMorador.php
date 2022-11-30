@@ -71,9 +71,9 @@
       <option >Casado(a)</option>
       <option >Viuvo(a)</option>
       <option >Divorciado(a)</option>
-      <option>...</option>
     </select>
 </div>
+
 <div class="col-md-2">
     <label for="inputZip" class="form-label">Bloco</label>
     <input type="number" class="form-control" name="bloco" id="inputZip">
@@ -82,11 +82,20 @@
     <label for="inputZip" class="form-label">Nº AP</label>
     <input type="number" class="form-control" name="numero_apartamento" id="inputZip">
 </div>
+<div class="col-md-4">
+    <label for="estadocivil" class="form-label">Função</label>
+    <select type="text" id="funcao" name="estadocivil" class="form-select">
+      <option select ></option>
+      <option >Morador</option>
+      <option >Administrador</option>
+      <option >Porteiro</option>
+    </select>
+</div>
 <div class="col-12 ">
     <button type="submit" class="mt-4 p-2 px-5 btn btn-primary">Cadastrar</button>
 </form>
 </div>
-<button onclick="cancelar()" class="mt-4 p-2 px-5 btn btn-primary">Cancelar</button>
+<button onclick="cancelarMorador()" class="mt-4 p-2 px-5 btn btn-primary">Cancelar</button>
 </div>
 </div>
 </div>    

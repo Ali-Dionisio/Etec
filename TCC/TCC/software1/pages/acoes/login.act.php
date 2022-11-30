@@ -9,7 +9,8 @@ if($busca->num_rows ==1){
     $contato = mysqli_fetch_array($busca);
     if($senha === $contato['senha']){
         $_SESSION['login'] = true;
-        $_SESSION['nome'] = $contato['nome'];
+        $_SESSION['nome'] = $contato['primeiro_nome'];
+        $_SESSION['usuarioLogin'] = $usuario;
         $target = "location:../intranet/intranet.php";
         
     }else{

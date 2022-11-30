@@ -42,7 +42,7 @@
     $moradores = mysqli_query($con, "Select * from `tb_morador`");
     while($morador = mysqli_fetch_array($moradores)){
         echo "<div class=box1>";
-        echo "<p><img src=$morador[foto]></p>";
+        echo "<p><img class=imgUsuario src=$morador[foto]></p>";
         echo "<div class=box>";
         echo "<p> Primeiro Nome: $morador[primeiro_nome]</p>";
         echo "<p> Nome: $morador[nome_completo]</p>";
@@ -59,7 +59,7 @@
         echo "<p> Nº: $morador[numero_apartamento]</p>";
         echo "</div>";
         echo "<div class=alterarExcluir>";
-        echo "<p> <a href =alterar.php?cod=$morador[cod_morador]>Alterar</a></p>";
+        echo "<p> <a href =alterarMorador.php?cod=$morador[cod_morador]>Alterar</a></p>";
         echo "<p> <a href =javascript:confirmar($morador[cod_morador])>Excluir</a></p>";
         echo "</div>";
         echo "</div>";

@@ -26,9 +26,9 @@
     <div class="pesquisar">
         <p>Pesquisar <input type="text" onKeyup="pesquisa(this.value)"></p>
     </div>
-    <div class="cadastrar">
+    <!-- <div class="cadastrar">
         <a href="../intranet/cadUsuario.php">Cadastrar</a>
-    </div>
+    </div> -->
     <div id="result"></div>
     
 <?php
@@ -44,7 +44,7 @@
         echo "<div class=box1>";
         echo "<div class=box>";
         echo "<p> Cod. Usuário: $usuario[cod_usuario]</p>";
-        echo "<p> Primeiro Nome: $usuario[nome]</p>";
+        echo "<p> Primeiro Nome: $usuario[primeiro_nome]</p>";
         echo "</div>";
         echo "<div class=box>";
         echo "<p> Usuário: $usuario[usuario]</p>";

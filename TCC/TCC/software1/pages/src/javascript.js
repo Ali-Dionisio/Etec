@@ -11,6 +11,9 @@ function login(){
 function cancelar(){
     window.location.href = "../publico/index.php";
 }
+function cancelarMorador() {
+    window.location.href = "../intranet/moradores.php";
+}
 function cancelarIntra() {
     window.location.href = "../intranet/intranet.php";
 }

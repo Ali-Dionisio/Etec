@@ -28,9 +28,9 @@
         }
 ?>
 <?php
-    $codMorador = $_GET['cpf'];
+    $usuarioLogin = $_GET['cpf'];
     require('../acoes/connect.php');
-    $busca = mysqli_query($con, "Select * from `tb_morador` where `cpf` = '$codMorador'");
+    $busca = mysqli_query($con, "Select * from `tb_morador` where `cpf` = '$usuarioLogin'");
     $morador = mysqli_fetch_array($busca);
 ?>
     <div class="mt-5 container text-center">
@@ -41,12 +41,20 @@
         </div>
     </div>
     <div class="cadastro col mt-3"> <!--Segunda coluna -->
-    <h5 class="card-title">Meu Cadastro</h5>
+    <label><h5 class="card-title">Meu Cadastro</h5></label>
 
     <form class=" mt-5 row g-3 " action="../acoes/meuCadastro.act.php" method="post" id="" enctype="multipart/form-data">
-        <div class="mx-auto">
+        <div class="d-flex-column">
+            <div>
+                <input type="hidden" name="foto_anterior" value="<?php echo $morador['foto']?>" >
+                <input type="hidden" name="cod_morador" value="<?php echo $morador['cod_morador']?>" >
+                <img src="<?php echo $morador['foto']; ?>" class="imgUsuario" srcset="">
+                <p><input type="file" name="imagem" id="fileFoto"> </p>
+
+
+            </div>
             <input type="hidden" name="codMorador" value="<?php echo $morador['cod_morador']?>" >
-            Codigo Contato <?php echo $morador['cod_morador']; ?>
+            <label for=""> Codigo Contato: <?php echo $morador['cod_morador']; ?></label>
         </div>
   <div class="col-md-4">
       <label for="primeironome"  class="form-label">Primeiro nome</label>
@@ -75,7 +83,7 @@
 <div class="col-md-4">
     <label for="estadocivil" class="form-label">Estado Civil</label>
     <select id="estadocivil"  name="estadocivil" class="form-select">
-      <option >--<?php echo $morador['estadocivil']; ?></option>
+      <option ><?php echo $morador['estadocivil']; ?></option>
       <option >Solteiro(a)</option>
       <option >Casado(a)</option>
       <option >Viuvo(a)</option>
@@ -91,7 +99,7 @@
     <input type="text" class="form-control" name="numero_apartamento" id="inputZip" value="<?php echo $morador['numero_apartamento']; ?>">
 </div>
 <div class="col-12 ">
-    <button type="submit" class="mt-4 p-2 px-5 btn btn-primary">Cadastrar</button>
+  <button type="submit" class="mt-4 p-2 px-5 btn btn-primary">Alterar</button>
 </form>
 </div>
 <button onclick="cancelarIntra()" class="mt-4 p-2 px-5 btn btn-primary">Cancelar</button>

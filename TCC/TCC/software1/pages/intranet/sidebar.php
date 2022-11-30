@@ -29,17 +29,12 @@
   <?php
         @session_start();
         if(isset($_SESSION['msg'])){
-            echo "<p class=alert> $_SESSION</p>";
-            echo var_dump($_POST);
             unset($_SESSION['msg']);
-        }
-  require('../acoes/connect.php');
-  $morador = mysqli_query($con, "SELECT `cod_usuario`, `usuario`, `senha`, `funcao`, `nome`, `cpf`
-                                 FROM `tb_usuarios` 
-                                 INNER JOIN `tb_morador` on `tb_morador`.`cpf` = `tb_usuarios`.`usuario`
-                                 WHERE `tb_usuarios`.`usuario`=44291300867");
-  while($moradores = mysqli_fetch_array($morador)){
-     
+          }
+          $login = $_SESSION['usuarioLogin'];
+          require('../acoes/connect.php');
+          $morador = mysqli_query($con, "SELECT * FROM `tb_morador` WHERE `cpf`=$login");
+          while($moradores = mysqli_fetch_array($morador)){
   echo "<ul>";
   echo "  <li>";
   echo "    <a href =../intranet/meuCadastro.php?cpf=$moradores[cpf]>
