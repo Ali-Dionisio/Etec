@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 30-Nov-2022 às 19:28
+-- Tempo de geração: 01-Dez-2022 às 15:50
 -- Versão do servidor: 5.7.36
 -- versão do PHP: 7.4.26
 
@@ -46,19 +46,26 @@ CREATE TABLE IF NOT EXISTS `tb_morador` (
   `funcao` varchar(15) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`cod_morador`),
   UNIQUE KEY `cpf` (`cpf`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Extraindo dados da tabela `tb_morador`
 --
 
 INSERT INTO `tb_morador` (`cod_morador`, `primeiro_nome`, `nome_completo`, `cpf`, `rg`, `dtnascimento`, `celular`, `estadocivil`, `bloco`, `numero_apartamento`, `foto`, `funcao`) VALUES
-(1, 'alisson', 'alisson almeida', '44291300867', '111', '1999-01-20', '992325271', 'Casado(a)', '5', '1', '../imgs/1ac5fbea12c9dc646435a69daa443270.jpg', 'administrador'),
-(20, 'Eric', 'Eric Sanderson', '1234', '1234', '1999-12-11', '998989898', 'Casado(a)', '1', '5', '../imgs/79138aabef996a3e41473428c513065d.jpg', 'Morador');
+(1, 'alisson', 'alisson almeida', '44291300867', '111', '1999-01-20', '992325271', 'Casado(a)', '6', '1', '../imgs/1ac5fbea12c9dc646435a69daa443270.jpg', 'Administrador'),
+(22, 'Eric', 'Eric Sanderson', '1234', '11111', '2022-12-14', '11999995555', 'Solteiro(a)', '3', '12', '../imgs/14c837e9c88f9cf725e98282206992e5.jpg', 'Morador');
 
 --
 -- Acionadores `tb_morador`
 --
+DROP TRIGGER IF EXISTS `AlteraUsuario`;
+DELIMITER $$
+CREATE TRIGGER `AlteraUsuario` AFTER UPDATE ON `tb_morador` FOR EACH ROW UPDATE tb_usuarios
+SET funcao = NEW.funcao
+WHERE usuario = OLD.cpf
+$$
+DELIMITER ;
 DROP TRIGGER IF EXISTS `CriarUsuario`;
 DELIMITER $$
 CREATE TRIGGER `CriarUsuario` AFTER INSERT ON `tb_morador` FOR EACH ROW INSERT INTO tb_usuarios(usuario, primeiro_nome, senha, funcao)
@@ -84,8 +91,9 @@ CREATE TABLE IF NOT EXISTS `tb_salao` (
   `data_reserva` date NOT NULL,
   `hora_inicio` time NOT NULL,
   `hora_fim` time NOT NULL,
-  `cod_morador` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `cod_morador` int(11) NOT NULL,
+  UNIQUE KEY `cod_morador` (`cod_morador`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -102,7 +110,7 @@ CREATE TABLE IF NOT EXISTS `tb_usuarios` (
   `funcao` varchar(15) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`cod_usuario`),
   UNIQUE KEY `usuario` (`usuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Extraindo dados da tabela `tb_usuarios`
@@ -110,7 +118,7 @@ CREATE TABLE IF NOT EXISTS `tb_usuarios` (
 
 INSERT INTO `tb_usuarios` (`cod_usuario`, `usuario`, `primeiro_nome`, `senha`, `funcao`) VALUES
 (4, '44291300867', 'Alisson', '21232f297a57a5a743894a0e4a801fc3', 'Administrador'),
-(13, '1234', 'Eric', '21232f297a57a5a743894a0e4a801fc3', 'Morador');
+(15, '1234', 'Eric', '81dc9bdb52d04dc20036dbd8313ed055', 'Morador');
 
 -- --------------------------------------------------------
 
@@ -125,9 +133,10 @@ CREATE TABLE IF NOT EXISTS `tb_vaga_garagem` (
   `tipo_vaga` varchar(15) COLLATE utf8_unicode_ci NOT NULL,
   `ocupada` tinyint(1) NOT NULL,
   `placa_veiculo` varchar(7) COLLATE utf8_unicode_ci NOT NULL,
-  `cod_morador` int(11) NOT NULL,
-  PRIMARY KEY (`cod_vaga`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  PRIMARY KEY (`cod_vaga`),
+  UNIQUE KEY `placa_veiculo_2` (`placa_veiculo`),
+  KEY `placa_veiculo` (`placa_veiculo`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -141,18 +150,38 @@ CREATE TABLE IF NOT EXISTS `tb_veiculo_morador` (
   `modelo` varchar(15) COLLATE utf8_unicode_ci NOT NULL,
   `ano` date NOT NULL,
   `cor` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
-  PRIMARY KEY (`placa_veiculo`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `cod_morador` int(11) NOT NULL,
+  PRIMARY KEY (`placa_veiculo`),
+  UNIQUE KEY `cod_morador` (`cod_morador`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Restrições para despejos de tabelas
 --
 
 --
+-- Limitadores para a tabela `tb_salao`
+--
+ALTER TABLE `tb_salao`
+  ADD CONSTRAINT `tb_salao_ibfk_1` FOREIGN KEY (`cod_morador`) REFERENCES `tb_morador` (`cod_morador`);
+
+--
 -- Limitadores para a tabela `tb_usuarios`
 --
 ALTER TABLE `tb_usuarios`
   ADD CONSTRAINT `FK_usuario_morador` FOREIGN KEY (`usuario`) REFERENCES `tb_morador` (`cpf`);
+
+--
+-- Limitadores para a tabela `tb_vaga_garagem`
+--
+ALTER TABLE `tb_vaga_garagem`
+  ADD CONSTRAINT `tb_vaga_garagem_ibfk_1` FOREIGN KEY (`placa_veiculo`) REFERENCES `tb_veiculo_morador` (`placa_veiculo`);
+
+--
+-- Limitadores para a tabela `tb_veiculo_morador`
+--
+ALTER TABLE `tb_veiculo_morador`
+  ADD CONSTRAINT `tb_veiculo_morador_ibfk_1` FOREIGN KEY (`cod_morador`) REFERENCES `tb_morador` (`cod_morador`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

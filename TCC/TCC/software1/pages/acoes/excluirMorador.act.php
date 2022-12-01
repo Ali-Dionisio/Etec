@@ -7,7 +7,5 @@ extract($_POST);
         header("location: ../intranet/moradores.php");
     }else{
         echo "Erro ao excluir!";
-        var_dump($_GET['cod']);
-        var_dump($codMorador);
-
+        header("location: ../intranet/moradores.php");
     }

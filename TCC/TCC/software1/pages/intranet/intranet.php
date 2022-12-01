@@ -1,4 +1,4 @@
-<?php require('sec.php') ?>
+<?php require('../intranet/sec.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

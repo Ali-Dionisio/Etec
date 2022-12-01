@@ -24,7 +24,8 @@
                                     `celular` = '$celular',
                                     `estadocivil` = '$estadocivil',
                                     `bloco` = '$bloco',
-                                    `numero_apartamento` = '$numero_apartamento'
+                                    `numero_apartamento` = '$numero_apartamento',
+                                    `funcao` = '$funcao'
                                     WHERE `tb_morador`.`cod_morador` = '$cod_morador';")){
                                 $msg = "Alterado com sucesso!";
                         }else{

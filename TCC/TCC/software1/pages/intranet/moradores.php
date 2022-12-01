@@ -39,7 +39,6 @@
         echo "<p class=alert> $_SESSION[msg]</p>";
         unset($_SESSION['msg']);
     }
-
     require('../acoes/connect.php');
     $moradores = mysqli_query($con, "Select * from `tb_morador`");
     while($morador = mysqli_fetch_array($moradores)){

@@ -30,3 +30,11 @@ label{
 .imgUsuario{
     max-width: 150px;
 }
+.alterarSenha a{
+    color: white;
+    text-decoration: none;
+}
+.alterarSenha a:hover{
+    color: white;
+    text-decoration: none;
+}

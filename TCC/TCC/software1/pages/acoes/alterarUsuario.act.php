@@ -2,11 +2,11 @@
  
     extract($_POST);
     require('../acoes/connect.php');
+    $senha = md5($senha);
    
     
     if(mysqli_query($con, "UPDATE `tb_usuarios` SET 
-                                    `primeiro_nome` = '$primeiro_nome',
-                                    `funcao` = '$funcao'
+                                    `senha` = '$senha'
                                     WHERE `tb_usuarios`.`cod_usuario` = '$codUsuario';")){
                                 $msg = "Alterado com sucesso!";
                         }else{
