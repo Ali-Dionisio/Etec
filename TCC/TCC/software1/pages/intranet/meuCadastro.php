@@ -37,7 +37,7 @@
     $UsuarioLogado = mysqli_fetch_array($buscaCodigoUsuarioLogado);
     $morador = mysqli_fetch_array($busca);
     ?>
-    <div class="mt-5 container text-center">
+    <div class="mt-2 container text-center">
         <div class="row ">
             <div class="col">
                 <!--  primeira coluna -->
@@ -45,21 +45,19 @@
                     <img src="../imagens\ShannonLogo.png" class="d-flex w-10 h-10" alt="...">
                 </div>
             </div>
-            <div class="cadastro col mt-3">
+            <div class="cadastro col md-1">
                 <!--Segunda coluna -->
                 <label>
                     <h5 class="card-title">Meu Cadastro</h5>
                 </label>
 
-                <form class=" mt-5 row g-3 " action="../acoes/meuCadastro.act.php" method="post" id="" enctype="multipart/form-data">
+                <form class="  row g-3 " action="../acoes/meuCadastro.act.php" method="post" id="" enctype="multipart/form-data">
                     <div class="d-flex-column">
                         <div>
                             <input type="hidden" name="foto_anterior" value="<?php echo $morador['foto'] ?>">
                             <input type="hidden" name="cod_morador" value="<?php echo $morador['cod_morador'] ?>">
                             <img src="<?php echo $morador['foto']; ?>" class="imgUsuario" srcset="">
                             <p><input type="file" name="imagem" id="fileFoto"> </p>
-
-
                         </div>
                         <input type="hidden" name="codMorador" value="<?php echo $morador['cod_morador'] ?>">
                         <label for=""> Codigo Contato: <?php echo $morador['cod_morador']; ?></label>
@@ -71,6 +69,10 @@
                     <div class="col-md-8">
                         <label for="nomecompleto" class="form-label">Nome Completo</label>
                         <input type="nomecompleto" name="nome_completo" class="form-control" id="nomecompleto" value="<?php echo $morador['nome_completo']; ?>">
+                    </div>
+                    <div class="col-md-12">
+                        <label for="nomecompleto" class="form-label">E-mail</label>
+                        <input type="nomecompleto" name="email" class="form-control" id="email" value="<?php echo $morador['email']; ?>">
                     </div>
                     <div class="col-4">
                         <label for="cpf" class="form-label">CPF</label>

@@ -46,8 +46,8 @@
         echo "<div class=caixaImagem>";
         echo "<p><img class=imgUsuario src=$morador[foto]></p>";
         echo "</div>";
+        echo "<p class=cod> Codigo Morador: $morador[cod_morador]</p>";
         echo "<div class=box>";
-        echo "<p> Codigo Morador: $morador[cod_morador]</p>";
         echo "<p> Primeiro Nome: $morador[primeiro_nome]</p>";
         echo "<p> Nome: $morador[nome_completo]</p>";
         echo "</div>";
@@ -58,10 +58,13 @@
         echo "</div>";
         echo "<div class=box>";
         echo "<p> Celular: $morador[celular]</p>";
+        echo "<p> E-mail: $morador[email]</p>";
         echo "<p> Estado Civil: $morador[estadocivil]</p>";
+        echo "</div>";
+        echo "<div class=box>";
+        echo "<p> Função: $morador[funcao]</p>";
         echo "<p> Bloco: $morador[bloco]</p>";
         echo "<p> Nº: $morador[numero_apartamento]</p>";
-        echo "<p> Função: $morador[funcao]</p>";
         echo "</div>";
         echo "<div class=alterarExcluir>";
         echo "<p> <a href =alterarMorador.php?cod=$morador[cod_morador]>Alterar</a></p>";

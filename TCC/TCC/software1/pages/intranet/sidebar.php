@@ -64,13 +64,13 @@
   }
 ?>
 </div>
-<div class="dropdown mt-3 position-absolute bottom-10 start-10" >
+<div class="opcoes dropdown mt-3 position-absolute bottom-10 start-10" >
   <button class="btn btn-secondary dropdown-toggle" style="width: 220px;" type="button" data-bs-toggle="dropdown">
     Opções
   </button>
   <img src="" alt="">
   <ul class="dropdown-menu" >
-    <li><a class="dropdown-item" href="../publico/index.php">Sair</a></li>
+    <li><a class="dropdown-item" href="../acoes/logoff.php">Sair</a></li>
     <li><a class="dropdown-item" href="#">Another action</a></li>
     <li><a class="dropdown-item" href="#">Something else here</a></li>
   </ul>

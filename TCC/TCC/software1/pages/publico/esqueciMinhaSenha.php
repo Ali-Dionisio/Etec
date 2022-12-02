@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login CondMind</title>
-    <link rel="stylesheet" href="../estilo/login.css">
+    <title>Recuperar Senha</title>
+    <link rel="stylesheet" href="../estilo/esqueciMinhaSenha.css">
     <script src="./src/javascript.js"></script>
-    
+
 </head>
 
 <body>
@@ -22,26 +22,25 @@
     <div class="mensagemLogin">
         <p>
         <h1>Seja Bem-Vindo</h1>
-        <h2>Cadastre-se ou logue no sistema para comersarmos</h2>
+        <h2>Esqueceu sua senha? Podemos te ajudar </h2>
         </p>
     </div>
     <div class="logo">
-        <img src="../imagens/shannonLogo.png" alt="">
+        <a href="../publico/login.php">
+            <img src="../imagens/shannonLogo.png" alt="logo">
+        </a>
     </div>
     <div class="login">
-        <form action="../acoes/login.act.php" method="post">
-            <h1>Efetue seu acesso</h1>
+        <form action="../acoes/esqueciMinhaSenha.act.php" method="post">
+            <h1>Recupere sua senha</h1>
+            <p>Digite abaixo o seu CPF</p>
             <nav>
-                <p>Usuário <input type="text" name="usuario" id="usuario"></p>
-                <p>Senha<input type="password" name="senha" id="senha"></p>
+                <p>CPF: <input type="text" name="cpf" id="cpf"></p>
             </nav>
             <p class="botoes">
-                <input type="submit" class="mt-4 p-2 px-5 btn btn-primary"  id="enter" value="Entrar">
+                <input type="submit" class="mt-4 p-2 px-5 btn btn-primary" id="esqueciMinhaSenha" value="Proximo Etapa">
             </p>
         </form>
-        <div class="esqueciMinhaSenha">
-            <a href="../publico/esqueciMinhaSenha.php">Esqueci Minha Senha</a>
-        </div>
     </div>
 </body>
 

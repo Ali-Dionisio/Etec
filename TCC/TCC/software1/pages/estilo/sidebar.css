@@ -12,3 +12,8 @@ body{
     background-position: top;
     background-attachment: fixed;
 }
+.opcoes{
+    position: absolute;
+    bottom: 4rem;
+    left: 4rem;
+}

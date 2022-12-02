@@ -18,6 +18,7 @@
                                     `foto` = '$endereco',
                                     `primeiro_nome` = '$primeiro_nome',
                                     `nome_completo` = '$nome_completo', 
+                                    `email` = '$email', 
                                     `cpf` = '$cpf',
                                     `rg` = '$rg',
                                     `dtnascimento` = '$dtnascimento',

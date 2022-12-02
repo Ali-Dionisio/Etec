@@ -29,7 +29,7 @@
     $busca = mysqli_query($con, "Select * from `tb_morador` where `cod_morador` = '$codMorador'");
     $morador = mysqli_fetch_array($busca);
     ?>
-    <div class="mt-5 container text-center">
+    <div class="mt-2 container text-center">
         <div class="row ">
             <div class="col">
                 <!--  primeira coluna -->
@@ -49,13 +49,17 @@
                         <p><input type="file" name="imagem" id="fileFoto"> </p>
                     </div>
 
-                    <div class="col-md-2">
+                    <div class="col-md-4">
                         <label for="primeironome" class="form-label">Nome</label>
                         <input type="text" name="primeiro_nome" value="<?php echo $morador['primeiro_nome'] ?>" class="form-control" id="primeironome">
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-8">
                         <label for="nomecompleto" class="form-label">Nome Completo</label>
                         <input type="text" name="nome_completo" value="<?php echo $morador['nome_completo'] ?>" class="form-control" id="nomecompleto">
+                    </div>
+                    <div class="col-md-8">
+                        <label for="nomecompleto" class="form-label">E-mail</label>
+                        <input type="nomecompleto" name="email" class="form-control" id="email" value="<?php echo $morador['email']; ?>">
                     </div>
                     <div class="col-md-4">
                         <label for="estadocivil" class="form-label">Função</label>
