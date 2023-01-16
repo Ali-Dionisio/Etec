@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 01-Dez-2022 às 15:50
+-- Tempo de geração: 16-Jan-2023 às 08:17
 -- Versão do servidor: 5.7.36
 -- versão do PHP: 7.4.26
 
@@ -35,6 +35,7 @@ CREATE TABLE IF NOT EXISTS `tb_morador` (
   `cod_morador` int(11) NOT NULL AUTO_INCREMENT,
   `primeiro_nome` varchar(15) COLLATE utf8_unicode_ci NOT NULL,
   `nome_completo` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
   `cpf` varchar(15) COLLATE utf8_unicode_ci NOT NULL,
   `rg` varchar(11) COLLATE utf8_unicode_ci NOT NULL,
   `dtnascimento` varchar(12) COLLATE utf8_unicode_ci NOT NULL,
@@ -52,9 +53,9 @@ CREATE TABLE IF NOT EXISTS `tb_morador` (
 -- Extraindo dados da tabela `tb_morador`
 --
 
-INSERT INTO `tb_morador` (`cod_morador`, `primeiro_nome`, `nome_completo`, `cpf`, `rg`, `dtnascimento`, `celular`, `estadocivil`, `bloco`, `numero_apartamento`, `foto`, `funcao`) VALUES
-(1, 'alisson', 'alisson almeida', '44291300867', '111', '1999-01-20', '992325271', 'Casado(a)', '6', '1', '../imgs/1ac5fbea12c9dc646435a69daa443270.jpg', 'Administrador'),
-(22, 'Eric', 'Eric Sanderson', '1234', '11111', '2022-12-14', '11999995555', 'Solteiro(a)', '3', '12', '../imgs/14c837e9c88f9cf725e98282206992e5.jpg', 'Morador');
+INSERT INTO `tb_morador` (`cod_morador`, `primeiro_nome`, `nome_completo`, `email`, `cpf`, `rg`, `dtnascimento`, `celular`, `estadocivil`, `bloco`, `numero_apartamento`, `foto`, `funcao`) VALUES
+(1, 'alisson', 'alisson almeida', 'alisson.a-work@outlook.com', '44291300867', '111', '1999-01-20', '992325271', 'Casado(a)', '6', '1', '../imgs/1ac5fbea12c9dc646435a69daa443270.jpg', 'Administrador'),
+(22, 'Eric', 'Eric Sanderson', '', '1234', '11111', '2022-12-14', '11999995555', 'Solteiro(a)', '3', '12', '../imgs/14c837e9c88f9cf725e98282206992e5.jpg', 'Morador');
 
 --
 -- Acionadores `tb_morador`
