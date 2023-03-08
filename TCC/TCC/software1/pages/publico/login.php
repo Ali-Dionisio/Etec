@@ -19,28 +19,44 @@
         unset($_SESSION['msg']);
     }
     ?>
-    <div class="mensagemLogin">
-        <p>
-        <h1>Seja Bem-Vindo</h1>
-        <h2>Cadastre-se ou logue no sistema para comersarmos</h2>
-        </p>
-    </div>
-    <div class="logo">
-        <img src="../imagens/shannonLogo.png" alt="">
-    </div>
-    <div class="login">
-        <form action="../acoes/login.act.php" method="post">
-            <h1>Efetue seu acesso</h1>
-            <nav>
-                <p>Usuário <input type="text" name="usuario" id="usuario"></p>
-                <p>Senha<input type="password" name="senha" id="senha"></p>
-            </nav>
-            <p class="botoes">
-                <input type="submit" class="mt-4 p-2 px-5 btn btn-primary"  id="enter" value="Entrar">
-            </p>
-        </form>
-        <div class="esqueciMinhaSenha">
-            <a href="../publico/esqueciMinhaSenha.php">Esqueci Minha Senha</a>
+    <?php include('barraSuperiorPub.php'); ?>    
+
+    <div class="lados">
+        <div class="ladoEsquerdo">
+            <h2>Login</H2>
+        </div>
+        <div class="ladoDireito">
+            <div class="emCima">
+            <form action="../acoes/login.act.php" method="post">
+                <p>Seja Bem-Vindo(a)
+                <p> Cadastre-se ou logue no sistema para comersarmos</p>
+                <nav>
+                    <nav class="borda">
+                        <p> USUÁRIO </p>
+                        <input type="text" name="usuario" id="usuario" placeholder="   Digite o usuário">
+                    </nav>
+                    <nav class="borda">
+                        <p> SENHA  </p>
+                        <input type="password" name="senha" id="senha" placeholder="   Digite a senha">
+                    </nav>
+                </nav>
+                <nav class="esqueciSenha">
+                    <a href="../publico/esqueciMinhaSenha.php">Esqueci Minha Senha ou Usuário</a>
+                </nav>
+                <p class="botoes">
+                    <input type="submit" class="mt-4 p-2 px-5 btn btn-primary"  id="enter" value="Entrar">
+                </p>
+            </form>
+            </div>
+            <div class="emBaixo">
+            <nav class="borda">
+                    <strong>Não tem cadastro ?</strong>
+                    <p>
+                        É rápido e simples, basta informar alguns dados
+                    </p>
+                    <a href="../publico/esqueciMinhaSenha.php">Cadastre-se</a>
+                    </nav>
+            </div>
         </div>
     </div>
 </body>
