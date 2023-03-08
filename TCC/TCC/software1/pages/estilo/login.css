@@ -1,4 +1,7 @@
 /* Login */
+    p, h1,h2, a, input{
+        font-family: 'Ubuntu', sans-serif;
+    }
     .lados{
         display: flex;
     }
@@ -24,9 +27,11 @@
         color: #808080;
     }
     #usuario, #senha{
-        border: none;
         padding: 10px 20px;
         background: none;
+        box-shadow: 0 0 0 0;
+        border: 0 none;
+        outline: 0;
     }
     .borda{
         border: 1px solid #1484fc;

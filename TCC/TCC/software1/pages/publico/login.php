@@ -8,7 +8,11 @@
     <title>Login CondMind</title>
     <link rel="stylesheet" href="../estilo/login.css">
     <script src="./src/javascript.js"></script>
-    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -19,7 +23,7 @@
         unset($_SESSION['msg']);
     }
     ?>
-    <?php include('barraSuperiorPub.php'); ?>    
+    <?php include('barraSuperiorPub.php'); ?>
 
     <div class="lados">
         <div class="ladoEsquerdo">
@@ -27,35 +31,35 @@
         </div>
         <div class="ladoDireito">
             <div class="emCima">
-            <form action="../acoes/login.act.php" method="post">
-                <p>Seja Bem-Vindo(a)
-                <p> Cadastre-se ou logue no sistema para comersarmos</p>
-                <nav>
-                    <nav class="borda">
-                        <p> USUÁRIO </p>
-                        <input type="text" name="usuario" id="usuario" placeholder="   Digite o usuário">
+                <form action="../acoes/login.act.php" method="post">
+                    <p>Seja Bem-Vindo(a)
+                    <p> Cadastre-se ou logue no sistema para comersarmos</p>
+                    <nav>
+                        <nav class="borda">
+                            <p> USUÁRIO </p>
+                            <input type="text" name="usuario" id="usuario" placeholder="   Digite o usuário">
+                        </nav>
+                        <nav class="borda">
+                            <p> SENHA </p>
+                            <input type="password" name="senha" id="senha" placeholder="   Digite a senha">
+                        </nav>
                     </nav>
-                    <nav class="borda">
-                        <p> SENHA  </p>
-                        <input type="password" name="senha" id="senha" placeholder="   Digite a senha">
+                    <nav class="esqueciSenha">
+                        <a href="../publico/esqueciMinhaSenha.php">Esqueci Minha Senha ou Usuário</a>
                     </nav>
-                </nav>
-                <nav class="esqueciSenha">
-                    <a href="../publico/esqueciMinhaSenha.php">Esqueci Minha Senha ou Usuário</a>
-                </nav>
-                <p class="botoes">
-                    <input type="submit" class="mt-4 p-2 px-5 btn btn-primary"  id="enter" value="Entrar">
-                </p>
-            </form>
+                    <p class="botoes">
+                        <input type="submit" class="mt-4 p-2 px-5 btn btn-primary" id="enter" value="Entrar">
+                    </p>
+                </form>
             </div>
             <div class="emBaixo">
-            <nav class="borda">
+                <!-- <nav class="borda">
                     <strong>Não tem cadastro ?</strong>
                     <p>
                         É rápido e simples, basta informar alguns dados
                     </p>
                     <a href="../publico/esqueciMinhaSenha.php">Cadastre-se</a>
-                    </nav>
+                    </nav> -->
             </div>
         </div>
     </div>

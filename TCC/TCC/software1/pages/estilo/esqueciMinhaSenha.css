@@ -1,17 +1,102 @@
-/* Login */
-.mensagemLogin {
-    text-align: center;
-    font-weight: bold;
+/* Esqueci minha senha */
+
+
+
+   body {
+       background-color: #F8F9FA;
+       background-repeat: no-repeat;
+       background-size: 100vw 100vh;
+       background-position: top;
+       background-attachment: fixed;
+   }
+ p,
+ h1,
+ h2,
+ a,
+ input {
+     font-family: 'Ubuntu', sans-serif;
+ }
+
+ /* Login */
+ p,
+ h1,
+ h2,
+ a,
+ input {
+     font-family: 'Ubuntu', sans-serif;
+ }
+
+ .lados {
+     display: flex;
+ }
+
+ .ladoDireito {
+     width: 50%;
+ }
+
+ .ladoEsquerdo {
+     width: 50%;
+     display: flex;
+     justify-content: center;
+     margin: 0 auto;
+ }
+
+ .ladoEsquerdo h2 {
+     margin-top: 20%;
+ }
+
+ .emCima {
+     height: 70%;
+     margin-top: 20%;
+
+ }
+
+ .emCima p {
+     font-size: 12pt;
+     color: #808080;
+ }
+
+ #cpf{
+     padding: 10px 20px;
+     background: none;
+     box-shadow: 0 0 0 0;
+     border: 0 none;
+     outline: 0;
+ }
+
+ .borda {
+     border: 1px solid #1484fc;
+     padding: 10px;
+     margin-top: 15px;
+     width: 50%;
+ }
+
+ .botoes input {
+     background-color: #1484FC;
+     padding: 10px 40px;
+     border: none;
+     color: white;
+     border-radius: 5px;
+     cursor: pointer;
+ }
+
+ .botoes input:hover {
+     background-color: #4a9df5;
+
+ }
+
+ .emBaixo {
+     height: 50%;
+ }
+#esqueciMinhaSenha{
+    margin-top: 10px;
 }
 
-body {
-    background-image: url("../imagens/PORTARIA.jpg");
-    background-repeat: no-repeat;
-    background-size: 100vw 100vh;
-    background-position: top;
-    background-attachment: fixed;
-}
-
+/* 
+ .mensagemLogin {
+     text-align: center;
+     font-weight: bold;
+ }
 .login {
     position: absolute;
     top: 25%;
@@ -74,7 +159,6 @@ body {
     background: rgb(228, 228, 204);
 }
 
-/* Logo */
 .logo img {
     position: absolute;
     left: 15%;
@@ -94,4 +178,4 @@ body {
 
 .esqueciMinhaSenha a:hover {
     color: rgba(255, 255, 255, 0.856);
-}
+} */
