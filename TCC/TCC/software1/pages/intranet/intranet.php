@@ -26,37 +26,49 @@
     echo "<div class=bemvindo>";
     echo "<h1>Seja bem Vindo(a), $_SESSION[nome] </h1>";
     echo "</div>";
+
+    $login = $_SESSION['usuarioLogin'];
+    require('../acoes/connect.php');
+    $morador = mysqli_query($con, "SELECT * FROM `tb_morador` WHERE `cpf`=$login");
+    while ($moradores = mysqli_fetch_array($morador)) {
+
+        echo "<div class=central>";
+        echo "<div class=esquerda>";
+        echo "  <nav class=botao>";
+        echo "     <img src=../imagens/usuario-de-perfil.png alt=>";
+        echo "     <a href =../intranet/meuCadastro.php?cpf=$moradores[cpf]> <h1>Meu Cadastro</h1> </a>";
+        echo "  </nav>";
+        echo "  <nav class=botao>";
+        echo "        <img src=../imagens/silhueta-de-multiplos-usuarios.png alt=>";
+        echo "      <a href =../intranet/usuarios.php>  <h1>Usuários</h1></a>";
+        echo "  </nav>";
+        echo "  <nav class=botao>";
+        echo "        <img src=../imagens/porta-de-saida.png alt=>";
+        echo "      <a href =../intranet/salao.php> <h1>Salão</h1></a>";
+        echo "  </nav>";
+        echo " </div>";
+        echo " <div class=direita>";
+        echo "  <nav class=botao>";
+        echo "        <img src=../imagens/varios-usuarios.png alt=>";
+        echo "      <a href =../intranet/moradores.php>  <h1>Moradores</h1></a>";
+        echo "  </nav>";
+        echo "  <nav class=botao>";
+        echo "        <img src=../imagens/cartao-de-identidade.png alt=>";
+        echo "       <a href =../intranet/minhaVaga.php> <h1>Minha Vaga</h1></a>";
+        echo "  </nav>";
+        echo "  <nav class=botao>";
+        echo "        <img src=../imagens/megafone.png alt=>";
+        echo "       <a href =../intranet/reclameAqui.php> <h1>Reclame aqui</h1></a>";
+        echo "  </nav>";
+        echo "</div>";
+        echo "</div>";
+        echo "<nav class=sair>";
+        echo "<a href=../acoes/logoff.php class=botoes> <img src=../imagens/porta-de-saida.png>  Sair</a>";
+        echo "</nav>";
+
+    }
     ?>
-    <div class="central">
-        <div class="esquerda">
-            <nav class="botao">
-                <img src="../imagens/usuario-de-perfil.png" alt="">
-                <h1>Meu Cadastro</h1>
-            </nav>
-            <nav class="botao">
-                <img src="../imagens/silhueta-de-multiplos-usuarios.png" alt="">
-                <h1>Usuários</h1>
-            </nav>
-            <nav class="botao">
-                <img src="../imagens/porta-de-saida.png" alt="">
-                <h1>Salão</h1>
-            </nav>
-        </div>
-        <div class="direita">
-            <nav class="botao">
-                <img src="../imagens/varios-usuarios.png" alt="">
-                <h1>Moradores</h1>
-            </nav>
-            <nav class="botao">
-                <img src="../imagens/cartao-de-identidade.png" alt="">
-                <h1>Minha Vaga</h1>
-            </nav>
-            <nav class="botao">
-                <img src="../imagens/megafone.png" alt="">
-                <h1>Reclame aqui</h1>
-            </nav>
-        </div>
-    </div>
+
 </body>
 
 </html>
