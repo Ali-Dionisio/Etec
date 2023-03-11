@@ -21,7 +21,7 @@
 </head>
 
 <body>
-    <?php include('sidebar.php'); ?>
+    <?php include('../intranet/barraSuperiorInt.php'); ?>
     <?php
     @session_start();
     if (isset($_SESSION['msg'])) {

@@ -6,7 +6,7 @@
         height: 10%;
         background-color: #1484fc;
     }
-    img{
+    #barra img{
         height: 50px;
         display: flex;
         justify-content:center;

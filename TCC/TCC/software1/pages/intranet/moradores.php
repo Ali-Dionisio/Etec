@@ -23,7 +23,7 @@
     </script>
 </head>
 <body>
-<?php include('sidebar.php'); ?>    
+<?php include('./barraSuperiorInt.php'); ?>    
 
     <div class="pesquisar">
         <p>Pesquisar <input type="text" onKeyup="pesquisa(this.value)"></p>
