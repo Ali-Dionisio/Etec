@@ -9,15 +9,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 
     <link rel="stylesheet" href="../estilo/cadastro.css">
-    <style>
-        body {
-            background-image: url("../imagens/PORTARIA.jpg");
-            background-repeat: no-repeat;
-            background-size: 100vw 100vh;
-            background-position: top;
-            background-attachment: fixed;
-        }
-    </style>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -42,13 +37,13 @@
             <div class="col">
                 <!--  primeira coluna -->
                 <div class="imglogo">
-                    <img src="../imagens\ShannonLogo.png" class="d-flex w-10 h-10" alt="...">
+                    Meu Cadastro
                 </div>
             </div>
             <div class="cadastro col md-1">
                 <!--Segunda coluna -->
                 <label>
-                    <h5 class="card-title">Meu Cadastro</h5>
+                    <h1>Meu Cadastro</h1>
                 </label>
 
                 <form class="  row g-3 " action="../acoes/meuCadastro.act.php" method="post" id="" enctype="multipart/form-data">

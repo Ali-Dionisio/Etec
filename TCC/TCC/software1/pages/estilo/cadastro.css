@@ -1,16 +1,20 @@
 body{
-    background-image: url("../imagens/Acesso_condmind.jpg");
+    background-color: #F8F9FA;
     background-repeat: no-repeat;    
     background-size: 100vw 100vh;
     background-position: top;
     background-attachment: fixed;
-    color: white;
+}
+p,
+h1,
+h2,
+a,
+input {
+    font-family: 'Ubuntu', sans-serif;
 }
 .cadastro{
     padding: 30px;
-    border-radius: 15px;
-    border: 2px solid black;
-    background: rgba(27, 6, 6, 0.5)
+
 }
 .imglogo{
     display: flex;
@@ -24,6 +28,9 @@ body{
 }
 label{
     color: white;
+}
+.form-control{
+    border:  2px solid #1484FC;
 }
 
 .imgUsuario{
