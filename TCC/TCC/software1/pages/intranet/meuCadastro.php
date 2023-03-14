@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 
     <link rel="stylesheet" href="../estilo/cadastro.css">
-
+    <script src="../src/javascript.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
@@ -37,14 +37,14 @@
             <div class="col">
                 <!--  primeira coluna -->
                 <div class="imglogo">
-                    Meu Cadastro
+                    <label>
+                        <h1>Meu Cadastro</h1>
+                    </label>
                 </div>
             </div>
             <div class="cadastro col md-1">
                 <!--Segunda coluna -->
-                <label>
-                    <h1>Meu Cadastro</h1>
-                </label>
+
 
                 <form class="  row g-3 " action="../acoes/meuCadastro.act.php" method="post" id="" enctype="multipart/form-data">
                     <div class="d-flex-column">
@@ -86,7 +86,7 @@
                         <input type="text" class="form-control" name="celular" id="celular" value="<?php echo $morador['celular']; ?>">
                     </div>
                     <div class="col-md-4">
-                        <label for="estadocivil" class="form-label">Estado Civil</label>
+                        <label for="estadocivil" class=" form-label">Estado Civil</label>
                         <select id="estadocivil" name="estadocivil" class="form-select">
                             <option><?php echo $morador['estadocivil']; ?></option>
                             <option>Solteiro(a)</option>
@@ -110,12 +110,11 @@
             <button class="alterarSenha mt-4 p-2 px-5 btn btn-primary">
                 <?php echo " <a href =alterarUsuario.php?cod=$UsuarioLogado[cod_usuario]>Alterar Senha</a>"; ?>
             </button>
-
-
             <button onclick="cancelarIntra()" class="mt-4 p-2 px-5 btn btn-primary">Cancelar</button>
         </div>
     </div>
     </div>
+
 
 </body>
 

@@ -29,7 +29,7 @@
         <p>Pesquisar <input type="text" onKeyup="pesquisa(this.value)"></p>
     </div>
     <div class="cadastrar">
-        <a href="../intranet/cadMorador.php">Cadastrar</a>
+        <a href="../intranet/cadMorador.php">Cadastrar novo morador</a>
     </div>
     <div id="result"></div>
     
@@ -53,18 +53,24 @@
         echo "</div>";
         echo "<div class=box>";
         echo "<p> CPF: $morador[cpf]</p>";
+        echo "<p> Função: $morador[funcao]</p>";
+        echo "</div>";
+        echo "<div class=box>";
         echo "<p> RG: $morador[rg]</p>";
-        echo "<p> Data de Nascimento: $morador[dtnascimento]</p>";
+        echo "<p> Bloco: $morador[bloco]</p>";
         echo "</div>";
         echo "<div class=box>";
         echo "<p> Celular: $morador[celular]</p>";
-        echo "<p> E-mail: $morador[email]</p>";
-        echo "<p> Estado Civil: $morador[estadocivil]</p>";
+        echo "<p> Nº: $morador[numero_apartamento]</p>";
         echo "</div>";
         echo "<div class=box>";
-        echo "<p> Função: $morador[funcao]</p>";
-        echo "<p> Bloco: $morador[bloco]</p>";
-        echo "<p> Nº: $morador[numero_apartamento]</p>";
+        echo "<p> E-mail: $morador[email]</p>";
+        echo "</div>";
+        echo "<div class=box>";
+        echo "<p> Data de Nascimento: $morador[dtnascimento]</p>";
+        echo "</div>";
+        echo "<div class=box>";
+        echo "<p> Estado Civil: $morador[estadocivil]</p>";
         echo "</div>";
         echo "<div class=alterarExcluir>";
         echo "<p> <a href =alterarMorador.php?cod=$morador[cod_morador]>Alterar</a></p>";

@@ -9,12 +9,17 @@ p,
 h1,
 h2,
 a,
-input {
+input,
+label,
+button{
     font-family: 'Ubuntu', sans-serif;
 }
-.cadastro{
+.cadastro, .imglogo{
     padding: 30px;
 
+}
+.imglogo{
+    margin-top: 2vw;
 }
 .imglogo{
     display: flex;
@@ -27,10 +32,11 @@ input {
     color: white;
 }
 label{
-    color: white;
+    color: black;
 }
-.form-control{
+.form-control, #estadocivil{
     border:  2px solid #1484FC;
+    border-radius: 0px;
 }
 
 .imgUsuario{
