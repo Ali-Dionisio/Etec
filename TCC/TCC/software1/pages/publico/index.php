@@ -20,10 +20,9 @@
         <div class="links">
 
             <a href="#home">Home</a>
-            <a href="#sobre_nos">Sobre a Shannon</a>
-            <a href="#condmind">Nossos serviços</a>
+            <a href="#titulo_sobre">Sobre a Shannon</a>
             <a href="login.php">CondMind</a>
-            <a href="">Fale conosco</a>
+            <a href="#titulo_fale">Fale conosco</a>
         </div><!--FIM DA DIV LINKS-->
     </div><!--FIM DA DIV NAV_BAR-->
     <br>
@@ -31,24 +30,26 @@
 
 
     <div id="page_body">
-        <h1>Slogan</h1>
-        <img id="img_slider" src="../imagens/img_teste_Shannon.jpg" alt="" id="slider">
-        <h2 id="legenda">Sobre a Shannon</h2>
-        <img id="img_sobre_nos" src="../imagens/sobre_nos.jpg" alt="">
-        <h3 id="sobre">Quem somos e o que fazemos?</h3>
-        <p>Atuamos desde 2022 prestando serviços de assessoria condominial com excelência e transparência. Além da vasta e tradicional experiência alcançada ao longo dos anos de atuação, a empresa conta com inovadoras propostas de soluções, gestão e aplicação de tecnologias, demonstrando know how de quem sempre pensa na frente e em prol de seus clientes.</p>
+            <h1>Slogan</h1>
+                <div class="imagens">
+                    <img id="img_slider" src="../imagens/img_teste_Shannon.jpg" alt="" id="slider">
+                </div>
+            <h2 id="titulo_sobre">Sobre a Shannon</h2>
+            <img id="img_sobre_nos" src="../imagens/sobre_nos.jpg" alt="">
+            <h3 id="sobre">Quem somos e o que fazemos?</h3>
+            <p>Atuamos desde 2022 prestando serviços de assessoria condominial com excelência e transparência. Além da vasta e tradicional experiência alcançada ao longo dos anos de atuação, a empresa conta com inovadoras propostas de soluções, gestão e aplicação de tecnologias, demonstrando know how de quem sempre pensa na frente e em prol de seus clientes.</p>
         <br>
-        <p>Nossas premissas na prestação de serviços, se destacam por oferecer soluções completas e adaptáveis ao condomínio e seus condôminos. Nossa equipe técnica é altamente qualificada e composta por profissionais capacitados, dedicados a entender e gerenciar as necessidades de nossos clientes, com responsabilidade e ética.</p>
+            <p>Nossas premissas na prestação de serviços, se destacam por oferecer soluções completas e adaptáveis ao condomínio e seus condôminos. Nossa equipe técnica é altamente qualificada e composta por profissionais capacitados, dedicados a entender e gerenciar as necessidades de nossos clientes, com responsabilidade e ética.</p>
 
 
         <div class="clear"></div>
 
         <br>
         <!--INICIO PARTE CONDMIND-->
-        <h2 id="legenda">Condmind</h2>
+        <h2 id="titulo_cond">Condmind</h2>
         <div class="condmind_texto">
             <h3>CONDMIND</h3>
-
+            
             <h4>GESTÃO DE ESTACIONAMENTO</h4>
             <br><br>
 
@@ -76,11 +77,51 @@
 
         <div class="clear"></div>
         <!--FINAL DA PÁGINA BODY-->
-
+    <br>
         <div class="fale_conosco"><!--COMEÇO DA SESSÃO fALE CONOSCO-->
 
-            <h2 id="legenda">Fale conosco</h2>
+            <h2 id="titulo_fale">Fale conosco</h2>
+                <div class="forms">
+                   <nav class="nome">
+                        <p>NOME</p>
+                        <input type="text" name="" id="" placeholder="Digite seu nome">
+                   </nav>
 
+                   <nav class="ultimo_nome">
+                        <p>ÚLTIMO NOME</p>
+                        <input type="text"  name="" id="sobrenome" placeholder="Digite o seu último nome">
+                   </nav>
+                            <div class="clear"></div>
+                   <nav class="email">
+                        <p>E-MAIL</p>
+                        <input type="email" name="" id="email" placeholder="Digite seu email">
+                   </nav>
+
+                   <nav class="telefone">
+                    <p>TELEFONE</p>
+                    <input type="number"  name="" id="telefone" placeholder="(00) 00000-0000">
+                   </nav>
+                   
+                   <nav class="assunto">
+                    <p>ASSUNTO</p>
+                   
+                    <select name="" id="">
+                    <option value="">Selecione uma opção</option>
+                        <option value="">Dúvida</option>
+                        <option value="">Contrato</option>
+                        <option value="">Softwares</option>
+                       
+                    </select>
+                   </nav>
+
+                   <nav class="mensagem">
+                    <p>MENSAGEM</p>
+                    <textarea name=""  placeholder="Digite a sua mensagem" id="" ></textarea>
+                   </nav>
+
+                    <input type="submit" value="ENVIAR" id="btn_contato" onclick="clique()">
+                    <p id=mensagem></p>
+                </div>
 
 
         </div>
@@ -89,12 +130,22 @@
 
     <div class="footer">
         <img src="../imagens/ShannonLogo.png" alt="" id="footer_img">
-        <p class="rua_matriz"> Matriz: Rua Virgínia Ferni, 400 - Itaquera, São Paulo - SP. | CEP:08253000 Fones: (11) 2254-7627 </p>
+        <p class="rua_matriz"> Matriz: Rua Virgínia Ferni, 400 - Itaquera, São Paulo - SP. | CEP: 0825-3000 | Fones: (11) 2254-7627 </p>
         <p  id="copy">Copyright &copy;  2023. Condmind</p>
+        <div id="icon_footer">
+           <a class="link_footer" href="https://www.instagram.com"><img class="img_f" src="../imgs/instagram.png" alt="Imagem Instagram"></a> 
+            <a class="link_footer" href="https://www.linkedin.com/"><img class="img_f" src="../imgs/linkedin.png" alt="Imagem Linkedln"></a>
+            <a class="link_footer" href="https://www.facebook.com"><img class="img_f" src="../imgs/facebook.png" alt="Imagem Facebook"></a>
+        </div>
     </div>
 
 
+    <script>
+        function clique(){
+            document.getElementById("mensagem").innerHTML = "Mensagem enviada!"
+        }
 
+    </script>
 
 
 
