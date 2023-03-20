@@ -14,7 +14,10 @@ label,
 button{
     font-family: 'Ubuntu', sans-serif;
 }
-.cadastro, .imglogo{
+*{
+    font-family: NONE;
+}
+.cadastro, .col .imglogo{
     padding: 30px;
 
 }

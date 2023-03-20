@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <?php include('sidebar.php'); ?>
+    <?php include('../intranet/barraSuperiorInt.php'); ?>
 
     <?php
     @session_start();

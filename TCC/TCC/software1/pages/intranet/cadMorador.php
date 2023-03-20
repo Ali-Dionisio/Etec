@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <?php include('sidebar.php'); ?>
+    <?php include('../intranet/barraSuperiorInt.php'); ?>
 
     <?php
     @session_start();
@@ -29,12 +29,11 @@
             <div class="col">
                 <!--  primeira coluna -->
                 <div class="imglogo">
-                    <img src="../imagens\ShannonLogo.png" class="d-flex w-10 h-10" alt="...">
+                     <h5 class="card-title">Cadastre-se</h5>
                 </div>
             </div>
             <div class="cadastro col mt-3">
                 <!--Segunda coluna -->
-                <h5 class="card-title">Cadastre-se</h5>
 
                 <form class=" mt-5 row g-3 " action="../acoes/cadMorador.act.php" method="post" id="" enctype="multipart/form-data">
                     <div class="mx-auto">
@@ -89,7 +88,7 @@
                     </div>
                     <div class="col-md-8">
                         <label for="email" class="form-label">E-mail</label>
-                        <input type="email" name="email" class="form-control" id="email" ?>">
+                        <input type="email" name="email" class="form-control" id="email" ?>
                     </div>
                     <div class="col-md-4">
                         <label for="estadocivil" class="form-label">Função</label>
