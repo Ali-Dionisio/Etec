@@ -13,6 +13,7 @@
     p, h1,h2, a, input, li{
         font-family: 'Ubuntu', sans-serif;
     }
+ 
     #barra{
         display: flex;
         align-items:center;
@@ -20,9 +21,10 @@
         background-color: #1484fc;
     }
     #barra .logo img{
-        height: 40px;
-        padding: 5px 0 5px 0;
-        margin-left: 1vw;
+        height: 40px ;
+        padding: 5px 0 5px 0 ;
+        margin-left: 1vw ;
+        
     }   
     #barra li{
         display: inline-block;
@@ -37,10 +39,10 @@
     #barra a{
         color: white;
     }
-   #barra .sair img{
+    #barra .sair img{
         height: 20px;
         margin-right: 1vw;
-   }
+    }
     .sair{
         position: absolute;
         right: 2vw;
@@ -49,25 +51,25 @@
         padding: 5px 45px;
     }
     .sair a{
-    text-decoration-line: none;
-    font-size: 16pt;
-}
+        text-decoration-line: none;
+        font-size: 16pt;
+    }
     
-</style>
+    </style>
 
 <div id="barra">
     <nav class="logo">
         <img src="../imagens/logoCondMind.png" alt="" srcset="">
     </nav>
     <nav>
-    <?php
+        <?php
         @session_start();
         if(isset($_SESSION['msg'])){
             unset($_SESSION['msg']);
-          }
-          $login = $_SESSION['usuarioLogin'];
-          require('../acoes/connect.php');
-          $morador = mysqli_query($con, "SELECT * FROM `tb_morador` WHERE `cpf`=$login");
+        }
+        $login = $_SESSION['usuarioLogin'];
+        require('../acoes/connect.php');
+        $morador = mysqli_query($con, "SELECT * FROM `tb_morador` WHERE `cpf`=$login");
           while($moradores = mysqli_fetch_array($morador)){
   echo "<ul>";
   echo "  <li>";

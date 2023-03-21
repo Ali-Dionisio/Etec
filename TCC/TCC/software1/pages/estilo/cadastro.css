@@ -12,17 +12,15 @@ a,
 input,
 label,
 button{
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Ubuntu', sans-serif  !important;
 }
-*{
-    font-family: NONE;
-}
+
 .cadastro, .col .imglogo{
     padding: 30px;
 
 }
 .imglogo{
-    margin-top: 2vw;
+    margin-top: 4vw;
 }
 .imglogo{
     display: flex;
