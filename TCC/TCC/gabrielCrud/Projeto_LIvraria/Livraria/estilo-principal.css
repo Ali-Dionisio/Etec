@@ -1,0 +1,184 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    border: none;
+}
+
+#form-cad-livro{
+    margin: 40px 40px 40px 100px;
+}
+
+#form-cad-livro legend{
+    margin-top: 100px;
+    font-size: 22px;
+}
+
+#form-cad-livro p{
+    margin: 40px 0px 5px 500px;
+}
+
+
+#form-cad-livro form input{
+    margin: 0px 0px 0px 500px;
+    border: solid 1px #00073d;
+    padding: 30px 250px 10px 5px;
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+#form-cad-livro form input#fileFoto{
+    margin: 0px 0px 0px 500px;
+    border: solid 1px #00073d;
+    padding: 30px 120px 10px 5px;
+    margin-top: 10px;
+    font-size: 13px;
+    width: 420px;
+}
+
+#form-cad-livro form input[type=submit]{
+    text-align: center;
+    padding: 20px 186px;
+    font-size: 15px;
+}
+
+.listar{
+    height: 750px;
+    border: 2px solid #00073d;
+    margin: 10px 10px 10px 100px;
+    width: 370px;
+    padding: 8px;
+    float: left;
+    background-color: #eff6fe;
+}
+
+.infosListar{
+    font-weight: 600;
+    margin: 10px 0px 20px 0px;
+
+}
+
+.altExListar{
+    font-weight: 600;
+    margin: 10px 0px 20px 0px;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.pesquisar p{
+    margin: 0px 0 10px 0;
+    width: 1210px;
+    font-size: 20px;
+}
+
+.pesquisar input{
+    border: solid 1px #00073d;
+    margin-top: 10px;
+    margin: 10px;
+    width: 420px;
+    padding: 10px;
+    font-size: 15px;
+}
+
+#form-login input{
+    margin: 0px 0px 0px 500px;
+    border: solid 1px #00073d;
+    padding: 30px 250px 10px 5px;
+    margin-top: 10px;
+    font-size: 13px;
+    width: 500px;
+}
+
+#form-login{
+    margin:80px;
+
+}
+
+#form-login legend{
+    margin-top: 100px;
+    font-size: 22px;
+}
+
+#form-login p{
+    margin: 40px 0px 5px 500px;
+}
+
+#form-login form input[type=submit]{
+    text-align: center;
+    padding: 20px 200px;
+    margin: 0px;
+}
+
+.alert .listar{
+    font-size: 30px;
+    margin: 30px 50px;
+    border: 1px solid #ecf5ef;
+    width: 450px;
+    padding: 10px;
+    text-align: center;
+}
+
+.sucesso{
+    font-size: 30px;
+    margin: 30px 50px;
+    border: 1px solid #ecf5ef;
+    width: 450px;
+    padding: 10px;
+    text-align: center;
+}
+
+.listaMenu{
+    text-transform: uppercase;
+    margin: 10px 0px 10px 800px;
+    padding: 10px;
+    font-size: 25px;
+}
+
+.listaMenu a .pesquisar{
+    text-transform: uppercase;
+    margin: 10px 10px 10px 640px;
+    padding: 10px;
+    font-size: 25px;
+}
+
+.boxPesquisar{
+    height: 750px;
+    border: 2px solid #00073d;
+    margin: 10px;
+    width: 370px;
+    padding: 8px;
+    float: left;
+    background-color: #eff6fe;
+}
+
+.infosPesquisar{
+    font-weight: 600;
+    margin: 10px 0px 20px 0px;
+
+}
+
+.altExPesquisar{
+    font-weight: 600;
+    margin: 10px 0px 20px 0px;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.nomeAlterarLivro{
+    border: solid 2px black;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 30px;
+    padding: 15px;
+    width: 350px;
+    border-radius: 10px;
+}
+
+.msgBemVindo{
+    margin: 10px;
+}
