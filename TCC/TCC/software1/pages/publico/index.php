@@ -84,7 +84,7 @@
                 <div class="forms">
                    <nav class="nome">
                         <p>NOME</p>
-                        <input type="text" name="" id="nome" placeholder="Digite seu nome">
+                        <input type="text" name="" id="" placeholder="Digite seu nome">
                    </nav>
 
                    <nav class="ultimo_nome">
@@ -116,27 +116,12 @@
 
                    <nav class="mensagem">
                     <p>MENSAGEM</p>
-                    <textarea name=""  placeholder="Digite a sua mensagem" id="area_texto" ></textarea>
+                    <textarea name=""  placeholder="Digite a sua mensagem" id="" ></textarea>
                    </nav>
 
                     <input type="submit" value="ENVIAR" id="btn_contato" onclick="clique()">
                         <div class="enviado">
                         <p id=mensagem></p>
-
-                        
-                            <script>
-                                function clique(){
-                                    if(document.getElementById("nome").value == "" ||document.getElementById("sobrenome").value == ""||document.getElementById("email").value == ""
-                                    || document.getElementById("telefone").value == "" || document.getElementById("area_texto").value == ""){
-                                        document.getElementById("mensagem").innerHTML = "Digite todos os  campos!"
-                                    }else{
-                                        document.getElementById("mensagem").innerHTML = "Mensagem enviada!"
-                                    }
-                                
-                                }
-                            </script>
-
-                            
                         </div>
                 </div>
 
@@ -157,6 +142,12 @@
     </div>
 
 
+    <script>
+        function clique(){
+            document.getElementById("mensagem").innerHTML = "Mensagem enviada!"
+        }
+
+    </script>
 
 
 

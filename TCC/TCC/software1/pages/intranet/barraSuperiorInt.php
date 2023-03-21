@@ -19,12 +19,15 @@
         align-items:center;
         height: 4vw;
         background-color: #1484fc;
+        position: -webkit-sticky; /* Safari */
+        position: sticky;
+        top: 0;
     }
     #barra .logo img{
-        height: 40px ;
+        height: 50% ;
         padding: 5px 0 5px 0 ;
         margin-left: 1vw ;
-        
+        width: 10vw;
     }   
     #barra li{
         display: inline-block;

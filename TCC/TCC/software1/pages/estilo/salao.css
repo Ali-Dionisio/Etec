@@ -1,40 +1,4 @@
 
-#titulo{
-    display: flex;
-    justify-content: center;
-    background: rgba(0, 0, 0, 0.5);
-    width: 40%;
-    margin: 0 auto;
-    border-radius: 30px;
-    padding: 5px;
-    color: white;
-    margin-top: -1rem;
-}
-#titulo2 {
-    display: flex;
-    justify-content: center;
-    background: rgba(0, 0, 0, 0.5);
-    width: 80%;
-    margin: 0 auto;
-    border-radius: 30px;
-    color: white;
-    margin-bottom: 2rem;
-    margin-top: 10px;
-}
-.carousel-caption h5, .carousel-caption p {
-    text-shadow: 0.1em 0.1em rgb(2, 2, 2)
-}
-.d-block{
-    height: 30rem;
-    border-radius: 320rem;
-}
-.carousel-item{
-    background: rgba(0, 0, 0, 0.5);
-    padding-left: 5rem;
-    padding-right: 5rem;
-    margin-bottom: 2rem;
-
-}
 .disposicaoDate h1{
     text-shadow: 0.1em 0.1em rgb(2, 2, 2)
 
@@ -48,4 +12,19 @@
 }
 #calendario{
     width: 20rem;
+}
+#quadro{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+}
+#state{
+    display: flex;
+    margin: 0 auto;
+    margin-top: 5vw;
+    height: 30vw;
+    width: 89%;
+
 }
