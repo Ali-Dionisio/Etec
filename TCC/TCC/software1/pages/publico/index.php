@@ -35,7 +35,7 @@
                     <img id="img_slider" src="../imagens/img_teste_Shannon.jpg" alt="" id="slider">
                 </div>
             <h2 id="titulo_sobre">Sobre a Shannon</h2>
-            <img id="img_sobre_nos" src="../imagens/sobre_nos.jpg" alt="">
+            <img id="img_sobre_nos" src="../imagens/grupo.png" alt="">
             <h3 id="sobre">Quem somos e o que fazemos?</h3>
             <p>Atuamos desde 2022 prestando serviços de assessoria condominial com excelência e transparência. Além da vasta e tradicional experiência alcançada ao longo dos anos de atuação, a empresa conta com inovadoras propostas de soluções, gestão e aplicação de tecnologias, demonstrando know how de quem sempre pensa na frente e em prol de seus clientes.</p>
         <br>
@@ -120,14 +120,16 @@
                    </nav>
 
                     <input type="submit" value="ENVIAR" id="btn_contato" onclick="clique()">
-                    <p id=mensagem></p>
+                        <div class="enviado">
+                        <p id=mensagem></p>
+                        </div>
                 </div>
 
 
         </div>
 
     </div>
-
+        <div class="clear"></div>
     <div class="footer">
         <img src="../imagens/ShannonLogo.png" alt="" id="footer_img">
         <p class="rua_matriz"> Matriz: Rua Virgínia Ferni, 400 - Itaquera, São Paulo - SP. | CEP: 0825-3000 | Fones: (11) 2254-7627 </p>
