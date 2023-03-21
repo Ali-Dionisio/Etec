@@ -1,0 +1,30 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+.lista a{/*Comando que altera a lista com os links (Lista, incluir, entrar e pesquisar)*/
+    background-color: green;
+    text-decoration: none;
+    color: black;
+}
+
+.box{ /*Classe das caixas onde estão as imagens e informações*/
+    float: left;
+    border: solid black 2px;
+    width: 350px;
+    height: 350px;
+    margin: 5px;
+}
+
+
+.box img{/*Comando para alterar somente as imagens que estão dentro das caixas*/
+    
+    height: 225px;
+    width: 200px;
+}
+
+.pesquisar{
+    text-align: center;
+
+}
