@@ -36,6 +36,7 @@ html{
 .links {
   padding-top: 40px;
   padding-left: 220px;
+  color: white;
 }
 
 a {
@@ -119,7 +120,7 @@ h4 {
 }
 
 .footer {
-  height: 170px;
+  height: 210px;
   width: 100%;
   background-color: #b571ff;
 }
@@ -145,14 +146,14 @@ h4 {
 }
 
 .nome{
-    padding: 20px;
+    padding: 10px;
     height: 80px;
     width: 45%;
     border: #1484fc solid 1px;
     float: left;
 }
 .ultimo_nome{
-    padding: 20px;
+    padding: 10px;
     height: 80px;
     width: 45%;
     border: #1484fc solid 1px;
@@ -177,7 +178,7 @@ input[type=number]::-webkit-inner-spin-button {
 
 
 .email ,.telefone,.assunto{
-    padding: 20px;
+    padding: 10px;
     height: 80px;
    margin-top: 20px;
     border: #1484fc solid 1px;
@@ -222,7 +223,7 @@ input[type=number]::-webkit-inner-spin-button {
   }
   
 .links a{
-transition: 1s;
+color: white;
 }
   #icon_footer{
     float: right;
@@ -230,6 +231,7 @@ transition: 1s;
   }
 
   .link_footer {
+    margin-bottom: 50px;
     padding: 0;
     width: 5px ;
   }
