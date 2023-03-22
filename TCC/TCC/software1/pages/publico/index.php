@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
 
 <body>
@@ -32,13 +33,35 @@
     <div id="page_body">
             <h1>Slogan</h1>
                 <div class="imagens">
-                    <img id="img_slider" src="../imagens/img_teste_Shannon.jpg" alt="" id="slider">
+                   <!-- <img id="img_slider" src="../imagens/img_teste_Shannon.jpg" alt="" id="slider">  -->
+                   <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="../imagens/img_teste_Shannon.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="../imagens/img_teste_Shannon.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="../imagens/img_teste_Shannon.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+ 
                 </div>
             <h2 id="titulo_sobre">Sobre a Shannon</h2>
             <img id="img_sobre_nos" src="../imagens/grupo.png" alt="">
             <h3 id="sobre">Quem somos e o que fazemos?</h3>
             <p>Atuamos desde 2022 prestando serviços de assessoria condominial com excelência e transparência. Além da vasta e tradicional experiência alcançada ao longo dos anos de atuação, a empresa conta com inovadoras propostas de soluções, gestão e aplicação de tecnologias, demonstrando know how de quem sempre pensa na frente e em prol de seus clientes.</p>
-        <br>
+       
             <p>Nossas premissas na prestação de serviços, se destacam por oferecer soluções completas e adaptáveis ao condomínio e seus condôminos. Nossa equipe técnica é altamente qualificada e composta por profissionais capacitados, dedicados a entender e gerenciar as necessidades de nossos clientes, com responsabilidade e ética.</p>
 
 
@@ -56,12 +79,12 @@
             <p>
                 Problemas com organização das vagas de garagem/estacionamento são recorrentes em apartamentos ou condomínios. Seja a falta de informações sobre a vaga e seu dono, a não opção de alteração da mesma sendo possível apenas por sorteio em alguns casos ou até mesmo a opção de poder excluir ou alugar o espaço.
             </p>
-            <br>
+            
             <p>
                 Feito para auxiliar esta organização em estacionamentos de condomínios, o CondMind realiza consultas, alteração e exclusão das vagas ofertadas facilitando a organização tanto para a administração quanto para os moradores.
 
             </p>
-            <br>
+          
             <p>
                 Desenvolvido para navegadores, faz você se manter atualizado em tempo real sobre a condição de sua vaga. Fornece a opção de alterar proprietário caso o usuário não deseje ter sua vaga, entre outras funcionalidades.
             </p>
@@ -84,7 +107,7 @@
                 <div class="forms">
                    <nav class="nome">
                         <p>NOME</p>
-                        <input type="text" name="" id="" placeholder="Digite seu nome">
+                        <input type="text" name="" id="nome" placeholder="Digite seu nome">
                    </nav>
 
                    <nav class="ultimo_nome">
@@ -116,7 +139,7 @@
 
                    <nav class="mensagem">
                     <p>MENSAGEM</p>
-                    <textarea name=""  placeholder="Digite a sua mensagem" id="" ></textarea>
+                    <textarea name=""  placeholder="Digite a sua mensagem" id="area_texto" ></textarea>
                    </nav>
 
                     <input type="submit" value="ENVIAR" id="btn_contato" onclick="clique()">
@@ -144,13 +167,17 @@
 
     <script>
         function clique(){
-            document.getElementById("mensagem").innerHTML = "Mensagem enviada!"
-        }
-
+                if(document.getElementById("nome").value=="" || document.getElementById("sobrenome").value=="" || document.getElementById("telefone").value=="" 
+                || document.getElementById("area_texto").value=="" || document.getElementById("email").value=="" ){
+                        document.getElementById("mensagem").innerHTML = "Preencha todos os campos!"
+                    }else{
+                        document.getElementById("mensagem").innerHTML = "Mensagem enviada!"
+                        }
+                    }
     </script>
 
 
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
 
 </html>
