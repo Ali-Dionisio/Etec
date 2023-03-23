@@ -30,9 +30,10 @@
         width: 10vw;
     }   
     #barra li{
-        display: inline-block;
-        text-decoration: underline;
-        text-underline-offset: 10px;     
+        display: inline-block !important;
+        text-decoration: underline !important;
+        text-underline-offset: 10px !important;
+        color: white !important;     
     }
     #barra ul{
         width: 40vw;
