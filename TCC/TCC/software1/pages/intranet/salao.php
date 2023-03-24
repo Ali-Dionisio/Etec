@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,19 +15,48 @@
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
     <title>Salão</title>
 </head>
+
 <body>
-<?php include('../intranet/barraSuperiorInt.php'); ?>    
-    <div id="quadro">
-        <div id="state">
-            <?php include('../intranet/containner.php'); ?>    
+    <?php include('../intranet/barraSuperiorInt.php'); ?>
+    <div class="titSalao">
+        <div class="esquerda">
+            <h2>Agende o seu horário </h2><br>
+
+        </div>
+        <div class="direita">
+            <p> Nosso Salão de festas você pode curtir todas as atrações.</p>
         </div>
     </div>
-<div class="disposicaoDate">
-    <h1>Marque abaixo a data e o horario de inicio e termino do seu evento</h1>
-    Data do evento: <input type="date" name="Calendario" id="calendario">
-    Horário de Inicio<input type="time" name="Calendario" id="calendario">
-    Horário de Termino<input type="time" name="Calendario" id="calendario">
 
-</div>
+
+    <div id="quadro">
+        <div id="state">
+            <?php include('../intranet/containner.php'); ?>
+        </div>
+    </div>
+    <div class="disposicaoDate">
+        <h2>Marque abaixo a data e o horario de inicio e termino do seu evento</h2>
+        <form class="form mt-2 row g-3" action="..." method="post" id="">
+
+            <div class="marcaEvento">
+                <div class="dataHora1">
+                    <p> Data do evento: </p>
+                    <input type="date" name="Calendario" id="calendario">
+                </div>
+                <div class="dataHora2">
+                    <p> Horário de Inicio</p>
+                    <input type="time" name="Calendario" id="calendario">
+                </div>
+                <div class="dataHora2">
+                    <p> Horário de Termino </p>
+                    <input type="time" name="Calendario" id="calendario">
+                </div>
+            </div>
+            <div class="col-12">
+                <button type="submit" class="mt-4 p-2 px-5 btn btn-primary">Cadastrar</button>
+            </div>
+        </form>
+    </div>
 </body>
+
 </html>
