@@ -18,13 +18,20 @@
 
 <body>
     <?php include('../intranet/barraSuperiorInt.php'); ?>
+    <?php
+    @session_start();
+    if (isset($_SESSION['msg'])) {
+        echo "<p class=alert>$_SESSION[msg]</p>";
+        unset($_SESSION['msg']);
+    }
+    ?>
+
     <div class="titSalao">
         <div class="esquerda">
-            <h2>Agende o seu horário </h2><br>
-
+            <h2>Agende o seu horário, <?php echo " $_SESSION[nome] "; ?> </h2><br>
         </div>
         <div class="direita">
-            <p> Nosso Salão de festas você pode curtir todas as atrações.</p>
+            <p> Em nosso Salão de festas você pode curtir todas as atrações.</p>
         </div>
     </div>
 
@@ -36,7 +43,7 @@
     </div>
     <div class="disposicaoDate">
         <h2>Marque abaixo a data e o horario de inicio e termino do seu evento</h2>
-        <form class="form mt-2 row g-3" action="..." method="post" id="">
+        <form class="form mt-2 row g-3" action="../acoes/salao.act.php" method="post" id="">
 
             <div class="marcaEvento">
                 <div class="dataHora1">
@@ -45,17 +52,20 @@
                 </div>
                 <div class="dataHora2">
                     <p> Horário de Inicio</p>
-                    <input type="time" name="Calendario" id="calendario">
+                    <input type="time" name="horaInicio" id="calendario">
                 </div>
                 <div class="dataHora2">
                     <p> Horário de Termino </p>
-                    <input type="time" name="Calendario" id="calendario">
+                    <input type="time" name="horaFim" id="calendario">
                 </div>
             </div>
             <div class="col-12">
                 <button type="submit" class="mt-4 p-2 px-5 btn btn-primary">Cadastrar</button>
             </div>
         </form>
+    </div>
+    <div class="salaoLista">
+        <?php include('../intranet/salaoLista.php'); ?>
     </div>
 </body>
 

@@ -65,3 +65,7 @@ a{
     margin-left: 0 !important;
     margin-right: 0 !important;
 }
+.salaoLista{
+    width: 80%;
+    margin: 0 auto;    
+}

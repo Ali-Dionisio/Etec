@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CondMind</title>
-    
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link rel="stylesheet" href="../estilo/cadastro.css">
-    
+
     <script src="../src/javascript.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,6 +40,7 @@
                 <div class="imglogo">
                     <label>
                         <h1>Meu Cadastro</h1>
+                        <?php echo " $_SESSION[usuarioLogin] "; ?>
                     </label>
                 </div>
             </div>
@@ -47,11 +48,11 @@
                 <!--Segunda coluna -->
 
 
-                <form class="  row g-3 " action="../acoes/meuCadastro.act.php" method="post" id="" enctype="multipart/form-data">
+                <form class="row g-3 " action="../acoes/meuCadastro.act.php" method="post" id="" enctype="multipart/form-data">
                     <div class="d-flex-column">
                         <div>
-                            <input type="hidden" name="foto_anterior" value="<?php echo $morador['foto'] ?>">
                             <input type="hidden" name="cod_morador" value="<?php echo $morador['cod_morador'] ?>">
+                            <input type="hidden" name="foto_anterior" value="<?php echo $morador['foto'] ?>">
                             <img src="<?php echo $morador['foto']; ?>" class="imgUsuario" srcset="">
                             <p><input type="file" name="imagem" id="fileFoto"> </p>
                         </div>

@@ -15,7 +15,7 @@
         function pesquisa(texto){
             $.ajax({
                 type: "post",
-                url: "../acoes/pesquisa.act.php?texto="+texto,
+                url: "../acoes/pesquisaUsuario.act.php?texto="+texto,
                 success: function(response){
                     $('#result').html(response);
                 }

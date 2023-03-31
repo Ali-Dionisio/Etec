@@ -35,4 +35,4 @@
 session_start();
 $_SESSION['msg'] = $msg;    
 $usuarioLogin = $_SESSION['usuarioLogin'];     
-//header("location:../intranet/moradores.php");                         
+header("location:../intranet/moradores.php");                         

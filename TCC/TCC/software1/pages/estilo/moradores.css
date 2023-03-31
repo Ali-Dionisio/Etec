@@ -45,6 +45,7 @@ button{
     margin-left: 10rem;
     margin-right: 10rem;
 }
+
 .box{
     display: flex;
     justify-content: space-between;
@@ -108,3 +109,20 @@ button{
 .excluir a{
     color: white;
 }
+#result .box1{
+    width: 39%;
+}
+/* #result img {
+    max-width: 150px;
+}
+
+#result .box1 {
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
+#result .caixaImagem {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    margin-bottom: 20px;
+} */

@@ -1,3 +1,5 @@
+<?php require('sec.php') ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -37,7 +39,7 @@
             <div class="cadastro col mt-3">
                 <!--Segunda coluna -->
 
-                <form class=" mt-5 row g-3 " action="../acoes/cadMorador.act.php" method="post" id="" enctype="multipart/form-data">
+                <form class=" mt-5 row g-3 " action="../acoes/cadMorador.act.php" method="post" enctype="multipart/form-data">
                     <div class="mx-auto">
                         <p><label for="fileFoto" id="lblFoto">Foto</label> </p>
                         <p><input type="file" name="foto" id="fileFoto"> </p>

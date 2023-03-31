@@ -43,7 +43,7 @@
         echo "        <h1>Usuários</h1>";
         echo "  </nav></a>";
         echo " <a href =../intranet/salao.php> <nav class=botao>";
-        echo "        <img src=../imagens/porta-de-saida.png alt=>";
+        echo "        <img src=../imagens/champagne-glass.png alt=>";
         echo "       <h1>Salão</h1>";
         echo "  </nav></a>";
         echo " </div>";

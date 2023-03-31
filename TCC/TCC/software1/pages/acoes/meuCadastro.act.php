@@ -1,8 +1,14 @@
 <?php
-    var_dump($_FILES);
+    
+    require('../acoes/connect.php');
+    
+    session_start();
+    $usuarioLogin = $_SESSION['usuarioLogin'];
+
     extract($_FILES);
     extract($_POST);
-    require('../acoes/connect.php');
+
+    
     if($imagem['size']>0){
         if($foto_anterior == ""){
             $endereco = "imgs/".md5(time()).".jpg";
@@ -26,12 +32,14 @@
                                     `estadocivil` = '$estadocivil',
                                     `bloco` = '$bloco',
                                     `numero_apartamento` = '$numero_apartamento'
-                                    WHERE `tb_morador`.`cod_morador` = '$cod_morador';")){
+                                    WHERE `tb_morador`.`cpf` = '$usuarioLogin';")){
                                 $msg = "Alterado com sucesso!";
                         }else{
                                 $msg = "Erro ao alterar!";
                             }
-session_start();
-$_SESSION['msg'] = $msg;    
-$usuarioLogin = $_SESSION['usuarioLogin'];                    
+
+var_dump($_FILES);
+var_dump($_POST);
+
+
 header("location:../intranet/meuCadastro.php?cpf=$usuarioLogin");                         
