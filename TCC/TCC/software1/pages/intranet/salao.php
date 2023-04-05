@@ -22,8 +22,14 @@
     @session_start();
     if (isset($_SESSION['msg'])) {
         echo "<p class=alert>$_SESSION[msg]</p>";
+        
         unset($_SESSION['msg']);
     }
+
+    $codUsuario = $_SESSION['usuarioLogin'];
+    require('../acoes/connect.php');
+    $busca = mysqli_query($con, "Select * from `tb_morador` where `cpf` = '$codUsuario'");
+    $morador = mysqli_fetch_array($busca);
     ?>
 
     <div class="titSalao">
@@ -57,6 +63,8 @@
                 <div class="dataHora2">
                     <p> Horário de Termino </p>
                     <input type="time" name="horaFim" id="calendario">
+                    <input type="hidden" name="cod_morador" class="form-control" value="<?php echo $morador['cod_morador'] ?>">
+
                 </div>
             </div>
             <div class="col-12">
@@ -65,6 +73,7 @@
         </form>
     </div>
     <div class="salaoLista">
+ 
         <?php include('../intranet/salaoLista.php'); ?>
     </div>
 </body>

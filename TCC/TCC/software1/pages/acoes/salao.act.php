@@ -3,7 +3,7 @@
 require('../acoes/connect.php');
 extract($_POST);
 extract($_FILES);
-$cod_morador = 26;
+
 if (mysqli_query($con, "INSERT INTO `tb_salao` (`cod_salao`,
                                                 `data_reserva`,
                                                 `hora_inicio`,
