@@ -106,14 +106,11 @@
             <h2 id="titulo_fale">Fale conosco</h2>
                 <div class="forms">
                    <nav class="nome">
-                        <p>NOME</p>
+                        <p>NOME COMPLETO</p>
                         <input type="text" name="" id="nome" placeholder="Digite seu nome">
                    </nav>
 
-                   <nav class="ultimo_nome">
-                        <p>ÚLTIMO NOME</p>
-                        <input type="text"  name="" id="sobrenome" placeholder="Digite o seu último nome">
-                   </nav>
+               
                             <div class="clear"></div>
                    <nav class="email">
                         <p>E-MAIL</p>
