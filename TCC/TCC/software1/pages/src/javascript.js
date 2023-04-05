@@ -20,6 +20,9 @@ function cancelarIntra() {
 function cancelarUsuario() {
     window.location.href = "../intranet/usuarios.php";
 }
+function cancelarSalao() {
+    window.location.href = "../intranet/salao.php";
+}
 function meuCadastro(){
     window.location.href = "meuCadastro.php";
 }

@@ -36,39 +36,38 @@
     $salao = mysqli_fetch_array($busca);
     ?>
     <?php echo $cod_salao ?>
-     
     <div class="mt-5 container text-center">
         <div class="row ">
-            <div class="col">
+            <div class="cadastro col mt-3">
                 <!--  primeira coluna -->
-                <div class="imglogo">
-                    <img src="../imagens/ShannonLogo.png" class="d-flex w-2 h-10" alt="...">
-                </div>
+                <!-- <h5 class="card-title">Altere sua reserva</h5> -->
+
             </div>
             <div class="cadastro col mt-3">
                 <!--Segunda coluna -->
-                <h5 class="card-title">Cadastre-se</h5>
+                <h5 class="card-title">Altere sua reserva</h5>
 
-                <form class="mt-5 row g-3" action="../acoes/.act.php" method="post" id="">
+                <form class="mt-5 row g-3" action="../acoes/alterarReserva.act.php" method="post" id="">
                     <div class="col-md-4">
-                        <label for="data_reserva" class="form-label">Data</label>
-                        <input type="date" name="data_reserva" class="form-control"  value="<?php echo $salao['data_reserva']; ?> " >
+                        <label for="hora_fim" class="form-label">Data da reserva</label>
+                        <input type="date" name="data_reserva" class="form-control" value="<?php echo $salao['data_reserva']; ?>">
                     </div>
+
                     <div class="col-md-4">
-                        <label for="hora_inicio" class="form-label">Hora Inicial</label>
-                        <input type="time" name="hora_inicio" class="form-control"  value="<?php echo $salao['hora_inicio']; ?> " >
+                        <label for="hora-inicio" class="form-label">Hora Inicial</label>
+                        <input type="time" name="hora_inicio" class="form-control" value="<?php echo $salao['hora_inicio']; ?>">
                     </div>
                     <div class="col-md-4">
                         <label for="hora_fim" class="form-label">Hora Final</label>
-                        <input type="time" name="hora_fim" class="form-control"  value="<?php echo $salao['hora_fim']; ?>" >
+                        <input type="time" name="hora_fim" class="form-control" value="<?php echo $salao['hora_fim']; ?>">
                     </div>
 
                     <div class="col-12 ">
-                        <button type="submit" class="mt-4 p-2 px-5 btn btn-primary">Alterar Senha</button>
+                        <button type="submit" class="mt-4 p-2 px-5 btn btn-primary">Alterar reserva</button>
                     </div>
 
                 </form>
-                <button onclick="cancelarUsuario()" class="mt-4 p-2 px-5 btn btn-primary">Cancelar</button>
+                <button onclick="cancelarSalao()" class="mt-4 p-2 px-5 btn btn-primary">Cancelar</button>
             </div>
         </div>
 
