@@ -25,10 +25,7 @@
             align-items: center;
             height: 4vw;
             background-color: #1484fc;
-            position: -webkit-sticky;
-            /* Safari */
-            position: sticky;
-            top: 0;
+    
         }
 
         #barra .logo img {
@@ -97,7 +94,7 @@
                 echo "  </li>";
                 echo "  <li>";
                 echo "    <a href =../intranet/moradores.php>
-            Moradores </a>";
+            Proprietarios </a>";
                 echo "  </li>";
                 echo "  <li>";
                 echo "    <a href =../intranet/usuarios.php>

@@ -4,51 +4,47 @@
 <h1>Listar Usuários</h1>
 <?php
 @session_start();
-if (isset($_SESSION['msg'])) {
-    echo "<p class=alert> $_SESSION[msg]</p>";
-    unset($_SESSION['msg']);
-}
+    if(isset($_SESSION['msg'])){
+        echo "<p class=alert> $_SESSION[msg]</p>";
+        unset($_SESSION['msg']);
+    }
 require('../acoes/connect.php');
 
-$sql = "SELECT * FROM tb_salao";
-$res = $con->query($sql);
-$qtd = $res->num_rows;
+$salaos = mysqli_query($con, "Select * from `tb_salao`");
 
-
-
-
-$busca = mysqli_query($con, "SELECT primeiro_nome FROM tb_morador WHERE tb_morador.cod_morador = '1'");
-$nomeMorador = mysqli_fetch_array($busca);
-
-
-if ($qtd > 0) {
-    print "<table class='table table-hover 
+echo "<table class='table table-hover 
          table-bordered'>";
-    print "<tr>";
-    print "<th>#</th>";
-    print "<th>Data do Evento</th>";
-    print "<th>Horario de inicio</th>";
-    print "<th>Horario do fim</th>";
-    print "<th>Nome do morador</th>";
-    print "<th>Ações</th>";
-    print "</tr>";
-    while ($row = $res->fetch_object()) {
-        print "<tr>";
-        print "<td>" . $row->cod_salao . "</td>";
-        print "<td>" . $row->data_reserva . "</td>";
-        print "<td>" . $row->hora_inicio . "</td>";
-        print "<td>" . $row->hora_inicio . "</td>";
-        print "<td>" . "$nomeMorador[primeiro_nome]" . "</td>";
-        print "<td>
-                    <button onclick=\"location.href='?page=editar&id=" . $row->cod_salao . "';\" class='btn btn-success'>Editar</button>
+         echo "<tr>";
+         echo "<th>#</th>";
+         echo "<th>Data do Evento</th>";
+         echo "<th>Horario de inicio</th>";
+         echo "<th>Horario do fim</th>";
+         echo "<th>Nome do morador</th>";
+         echo "<th>Ações</th>";
+         echo "</tr>";
+    while($salao = mysqli_fetch_array($salaos)){
+    $moradores = mysqli_query($con, "Select * from `tb_morador` where cod_morador = $salao[cod_morador]" );
+        echo "<tr>";
+        echo "<td> $salao[cod_salao] </td>";
+        echo "<td> $salao[data_reserva] </td>";
+        echo "<td> $salao[hora_inicio] </td>";
+        echo "<td> $salao[hora_fim] </td>";
+        while($morador = mysqli_fetch_array($moradores)){
+            $nome = strtoupper("$morador[primeiro_nome]");
+            echo "<td> $nome </td>";
+        }
+        echo "<td>
+                    <button onclick=\"location.href='?page=editar&id=$salao[cod_salao]';\" class='btn btn-success'>Editar</button>
 
-                    <button onclick=\"if(confirm('Tem certeza que deseja excluir?')){location.href='?page=salvar&acao=excluir&id=" . $row->cod_salao . "';}else{false;}\" class='btn btn-danger'>Excluir</button>           
+                    <button onclick=\"if(confirm('Tem certeza que deseja excluir? id: $salao[cod_salao]')){location.href='../acoes/excluirReservaSalao.act.php?cod=$salao[cod_salao]';}else{false;}\" class='btn btn-danger'>Excluir</button>           
             </td>";
-        print "</tr>";
+        echo "</tr>";
     }
-    print "</table>";
-} else {
-    print "<p> class = 'alert-danger'> Não
-        encontrou resultados</p>";
-}
+    echo "</table>";
+//} 
+// else {
+//     echo "<p> class = 'alert-danger'> Não
+//         encontrou resultados</p>";
+// }
+
 ?>

@@ -40,7 +40,7 @@
                 <div class="imglogo">
                     <label>
                         <h1>Meu Cadastro</h1>
-                        <?php echo " $_SESSION[usuarioLogin] "; ?>
+                       
                     </label>
                 </div>
             </div>
