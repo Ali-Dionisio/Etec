@@ -34,7 +34,7 @@ echo "<table class='table table-hover
             echo "<td> $nome </td>";
         }
         echo "<td>
-                    <button onclick=\"location.href='?page=editar&id=$salao[cod_salao]';\" class='btn btn-success'>Editar</button>
+                    <button onclick=\"location.href='alterarReservaSalao.php?page=editar&cod=$salao[cod_salao]';\" class='btn btn-success'>Editar</button>
 
                     <button onclick=\"if(confirm('Tem certeza que deseja excluir? id: $salao[cod_salao]')){location.href='../acoes/excluirReservaSalao.act.php?cod=$salao[cod_salao]';}else{false;}\" class='btn btn-danger'>Excluir</button>           
             </td>";
