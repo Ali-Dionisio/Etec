@@ -1,3 +1,4 @@
+<?php require('sec.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,7 +36,7 @@
     $busca = mysqli_query($con, "Select * from `tb_salao` where `cod_salao` = '$cod_salao'");
     $salao = mysqli_fetch_array($busca);
     ?>
-    <?php echo $cod_salao ?>
+    
     <div class="mt-5 container text-center">
         <div class="row ">
             <div class="cadastro col mt-3">
@@ -49,8 +50,10 @@
 
                 <form class="mt-5 row g-3" action="../acoes/alterarReserva.act.php" method="post" id="">
                     <div class="col-md-4">
-                        <label for="hora_fim" class="form-label">Data da reserva</label>
+                        <label for="data_reserva" class="form-label">Data da reserva</label>
                         <input type="date" name="data_reserva" class="form-control" value="<?php echo $salao['data_reserva']; ?>">
+                        <input type="hidden" name="cod_salao" class="form-control" value="<?php echo $salao['cod_salao']; ?>">
+
                     </div>
 
                     <div class="col-md-4">

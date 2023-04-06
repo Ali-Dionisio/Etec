@@ -1,3 +1,4 @@
+<?php require('sec.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,12 +39,12 @@
             <div class="col">
                 <!--  primeira coluna -->
                 <div class="imglogo">
-                <h5 class="card-title">Cadastre-se</h5>
+                    <h5 class="card-title">Cadastre-se</h5>
                 </div>
             </div>
             <div class="cadastro col mt-3">
                 <!--Segunda coluna -->
-                
+
 
                 <form class=" mt-5 row g-3 " action="../acoes/alterarMorador.act.php" method="post" id="" enctype="multipart/form-data">
                     <div class="mx-auto">

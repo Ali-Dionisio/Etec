@@ -10,7 +10,7 @@
     }
 require('../acoes/connect.php');
 
-$salaos = mysqli_query($con, "Select * from `tb_salao`");
+$salaos = mysqli_query($con, "Select * from `tb_salao` order by data_reserva ");
 
 echo "<table class='table table-hover 
          table-bordered'>";

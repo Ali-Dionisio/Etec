@@ -33,7 +33,7 @@
             <div class="col">
                 <!--  primeira coluna -->
                 <div class="imglogo">
-                     <h5 class="card-title">Cadastre-se</h5>
+                    <h5 class="card-title">Cadastre-se</h5>
                 </div>
             </div>
             <div class="cadastro col mt-3">

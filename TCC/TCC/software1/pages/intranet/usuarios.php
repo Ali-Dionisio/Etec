@@ -1,5 +1,7 @@
+<?php require('sec.php') ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,19 +14,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
     <title>Listar Usuários</title>
     <script>
-        function pesquisa(texto){
+        function pesquisa(texto) {
             $.ajax({
                 type: "post",
-                url: "../acoes/pesquisaUsuario.act.php?texto="+texto,
-                success: function(response){
+                url: "../acoes/pesquisaUsuario.act.php?texto=" + texto,
+                success: function(response) {
                     $('#result').html(response);
                 }
             });
         };
     </script>
 </head>
+
 <body>
-<?php include('../intranet/barraSuperiorInt.php'); ?>    
+    <?php include('../intranet/barraSuperiorInt.php'); ?>
 
     <div class="pesquisar">
         <p>Pesquisar <input type="text" onKeyup="pesquisa(this.value)"></p>
@@ -33,19 +36,19 @@
         <a href="../intranet/cadUsuario.php">Cadastrar</a>
     </div> -->
     <div id="result"></div>
-    
-<?php
+
+    <?php
     @session_start();
-    if(isset($_SESSION['msg'])){
+    if (isset($_SESSION['msg'])) {
         echo "<p class=alert> $_SESSION[msg]</p>";
         unset($_SESSION['msg']);
     }
 
     require('../acoes/connect.php');
     $usuarios = mysqli_query($con, "Select * from `tb_usuarios`");
-    while($usuario = mysqli_fetch_array($usuarios)){
+    while ($usuario = mysqli_fetch_array($usuarios)) {
         echo "<div class=box2>";
-        
+
         echo "<div class=box1>";
         echo "<div class=box>";
         echo "<p> Cod. Usuário:<b> $usuario[cod_usuario]</b></p>";
@@ -65,18 +68,16 @@
         echo "</div>";
         echo "<div class=risco> </div>";
         echo "</div>";
-
-
-
     }
-?>
-<script>
-    function confirmar(codigo) {
-        resposta = confirm("Deseja excluir o registro "+codigo+"?");
-        if(resposta == true){
-            window.location = "../acoes/excluirUsuario.act.php?cod="+codigo;
+    ?>
+    <script>
+        function confirmar(codigo) {
+            resposta = confirm("Deseja excluir o registro " + codigo + "?");
+            if (resposta == true) {
+                window.location = "../acoes/excluirUsuario.act.php?cod=" + codigo;
+            }
         }
-    }
-</script>
+    </script>
 </body>
+
 </html>

@@ -1,3 +1,4 @@
+<?php require('sec.php') ?>
 <?php
 @session_start();
 $_SESSION['usuario'] = false;

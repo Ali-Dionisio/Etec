@@ -29,7 +29,7 @@
         <p>Pesquisar <input type="text" onKeyup="pesquisa(this.value)"></p>
     </div>
     <div class="cadastrar">
-        <a href="../intranet/cadMorador.php">Cadastrar novo morador</a>
+        <a href="../intranet/cadMorador.php">Cadastrar novo proprietario</a>
     </div>
     <div id="result"></div>
     
@@ -41,6 +41,7 @@
     }
     require('../acoes/connect.php');
     $moradores = mysqli_query($con, "Select * from `tb_morador`");
+    echo "<table id=dtBasicExample class=table table-striped table-bordered table-sm cellspacing=0 height=100% width=100%>";
     while($morador = mysqli_fetch_array($moradores)){
         echo "<div class=box1>";
         echo "<div class=caixaImagem>";
@@ -78,8 +79,8 @@
         echo "</div>";
         echo "</div>";
         echo "<div class=risco> </div>";
-
-
+        
+        echo "</table>";
     }
 ?>
 <script>

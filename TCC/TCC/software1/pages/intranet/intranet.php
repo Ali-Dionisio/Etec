@@ -1,4 +1,5 @@
-<?php require('../intranet/sec.php') ?>
+<?php require('sec.php') ?>
+<?php require('controleAcesso.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,21 +35,21 @@
 
         echo "<div class=central>";
         echo "<div class=esquerda>";
-        echo " <a href =../intranet/meuCadastro.php?cpf=$moradores[cpf]> <nav class=botao>";
+        echo " <a href =../intranet/meuCadastro.php?cpf=$moradores[cpf]> <nav class=botao >";
         echo "     <img src=../imagens/usuario-de-perfil.png alt=>";
-        echo "      <h1>Meu Cadastro</h1> ";
+        echo "      <h1 >Meu Cadastro</h1> ";
         echo "  </nav></a>";
-        echo " <a href =../intranet/usuarios.php> <nav class=botao>";
+        echo " <a href =../intranet/usuarios.php class=$controleMorador> <nav class=botao> ";
         echo "        <img src=../imagens/silhueta-de-multiplos-usuarios.png alt=>";
-        echo "        <h1>Usuários</h1>";
-        echo "  </nav></a>";
+        echo "        <h1 >Usuários</h1>";
+        echo "  </nav ></a >";
         echo " <a href =../intranet/salao.php> <nav class=botao>";
         echo "        <img src=../imagens/champagne-glass.png alt=>";
         echo "       <h1>Salão</h1>";
         echo "  </nav></a>";
         echo " </div>";
         echo " <div class=direita>";
-        echo " <a href =../intranet/moradores.php> <nav class=botao>";
+        echo " <a href =../intranet/moradores.php class=$controleMorador> <nav class=botao>";
         echo "        <img src=../imagens/varios-usuarios.png alt=>";
         echo "        <h1>Proprietarios</h1>";
         echo "  </nav></a>";
@@ -65,7 +66,6 @@
         echo "<nav class=sair>";
         echo "<a href=../acoes/logoff.php class=botoes> <img src=../imagens/porta-de-saida.png>  Sair</a>";
         echo "</nav>";
-
     }
     ?>
 

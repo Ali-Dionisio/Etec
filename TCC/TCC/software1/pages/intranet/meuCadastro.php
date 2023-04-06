@@ -1,3 +1,6 @@
+<?php require('sec.php') ?>
+<?php require('controleAcesso.php') ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,6 +28,7 @@
         unset($_SESSION['msg']);
     }
     ?>
+    <div class="msg"></div>
     <?php
     $usuarioLogin = $_GET['cpf'];
     require('../acoes/connect.php');
@@ -40,7 +44,7 @@
                 <div class="imglogo">
                     <label>
                         <h1>Meu Cadastro</h1>
-                       
+
                     </label>
                 </div>
             </div>
@@ -73,7 +77,7 @@
                     </div>
                     <div class="col-4">
                         <label for="cpf" class="form-label">CPF</label>
-                        <input type="text" class="cpf form-control" id="cpf" name="cpf" value="<?php echo $morador['cpf']; ?>">
+                        <input type="text" class="cpf form-control" id="cpf" name="cpf" <?php echo "$campo"; ?> value="<?php echo $morador['cpf']; ?>">
                     </div>
                     <div class="col-4">
                         <label for="rg" class="form-label">RG</label>
@@ -99,11 +103,11 @@
                     </div>
                     <div class="col-md-2">
                         <label for="inputZip" class="form-label">Bloco</label>
-                        <input type="text" class="form-control" name="bloco" id="inputZip" value="<?php echo $morador['bloco']; ?>">
+                        <input type="text" class="form-control" name="bloco" id="inputZip" <?php echo "$campo"; ?> value="<?php echo $morador['bloco']; ?>">
                     </div>
                     <div class="col-md-2">
                         <label for="inputZip" class="form-label">Nº AP</label>
-                        <input type="text" class="form-control" name="numero_apartamento" id="inputZip" value="<?php echo $morador['numero_apartamento']; ?>">
+                        <input type="text" class="form-control" name="numero_apartamento" id="inputZip" <?php echo "$campo"; ?> value="<?php echo $morador['numero_apartamento']; ?> ">
                     </div>
                     <div class="col-12 ">
                         <button type="submit" class="mt-4 p-2 px-5 btn btn-primary">Alterar Meus Dados</button>
