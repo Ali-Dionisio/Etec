@@ -34,7 +34,7 @@
     
      <div class="salaoLista">
  
-        <?php include('..//intranet/minhaVagaLista.php'); ?>
+        <?php include('../intranet/minhaVagaLista.php'); ?>
     </div> 
 </body>
 

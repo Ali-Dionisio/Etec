@@ -1,7 +1,7 @@
 <?php require('sec.php') ?>
 
 
-<h1>Listar Usuários</h1>
+<h1>Minha Vaga</h1>
 <?php
 @session_start();
     if(isset($_SESSION['msg'])){
@@ -23,7 +23,7 @@ echo "<table class='table table-hover
          echo "<th>Ações</th>";
          echo "</tr>";
     while($vaga = mysqli_fetch_array($vagas)){
-    $moradores = mysqli_query($con, "Select * from `tb_morador` where cod_morador = $vaga[cod_morador]" );
+    $moradores = mysqli_query($con, "Select * from `tb_vaga_garagem` where cod_vaga = $vaga[cod_vaga]" );
         echo "<tr>";
         echo "<td> $vaga[cod_vaga] </td>";
         echo "<td> $vaga[num_vaga] </td>";
@@ -32,9 +32,9 @@ echo "<table class='table table-hover
         echo "<td> $vaga[placa_veiculo] </td>";
         
         echo "<td>
-                    <button onclick=\"location.href='alterarReservaSalao.php?page=editar&cod=$vaga[cod_vaga]';\" class='btn btn-success'>Editar</button>
+                    <button onclick=\"location.href='alterarMinhaVaga.php?page=editar&cod=$vaga[cod_vaga]';\" class='btn btn-success'>Editar</button>
 
-                    <button onclick=\"if(confirm('Tem certeza que deseja excluir? id: $vaga[vaga]')){location.href='../acoes/excluirReservaSalao.act.php?cod=$vaga[cod_vaga]';}else{false;}\" class='btn btn-danger'>Excluir</button>           
+                    <button onclick=\"if(confirm('Tem certeza que deseja excluir? id: $vaga[vaga]')){location.href='../acoes/excluirMinhaVaga.act.php?cod=$vaga[cod_vaga]';}else{false;}\" class='btn btn-danger'>Excluir</button>           
             </td>";
         echo "</tr>";
     }

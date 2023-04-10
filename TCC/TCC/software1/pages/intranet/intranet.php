@@ -53,7 +53,7 @@
         echo "        <img src=../imagens/varios-usuarios.png alt=>";
         echo "        <h1>Proprietarios</h1>";
         echo "  </nav></a>";
-        echo " <a href =../intranet/minhaVaga.php> <nav class=botao>";
+        echo " <a href =../intranet/viewMinhaVaga.php> <nav class=botao>";
         echo "        <img src=../imagens/cartao-de-identidade.png alt=>";
         echo "        <h1>Minha Vaga</h1>";
         echo "  </nav></a>";

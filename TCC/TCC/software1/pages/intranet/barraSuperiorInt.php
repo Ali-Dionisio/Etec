@@ -47,7 +47,7 @@
     }
 
     #barra ul {
-        width: 40vw;
+        width: 50vw;
         display: flex;
         justify-content: space-between;
     }
