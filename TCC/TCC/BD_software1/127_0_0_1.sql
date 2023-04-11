@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 05-Abr-2023 às 00:54
+-- Tempo de geração: 11-Abr-2023 às 01:32
 -- Versão do servidor: 8.0.27
 -- versão do PHP: 7.4.26
 
@@ -205,7 +205,7 @@ CREATE TABLE IF NOT EXISTS `tb_vaga_garagem` (
   PRIMARY KEY (`cod_vaga`),
   UNIQUE KEY `placa_veiculo_2` (`placa_veiculo`),
   KEY `placa_veiculo` (`placa_veiculo`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -216,13 +216,21 @@ CREATE TABLE IF NOT EXISTS `tb_vaga_garagem` (
 DROP TABLE IF EXISTS `tb_veiculo_morador`;
 CREATE TABLE IF NOT EXISTS `tb_veiculo_morador` (
   `placa_veiculo` varchar(7) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `tipo_veiculo` varchar(7) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `modelo` varchar(15) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `ano` date NOT NULL,
+  `ano` int NOT NULL,
   `cor` varchar(10) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `cod_morador` int NOT NULL,
   PRIMARY KEY (`placa_veiculo`),
   UNIQUE KEY `cod_morador` (`cod_morador`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
+
+--
+-- Extraindo dados da tabela `tb_veiculo_morador`
+--
+
+INSERT INTO `tb_veiculo_morador` (`placa_veiculo`, `tipo_veiculo`, `modelo`, `ano`, `cor`, `cod_morador`) VALUES
+('123asds', 'Carro', 'Onix', 2005, 'Preto', 1);
 
 -- --------------------------------------------------------
 

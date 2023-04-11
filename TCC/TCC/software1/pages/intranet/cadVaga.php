@@ -8,6 +8,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CondMind</title>
+        <script src="../src/javascript.js"></script>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <!-- JavaScript Bundle with Popper -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script> -->
@@ -42,7 +44,7 @@
                 <form class=" mt-5 row g-3 " action="../acoes/cadVaga.act.php" method="post" enctype="multipart/form-data">
 
                     <div class="col-md-4">
-                        <label for="codigomorador" class="form-label">Código Proprietário</label>
+                        <label for="cod_morador" class="form-label">Código Proprietário</label>
                         <input type="number" name="cod_morador" class="form-control" id="codigomorador">
                     </div>
                     <hr>
@@ -81,7 +83,7 @@
                         <button type="submit" class="btn-enviar">Cadastrar</button>
                 </form>
             </div>
-            <button onclick="cancelarMorador()" class="btn-cancel">Cancelar</button>
+            <button onclick="voltarVaga()" class="btn-cancel">Cancelar</button>
         </div>
     </div>
     </div>

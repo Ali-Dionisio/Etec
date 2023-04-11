@@ -35,6 +35,9 @@ function cadUsuario(){
 function alterUsuario() {
     window.location.href = "alterUsuario.php";
 }
+function voltarVaga() {
+    window.location.href = "viewMinhaVaga.php";
+}
 
 
 $('.celular').mask('(00)00000-0000');

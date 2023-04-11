@@ -111,7 +111,7 @@
             echo "  </li>";
         echo "</div>";
             echo "  <li>";
-            echo "    <a href =../intranet/minhaVaga.php>
+            echo "    <a href =../intranet/viewMinhaVaga.php>
           Minha Vaga </a>";
             echo "  </li>";
             echo "  <li>";
