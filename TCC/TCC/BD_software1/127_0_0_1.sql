@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 11-Abr-2023 às 01:32
+-- Tempo de geração: 11-Abr-2023 às 23:44
 -- Versão do servidor: 8.0.27
 -- versão do PHP: 7.4.26
 
@@ -51,6 +51,24 @@ INSERT INTO `tb_cor` (`cod_cor`, `descricao_cor`) VALUES
 (8, 'Verde'),
 (9, 'Laranja'),
 (10, 'Violeta');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `tb_fale_conosco`
+--
+
+DROP TABLE IF EXISTS `tb_fale_conosco`;
+CREATE TABLE IF NOT EXISTS `tb_fale_conosco` (
+  `cod_msg` int NOT NULL AUTO_INCREMENT,
+  `via` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
+  `nome_completo` varchar(150) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(60) COLLATE utf8_unicode_ci NOT NULL,
+  `celular` int NOT NULL,
+  `assunto` int NOT NULL,
+  `mensagem` mediumtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`cod_msg`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
