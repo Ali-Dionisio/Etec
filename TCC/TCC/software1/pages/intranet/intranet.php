@@ -59,7 +59,7 @@
         echo "  </nav></a>";
         echo " <a href =../intranet/reclameAqui.php> <nav class=botao>";
         echo "        <img src=../imagens/megafone.png alt=>";
-        echo "        <h1>Reclame aqui</h1>";
+        echo "        <h1>Fale conosco</h1>";
         echo "  </nav></a>";
         echo "</div>";
         echo "</div>";

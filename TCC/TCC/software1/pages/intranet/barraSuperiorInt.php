@@ -120,7 +120,7 @@
             echo "  </li>";
             echo "  <li>";
             echo "    <a href =../intranet/reclameAqui.php>
-          Reclame aqui </a>";
+          Fale Conosco </a>";
             echo "  </li>";
             echo "</ul>";
             echo "</nav>";

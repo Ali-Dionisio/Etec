@@ -13,6 +13,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
 
+<?php
+    require('../acoes/connect.php');
+?>
+
+
+
+
 <body>
 
 
@@ -104,39 +111,45 @@
         <div class="fale_conosco"><!--COMEÇO DA SESSÃO fALE CONOSCO-->
 
             <h2 id="titulo_fale">Fale conosco</h2>
+
+
+
+            
+            <form action="../acoes/fale_conosco.act.php" method="post">
                 <div class="forms">
-                   <nav class="nome">
-                        <p>NOME COMPLETO</p>
-                        <input type="text" name="" id="nome" placeholder="Digite seu nome">
-                   </nav>
+                    <nav class="nome">
+                        <label for="nome_completo">NOME COMPLETO</label>
+                        <input type="text" name="nome_completo" id="nome" placeholder="Digite seu nome">
+                        <input type="hidden" name="via" value="Shannon">
+                    </nav>
 
                
                             <div class="clear"></div>
                    <nav class="email">
-                        <p>E-MAIL</p>
-                        <input type="email" name="" id="email" placeholder="Digite seu email">
+                        <label for="email">EMAIL</label>
+                        <input type="email" name="email" id="email" placeholder="Digite seu email">
                    </nav>
 
                    <nav class="telefone">
-                    <p>TELEFONE</p>
-                    <input type="number"  name="" id="telefone" placeholder="(00) 00000-0000">
+                    <label for="celular">TELEFONE</label>
+                    <input type="number"  name="celular" id="telefone" placeholder="(00) 00000-0000">
                    </nav>
                    
                    <nav class="assunto">
                     <p>ASSUNTO</p>
                    
-                    <select name="" id="">
-                    <option value="">Selecione uma opção</option>
-                        <option value="">Dúvida</option>
-                        <option value="">Contrato</option>
-                        <option value="">Softwares</option>
+                    <select name="assunto" >
+                    <option >Selecione uma opção</option>
+                        <option >Dúvida</option>
+                        <option >Contrato</option>
+                        <option >Softwares</option>
                        
                     </select>
                    </nav>
 
                    <nav class="mensagem">
                     <p>MENSAGEM</p>
-                    <textarea name=""  placeholder="Digite a sua mensagem" id="area_texto" ></textarea>
+                    <textarea name="mensagem"  placeholder="Digite a sua mensagem" id="area_texto" ></textarea>
                    </nav>
 
                     <input type="submit" value="ENVIAR" id="btn_contato" onclick="clique()">
@@ -145,6 +158,7 @@
                         </div>
                 </div>
 
+                </form>
 
         </div>
 
@@ -178,3 +192,8 @@
 </body>
 
 </html>
+
+
+
+
+

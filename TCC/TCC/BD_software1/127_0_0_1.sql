@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 11-Abr-2023 às 23:44
+-- Tempo de geração: 12-Abr-2023 às 01:21
 -- Versão do servidor: 8.0.27
 -- versão do PHP: 7.4.26
 
@@ -64,11 +64,23 @@ CREATE TABLE IF NOT EXISTS `tb_fale_conosco` (
   `via` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
   `nome_completo` varchar(150) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `email` varchar(60) COLLATE utf8_unicode_ci NOT NULL,
-  `celular` int NOT NULL,
-  `assunto` int NOT NULL,
-  `mensagem` mediumtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `celular` varchar(12) COLLATE utf8_unicode_ci NOT NULL,
+  `assunto` varchar(25) COLLATE utf8_unicode_ci NOT NULL,
+  `mensagem` varchar(500) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`cod_msg`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
+
+--
+-- Extraindo dados da tabela `tb_fale_conosco`
+--
+
+INSERT INTO `tb_fale_conosco` (`cod_msg`, `via`, `nome_completo`, `email`, `celular`, `assunto`, `mensagem`) VALUES
+(14, 'CondMind', 'teste', 'teste@teste', '5588585874', 'Contrato', 'testesetss'),
+(13, 'Shannon', 'João', 'joaohenriquert@outlook.com', '11998898989', 'Softwares', 'teste'),
+(8, '', 'Alisson', 'Alisson@etec.com', '1125641124', 'Dúvida', 'Q qui é?'),
+(15, 'CondMind', 'a', 'a@gmail.com', '1', 'Dúvida', 'a'),
+(12, 'Shannon', 'João', 'joaohenriquert@outlook.com', '11998898989', 'Softwares', 'teste'),
+(16, 'Shannon', 'Alisson', 'Alisson@sss', '111111', 'Dúvida', 'teste2');
 
 -- --------------------------------------------------------
 
