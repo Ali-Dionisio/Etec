@@ -28,10 +28,9 @@ $msg = "<p class=sucesso>Registro gravado com Sucesso</p>";
 session_start();
 $_SESSION['msg'] = $msg;
 
-var_dump($_POST);
-var_dump($msg);
-
 header("location:../intranet/reclameAqui.php");                         
+
+
 
 
 
