@@ -52,3 +52,5 @@ document.addEventListener('DOMContentLoaded', function() {
       items = document.querySelectorAll('.gallery__item');
     });
   });
+
+ 

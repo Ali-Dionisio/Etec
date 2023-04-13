@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../estilo/shannon.css">
 
-    <title>Reclame Aqui</title>
+    <title>Fale conosco</title>
 </head>
 
 <style>
@@ -15,20 +15,20 @@
 
 
 #formulario{
-    margin: 0 auto;
-    width: 640px;
+    margin: 50px  auto;
+    width: 840px;
     height: auto;
 }
 
 </style>
 <body>
 
-    <?php include('../intranet/barraSuperiorInt.php')?>
+<?php include('../intranet/barraSuperiorInt.php'); ?>
 
     <div id="formulario">
     <div class="fale_conosco"><!--COMEÇO DA SESSÃO fALE CONOSCO-->
 
-<h2 id="titulo_fale">Fale conosco</h2>
+
 
 
 

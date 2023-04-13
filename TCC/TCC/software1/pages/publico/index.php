@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <script src="../jquery/jquery-3.6.0.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
 
@@ -27,10 +28,10 @@
         <img id="logo" src="../imagens/ShannonLogo.png" alt="">
         <div class="links">
 
-            <a href="#home">Home</a>
-            <a href="#titulo_sobre">Sobre a Shannon</a>
-            <a href="login.php">CondMind</a>
-            <a href="#titulo_fale">Fale conosco</a>
+            <a class="link" href="#home">Home</a>
+            <a class="link" href="#titulo_sobre">Sobre a Shannon</a>
+            <a class="link" href="login.php">CondMind</a>
+            <a class="link" href="#titulo_fale">Fale conosco</a>
         </div><!--FIM DA DIV LINKS-->
     </div><!--FIM DA DIV NAV_BAR-->
     <br>
@@ -90,16 +91,19 @@
             <br><br>
 
             <p>
-                Problemas com organização das vagas de garagem/estacionamento são recorrentes em apartamentos ou condomínios. Seja a falta de informações sobre a vaga e seu dono, a não opção de alteração da mesma sendo possível apenas por sorteio em alguns casos ou até mesmo a opção de poder excluir ou alugar o espaço.
+                Problemas com organização das vagas de garagem/estacionamento são recorrentes em apartamentos ou condomínios. 
+                Seja a falta de informações sobre a vaga e seu dono, a não opção de alteração da mesma sendo possível apenas 
+                por sorteio em alguns casos ou até mesmo a opção de poder excluir ou alugar o espaço.
             </p>
             
             <p>
-                Feito para auxiliar esta organização em estacionamentos de condomínios, o CondMind realiza consultas, alteração e exclusão das vagas ofertadas facilitando a organização tanto para a administração quanto para os moradores.
-
+                Feito para auxiliar esta organização em estacionamentos de condomínios, o CondMind realiza consultas, 
+                alteração e exclusão das vagas ofertadas facilitando a organização tanto para a administração quanto para os moradores.
             </p>
           
             <p>
-                Desenvolvido para navegadores, faz você se manter atualizado em tempo real sobre a condição de sua vaga. Fornece a opção de alterar proprietário caso o usuário não deseje ter sua vaga, entre outras funcionalidades.
+                Desenvolvido para navegadores, faz você se manter atualizado em tempo real sobre a condição de sua vaga.
+                 Fornece a opção de alterar proprietário caso o usuário não deseje ter sua vaga, entre outras funcionalidades.
             </p>
             <br>
 
@@ -194,6 +198,16 @@
     </script>
 
 
+<!--
+<script src="../jquery/jQuery-Mask-Plugin-master/src/jquery.mask.js">
+     /*Márcaras*/
+     $(document).ready(function(){
+    $('#telefone').mask('(00) 00000-0000');
+    $("#nome").mask('aaa');
+   
+});
+</script>
+-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
 

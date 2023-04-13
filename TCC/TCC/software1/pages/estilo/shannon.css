@@ -39,7 +39,7 @@ html{
   color: white;
 }
 
-a {
+.link {
   padding: 0px 10px;
   text-decoration: underline;
   text-underline-offset: 8px;
