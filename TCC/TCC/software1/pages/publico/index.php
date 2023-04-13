@@ -10,7 +10,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
-    <script src="../jquery/jquery-3.6.0.min.js"></script>
+    <script src="src/jquery-3.6.0.min.js"></script>
+    <script src="src/jQuery-Mask-Plugin-master/src/jquery.mask.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
 
@@ -142,7 +143,7 @@
 
                    <nav class="telefone">
                     <label for="celular">TELEFONE</label>
-                    <input type="number"  name="celular" id="telefone" placeholder="(00) 00000-0000">
+                    <input type="number" class="celular"  name="celular" id="celular" placeholder="(00) 00000-0000">
                    </nav>
                    
                    <nav class="assunto">
@@ -186,7 +187,7 @@
     </div>
 
 
-    <script>
+    <!-- <script>
         function clique(){
                 if(document.getElementById("nome").value=="" || document.getElementById("sobrenome").value=="" || document.getElementById("telefone").value=="" 
                 || document.getElementById("area_texto").value=="" || document.getElementById("email").value=="" ){
@@ -195,19 +196,11 @@
                         document.getElementById("mensagem").innerHTML = "Mensagem enviada!"
                         }
                     }
+    </script> -->
+    <script>
+         $('.celular').mask('(00)00000-0000');
+
     </script>
-
-
-<!--
-<script src="../jquery/jQuery-Mask-Plugin-master/src/jquery.mask.js">
-     /*Márcaras*/
-     $(document).ready(function(){
-    $('#telefone').mask('(00) 00000-0000');
-    $("#nome").mask('aaa');
-   
-});
-</script>
--->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
 
