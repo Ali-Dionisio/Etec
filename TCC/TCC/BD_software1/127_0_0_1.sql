@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 12-Abr-2023 às 01:21
+-- Tempo de geração: 14-Abr-2023 às 01:13
 -- Versão do servidor: 8.0.27
 -- versão do PHP: 7.4.26
 
@@ -61,11 +61,11 @@ INSERT INTO `tb_cor` (`cod_cor`, `descricao_cor`) VALUES
 DROP TABLE IF EXISTS `tb_fale_conosco`;
 CREATE TABLE IF NOT EXISTS `tb_fale_conosco` (
   `cod_msg` int NOT NULL AUTO_INCREMENT,
-  `via` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
+  `via` varchar(10) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `nome_completo` varchar(150) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `email` varchar(60) COLLATE utf8_unicode_ci NOT NULL,
-  `celular` varchar(12) COLLATE utf8_unicode_ci NOT NULL,
-  `assunto` varchar(25) COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(60) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `celular` varchar(12) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `assunto` varchar(25) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `mensagem` varchar(500) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`cod_msg`)
 ) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
@@ -128,7 +128,7 @@ CREATE TABLE IF NOT EXISTS `tb_morador` (
   `funcao` varchar(15) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`cod_morador`),
   UNIQUE KEY `cpf` (`cpf`)
-) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
 
 --
 -- Extraindo dados da tabela `tb_morador`
@@ -137,9 +137,10 @@ CREATE TABLE IF NOT EXISTS `tb_morador` (
 INSERT INTO `tb_morador` (`cod_morador`, `primeiro_nome`, `nome_completo`, `email`, `cpf`, `rg`, `dtnascimento`, `celular`, `estadocivil`, `bloco`, `numero_apartamento`, `foto`, `funcao`) VALUES
 (1, 'alisson', 'alisson almeida', 'alisson.a-work@outlook.com', '44291300867', '111', '1999-01-20', '992325271', 'Casado(a)', '6', '1', '../imgs/1ac5fbea12c9dc646435a69daa443270.jpg', 'Administrador'),
 (23, 'Gabriel', 'Gabriel Sena', '', '55182079840', '11111', '2023-03-14', '', 'Solteiro(a)', '2', '1', '../imgs/1ac5fbea12c9dc646435a69daa443270.jpg', 'Administrador'),
-(24, 'João', 'João Henrique', '', '53189636842', '1111111', '0000-00-00', '', 'Solteiro(a)', '3', '1', '../imgs/1ac5fbea12c9dc646435a69daa443270.jpg', 'Administrador'),
+(24, 'João', 'João Henrique', '', '53189636842', '1111111', '2023-07-30', '', 'Solteiro(a)', '3', '1', '../imgs/1ac5fbea12c9dc646435a69daa443270.jpg', 'Administrador'),
 (25, 'Eric', 'Eric Sanderson', '', '49098843867', '', '2023-03-14', '', '', '', '', '../imgs/1ac5fbea12c9dc646435a69daa443270.jpg', 'Administrador'),
-(26, 'kleber', 'Kleber Souza', 'teste@teste', '21215155423', '112223335', '1998-02-01', '', 'Solteiro(a)', '2', '1', '../imgs/1ac5fbea12c9dc646435a69daa443270.jpg', 'Morador');
+(26, 'kleber', 'Kleber Souza', 'teste@teste', '21215155423', '112223335', '1998-02-01', '', 'Solteiro(a)', '2', '1', '../imgs/1ac5fbea12c9dc646435a69daa443270.jpg', 'Morador'),
+(35, 'Gustavo', 'Gustavo Guilherme', 'gustavo@gustavo', '11811100022', '', '2023-04-13', '', 'Solteiro(a)', '', '', '../imgs/1ac5fbea12c9dc646435a69daa443270.jpg', 'Morador');
 
 --
 -- Acionadores `tb_morador`
@@ -180,7 +181,7 @@ CREATE TABLE IF NOT EXISTS `tb_salao` (
   PRIMARY KEY (`cod_salao`),
   UNIQUE KEY `cod_morador` (`cod_morador`),
   KEY `cod_morador_2` (`cod_morador`)
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
 
 --
 -- Extraindo dados da tabela `tb_salao`
@@ -189,7 +190,8 @@ CREATE TABLE IF NOT EXISTS `tb_salao` (
 INSERT INTO `tb_salao` (`cod_salao`, `data_reserva`, `hora_inicio`, `hora_fim`, `cod_morador`) VALUES
 (4, '2023-03-31', '20:26:00', '21:22:00', 26),
 (15, '2023-04-05', '21:30:00', '22:00:00', 1),
-(18, '2023-07-30', '12:00:00', '23:00:00', 24);
+(18, '2023-07-30', '12:00:00', '23:00:00', 24),
+(19, '2023-04-20', '20:32:00', '20:33:00', 35);
 
 -- --------------------------------------------------------
 
@@ -206,7 +208,7 @@ CREATE TABLE IF NOT EXISTS `tb_usuarios` (
   `funcao` varchar(15) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`cod_usuario`),
   UNIQUE KEY `usuario` (`usuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
 
 --
 -- Extraindo dados da tabela `tb_usuarios`
@@ -217,7 +219,8 @@ INSERT INTO `tb_usuarios` (`cod_usuario`, `usuario`, `primeiro_nome`, `senha`, `
 (16, '55182079840', 'Gabriel', '21232f297a57a5a743894a0e4a801fc3', 'Administrador'),
 (17, '53189636842', 'João', '21232f297a57a5a743894a0e4a801fc3', 'Administrador'),
 (18, '49098843867', 'Eric', '21232f297a57a5a743894a0e4a801fc3', 'Administrador'),
-(19, '21215155423', 'kleber', '21232f297a57a5a743894a0e4a801fc3', 'Morador');
+(19, '21215155423', 'kleber', '21232f297a57a5a743894a0e4a801fc3', 'Morador'),
+(22, '11811100022', 'Gustavo', '21232f297a57a5a743894a0e4a801fc3', 'Morador');
 
 -- --------------------------------------------------------
 
