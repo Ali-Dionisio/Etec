@@ -10,9 +10,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
-    <script src="src/jquery-3.6.0.min.js"></script>
-    <script src="src/jQuery-Mask-Plugin-master/src/jquery.mask.js"></script>
+    <script src="../jquery/jquery-3.6.0.min.js"></script>
+    <script src="../jquery/jquery.mask.js"></script>
+    <script src="../jquery/app.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  
 </head>
 
 <?php
@@ -143,7 +146,7 @@
 
                    <nav class="telefone">
                     <label for="celular">TELEFONE</label>
-                    <input type="number" class="celular"  name="celular" id="celular" placeholder="(00) 00000-0000">
+                    <input type="text" class="celular"  name="celular" id="celular" placeholder="(00) 00000-0000">
                    </nav>
                    
                    <nav class="assunto">
@@ -187,7 +190,7 @@
     </div>
 
 
-    <!-- <script>
+    <script>
         function clique(){
                 if(document.getElementById("nome").value=="" || document.getElementById("sobrenome").value=="" || document.getElementById("telefone").value=="" 
                 || document.getElementById("area_texto").value=="" || document.getElementById("email").value=="" ){
@@ -196,15 +199,26 @@
                         document.getElementById("mensagem").innerHTML = "Mensagem enviada!"
                         }
                     }
-    </script> -->
-    <script>
-         $('.celular').mask('(00)00000-0000');
-
     </script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-</body>
 
+
+
+    <script>
+
+var $j = jQuery.noConflict();
+// Use jQuery com a variavel $j para evitar conflitos
+$j(document).ready(function(){
+$j('#celular').mask("(99) 99999-9999"); // onde #telefone é o id do campo
+
+});
+</script>
+
+
+
+</body>
 </html>
+
+
 
 
 

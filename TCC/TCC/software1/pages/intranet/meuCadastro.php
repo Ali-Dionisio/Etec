@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="../estilo/cadastro.css">
 
     <script src="../src/javascript.js"></script>
+    <script src="../jquery/jquery-3.6.0.min.js"></script>
+    <script src="../jquery/jquery.mask.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
@@ -125,3 +127,14 @@
 </body>
 
 </html>
+
+<!--MASCARAS-->
+<script>
+        var $j = jQuery.noConflict();
+        // Use jQuery com a variavel $j para evitar conflitos
+        $j(document).ready(function(){
+        $j('#cpf').mask("999.999.999-99");
+        $j('#celular').mask("(11) 99999-9999");
+        $j('#rg').mask("99.999.999-9");
+            });
+    </script>

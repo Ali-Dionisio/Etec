@@ -10,7 +10,8 @@
 
     <script src="../src/javascript.js"></script>
 
-
+    <script src="../jquery/jquery-3.6.0.min.js"></script>
+    <script src="../jquery/jquery.mask.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <!-- JavaScript Bundle with Popper -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script> -->
@@ -89,7 +90,7 @@
                     </div>
                     <div class="col-md-4">
                         <label for="celular" class="form-label">Celular</label>
-                        <input type="number" class="form-control" name="celular" value="<?php echo $morador['celular'] ?>" id="celular">
+                        <input type="text" class="form-control" name="celular" value="<?php echo $morador['celular'] ?>" id="celular">
                     </div>
                     <div class="col-md-4">
                         <label for="estadocivil" class="form-label">Estado Civil</label>
@@ -123,3 +124,14 @@
 </body>
 
 </html>
+
+<!--MASCARAS-->
+    <script>
+        var $j = jQuery.noConflict();
+        // Use jQuery com a variavel $j para evitar conflitos
+        $j(document).ready(function(){
+        $j('#cpf').mask("999.999.999-99");
+        $j('#celular').mask("(11) 99999-9999");
+        $j('#rg').mask("99.999.999-9");
+            });
+    </script>
