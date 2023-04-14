@@ -13,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <script src="../src/javascript.js"></script>
     <title>Salão</title>
 </head>
 
@@ -22,7 +23,7 @@
     @session_start();
     if (isset($_SESSION['msg'])) {
         echo "<p class=alert>$_SESSION[msg]</p>";
-        
+
         unset($_SESSION['msg']);
     }
 
@@ -73,7 +74,7 @@
         </form>
     </div>
     <div class="salaoLista">
- 
+
         <?php include('../intranet/salaoLista.php'); ?>
     </div>
 </body>

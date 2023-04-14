@@ -22,6 +22,8 @@
 </head>
 
 <body>
+    <div class="msg"></div>
+
     <?php include('../intranet/barraSuperiorInt.php'); ?>
     <?php
     @session_start();
@@ -30,7 +32,6 @@
         unset($_SESSION['msg']);
     }
     ?>
-    <div class="msg"></div>
     <?php
     $usuarioLogin = $_GET['cpf'];
     require('../acoes/connect.php');
@@ -130,11 +131,11 @@
 
 <!--MASCARAS-->
 <script>
-        var $j = jQuery.noConflict();
-        // Use jQuery com a variavel $j para evitar conflitos
-        $j(document).ready(function(){
+    var $j = jQuery.noConflict();
+    // Use jQuery com a variavel $j para evitar conflitos
+    $j(document).ready(function() {
         $j('#cpf').mask("999.999.999-99");
         $j('#celular').mask("(11) 99999-9999");
         $j('#rg').mask("99.999.999-9");
-            });
-    </script>
+    });
+</script>

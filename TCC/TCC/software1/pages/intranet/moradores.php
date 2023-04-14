@@ -23,6 +23,7 @@
     </script>
 </head>
 <body>
+    <div class="msg"></div>
 <?php include('./barraSuperiorInt.php'); ?>    
 
     <div class="pesquisar">
