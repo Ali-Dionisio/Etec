@@ -183,8 +183,8 @@
         <p class="rua_matriz"> Matriz: Rua Virgínia Ferni, 400 - Itaquera, São Paulo - SP. | CEP: 0825-3000 | Fones: (11) 2254-7627 </p>
         <p  id="copy">Copyright &copy;  2023. Condmind</p>
         <div id="icon_footer">
-           <a class="link_footer" href="https://www.instagram.com"><img class="img_f" src="../imgs/instagram.png" alt="Imagem Instagram"></a> 
-            <a class="link_footer" href="https://www.linkedin.com/"><img class="img_f" src="../imgs/linkedin.png" alt="Imagem Linkedln"></a>
+           <a class="link_footer" href="https://www.instagram.com/empresashannon/"><img class="img_f" src="../imgs/instagram.png" alt="Imagem Instagram"></a> 
+            <a class="link_footer" href="https://www.linkedin.com/in/empresa-shannon-a7b8ab270/"><img class="img_f" src="../imgs/linkedin.png" alt="Imagem Linkedln"></a>
             <a class="link_footer" href="https://www.facebook.com"><img class="img_f" src="../imgs/facebook.png" alt="Imagem Facebook"></a>
         </div>
     </div>
