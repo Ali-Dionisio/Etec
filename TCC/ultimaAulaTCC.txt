@@ -1,0 +1,8 @@
+pesquisa.:
+
+filtro por data(mes/ano)
+Mes mais reservado
+por morador
+
+
+INSERT INTO `tb_hist_salao` (`tb_hist_salao`.`num_historico`, `tb_hist_salao`.`data_reserva`, `tb_hist_salao`.`hora_inicio`, `tb_hist_salao`.`hora_fim`, `tb_hist_salao`.`cod_morador`) SELECT null, `tb_salao`.`data_reserva`, `tb_salao`.`hora_inicio`, `tb_salao`.`hora_fim`, `tb_salao`.`cod_morador` FROM `tb_salao` WHERE `data_reserva` <> `tb_salao`.`data_reserva`;
