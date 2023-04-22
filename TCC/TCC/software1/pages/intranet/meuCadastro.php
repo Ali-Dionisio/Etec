@@ -129,13 +129,3 @@
 
 </html>
 
-<!--MASCARAS-->
-<script>
-    var $j = jQuery.noConflict();
-    // Use jQuery com a variavel $j para evitar conflitos
-    $j(document).ready(function() {
-        $j('#cpf').mask("999.999.999-99");
-        $j('#celular').mask("(11) 99999-9999");
-        $j('#rg').mask("99.999.999-9");
-    });
-</script>

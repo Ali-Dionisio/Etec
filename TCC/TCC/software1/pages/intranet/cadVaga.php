@@ -44,13 +44,13 @@
                 <form class=" mt-5 row g-3 " action="../acoes/cadVaga.act.php" method="post" enctype="multipart/form-data">
 
                     <div class="col-md-4">
-                        <label for="cod_morador" class="form-label">Código Proprietário</label>
-                        <input type="number" name="cod_morador" class="form-control" id="codigomorador">
+                        <label for="cod_vaga" class="form-label">Código Proprietário</label>
+                        <input type="number" name="cod_vaga" class="form-control" id="cod_vaga">
                     </div>
                     <hr>
                     <div class="col-md-4">
-                        <label for="numerovaga" class="form-label">Número da Vaga</label>
-                        <select type="text" id="numerovaga" name="num_vaga" class="form-select2">
+                        <label for="num_vaga" class="form-label">Número da Vaga</label>
+                        <select type="text" id="num_vaga" name="num_vaga" class="form-select2">
                             <option value="">Selecione um número</option>
                             <?php
                             for ($i = 1; $i <= 100; $i++) {
@@ -61,8 +61,8 @@
                     </div>
                     <hr>
                     <div class="col-md-4">
-                        <label for="tipovaga" class="form-label">Tipo de Vaga</label>
-                        <select type="text" id="tipovaga" name="tipo_vaga" class="form-select2">
+                        <label for="tipo_vaga" class="form-label">Tipo de Vaga</label>
+                        <select type="text" id="tipo_vaga" name="tipo_vaga" class="form-select2">
                             <option value="">Selecione o tipo de veículo</option>
                             <option>Carro</option>
                             <option>Moto</option>
@@ -70,14 +70,14 @@
                     </div>
                     <hr>
                     <div class="col-md-4">
-                        <label for="placaveiculo" class="form-label">Placa do Veículo</label>
-                        <input type="number" name="placa_veiculo" class="form-control" id="placaveiculo">
+                        <label for="ocupada " class="form-label">Código do Usuário</label>
+                        <input type="number" name="ocupada" class="form-control" id="ocupada">
                     </div>
                     <hr>
                     <div class="col-md-4">
-                        <label for="codigousuario " class="form-label">Código do Usuário</label>
-                        <input type="number" name="cod_usuario" class="form-control" id="codigousuario">
-                        </div>
+                        <label for="placaveiculo" class="form-label">Placa do Veículo</label>
+                        <input type="text" name="placa_veiculo" class="form-control" id="placaveiculo">
+                    </div>
                     <hr>
                     <div class="col-12 ">
                         <button type="submit" class="btn-enviar">Cadastrar</button>

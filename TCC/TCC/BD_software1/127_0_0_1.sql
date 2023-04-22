@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 14-Abr-2023 às 18:09
+-- Tempo de geração: 19-Abr-2023 às 16:56
 -- Versão do servidor: 5.7.36
 -- versão do PHP: 7.4.26
 
@@ -116,6 +116,33 @@ INSERT INTO `tb_funcao` (`cod_funcao`, `descricao_funcao`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Estrutura da tabela `tb_hist_salao`
+--
+
+DROP TABLE IF EXISTS `tb_hist_salao`;
+CREATE TABLE IF NOT EXISTS `tb_hist_salao` (
+  `num_hist_salao` int(11) NOT NULL AUTO_INCREMENT,
+  `cod_salao` int(11) NOT NULL DEFAULT '0',
+  `data_reserva` date NOT NULL,
+  `hora_inicio` time NOT NULL,
+  `hora_fim` time NOT NULL,
+  `cod_morador` int(11) NOT NULL,
+  PRIMARY KEY (`num_hist_salao`)
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Extraindo dados da tabela `tb_hist_salao`
+--
+
+INSERT INTO `tb_hist_salao` (`num_hist_salao`, `cod_salao`, `data_reserva`, `hora_inicio`, `hora_fim`, `cod_morador`) VALUES
+(1, 15, '2023-04-19', '10:30:00', '13:50:00', 1),
+(2, 18, '2023-07-30', '12:00:00', '23:00:00', 24),
+(3, 19, '2023-04-21', '09:45:00', '10:45:00', 35),
+(5, 21, '2023-04-20', '13:39:54', '14:38:54', 23);
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura da tabela `tb_morador`
 --
 
@@ -189,16 +216,31 @@ CREATE TABLE IF NOT EXISTS `tb_salao` (
   PRIMARY KEY (`cod_salao`),
   UNIQUE KEY `cod_morador` (`cod_morador`),
   KEY `cod_morador_2` (`cod_morador`)
-) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Extraindo dados da tabela `tb_salao`
 --
 
 INSERT INTO `tb_salao` (`cod_salao`, `data_reserva`, `hora_inicio`, `hora_fim`, `cod_morador`) VALUES
-(15, '2023-04-05', '21:30:00', '22:00:00', 1),
 (18, '2023-07-30', '12:00:00', '23:00:00', 24),
-(19, '2023-04-21', '08:45:00', '10:45:00', 35);
+(19, '2023-04-21', '09:45:00', '10:45:00', 35),
+(21, '2023-04-20', '13:39:54', '14:38:54', 23);
+
+--
+-- Acionadores `tb_salao`
+--
+DROP TRIGGER IF EXISTS `AtualizaHistoricoSalao`;
+DELIMITER $$
+CREATE TRIGGER `AtualizaHistoricoSalao` AFTER UPDATE ON `tb_salao` FOR EACH ROW UPDATE tb_hist_salao SET data_reserva = NEW.data_reserva, hora_inicio = NEW.hora_inicio, hora_fim = NEW.hora_fim
+where cod_salao = OLD.cod_salao
+$$
+DELIMITER ;
+DROP TRIGGER IF EXISTS `alimetarHistoricoSalao`;
+DELIMITER $$
+CREATE TRIGGER `alimetarHistoricoSalao` AFTER INSERT ON `tb_salao` FOR EACH ROW INSERT INTO tb_hist_salao (cod_salao, data_reserva, hora_inicio, hora_fim, cod_morador) VALUES (NEW.cod_salao, NEW.data_reserva, NEW.hora_inicio, NEW.hora_fim, NEW.cod_morador)
+$$
+DELIMITER ;
 
 -- --------------------------------------------------------
 
@@ -245,7 +287,7 @@ CREATE TABLE IF NOT EXISTS `tb_vaga_garagem` (
   PRIMARY KEY (`cod_vaga`),
   UNIQUE KEY `placa_veiculo_2` (`placa_veiculo`),
   KEY `placa_veiculo` (`placa_veiculo`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
