@@ -23,7 +23,7 @@ body{
     display:inline-grid;
     margin-left: 4%;
 }
-#calendario{
+#data, #horaInicio, #horaTermino{
     width: 14rem;
     border-color: #1484FC;
 }

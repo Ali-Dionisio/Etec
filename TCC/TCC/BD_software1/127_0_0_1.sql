@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 19-Abr-2023 às 16:56
+-- Tempo de geração: 24-Abr-2023 às 01:37
 -- Versão do servidor: 5.7.36
 -- versão do PHP: 7.4.26
 
@@ -128,7 +128,7 @@ CREATE TABLE IF NOT EXISTS `tb_hist_salao` (
   `hora_fim` time NOT NULL,
   `cod_morador` int(11) NOT NULL,
   PRIMARY KEY (`num_hist_salao`)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Extraindo dados da tabela `tb_hist_salao`
@@ -138,7 +138,12 @@ INSERT INTO `tb_hist_salao` (`num_hist_salao`, `cod_salao`, `data_reserva`, `hor
 (1, 15, '2023-04-19', '10:30:00', '13:50:00', 1),
 (2, 18, '2023-07-30', '12:00:00', '23:00:00', 24),
 (3, 19, '2023-04-21', '09:45:00', '10:45:00', 35),
-(5, 21, '2023-04-20', '13:39:54', '14:38:54', 23);
+(5, 21, '2023-04-20', '13:39:54', '14:38:54', 23),
+(6, 22, '2023-04-20', '00:00:00', '00:00:00', 1),
+(7, 23, '2023-04-21', '20:18:00', '20:20:00', 1),
+(8, 25, '2024-01-20', '00:00:00', '00:00:00', 1),
+(9, 26, '2023-04-19', '00:00:00', '00:00:00', 1),
+(10, 27, '2023-04-12', '00:00:00', '00:00:00', 1);
 
 -- --------------------------------------------------------
 
@@ -216,16 +221,14 @@ CREATE TABLE IF NOT EXISTS `tb_salao` (
   PRIMARY KEY (`cod_salao`),
   UNIQUE KEY `cod_morador` (`cod_morador`),
   KEY `cod_morador_2` (`cod_morador`)
-) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Extraindo dados da tabela `tb_salao`
 --
 
 INSERT INTO `tb_salao` (`cod_salao`, `data_reserva`, `hora_inicio`, `hora_fim`, `cod_morador`) VALUES
-(18, '2023-07-30', '12:00:00', '23:00:00', 24),
-(19, '2023-04-21', '09:45:00', '10:45:00', 35),
-(21, '2023-04-20', '13:39:54', '14:38:54', 23);
+(18, '2023-07-30', '12:00:00', '23:00:00', 24);
 
 --
 -- Acionadores `tb_salao`

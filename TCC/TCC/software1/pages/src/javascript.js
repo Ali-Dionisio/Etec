@@ -1,6 +1,19 @@
 //  src="src/jQuery-Mask-Plugin-master/src/jquery.mask.js" 
 //  src="src/jquery-3.6.0.min.js"
 
+
+var x = document.getElementById("data").value;
+
+let DataAtual = new Date().toISOString().slice(0, 10).split('-').join('-');
+
+$('#data').click(function () {
+    console.log("è o que aáá ")
+})
+
+// if(x < DataAtual){
+//     alert("è o que é ")
+// };
+
 function enter(){
     //var x = document.getElementById("Login").value;
     window.location.href = "intranet.php";    
@@ -39,11 +52,6 @@ function voltarVaga() {
     window.location.href = "viewMinhaVaga.php";
 }
 
-$(document).ready(function () {
-    $("#calendario").click(function() {
-        if(data < Date()){
-            console.log("o valor da data é menor");
-        }
-    })
-})  
 
+
+    // impede o envio do form - e.preventDefault();

@@ -1,7 +1,7 @@
 <?php require('sec.php') ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <head>
@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
-    <script src="../src/javascript.js"></script>
+    
     <title>Salão</title>
 </head>
 
@@ -50,20 +50,29 @@
     </div>
     <div class="disposicaoDate">
         <h2>Marque abaixo a data e o horario de inicio e termino do seu evento</h2>
-        <form class="form mt-2 row g-3" action="../acoes/salao.act.php" method="post" id="">
+        <form class="form mt-2 row g-3" action="../acoes/salao.act.php" method="post" id="formulario">
 
             <div class="marcaEvento">
                 <div class="dataHora1">
                     <p> Data do evento: </p>
-                    <input type="date" name="Calendario" id="calendario">
+    <?php
+                date_default_timezone_set('America/Sao_Paulo');
+                $hoje = date('Y-m-d') ;
+                $hora = date('H:i');
+
+            //echo "$hora";
+            echo    "<input type=date name=Calendario id=data min=$hoje value=> ";
+    ?>
                 </div>
                 <div class="dataHora2">
                     <p> Horário de Inicio</p>
-                    <input type="time" name="horaInicio" id="calendario">
+    <?php
+            echo     "<input type=time name=horaInicio id=horaInicio min=$hora value=$hora>";
+    ?>
                 </div>
                 <div class="dataHora2">
                     <p> Horário de Termino </p>
-                    <input type="time" name="horaFim" id="calendario">
+                    <input type="time" name="horaFim" id="horaTermino">
                     <input type="hidden" name="cod_morador" class="form-control" value="<?php echo $morador['cod_morador'] ?>">
 
                 </div>
@@ -74,9 +83,10 @@
         </form>
     </div>
     <div class="salaoLista">
-
+        
         <?php include('../intranet/salaoLista.php'); ?>
     </div>
+    <script src="../src/javascript.js"></script>
 </body>
 
 </html>
