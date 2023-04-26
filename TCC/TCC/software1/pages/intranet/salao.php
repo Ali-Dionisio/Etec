@@ -9,6 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../estilo/salao.css">
+    <script src="../src/javascript.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,6 +33,7 @@
     $busca = mysqli_query($con, "Select * from `tb_morador` where `cpf` = '$codUsuario'");
     $morador = mysqli_fetch_array($busca);
     ?>
+    <button type="button"  onclick="consuhisto()" id="consuhisto" class="mt-4 p-2 px-5 btn btn-primary">Consultar Histórico</button>
 
     <div class="titSalao">
         <div class="esquerda">

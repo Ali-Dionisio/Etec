@@ -5,7 +5,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
 
-<h1>Listar Usuários</h1>
+<h1>Lista de Eventos</h1>
 <?php
 @session_start();
 if (isset($_SESSION['msg'])) {

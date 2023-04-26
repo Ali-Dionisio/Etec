@@ -69,3 +69,18 @@ a{
     width: 80%;
     margin: 0 auto;    
 }
+.titEventos{
+    text-align: center;
+    padding: 20px;   
+}
+#consuhisto{
+    position: absolute;
+    right: 0;
+}
+.tittabela{
+    background: #1484FC;
+    color: white;
+}
+.linha{
+    color: #1484FC;
+}

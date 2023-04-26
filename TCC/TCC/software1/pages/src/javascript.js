@@ -30,6 +30,9 @@ function cancelarMorador() {
 function cancelarIntra() {
     window.location.href = "../intranet/intranet.php";
 }
+function consuhisto() {
+    window.location.href = "../intranet/consultarHistorico.php";
+}
 function cancelarUsuario() {
     window.location.href = "../intranet/usuarios.php";
 }
