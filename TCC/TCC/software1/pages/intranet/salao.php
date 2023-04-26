@@ -80,9 +80,17 @@
                 </div>
                 <div class="dataHora2">
                     <p> Horário de Termino </p>
-                    <nav id="exibir" class="exibir"></nav>
+                    <!-- <nav id="exibir" class="exibir"></nav> -->
 
-                    <input type="time" name="horaFim" id="horaTermino" value=" <script>     document.getElementById(exibir).value = x; </script>"> 
+                    <!-- <input type="time" name="horaFim" id="horaTermino" value=""> -->
+                    <script>
+                        function jogaDataFim(horaInicio){
+                        var x = document.getElementById("horaInicio").value;
+                        console.log(x);
+                        //document.getElementById("exibir").innerHTML = x;
+                    }
+                        document.write("<input type='time' name='horaFim' min=" + x +" id='horaTermino' value='"+ x + "'>"   );
+                    </script> 
                     <input type="hidden" name="cod_morador" class="form-control" value="<?php echo $morador['cod_morador'] ?>">
 
                 </div>
@@ -97,16 +105,14 @@
         <?php include('../intranet/salaoLista.php'); ?>
     </div>
     <script src="../src/javascript.js"></script>
-    <script>
+    <!-- <script>
         function jogaDataFim(horaInicio){
         var x = document.getElementById("horaInicio").value;
         console.log(x);
         document.getElementById("exibir").innerHTML = x;
 
     }
-    </script>
-     <script>     document.getElementById("exibir").value = x; </script>
-    
+    </script>     -->
 </body>
 
 </html>

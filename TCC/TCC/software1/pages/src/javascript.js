@@ -2,14 +2,6 @@
 //  src="src/jquery-3.6.0.min.js"
 
 
-var x = document.getElementById("data").value;
-
-let DataAtual = new Date().toISOString().slice(0, 10).split('-').join('-');
-
-$('#data').click(function () {
-    console.log("è o que aáá ")
-})
-
 // if(x < DataAtual){
 //     alert("è o que é ")
 // };
