@@ -1,0 +1,19 @@
+.logo{
+    max-width: 10rem;
+    margin-bottom: 2rem;
+}
+li button{
+    width: 15rem;
+}
+body{
+    background-image: url("../imagens/PORTARIA.jpg");
+    background-repeat: no-repeat;    
+    background-size: 100vw 100vh;
+    background-position: top;
+    background-attachment: fixed;
+}
+.opcoes{
+    position: absolute;
+    bottom: 1rem;
+    left: 4rem;
+}
