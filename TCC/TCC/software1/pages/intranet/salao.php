@@ -59,20 +59,28 @@
                 date_default_timezone_set('America/Sao_Paulo');
                 $hoje = date('Y-m-d') ;
                 $hora = date('H:i');
-
-            //echo "$hora";
-            echo    "<input type=date name=Calendario id=data min=$hoje value=> ";
-    ?>
+                $horaNova = strtotime("$hora + 30 minutes");
+                $hora = date("H:i",$horaNova);
+               // echo $hora;       
+               echo    "<input type=date name=Calendario id=data min=$hoje value=$hoje> ";
+               ?>
                 </div>
                 <div class="dataHora2">
                     <p> Horário de Inicio</p>
     <?php
-            echo     "<input type=time name=horaInicio id=horaInicio min=$hora value=$hora>";
+         /*   echo     "   <label for=hora-cons>Escolha o horário da consulta (aberto das 12:00 às 18:00): </label>";*/
+            echo     "    <input name=horaInicio id=horaInicio type=time";
+            echo     "          min=$hora onclick=jogaDataFim() required value=$hora>" ;
+            echo     "   <span class=validacao></span>";
+
+            /*echo     "<input type=time name=horaInicio id=horaInicio min=$hora value=$hora>";*/
     ?>
                 </div>
                 <div class="dataHora2">
                     <p> Horário de Termino </p>
-                    <input type="time" name="horaFim" id="horaTermino">
+                    <nav id="exibir" class="exibir"></nav>
+
+                    <input type="time" name="horaFim" id="horaTermino" value=" <script>     document.getElementById(exibir).value = x; </script>"> 
                     <input type="hidden" name="cod_morador" class="form-control" value="<?php echo $morador['cod_morador'] ?>">
 
                 </div>
@@ -87,6 +95,16 @@
         <?php include('../intranet/salaoLista.php'); ?>
     </div>
     <script src="../src/javascript.js"></script>
+    <script>
+        function jogaDataFim(horaInicio){
+        var x = document.getElementById("horaInicio").value;
+        console.log(x);
+        document.getElementById("exibir").innerHTML = x;
+
+    }
+    </script>
+     <script>     document.getElementById("exibir").value = x; </script>
+    
 </body>
 
 </html>

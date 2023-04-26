@@ -1,0 +1,55 @@
+body{
+    background-color: #F8F9FA;
+    background-repeat: no-repeat;    
+    background-size: 100vw 100vh;
+    background-position: top;
+    background-attachment: fixed;
+}
+p,
+h1,
+h2,
+a,
+input,
+label,
+button{
+    font-family: 'Ubuntu', sans-serif  !important;
+}
+
+.cadastro, .col .imglogo{
+    padding: 30px;
+
+}
+.imglogo{
+    margin-top: 4vw;
+}
+.imglogo{
+    display: flex;
+    float: left;
+}
+.imglogo img{
+    width: 50%;
+}
+.form {
+    color: white;
+}
+label{
+    color: black;
+}
+.form-control, #estadocivil{
+    border:  2px solid #1484FC;
+    border-radius: 0px;
+}
+
+.imgUsuario{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    max-width: 150px;
+}
+.alterarSenha a{
+    color: white;
+    text-decoration: none;
+}
+.alterarSenha a:hover{
+    color: white;
+    text-decoration: none;
+}
