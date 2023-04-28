@@ -49,4 +49,3 @@ function voltarVaga() {
 
 
 
-    // impede o envio do form - e.preventDefault();

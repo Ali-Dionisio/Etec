@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
-    
+
     <title>Salão</title>
 </head>
 
@@ -33,8 +33,9 @@
     $busca = mysqli_query($con, "Select * from `tb_morador` where `cpf` = '$codUsuario'");
     $morador = mysqli_fetch_array($busca);
     ?>
-    <button type="button"  onclick="consuhisto()" id="consuhisto" class="mt-4 p-2 px-5 btn btn-primary">Consultar Histórico</button>
-
+    <?php echo    "<div class=$controleMorador>";   ?>
+    <button type="button" onclick="consuhisto()" id="consuhisto" class="mt-4 p-2 px-5 btn btn-primary">Consultar Histórico</button>
+    <?php  echo  "</div>";  ?>
     <div class="titSalao">
         <div class="esquerda">
             <h2>Agende o seu horário, <?php echo " $_SESSION[nome] "; ?> </h2><br>
@@ -57,42 +58,38 @@
             <div class="marcaEvento">
                 <div class="dataHora1">
                     <p> Data do evento: </p>
-    <?php
-                date_default_timezone_set('America/Sao_Paulo');
-                $hoje = date('Y-m-d') ;
-                $hora = date('H:i');
-                $horaNova = strtotime("$hora + 30 minutes");
-                $hora = date("H:i",$horaNova);
-               // echo $hora;       
-               echo    "<input type=date name=Calendario id=data min=$hoje value=$hoje> ";
-               ?>
+                    <?php
+                    date_default_timezone_set('America/Sao_Paulo');
+                    $hoje = date('Y-m-d');
+                    $hora = date('H:i');
+                    $horaNova = strtotime("$hora + 30 minutes");
+                    $hora = date("H:i", $horaNova);
+                    // echo $hora;       
+                    echo    "<input type=date name=Calendario id=data min=$hoje value=$hoje> ";
+                    ?>
                 </div>
                 <div class="dataHora2">
                     <p> Horário de Inicio</p>
-    <?php
-         /*   echo     "   <label for=hora-cons>Escolha o horário da consulta (aberto das 12:00 às 18:00): </label>";*/
-            echo     "    <input name=horaInicio id=horaInicio type=time";
-            echo     "          min=$hora onclick=jogaDataFim() required value=$hora>" ;
-            echo     "   <span class=validacao></span>";
+                    <?php
+                    /*   echo     "   <label for=hora-cons>Escolha o horário da consulta (aberto das 12:00 às 18:00): </label>";*/
+                    echo     "    <input name=horaInicio id=horaInicio type=time";
+                    echo     "          min=$hora onclick=jogaDataFim() required value=$hora>";
+                    echo     "   <span class=validacao></span>";
+                    $horaEscolhida = $hora;
 
-            /*echo     "<input type=time name=horaInicio id=horaInicio min=$hora value=$hora>";*/
-    ?>
+                    $horaNova2 = strtotime("$horaEscolhida + 30 minutes");
+                    $horaMostrar = date("H:i", $horaNova2);
+                    "<input type=time name=horaInicio id=horaInicio min=$horaMostrar value=$horaMostrar>";
+                    ?>
                 </div>
                 <div class="dataHora2">
                     <p> Horário de Termino </p>
                     <!-- <nav id="exibir" class="exibir"></nav> -->
+                    <?php
+                    echo     "    <input type=time name=horaFim id=horaTermino min=$hora value=$hora >";
 
-                    <!-- <input type="time" name="horaFim" id="horaTermino" value=""> -->
-                    <script>
-                        function jogaDataFim(horaInicio){
-                        var x = document.getElementById("horaInicio").value;
-                        console.log(x);
-                        //document.getElementById("exibir").innerHTML = x;
-                    }
-                        document.write("<input type='time' name='horaFim' min=" + x +" id='horaTermino' value='"+ x + "'>"   );
-                    </script> 
-                    <input type="hidden" name="cod_morador" class="form-control" value="<?php echo $morador['cod_morador'] ?>">
-
+                    echo     "   <input type=hidden name=cod_morador class=form-control value=$morador[cod_morador]> ";
+                    ?>
                 </div>
             </div>
             <div class="col-12">
@@ -101,18 +98,19 @@
         </form>
     </div>
     <div class="salaoLista">
-        
+
         <?php include('../intranet/salaoLista.php'); ?>
     </div>
     <script src="../src/javascript.js"></script>
-    <!-- <script>
-        function jogaDataFim(horaInicio){
-        var x = document.getElementById("horaInicio").value;
-        console.log(x);
-        document.getElementById("exibir").innerHTML = x;
+    <script>
+        function jogaDataFim(horaInicio) {
+            var x = document.getElementById("horaInicio").value;
+            console.log(x);
+            document.getElementById("exibir").innerHTML = x;
+            document.write(x);
 
-    }
-    </script>     -->
+        }
+    </script>
 </body>
 
 </html>

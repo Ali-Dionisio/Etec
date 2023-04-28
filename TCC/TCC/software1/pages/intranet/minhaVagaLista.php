@@ -18,17 +18,20 @@ echo "<table class='table table-hover
          echo "<th>#</th>";
          echo "<th>Número da Vaga</th>";
          echo "<th>Tipo da Vaga</th>";
-         echo "<th>Situação da Vaga</th>";
+         echo "<th>Usuário</th>";
          echo "<th>Placa do Veículo</th>";
          echo "<th>Ações</th>";
          echo "</tr>";
     while($vaga = mysqli_fetch_array($vagas)){
-    $moradores = mysqli_query($con, "Select * from `tb_vaga_garagem` where cod_vaga = $vaga[cod_vaga]" );
+    $usuarios= mysqli_query($con, "Select * from `tb_usuarios` where cod_usuario = $vaga[ocupada]" );
         echo "<tr>";
         echo "<td> $vaga[cod_vaga] </td>";
         echo "<td> $vaga[num_vaga] </td>";
         echo "<td> $vaga[tipo_vaga] </td>";
-        echo "<td> $vaga[ocupada] </td>";
+        while ($usuario = mysqli_fetch_array($usuarios)) {
+            $nome = strtoupper("$usuario[primeiro_nome]");
+        echo "<td>$vaga[ocupada] -  $nome </td>";
+        }
         echo "<td> $vaga[placa_veiculo] </td>";
         
         echo "<td>

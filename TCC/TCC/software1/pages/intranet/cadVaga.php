@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CondMind</title>
-        <script src="../src/javascript.js"></script>
+    <script src="../src/javascript.js"></script>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <!-- JavaScript Bundle with Popper -->
@@ -28,6 +28,11 @@
     if (isset($_SESSION['msg'])) {
         echo "<p class=alert>$_SESSION[msg]</p>";
         unset($_SESSION['msg']);
+
+
+
+        $codMorador = $_GET['cod'];
+        require('../acoes/connect.php');
     }
     ?>
     <div class="mt-5 container text-center">
@@ -44,9 +49,11 @@
                 <form class=" mt-5 row g-3 " action="../acoes/cadVaga.act.php" method="post" enctype="multipart/form-data">
 
                     <div class="col-md-4">
-                        <label for="cod_vaga" class="form-label">Código Proprietário</label>
-                        <input type="number" name="cod_vaga" class="form-control" id="cod_vaga">
+                        <!-- <label for="cod_vaga" class="form-label">Código Proprietário</label> -->
+                        <input type="hidden" name="cod_vaga" class="form-control" id="cod_vaga">
                     </div>
+
+
                     <hr>
                     <div class="col-md-4">
                         <label for="num_vaga" class="form-label">Número da Vaga</label>
@@ -71,12 +78,51 @@
                     <hr>
                     <div class="col-md-4">
                         <label for="ocupada " class="form-label">Código do Usuário</label>
-                        <input type="number" name="ocupada" class="form-control" id="ocupada">
+                        <!-- <input type="number" name="ocupada" class="form-control" id="ocupada"> -->
+
+                        <select type="number" name="ocupada" class="form-control" id="ocupada">
+
+                            <?php
+                            $sql = "SELECT * FROM tb_usuarios";
+                            $result = $con->query($sql);
+                            if ($result->num_rows > 0) {
+                                // output data of each row
+                                while ($row = $result->fetch_assoc()) {
+                                    echo "<option> <br> Cod.: " .  $row["cod_usuario"] . " - Nome: " . $row["primeiro_nome"] . "<br> </option>";
+                                }
+                            } else {
+                                echo "0 results";
+                            }
+
+                            ?>
+                        </select>
                     </div>
                     <hr>
                     <div class="col-md-4">
                         <label for="placaveiculo" class="form-label">Placa do Veículo</label>
-                        <input type="text" name="placa_veiculo" class="form-control" id="placaveiculo">
+                        <select type="text" name="placa_veiculo" class="form-control" id="placaveiculo">
+
+                            <?php
+                            $sql = "SELECT * FROM tb_veiculo_morador";
+                            $result = $con->query($sql);
+                            $sqlMorador = "SELECT * FROM tb_morador";
+                            $resultMorador = $con->query($sqlMorador);
+
+                            if ($result->num_rows > 0) {
+                                // output data of each row
+                                while ($row = $result->fetch_assoc()) {
+                                    while ($row1 = $resultMorador->fetch_assoc()) {
+                                    echo "<option> <br> Placa.: " .  $row["placa_veiculo"] . " - Proprietario: " 
+                                    . $row1["primeiro_nome"] . 
+                                    "<br> </option>";
+                                }
+                                }
+                            } else {
+                                echo "0 results";
+                            }
+
+                            ?>
+                        </select>
                     </div>
                     <hr>
                     <div class="col-12 ">

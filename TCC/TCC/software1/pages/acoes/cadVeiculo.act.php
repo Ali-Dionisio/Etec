@@ -27,4 +27,4 @@ var_dump($_FILES);
 var_dump($_POST);
 
 
-header("location:../intranet/minhaVaga.php");
+//header("location:../intranet/minhaVaga.php");

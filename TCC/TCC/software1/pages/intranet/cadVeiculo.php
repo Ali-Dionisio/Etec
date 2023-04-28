@@ -90,29 +90,49 @@
                     <hr>
                     <div class="col-md-4">
                         <label for="cor" class="form-label">Cor do Veículo</label>
-                        <select type="text" name="cor" class="form-select2">
-                            <option>Selecione uma cor</option>
-                            <option>Preto</option>
-                            <option>Branco</option>
-                            <option>Vermelho</option>
-                            <option>Verde</option>
-                            <option>Azul</option>
-                            <option>Amarelo</option>
-                            <option>Rosa</option>
-                            <option>Roxo</option>
-                            <option>Laranja</option>
-                            <option>Verde escuro</option>
-                            <option>Marrom</option>
+                        <select type="text" name="cor" class="form-select2" ">
+                         <option select></option>
+
+                            <?php
+                            $sql = "SELECT * FROM tb_cor";
+                            $result = $con->query($sql);
+                            if ($result->num_rows > 0) {
+                                // output data of each row
+                                while ($row = $result->fetch_assoc()) {
+                                    echo "<option value=$row[descricao_cor]> <br> Cod.: " .  $row["cod_cor"] . " - Cor: " . $row["descricao_cor"] . "<br> </option>";
+                                }
+                            } else {
+                                echo "0 results";
+                            }
+
+                            ?>
                         </select>
                     </div>
                     <hr>
-                    <div class="col-md-4">
-                        <label for="cod_morador" class="form-label">Código Proprietário</label>
-                        <input type="text" name="cod_morador" class="form-control">
+                    <div class=" col-md-4">
+                            <label for="cod_morador" class="form-label">Código Proprietário</label>
+                            <!-- <input type="text" name="cod_morador" class="form-control"> -->
+                            <select type="text" name="cod_morador" class="form-select2">
+                                <option select></option>
+
+                                <?php
+                                $sql = "SELECT * FROM tb_morador";
+                                $result = $con->query($sql);
+                                if ($result->num_rows > 0) {
+                                    // output data of each row
+                                    while ($row = $result->fetch_assoc()) {
+                                        echo "<option value=$row[cod_morador]> <br> Cod.: " .  $row["cod_morador"] . " - Nome: " . $row["primeiro_nome"] . "<br> </option>";
+                                    }
+                                } else {
+                                    echo "0 results";
+                                }
+
+                                ?>
+                            </select>
                     </div>
                     <hr>
-                    <div class="col-12 ">
-                        <button type="submit" class="btn-enviar">Cadastrar</button>
+                    <div class=" col-12 ">
+                        <button type=" submit" class="btn-enviar">Cadastrar</button>
                     </div>
                 </form>
                 <button onclick="voltarVaga()" class="btn-cancel">Cancelar</button>

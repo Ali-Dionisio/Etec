@@ -22,7 +22,7 @@
     @session_start();
     if (isset($_SESSION['msg'])) {
         echo "<p class=alert>$_SESSION[msg]</p>";
-        
+
         unset($_SESSION['msg']);
     }
 
@@ -41,7 +41,9 @@
             </a>
         </div>
 
-
+<?php
+    echo    "<div class=$controleMorador>";
+?>
         <div class="btn2">
             <a class="button" id="button2" href="cadVeiculo.php">
                 <div class="icon">
@@ -49,17 +51,22 @@
                 </div>
             </a>
         </div>
-
-
-
-        <div class="btn3">
-            <a class="button" id="button3" href="cadVaga.php">
-                <div class="icon">
-                    <i class="fa-solid fa-warehouse"></i>Cadastrar Vaga
-                </div>
-            </a>
-        </div>
-
+<?php
+    echo    "</div>";
+?>
+<?php
+    echo    "<div class=$controleMorador>";
+?>
+            <div class="btn3">
+                <a class="button" id="button3" href="cadVaga.php">
+                    <div class="icon">
+                        <i class="fa-solid fa-warehouse"></i>Cadastrar Vaga
+                    </div>
+                </a>
+            </div>
+<?php
+    echo    "</div>";
+?>
     </div>
 
     <script src="https://kit.fontawesome.com/37e7af53fa.js" crossorigin="anonymous"></script>
