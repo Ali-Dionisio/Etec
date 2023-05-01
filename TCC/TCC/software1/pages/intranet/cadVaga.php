@@ -88,7 +88,7 @@
                             if ($result->num_rows > 0) {
                                 // output data of each row
                                 while ($row = $result->fetch_assoc()) {
-                                    echo "<option> <br> Cod.: " .  $row["cod_usuario"] . " - Nome: " . $row["primeiro_nome"] . "<br> </option>";
+                                    echo "<option value=$row[cod_usuario]> <br> Cod.: " .  $row["cod_usuario"] . " - Nome: " . $row["primeiro_nome"] . "<br> </option>";
                                 }
                             } else {
                                 echo "0 results";
@@ -105,14 +105,18 @@
                             <?php
                             $sql = "SELECT * FROM tb_veiculo_morador";
                             $result = $con->query($sql);
-                            $sqlMorador = "SELECT * FROM tb_morador";
+
+                            $sqlMorador = "SELECT * FROM tb_morador m
+                            join tb_veiculo_morador vm on vm.cod_morador = m.cod_morador
+                            WHERE vm.cod_morador = m.cod_morador";
+
                             $resultMorador = $con->query($sqlMorador);
 
                             if ($result->num_rows > 0) {
                                 // output data of each row
                                 while ($row = $result->fetch_assoc()) {
                                     while ($row1 = $resultMorador->fetch_assoc()) {
-                                    echo "<option> <br> Placa.: " .  $row["placa_veiculo"] . " - Proprietario: " 
+                                    echo "<option value=$row1[placa_veiculo]> <br> Placa.: " .  $row1["placa_veiculo"] . " - Proprietario: " 
                                     . $row1["primeiro_nome"] . 
                                     "<br> </option>";
                                 }

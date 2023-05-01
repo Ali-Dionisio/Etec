@@ -8,6 +8,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="../estilo/bootstrap.min.css">
+    <link rel="stylesheet" href="../estilo/minhaVaga.css">
 
      <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,6 +37,11 @@
  
         <?php include('../intranet/minhaVagaLista.php'); ?>
     </div> 
+    <button onclick="voltarVaga()" class="btn-cancel">Voltar</button>
+    <button onclick="cadastrarVaga()" class="btn-cancel">Cadastrar Vaga</button>
+
+    <script src="../src/javascript.js"></script>
+
 </body>
 
 </html>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 24-Abr-2023 às 01:37
+-- Tempo de geração: 01-Maio-2023 às 19:03
 -- Versão do servidor: 5.7.36
 -- versão do PHP: 7.4.26
 
@@ -27,6 +27,9 @@ USE `bd_condmind`;
 
 --
 -- Estrutura da tabela `tb_cor`
+--
+-- Criação: 01-Maio-2023 às 17:39
+-- Última actualização: 01-Maio-2023 às 17:39
 --
 
 DROP TABLE IF EXISTS `tb_cor`;
@@ -56,6 +59,9 @@ INSERT INTO `tb_cor` (`cod_cor`, `descricao_cor`) VALUES
 
 --
 -- Estrutura da tabela `tb_fale_conosco`
+--
+-- Criação: 01-Maio-2023 às 17:39
+-- Última actualização: 01-Maio-2023 às 17:39
 --
 
 DROP TABLE IF EXISTS `tb_fale_conosco`;
@@ -95,6 +101,9 @@ INSERT INTO `tb_fale_conosco` (`cod_msg`, `via`, `nome_completo`, `email`, `celu
 --
 -- Estrutura da tabela `tb_funcao`
 --
+-- Criação: 01-Maio-2023 às 17:39
+-- Última actualização: 01-Maio-2023 às 17:39
+--
 
 DROP TABLE IF EXISTS `tb_funcao`;
 CREATE TABLE IF NOT EXISTS `tb_funcao` (
@@ -117,6 +126,9 @@ INSERT INTO `tb_funcao` (`cod_funcao`, `descricao_funcao`) VALUES
 
 --
 -- Estrutura da tabela `tb_hist_salao`
+--
+-- Criação: 01-Maio-2023 às 17:39
+-- Última actualização: 01-Maio-2023 às 17:39
 --
 
 DROP TABLE IF EXISTS `tb_hist_salao`;
@@ -149,6 +161,9 @@ INSERT INTO `tb_hist_salao` (`num_hist_salao`, `cod_salao`, `data_reserva`, `hor
 
 --
 -- Estrutura da tabela `tb_morador`
+--
+-- Criação: 01-Maio-2023 às 17:39
+-- Última actualização: 01-Maio-2023 às 17:39
 --
 
 DROP TABLE IF EXISTS `tb_morador`;
@@ -210,6 +225,9 @@ DELIMITER ;
 --
 -- Estrutura da tabela `tb_salao`
 --
+-- Criação: 01-Maio-2023 às 17:39
+-- Última actualização: 01-Maio-2023 às 17:39
+--
 
 DROP TABLE IF EXISTS `tb_salao`;
 CREATE TABLE IF NOT EXISTS `tb_salao` (
@@ -250,6 +268,9 @@ DELIMITER ;
 --
 -- Estrutura da tabela `tb_usuarios`
 --
+-- Criação: 01-Maio-2023 às 17:39
+-- Última actualização: 01-Maio-2023 às 17:39
+--
 
 DROP TABLE IF EXISTS `tb_usuarios`;
 CREATE TABLE IF NOT EXISTS `tb_usuarios` (
@@ -279,6 +300,9 @@ INSERT INTO `tb_usuarios` (`cod_usuario`, `usuario`, `primeiro_nome`, `senha`, `
 --
 -- Estrutura da tabela `tb_vaga_garagem`
 --
+-- Criação: 01-Maio-2023 às 17:39
+-- Última actualização: 01-Maio-2023 às 19:00
+--
 
 DROP TABLE IF EXISTS `tb_vaga_garagem`;
 CREATE TABLE IF NOT EXISTS `tb_vaga_garagem` (
@@ -290,12 +314,58 @@ CREATE TABLE IF NOT EXISTS `tb_vaga_garagem` (
   PRIMARY KEY (`cod_vaga`),
   UNIQUE KEY `placa_veiculo_2` (`placa_veiculo`),
   KEY `placa_veiculo` (`placa_veiculo`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Extraindo dados da tabela `tb_vaga_garagem`
+--
+
+INSERT INTO `tb_vaga_garagem` (`cod_vaga`, `num_vaga`, `tipo_vaga`, `ocupada`, `placa_veiculo`) VALUES
+(25, 1, 'Carro', 4, '123asds'),
+(26, 3, 'Carro', 19, '789jhkj'),
+(27, 4, 'Carro', 22, '456asdf');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `tb_veiculo`
+--
+-- Criação: 01-Maio-2023 às 17:57
+-- Última actualização: 01-Maio-2023 às 18:02
+--
+
+DROP TABLE IF EXISTS `tb_veiculo`;
+CREATE TABLE IF NOT EXISTS `tb_veiculo` (
+  `cod_veiculo` int(11) NOT NULL AUTO_INCREMENT,
+  `modelo_veiculo` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`cod_veiculo`)
+) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Extraindo dados da tabela `tb_veiculo`
+--
+
+INSERT INTO `tb_veiculo` (`cod_veiculo`, `modelo_veiculo`) VALUES
+(1, 'Chevrolet Onix'),
+(2, 'Fiat Strada'),
+(3, 'Volkswagen Gol'),
+(4, 'Hyundai HB20'),
+(5, 'Fiat Argo'),
+(6, 'Jeep Renegade'),
+(7, 'Chevrolet Tracker'),
+(8, 'Toyota Corolla'),
+(9, 'Fiat Toro'),
+(10, 'Volkswagen Polo'),
+(11, 'Toyota Hilux'),
+(12, 'Jeep Compass');
 
 -- --------------------------------------------------------
 
 --
 -- Estrutura da tabela `tb_veiculo_morador`
+--
+-- Criação: 01-Maio-2023 às 17:39
+-- Última actualização: 01-Maio-2023 às 18:15
 --
 
 DROP TABLE IF EXISTS `tb_veiculo_morador`;
@@ -315,12 +385,17 @@ CREATE TABLE IF NOT EXISTS `tb_veiculo_morador` (
 --
 
 INSERT INTO `tb_veiculo_morador` (`placa_veiculo`, `tipo_veiculo`, `modelo`, `ano`, `cor`, `cod_morador`) VALUES
-('123asds', 'Carro', 'Onix', 2005, 'Preto', 1);
+('123asds', 'Carro', 'Onix', 2005, 'Preto', 1),
+('456asdf', 'Carro', 'Onix', 2009, 'Rosa', 35),
+('789jhkj', 'Carro', 'Volkswagen', 2007, 'Violeta', 26);
 
 -- --------------------------------------------------------
 
 --
 -- Estrutura da tabela `vaga`
+--
+-- Criação: 01-Maio-2023 às 17:39
+-- Última actualização: 01-Maio-2023 às 17:39
 --
 
 DROP TABLE IF EXISTS `vaga`;

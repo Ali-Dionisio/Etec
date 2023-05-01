@@ -74,8 +74,8 @@ a{
     padding: 20px;   
 }
 #consuhisto{
-    position: absolute;
-    right: 0;
+    display: flex;
+    float: right;
 }
 .tittabela{
     background: #1484FC;

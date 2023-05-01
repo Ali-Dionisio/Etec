@@ -9,7 +9,7 @@ if (mysqli_query($con, "INSERT INTO `tb_vaga_garagem` (`cod_vaga`,
                                                       `tipo_vaga`,
                                                       `ocupada`,
                                                       `placa_veiculo`) 
-  VALUES ('25',
+  VALUES (null,
   '$num_vaga',
   '$tipo_vaga',
   '$ocupada',

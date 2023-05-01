@@ -22,14 +22,17 @@ function cancelarMorador() {
 function cancelarIntra() {
     window.location.href = "../intranet/intranet.php";
 }
-function consuhisto() {
-    window.location.href = "../intranet/consultarHistorico.php";
-}
 function cancelarUsuario() {
     window.location.href = "../intranet/usuarios.php";
 }
 function cancelarSalao() {
     window.location.href = "../intranet/salao.php";
+}
+function cancelarVaga() {
+    window.location.href = "../intranet/minhaVaga.php";
+}
+function consuhisto() {
+    window.location.href = "../intranet/consultarHistorico.php";
 }
 function meuCadastro(){
     window.location.href = "meuCadastro.php";
@@ -46,6 +49,10 @@ function alterUsuario() {
 function voltarVaga() {
     window.location.href = "viewMinhaVaga.php";
 }
-
-
+function voltarCadVeiculo() {
+    window.location.href = "cadVeiculo.php";
+}
+function cadastrarVaga(){
+    window.location.href = "cadVaga.php";
+}
 

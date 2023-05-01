@@ -13,7 +13,6 @@
     <!-- <script src="src/jquery-3.6.0.min.js"></script>
         <script src="src/jQuery-Mask-Plugin-master/src/jquery.mask.js"></script> -->
 
-    <script src="../src/javascript.js"></script>
 
     <link rel="stylesheet" href="../estilo/minhaVaga.css">
     <!-- <link rel="stylesheet" href="../estilo/bootstrap.min.css"> -->
@@ -95,7 +94,8 @@
             </div>
         </div>
 
-
-</body>
+        
+    </body>
+    <script src="../src/javascript.js"></script>
 
 </html>
