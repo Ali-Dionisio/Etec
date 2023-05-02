@@ -7,6 +7,7 @@ label,
 button{
     font-family: 'Ubuntu', sans-serif;
 }
+
 .pesquisar{
     display: flex;
     justify-content: center;
@@ -126,3 +127,5 @@ button{
     padding-top: 20px;
     margin-bottom: 20px;
 } */
+
+

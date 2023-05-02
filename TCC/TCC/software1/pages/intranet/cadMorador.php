@@ -10,13 +10,14 @@
     <title>CondMind</title>
     <script src="../src/javascript.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <!-- JavaScript Bundle with Popper -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="../estilo/cadastro.css">
+
+    <script src="../src/javascript.js"></script>
     <script src="../jquery/jquery-3.6.0.min.js"></script>
     <script src="../jquery/jquery.mask.js"></script>
-    
-
-    <link rel="stylesheet" href="../estilo/cadastro.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -34,7 +35,7 @@
             <div class="col">
                 <!--  primeira coluna -->
                 <div class="imglogo">
-                    <h5 class="card-title">Cadastre-se</h5>
+                    <h1 class="card-title">Cadastre-se</h1>
                 </div>
             </div>
             <div class="cadastro col mt-3">
@@ -49,32 +50,32 @@
                     <div class="col-md-4">
 
                         <label for="primeironome" class="form-label">Primeiro nome</label>
-                        <input type="text" name="primeiro_nome" class="form-control" id="primeironome">
+                        <input type="text" name="primeiro_nome" class="form-control" id="validationDefault02" required>
                     </div>
                     <div class="col-md-8">
                         <label for="nomecompleto" class="form-label">Nome Completo</label>
-                        <input type="text" name="nome_completo" class="form-control" id="nomecompleto">
+                        <input type="text" name="nome_completo" class="form-control" id="validationDefault02" required>
                     </div>
 
                     <div class="col-4">
                         <label for="cpf" class="form-label">CPF</label>
-                        <input type="text" class="cpf form-control" id="cpf" name="cpf" placeholder="111.111.111.11">
+                        <input type="text" class="cpf form-control" id="validationDefault02" name="cpf" placeholder="111.111.111.11" required>
                     </div>
                     <div class="col-4">
                         <label for="rg" class="form-label">RG</label>
-                        <input type="text" class="form-control" name="rg" id="rg" placeholder="11.111.111-1">
+                        <input type="text" class="form-control" name="rg" id="validationDefault02" placeholder="11.111.111-1" required>
                     </div>
                     <div class="col-md-4">
                         <label for="dtnascimento" class="form-label">Data de Nascimento</label>
-                        <input type="date" class="form-control" name="dtnascimento" id="dtnascimento">
+                        <input type="date" class="form-control" name="dtnascimento" id="validationDefault02" required>
                     </div>
                     <div class="col-md-4">
                         <label for="celular" class="form-label">Celular</label>
-                        <input type="text" class="form-control" name="celular" id="celular">
+                        <input type="text" class="form-control" name="celular" id="validationDefault02" required>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4 ">
                         <label for="estadocivil" class="form-label">Estado Civil</label>
-                        <select type="text" id="estadocivil" name="estadocivil" class="form-select">
+                        <select type="text" id="validationDefault02" name="estadocivil" class="form-control" required>
                             <option select></option>
                             <option>Solteiro(a)</option>
                             <option>Casado(a)</option>
@@ -85,19 +86,19 @@
 
                     <div class="col-md-2">
                         <label for="inputZip" class="form-label">Bloco</label>
-                        <input type="number" class="form-control" name="bloco" id="inputZip">
+                        <input type="number" class="form-control" name="bloco" id="validationDefault02" >
                     </div>
                     <div class="col-md-2">
                         <label for="inputZip" class="form-label">Nº AP</label>
-                        <input type="number" class="form-control" name="numero_apartamento" id="inputZip">
+                        <input type="number" class="form-control" name="numero_apartamento" id="validationDefault02">
                     </div>
-                    <div class="col-md-8">
+                    <div class="col-md-8 ">
                         <label for="email" class="form-label">E-mail</label>
-                        <input type="email" name="email" class="form-control" id="email" ?>
+                        <input type="email" name="email" class="form-control" id="validationDefault02" required>
                     </div>
                     <div class="col-md-4">
                         <label for="estadocivil" class="form-label">Função</label>
-                        <select type="text" id="funcao" name="funcao" class="form-select">
+                        <select type="text" id="validationDefault02" name="funcao" class="form-control" required>
                             <option select></option>
                             <option>Morador</option>
                             <option>Administrador</option>

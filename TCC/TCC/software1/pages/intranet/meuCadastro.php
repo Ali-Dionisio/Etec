@@ -114,14 +114,17 @@
                     </div>
                     <div class="col-12 ">
                         <button type="submit" class="mt-4 p-2 px-5 btn btn-primary">Alterar Meus Dados</button>
+                    </div>
                 </form>
+                <div class="col-12 ">
+                <button class="alterarSenha mt-4 p-2 px-5 btn btn-primary">
+                    <?php echo " <a href =alterarUsuario.php?cod=$UsuarioLogado[cod_usuario]>Alterar Senha</a>"; ?>
+                </button>
+                <button onclick="cancelarIntra()" class="mt-4 p-2 px-5 btn btn-primary">Cancelar</button>
+                </div>
             </div>
-            <button class="alterarSenha mt-4 p-2 px-5 btn btn-primary">
-                <?php echo " <a href =alterarUsuario.php?cod=$UsuarioLogado[cod_usuario]>Alterar Senha</a>"; ?>
-            </button>
-            <button onclick="cancelarIntra()" class="mt-4 p-2 px-5 btn btn-primary">Cancelar</button>
+
         </div>
-    </div>
     </div>
 
 
