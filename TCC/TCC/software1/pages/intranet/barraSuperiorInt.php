@@ -8,7 +8,12 @@
 
 <style>
     * {
-        margin: 0;
+        font-family: 'Ubuntu' !important;
+}
+    * {
+        box-sizing: border-box;
+        margin: 0%;
+        padding: 0%;
         background-repeat: no-repeat;
         background-size: 100vw 100vh;
         background-position: top;
@@ -24,7 +29,7 @@
         font-family: 'Ubuntu', sans-serif;
     }
 
-    #barra {
+    #barraDiv {
         display: flex;
         align-items: center;
         height: 4vw;
@@ -32,31 +37,29 @@
 
     }
 
-    #barra .logo img {
-        height: 50%;
+    #barraDiv .logoBarraMenu img {
         padding: 5px 0 5px 0;
         margin-left: 1vw;
         width: 10vw;
     }
-
-    #barra li {
+    #barraDiv li {
         display: inline-block !important;
         text-decoration: underline !important;
         text-underline-offset: 10px !important;
         color: white !important;
     }
 
-    #barra ul {
+    #barraDiv ul {
         width: 50vw;
         display: flex;
         justify-content: space-between;
     }
 
-    #barra a {
+    #barraDiv a {
         color: white;
     }
 
-    #barra .sair img {
+    #barraDiv .sair img {
         height: 20px;
         margin-right: 1vw;
     }
@@ -75,13 +78,14 @@
     }
 
     .espaco a{
-        margin-left: 3vw;
+        margin-left: 4vw;
+
     }
 </style>
 
-<div id="barra">
+<div id="barraDiv">
     <a href="../intranet/intranet.php">
-        <nav class="logo">
+        <nav class="logoBarraMenu">
             <img src="../imagens/logoCondMind.png" alt="" srcset="">
         </nav>
     </a>
@@ -101,7 +105,7 @@
             Meu Cadastro </a>";
             echo "  </li>";
         echo "<div class=$controleMorador >";
-            echo "  <li>";
+            echo "  <li >";
             echo "    <a href =../intranet/moradores.php >
             Proprietarios </a>";
             echo "  </li>";
