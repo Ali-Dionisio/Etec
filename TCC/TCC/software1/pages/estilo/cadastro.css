@@ -15,11 +15,10 @@ label,
 button{
     font-family: 'Ubuntu', sans-serif  !important;
 }
-
 .cadastro, .col .imglogo{
     padding: 30px;
-
 }
+
 .imglogo{
     margin-top: 4vw;
 }
@@ -51,4 +50,13 @@ label{
 .alterarSenha a:hover{
     color: white;
     text-decoration: none;
+}
+dl, ol, ul {
+    margin-top: 0;
+    margin-bottom: 0rem !important;
+}
+
+ol, ul {
+    padding-left: 0rem !important;
+
 }

@@ -8,6 +8,9 @@
 
 <style>
     * {
+        font-family: 'Ubuntu' !important;
+}
+    * {
         box-sizing: border-box;
         margin: 0%;
         padding: 0%;
@@ -39,7 +42,6 @@
         margin-left: 1vw;
         width: 10vw;
     }
-
     #barraDiv li {
         display: inline-block !important;
         text-decoration: underline !important;
@@ -76,7 +78,8 @@
     }
 
     .espaco a{
-        margin-left: 3vw;
+        margin-left: 4vw;
+
     }
 </style>
 
@@ -102,7 +105,7 @@
             Meu Cadastro </a>";
             echo "  </li>";
         echo "<div class=$controleMorador >";
-            echo "  <li>";
+            echo "  <li >";
             echo "    <a href =../intranet/moradores.php >
             Proprietarios </a>";
             echo "  </li>";
