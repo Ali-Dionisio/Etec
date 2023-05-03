@@ -1,0 +1,12 @@
+MEU CADASTRO: ADMIN - é possível alterar qualquer um dos dados contidos nos inputs, não existe nenhuma limitação de alteração para o Administrador.
+
+LISTAR USUÁRIOS: ADMIN - é possível alterar ou excluir qualquer um dos mesmos cadastrados no banco de dados.
+
+LISTAR SALÃO: ADMIN - é possível editar ou excluir qualquer reserva já feita no banco de dados, além da possibilidade do próprio administrador faça uma reserva.
+
+LISTAR PROPRIETÁRIOS: ADMIN - mesma coisa do LISTAR USUÁRIOS ( é possível alterar ou excluir qualquer um dos mesmos cadastrados no banco de dados.) 
+
+MINHA VAGA : ADMIN - da acesso a três botões: Cadastrar Veículo que permite o administrador preencher seus as informações do carro/Opção de Cadastrar Vaga que após o veículo ser cadastrado, é possibilitada/Já na opção de Minha Vaga, é possível listar, alterar e excluir todos os dados de veículos cadastrados
+
+FALE CONOSCO: ADMIN - essa tela é semelhante a tela dos moradores, não tem nenhuma funcionalidade diferente.
+
