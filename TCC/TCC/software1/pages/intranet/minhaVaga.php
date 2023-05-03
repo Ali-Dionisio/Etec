@@ -38,7 +38,7 @@
         <?php include('../intranet/minhaVagaLista.php'); ?>
     </div> 
     <button onclick="voltarVaga()" class="btn-cancel">Voltar</button>
-    <button onclick="cadastrarVaga()" class="btn-cancel">Cadastrar Vaga</button>
+    <button onclick="cadastrarVaga()" class="btn-enviar">Cadastrar Vaga</button>
 
     <script src="../src/javascript.js"></script>
 
