@@ -117,3 +117,16 @@
 </body>
 
 </html>
+
+<script>
+
+var $j = jQuery.noConflict();
+// Use jQuery com a variavel $j para evitar conflitos
+$j(document).ready(function(){
+$j('#celular').mask("(00) 00000-0000");
+$j('#cpf').mask("00000000000");
+$j('#rg').mask("000000000");
+// onde #telefone é o id do campo
+
+});
+</script>

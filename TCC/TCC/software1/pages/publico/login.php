@@ -8,6 +8,9 @@
     <title>Login CondMind</title>
     <link rel="stylesheet" href="../estilo/login.css">
     <script src="./src/javascript.js"></script>
+    <script src="../jquery/jquery-3.6.0.min.js"></script>
+    <script src="../jquery/jquery.mask.js"></script>
+
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -67,3 +70,13 @@
 
 </html>
     
+<script>
+var $j = jQuery.noConflict();
+ //Use jQuery com a variavel $j para evitar conflitos
+ $j(document).ready(function(){
+ $j('#usuario').mask("00000000000"); 
+
+ //onde #telefone é o id do campo
+
+ });
+ </script>
