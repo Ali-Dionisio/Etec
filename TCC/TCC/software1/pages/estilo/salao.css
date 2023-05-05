@@ -89,3 +89,7 @@ a{
 dl, ol, ul {
     margin-bottom: 0rem !important;
 }
+ol,
+ul {
+    padding-left: 0rem !important;
+}
