@@ -18,12 +18,61 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+
+    <script>
+        function pesquisa(texto) {
+            console.log(texto)
+            $.ajax({
+                type: "post",
+                url: "../acoes/pesquisa.act.php?texto=" + texto,
+                success: function(response) {
+                    $('#result').html(response);
+                }
+            });
+        };
+    </script>
 </head>
 
 <body>
     <?php include('../intranet/barraSuperiorInt.php'); ?>
 
+    <div id="result"></div>
     <?php
+    function validateCPF($number)
+    {
+
+        $cpf = preg_replace('/[^0-9]/', "", $number);
+
+        if (strlen($cpf) != 11 || preg_match('/([0-9])\1{10}/', $cpf)) {
+            return false;
+        }
+
+        $number_quantity_to_loop = [9, 10];
+
+        foreach ($number_quantity_to_loop as $item) {
+
+            $sum = 0;
+            $number_to_multiplicate = $item + 1;
+
+            for ($index = 0; $index < $item; $index++) {
+
+                $sum += $cpf[$index] * ($number_to_multiplicate--);
+            }
+
+            $result = (($sum * 10) % 11);
+
+            if ($cpf[$item] != $result) {
+                return false;
+            }
+        }
+
+        return "true";
+    }
+    ?>
+    <?php
+
     @session_start();
     if (isset($_SESSION['msg'])) {
         echo "<p class=alert>$_SESSION[msg]</p>";
@@ -62,7 +111,12 @@
 
                     <div class="col-4">
                         <label for="cpf" class="form-label">CPF</label>
-                        <input type="text" class="cpf form-control" id="validationDefault02" name="cpf" placeholder="111.111.111.11" required>
+                        <input type="text" class="cpf form-control" id="validationDefault02" onKeyup="pesquisa(this.value)" name=" cpf" placeholder="111.111.111.11" required>
+                        <?php
+                        echo ValidateCPF(44291300867);
+                        ?>
+
+
                     </div>
                     <div class="col-4">
                         <label for="rg" class="form-label">RG</label>
