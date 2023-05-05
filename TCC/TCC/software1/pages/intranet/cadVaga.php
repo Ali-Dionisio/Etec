@@ -40,7 +40,10 @@
             <div class="col">
                 <!--  primeira coluna -->
                 <div class="imglogo">
-                    <h5 class="card-title">Cadastrar Vaga</h5>
+                    <label>
+                        <h1>Cadastrar Vaga</h1>
+
+                    </label>
                 </div>
             </div>
             <div class="cadastro col mt-3">
@@ -116,10 +119,10 @@
                                 // output data of each row
                                 while ($row = $result->fetch_assoc()) {
                                     while ($row1 = $resultMorador->fetch_assoc()) {
-                                    echo "<option value=$row1[placa_veiculo]> <br> Placa.: " .  $row1["placa_veiculo"] . " - Proprietario: " 
-                                    . $row1["primeiro_nome"] . 
-                                    "<br> </option>";
-                                }
+                                        echo "<option value=$row1[placa_veiculo]> <br> Placa.: " .  $row1["placa_veiculo"] . " - Proprietario: "
+                                            . $row1["primeiro_nome"] .
+                                            "<br> </option>";
+                                    }
                                 }
                             } else {
                                 echo "0 results";
@@ -133,7 +136,6 @@
                         <button type="submit" class="btn-enviar">Cadastrar</button>
                 </form>
             </div>
-            <button onclick="voltarVaga()" class="btn-cancel">Cancelar</button>
         </div>
     </div>
     </div>

@@ -34,7 +34,10 @@
             <div class="col">
                 <!--  primeira coluna -->
                 <div class="imglogo">
-                    <h5 class="card-title">Cadastrar Veículo</h5>
+                    <label>
+                        <h1>Cadastrar Vaga</h1>
+
+                    </label>
                 </div>
             </div>
             <div class="cadastro col mt-3">
@@ -43,10 +46,10 @@
                 <form class=" mt-5 row g-3 " action="../acoes/cadVeiculo.act.php" method="post" id="">
 
                     <div class="col-md-4">
-                        
+
                         <label for="placa_veiculo" class="form-label">Placa do Veículo</label>
-                        <input type="text" name="placa_veiculo" class="form-control">   
-                        
+                        <input type="text" name="placa_veiculo" class="form-control">
+
                     </div>
                     <hr>
                     <div class="col-md-4">
@@ -62,22 +65,22 @@
                         <label for="modelo" class="form-label">Modelo do Veículo</label>
 
                         <select type="text" name="modelo" class="form-select2">
-                                <option select></option>
+                            <option select></option>
 
-                                <?php
-                                $sql = "SELECT * FROM tb_veiculo";
-                                $result = $con->query($sql);
-                                if ($result->num_rows > 0) {
-                                    // output data of each row
-                                    while ($row = $result->fetch_assoc()) {
-                                        echo "<option value=$row[modelo_veiculo]> <br> Cod.: " .  $row["cod_veiculo"] . " - Modelo: " . $row["modelo_veiculo"] . "<br> </option>";
-                                    }
-                                } else {
-                                    echo "0 results";
+                            <?php
+                            $sql = "SELECT * FROM tb_veiculo";
+                            $result = $con->query($sql);
+                            if ($result->num_rows > 0) {
+                                // output data of each row
+                                while ($row = $result->fetch_assoc()) {
+                                    echo "<option value=$row[modelo_veiculo]> <br> Cod.: " .  $row["cod_veiculo"] . " - Modelo: " . $row["modelo_veiculo"] . "<br> </option>";
                                 }
+                            } else {
+                                echo "0 results";
+                            }
 
-                                ?>
-                            </select>
+                            ?>
+                        </select>
                     </div>
                     <hr>
                     <div class="col-md-4">
@@ -139,11 +142,9 @@
                         <button type=" submit" class="btn-enviar">Cadastrar</button>
                     </div>
                 </form>
-                <button onclick="voltarVaga()" class="btn-cancel">Cancelar</button>
             </div>
         </div>
     </div>
-
 </body>
 
 </html>

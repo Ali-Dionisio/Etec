@@ -1,9 +1,6 @@
 <?php require('sec.php') ?>
 <link rel="stylesheet" href="../estilo/salao.css">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
 
 <h1>Lista de Eventos</h1>
 <?php

@@ -74,7 +74,7 @@
 
     .sair a {
         text-decoration-line: none;
-        font-size: 16pt;
+        /* font-size: 16pt; */
     }
 
     .espaco a{

@@ -35,7 +35,10 @@
             <div class="col">
                 <!--  primeira coluna -->
                 <div class="imglogo">
-                    <h1 class="card-title">Cadastre-se</h1>
+                    <label>
+                        <h1>Cadastre-se</h1>
+
+                    </label>
                 </div>
             </div>
             <div class="cadastro col mt-3">
@@ -86,7 +89,7 @@
 
                     <div class="col-md-2">
                         <label for="inputZip" class="form-label">Bloco</label>
-                        <input type="number" class="form-control" name="bloco" id="validationDefault02" >
+                        <input type="number" class="form-control" name="bloco" id="validationDefault02">
                     </div>
                     <div class="col-md-2">
                         <label for="inputZip" class="form-label">Nº AP</label>
@@ -113,20 +116,19 @@
         </div>
     </div>
     </div>
-  
+
 </body>
 
 </html>
 
 <script>
+    var $j = jQuery.noConflict();
+    // Use jQuery com a variavel $j para evitar conflitos
+    $j(document).ready(function() {
+        $j('#celular').mask("(00) 00000-0000");
+        $j('#cpf').mask("00000000000");
+        $j('#rg').mask("000000000");
+        // onde #telefone é o id do campo
 
-var $j = jQuery.noConflict();
-// Use jQuery com a variavel $j para evitar conflitos
-$j(document).ready(function(){
-$j('#celular').mask("(00) 00000-0000");
-$j('#cpf').mask("00000000000");
-$j('#rg').mask("000000000");
-// onde #telefone é o id do campo
-
-});
+    });
 </script>
