@@ -1,4 +1,5 @@
 <?php require('sec.php') ?>
+<?php require('controleAcesso.php') ?>
 
 
 <h1>Minha Vaga</h1>
@@ -34,7 +35,7 @@ echo "<table class='table table-hover
         }
         echo "<td> $vaga[placa_veiculo] </td>";
         
-        echo "<td>
+        echo "<td class=$controleMorador>
                     <button onclick=\"location.href='alterarMinhaVaga.php?page=editar&cod=$vaga[cod_vaga]';\" class='btn btn-success'>Editar</button>
 
                     <button onclick=\"if(confirm('Tem certeza que deseja excluir? id: $vaga[cod_vaga]')){location.href='../acoes/excluirMinhaVaga.act.php?cod=$vaga[cod_vaga]';}else{false;}\" class='btn btn-danger'>Excluir</button>           

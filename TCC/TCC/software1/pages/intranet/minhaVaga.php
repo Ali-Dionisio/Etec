@@ -36,10 +36,13 @@
      <div class="salaoLista">
  
         <?php include('../intranet/minhaVagaLista.php'); ?>
-    </div> 
-    <button onclick="voltarVaga()" class="btn-cancel">Voltar</button>
-    <button onclick="cadastrarVaga()" class="btn-enviar">Cadastrar Vaga</button>
-
+    </div>
+    <?php 
+    echo    "<div class=$controleMorador botoesVaga>";
+    echo   "<button onclick=voltarVaga() class=btn-cancel>Voltar</button>";
+    echo   "<button onclick=cadastrarVaga() class=btn-enviar>Cadastrar Vaga</button>";
+    echo    "</div>";
+    ?>
     <script src="../src/javascript.js"></script>
 
 </body>

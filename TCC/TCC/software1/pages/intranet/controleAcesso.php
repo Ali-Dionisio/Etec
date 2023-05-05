@@ -1,8 +1,8 @@
 <style>
     .morador{
         display: none;
-        
     }
+    
 </style>
 
 <?php
