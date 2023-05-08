@@ -3,6 +3,8 @@
     extract($_FILES);
     extract($_POST);
     require('../acoes/connect.php');
+
+    
     if($imagem['size']>0){
         if($foto_anterior == ""){
             $endereco = "imgs/".md5(time()).".jpg";

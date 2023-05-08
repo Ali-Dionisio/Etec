@@ -4,11 +4,9 @@ require('connect.php');
 extract($_FILES);
 extract($_POST);
 
-if (empty( $foto)) {
+//if (empty($foto)) {
    $endereco = "../imgs/".md5(time()).".jpg";
-} else {
-   $endereco = "../imgs/1ac5fbea12c9dc646435a69daa443270.jpg";
-}
+//} 
 
 move_uploaded_file($foto['tmp_name'], $endereco);
 
