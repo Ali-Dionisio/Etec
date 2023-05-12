@@ -1,35 +1,58 @@
-<p>cpf <input type="text" name="number" value=""></p>
+<style>
+    .mensagemCPF {
+        display: flex;
+        justify-content: center;
+        border: 2px solid black;
+        margin-left: 15rem;
+        margin-right: 15rem;
+        margin-top: 15rem;
+    }
+
+</style>
+
+<form method=post>
+    <p>cpf <input type="text" name="number" value=""></p>
+    <input type=submit value=enviar name=bt-enviar>
+    <div class="mensagemCPF">
+        <h1>CPF invalido</h1>
+    </div>
+</form>
 
 <?php
+extract($_POST);
+
+if (@validateCPF($number)) {
+    echo "válido";
+} else {
+    echo "inválido";
+}
 
 
-function validateCPF($number)
+
+function validateCPF($cpf)
 {
 
-    $cpf = preg_replace('/[^0-9]/', "", $number);
+    $cpf = preg_replace('/[^0-9]/is', '', $cpf);
 
-    if (strlen($cpf) != 11 || preg_match('/([0-9])\1{10}/', $cpf)) {
+    // Verifica se foi informado todos os digitos corretamente
+    if (strlen($cpf) != 11) {
         return false;
     }
 
-    $number_quantity_to_loop = [9, 10];
+    // Verifica se foi informada uma sequência de digitos repetidos. Ex: 111.111.111-11
+    if (preg_match('/(\d)\1{10}/', $cpf)) {
+        return false;
+    }
 
-    foreach ($number_quantity_to_loop as $item) {
-
-        $sum = 0;
-        $number_to_multiplicate = $item + 1;
-
-        for ($index = 0; $index < $item; $index++) {
-
-            $sum += $cpf[$index] * ($number_to_multiplicate--);
+    // Faz o calculo para validar o CPF
+    for ($t = 9; $t < 11; $t++) {
+        for ($d = 0, $c = 0; $c < $t; $c++) {
+            $d += $cpf[$c] * (($t + 1) - $c);
         }
-
-        $result = (($sum * 10) % 11);
-
-        if ($cpf[$item] != $result) {
+        $d = ((10 * $d) % 11) % 10;
+        if ($cpf[$c] != $d) {
             return false;
         }
     }
-
     return true;
 }

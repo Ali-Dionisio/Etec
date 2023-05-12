@@ -27,7 +27,6 @@
     }
     ?>
     <?php include('barraSuperiorPub.php'); ?>
-    <div class="msg"></div>
     <div class="lados">
         <div class="ladoEsquerdo">
             <h2>Login</H2>

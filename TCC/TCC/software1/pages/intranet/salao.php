@@ -17,6 +17,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
 
     <title>Salão</title>
+
 </head>
 
 <body>
@@ -62,6 +63,8 @@
                     <?php
                     date_default_timezone_set('America/Sao_Paulo');
                     $hoje = date('Y-m-d');
+
+                    
                     $hora = date('H:i');
                     $horaNova = strtotime("$hora + 30 minutes");
                     $hora = date("H:i", $horaNova);
@@ -72,6 +75,7 @@
                 <div class="dataHora2">
                     <p> Horário de Inicio</p>
                     <?php
+                    $hora = "00:00";
                     /*   echo     "   <label for=hora-cons>Escolha o horário da consulta (aberto das 12:00 às 18:00): </label>";*/
                     echo     "    <input name=horaInicio id=horaInicio type=time";
                     echo     "          min=$hora onclick=jogaDataFim() required value=$hora>";
@@ -103,15 +107,7 @@
         <?php include('../intranet/salaoLista.php'); ?>
     </div>
     <script src="../src/javascript.js"></script>
-    <script>
-        function jogaDataFim(horaInicio) {
-            var x = document.getElementById("horaInicio").value;
-            console.log(x);
-            document.getElementById("exibir").innerHTML = x;
-            document.write(x);
 
-        }
-    </script>
 </body>
 
 </html>

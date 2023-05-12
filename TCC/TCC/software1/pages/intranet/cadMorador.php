@@ -77,8 +77,12 @@
     if (isset($_SESSION['msg'])) {
         echo "<p class=alert>$_SESSION[msg]</p>";
         unset($_SESSION['msg']);
+        unset($_SESSION['mensagemCPF']);
+        echo "<p class=alert>$_SESSION[mensagemCPF]</p>";
     }
     ?>
+    <div class="msg"></div>
+
     <div class="mt-5 container text-center">
         <div class="row ">
             <div class="col">
@@ -111,11 +115,7 @@
 
                     <div class="col-4">
                         <label for="cpf" class="form-label">CPF</label>
-                        <input type="text" class="cpf form-control" id="validationDefault02" onKeyup="pesquisa(this.value)" name=" cpf" placeholder="111.111.111.11" required>
-                        <?php
-                        echo ValidateCPF(44291300867);
-                        ?>
-
+                        <input type="text" class="cpf form-control" id="cpf" onKeyup="pesquisa(this.value)" name="cpf" placeholder="111.111.111.11" required>
 
                     </div>
                     <div class="col-4">

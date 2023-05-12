@@ -12,7 +12,7 @@ if (isset($_SESSION['msg'])) {
 }
 require('../acoes/connect.php');
 
-$salaos = mysqli_query($con, "SELECT * FROM `tb_salao` WHERE `DATA_RESERVA` >= SYSDATE() order by data_reserva ");
+$salaos = mysqli_query($con, "SELECT * FROM `tb_salao`");
 echo "<table class='table table-hover table-bordered'>";
 echo "<tr>";
 echo "<th>#</th>";

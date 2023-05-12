@@ -74,3 +74,12 @@ function ValidarCPF(Objcpf) {
     if (digitoGerado != digitoDigitado)
         alert('CPF Invalido!');
 }
+
+document.onreadystatechange = () => {
+    const field1 = document.getElementById("horaInicio");
+    const field2 = document.getElementById("horaTermino");
+  field1.addEventListener("change", function () {
+    field2.value = field1.value;
+  });
+
+};
