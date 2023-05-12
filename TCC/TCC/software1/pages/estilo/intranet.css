@@ -79,3 +79,12 @@ input {
 .sair img{
     margin-right: 2vw;
 }
+
+@media screen and (max-width: 480px) {
+    .botao {
+            width: 30vw;
+            height: 20vw;
+        }
+
+
+}

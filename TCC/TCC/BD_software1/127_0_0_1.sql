@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 01-Maio-2023 às 19:03
+-- Tempo de geração: 12-Maio-2023 às 17:41
 -- Versão do servidor: 5.7.36
 -- versão do PHP: 7.4.26
 
@@ -27,9 +27,6 @@ USE `bd_condmind`;
 
 --
 -- Estrutura da tabela `tb_cor`
---
--- Criação: 01-Maio-2023 às 17:39
--- Última actualização: 01-Maio-2023 às 17:39
 --
 
 DROP TABLE IF EXISTS `tb_cor`;
@@ -59,9 +56,6 @@ INSERT INTO `tb_cor` (`cod_cor`, `descricao_cor`) VALUES
 
 --
 -- Estrutura da tabela `tb_fale_conosco`
---
--- Criação: 01-Maio-2023 às 17:39
--- Última actualização: 01-Maio-2023 às 17:39
 --
 
 DROP TABLE IF EXISTS `tb_fale_conosco`;
@@ -101,9 +95,6 @@ INSERT INTO `tb_fale_conosco` (`cod_msg`, `via`, `nome_completo`, `email`, `celu
 --
 -- Estrutura da tabela `tb_funcao`
 --
--- Criação: 01-Maio-2023 às 17:39
--- Última actualização: 01-Maio-2023 às 17:39
---
 
 DROP TABLE IF EXISTS `tb_funcao`;
 CREATE TABLE IF NOT EXISTS `tb_funcao` (
@@ -127,9 +118,6 @@ INSERT INTO `tb_funcao` (`cod_funcao`, `descricao_funcao`) VALUES
 --
 -- Estrutura da tabela `tb_hist_salao`
 --
--- Criação: 01-Maio-2023 às 17:39
--- Última actualização: 01-Maio-2023 às 17:39
---
 
 DROP TABLE IF EXISTS `tb_hist_salao`;
 CREATE TABLE IF NOT EXISTS `tb_hist_salao` (
@@ -140,7 +128,7 @@ CREATE TABLE IF NOT EXISTS `tb_hist_salao` (
   `hora_fim` time NOT NULL,
   `cod_morador` int(11) NOT NULL,
   PRIMARY KEY (`num_hist_salao`)
-) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=20 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Extraindo dados da tabela `tb_hist_salao`
@@ -155,15 +143,21 @@ INSERT INTO `tb_hist_salao` (`num_hist_salao`, `cod_salao`, `data_reserva`, `hor
 (7, 23, '2023-04-21', '20:18:00', '20:20:00', 1),
 (8, 25, '2024-01-20', '00:00:00', '00:00:00', 1),
 (9, 26, '2023-04-19', '00:00:00', '00:00:00', 1),
-(10, 27, '2023-04-12', '00:00:00', '00:00:00', 1);
+(10, 27, '2023-04-12', '00:00:00', '00:00:00', 1),
+(11, 19, '2023-05-12', '09:19:00', '09:19:00', 1),
+(12, 20, '2023-05-12', '09:32:00', '09:35:00', 1),
+(13, 21, '2023-05-12', '10:24:00', '10:25:00', 1),
+(14, 22, '2023-05-12', '10:30:00', '10:32:00', 1),
+(15, 23, '2023-05-12', '10:27:00', '10:29:00', 1),
+(16, 24, '2023-05-12', '10:35:00', '10:36:00', 1),
+(17, 25, '2023-05-13', '10:22:00', '11:22:00', 1),
+(18, 27, '2023-05-13', '10:30:00', '11:30:00', 1),
+(19, 29, '2023-05-25', '08:30:00', '10:45:00', 1);
 
 -- --------------------------------------------------------
 
 --
 -- Estrutura da tabela `tb_morador`
---
--- Criação: 01-Maio-2023 às 17:39
--- Última actualização: 01-Maio-2023 às 17:39
 --
 
 DROP TABLE IF EXISTS `tb_morador`;
@@ -183,7 +177,7 @@ CREATE TABLE IF NOT EXISTS `tb_morador` (
   `funcao` varchar(15) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`cod_morador`),
   UNIQUE KEY `cpf` (`cpf`)
-) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Extraindo dados da tabela `tb_morador`
@@ -195,7 +189,8 @@ INSERT INTO `tb_morador` (`cod_morador`, `primeiro_nome`, `nome_completo`, `emai
 (24, 'João', 'João Henrique', '', '53189636842', '1111111', '0000-00-00', '', 'Solteiro(a)', '3', '1', '../imgs/1ac5fbea12c9dc646435a69daa443270.jpg', 'Administrador'),
 (25, 'Eric', 'Eric Sanderson', '', '49098843867', '', '2023-03-14', '', '', '', '', '../imgs/1ac5fbea12c9dc646435a69daa443270.jpg', 'Administrador'),
 (26, 'kleber', 'Kleber Souza', 'teste@teste', '21215155423', '112223335', '1998-02-01', '', 'Solteiro(a)', '2', '1', '../imgs/1ac5fbea12c9dc646435a69daa443270.jpg', 'Morador'),
-(35, 'Gustavo', 'Gustavo Guilherme', 'alo@ai.com', '11811100000', '11', '2012-12-11', '1199999999', 'Solteiro(a)', '2', '2', '../imgs/1ac5fbea12c9dc646435a69daa443270.jpg', 'Morador');
+(35, 'Gustavo', 'Gustavo Guilherme', 'alo@ai.com', '11811100000', '11', '2012-12-11', '1199999999', 'Solteiro(a)', '2', '2', '../imgs/1ac5fbea12c9dc646435a69daa443270.jpg', 'Morador'),
+(36, 'Clovis', 'Clovis Filho', 'a@aa', '80503856045', '1', '1985-01-02', '(1', 'Solteiro(a)', '01', '02', '../imgs/888fcd61aa0cc8a21a25705296de7d6f.jpg', 'Morador');
 
 --
 -- Acionadores `tb_morador`
@@ -225,9 +220,6 @@ DELIMITER ;
 --
 -- Estrutura da tabela `tb_salao`
 --
--- Criação: 01-Maio-2023 às 17:39
--- Última actualização: 01-Maio-2023 às 17:39
---
 
 DROP TABLE IF EXISTS `tb_salao`;
 CREATE TABLE IF NOT EXISTS `tb_salao` (
@@ -239,7 +231,7 @@ CREATE TABLE IF NOT EXISTS `tb_salao` (
   PRIMARY KEY (`cod_salao`),
   UNIQUE KEY `cod_morador` (`cod_morador`),
   KEY `cod_morador_2` (`cod_morador`)
-) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Extraindo dados da tabela `tb_salao`
@@ -268,9 +260,6 @@ DELIMITER ;
 --
 -- Estrutura da tabela `tb_usuarios`
 --
--- Criação: 01-Maio-2023 às 17:39
--- Última actualização: 01-Maio-2023 às 17:39
---
 
 DROP TABLE IF EXISTS `tb_usuarios`;
 CREATE TABLE IF NOT EXISTS `tb_usuarios` (
@@ -281,7 +270,7 @@ CREATE TABLE IF NOT EXISTS `tb_usuarios` (
   `funcao` varchar(15) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`cod_usuario`),
   UNIQUE KEY `usuario` (`usuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Extraindo dados da tabela `tb_usuarios`
@@ -293,15 +282,13 @@ INSERT INTO `tb_usuarios` (`cod_usuario`, `usuario`, `primeiro_nome`, `senha`, `
 (17, '53189636842', 'João', '21232f297a57a5a743894a0e4a801fc3', 'Administrador'),
 (18, '49098843867', 'Eric', '21232f297a57a5a743894a0e4a801fc3', 'Administrador'),
 (19, '21215155423', 'kleber', '21232f297a57a5a743894a0e4a801fc3', 'Morador'),
-(22, '11811100000', 'Gustavo', '21232f297a57a5a743894a0e4a801fc3', 'Morador');
+(22, '11811100000', 'Gustavo', '21232f297a57a5a743894a0e4a801fc3', 'Morador'),
+(23, '80503856045', 'Clovis', '21232f297a57a5a743894a0e4a801fc3', 'Morador');
 
 -- --------------------------------------------------------
 
 --
 -- Estrutura da tabela `tb_vaga_garagem`
---
--- Criação: 01-Maio-2023 às 17:39
--- Última actualização: 01-Maio-2023 às 19:00
 --
 
 DROP TABLE IF EXISTS `tb_vaga_garagem`;
@@ -314,7 +301,7 @@ CREATE TABLE IF NOT EXISTS `tb_vaga_garagem` (
   PRIMARY KEY (`cod_vaga`),
   UNIQUE KEY `placa_veiculo_2` (`placa_veiculo`),
   KEY `placa_veiculo` (`placa_veiculo`)
-) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Extraindo dados da tabela `tb_vaga_garagem`
@@ -329,9 +316,6 @@ INSERT INTO `tb_vaga_garagem` (`cod_vaga`, `num_vaga`, `tipo_vaga`, `ocupada`, `
 
 --
 -- Estrutura da tabela `tb_veiculo`
---
--- Criação: 01-Maio-2023 às 17:57
--- Última actualização: 01-Maio-2023 às 18:02
 --
 
 DROP TABLE IF EXISTS `tb_veiculo`;
@@ -364,9 +348,6 @@ INSERT INTO `tb_veiculo` (`cod_veiculo`, `modelo_veiculo`) VALUES
 --
 -- Estrutura da tabela `tb_veiculo_morador`
 --
--- Criação: 01-Maio-2023 às 17:39
--- Última actualização: 01-Maio-2023 às 18:15
---
 
 DROP TABLE IF EXISTS `tb_veiculo_morador`;
 CREATE TABLE IF NOT EXISTS `tb_veiculo_morador` (
@@ -393,9 +374,6 @@ INSERT INTO `tb_veiculo_morador` (`placa_veiculo`, `tipo_veiculo`, `modelo`, `an
 
 --
 -- Estrutura da tabela `vaga`
---
--- Criação: 01-Maio-2023 às 17:39
--- Última actualização: 01-Maio-2023 às 17:39
 --
 
 DROP TABLE IF EXISTS `vaga`;

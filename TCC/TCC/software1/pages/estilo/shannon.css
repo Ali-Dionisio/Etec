@@ -254,4 +254,41 @@ color: white;
   #slogan{
     font-family: 'Federo', sans-serif;
   }
-  
+@media screen and (max-width: 480px) {
+.links {
+padding-top: 5vw;
+padding-left: 0;
+}
+#img_slider {
+  width: 100px;
+  height: 400px;
+}
+
+.imagens {
+  margin: 0 auto;
+  width: 291px;
+  height: 200px;
+}
+
+#img_sobre_nos {
+  height: 200px;
+  width: 291px;
+  float: left;
+  padding-right: 30px;
+
+}
+.condmind_texto {
+  height: 500px;
+  width: 291px;
+}
+.condmind_texto {
+  height: 500px;
+  width: 291px;
+}
+
+.condmind_imagem img {
+  height: 500px;
+  width: 20rem;
+  margin-left: 18rem;
+}
+}
