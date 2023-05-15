@@ -6,7 +6,6 @@ li button{
     width: 15rem;
 }
 body{
-    background-image: url("../imagens/PORTARIA.jpg");
     background-repeat: no-repeat;    
     background-size: 100vw 100vh;
     background-position: top;
@@ -16,4 +15,12 @@ body{
     position: absolute;
     bottom: 1rem;
     left: 4rem;
+}
+
+@media screen and (max-width: 480px) {
+    .opcoes{
+        position:static;
+        bottom: 0rem;
+        left: 0rem;
+    }
 }

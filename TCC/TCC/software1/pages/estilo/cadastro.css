@@ -60,3 +60,10 @@ ol, ul {
     padding-left: 0rem !important;
 
 }
+@media screen and (min-width: 481px) {
+
+.barraLateral{
+    display: none;
+}
+
+}

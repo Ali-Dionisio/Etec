@@ -81,6 +81,13 @@
         margin-left: 4vw;
 
     }
+    @media screen and (max-width: 480px) {
+
+    #barraDiv{
+        display: none;
+    }
+
+}
 </style>
 
 <div id="barraDiv">
