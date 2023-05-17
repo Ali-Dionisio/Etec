@@ -254,7 +254,13 @@ color: white;
   #slogan{
     font-family: 'Federo', sans-serif;
   }
+  .barraLateral{
+    display: none;
+}
 @media screen and (max-width: 480px) {
+  .barraLateral{
+    display: flex;
+}
 .barraLateral{
   display: flex;
 }

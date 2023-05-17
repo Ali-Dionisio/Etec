@@ -127,7 +127,13 @@ button{
     padding-top: 20px;
     margin-bottom: 20px;
 } */
+.barraLateral{
+    display: none;
+}
 @media screen and (max-width: 480px) {
+    .barraLateral{
+        display: flex;
+    }
     .cadastrar{
         width: 60%;
     }

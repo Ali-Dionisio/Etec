@@ -41,13 +41,15 @@
         <div class="row ">
             <div class="col">
                 <!--  primeira coluna -->
-                <div class="imglogo">
-                    <img src="../imagens/ShannonLogo.png" class="d-flex w-2 h-10" alt="...">
+                
+                <div class="imagemPromocional">
+                    <h1>Login</h1>
+                        <img src="../imagens/timido.png" alt="" srcset="">
                 </div>
             </div>
             <div class="cadastro col mt-3">
                 <!--Segunda coluna -->
-                <h5 class="card-title">Cadastre-se</h5>
+                <h5 class="card-title"></h5>
 
                 <form class="mt-5 row g-3" action="../acoes/alterarUsuario.act.php" method="post" id="">
                     <div class="col-md-4">

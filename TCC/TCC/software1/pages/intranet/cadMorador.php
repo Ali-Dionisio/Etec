@@ -92,7 +92,9 @@
                 <div class="imglogo">
                     <label>
                         <h1>Cadastre-se</h1>
-
+                    <div class="imagemPromocional">
+                        <img src="../imagens/timido.png" alt="" srcset="">
+                    </div>
                     </label>
                 </div>
             </div>

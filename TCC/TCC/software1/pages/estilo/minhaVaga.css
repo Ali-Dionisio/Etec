@@ -121,7 +121,13 @@ ul {
 strong{
     display: none;
 }
+.barraLateral{
+    display: none;
+}
 @media screen and (max-width: 480px) {
+    .barraLateral{
+        display: flex;
+    }
     th{
         display: none;
     }

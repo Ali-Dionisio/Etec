@@ -43,7 +43,10 @@
             <div class="col">
                 <!--  primeira coluna -->
                 <div class="imglogo">
-                    <h5 class="card-title">Cadastre-se</h5>
+                    <div class="imagemPromocional">
+                    <h1>Alterar usuário </h1>
+                        <img src="../imagens/timido.png" alt="" srcset="">
+                    </div>
                 </div>
             </div>
             <div class="cadastro col mt-3">
