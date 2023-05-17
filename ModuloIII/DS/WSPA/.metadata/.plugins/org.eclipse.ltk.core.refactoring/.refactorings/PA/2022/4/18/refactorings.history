@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;dojo.RevisaoIf&apos; to &apos;RevisaoIfMeu&apos;&#x0D;&#x0A;- Original project: &apos;PA&apos;&#x0D;&#x0A;- Original element: &apos;dojo.RevisaoIf&apos;&#x0D;&#x0A;- Renamed element: &apos;dojo.RevisaoIfMeu&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;RevisaoIf&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;dojo{RevisaoIf.java[RevisaoIf" matchStrategy="1" name="RevisaoIfMeu" qualified="false" references="true" similarDeclarations="false" stamp="1650929619805" textual="false" version="1.0"/>
+</session>

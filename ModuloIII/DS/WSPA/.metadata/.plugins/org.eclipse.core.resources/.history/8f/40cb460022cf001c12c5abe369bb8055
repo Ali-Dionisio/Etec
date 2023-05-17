@@ -1,0 +1,39 @@
+package listaJ;
+
+import javax.swing.JOptionPane;
+
+public class J6 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int idade=0, regiao=0,resp=0,sp=0,centro=0,homemCentro=0, porcHomemCentro;
+		
+		while(resp <2) {
+		idade = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite sua idade", 
+				"Entrada", JOptionPane.QUESTION_MESSAGE));	
+		
+		String zona[] = {"Centro","Leste","Norte","Oeste","Sul"};
+		regiao = JOptionPane.showOptionDialog(null, "Qual a região onde você mora?", "Entrada", 0, 
+						  JOptionPane.QUESTION_MESSAGE,null,zona,zona[0]);
+		
+		String sexo[] = {"Masculino","Feminino", "Sair"};
+		resp = JOptionPane.showOptionDialog(null, "Qual o seu sexo", "Entrada", 0, 
+						  JOptionPane.QUESTION_MESSAGE,null,sexo,sexo[0]);
+		}
+		
+		sp++;
+		if(regiao == 0) {
+			centro++;
+			
+			if(resp == 0) {
+				homemCentro++;
+			}
+			porcHomemCentro = (homemCentro*100) / centro;
+		}
+		System.out.println("Censo da Cidade de São Paulo");
+		System.out.println(idade);
+		System.out.println("O percentual de homens que residem na Zona Central da cidade\n "+porcHomemCentro);
+		System.out.println("O total de pessoas que residem em São Paulo "+sp);
+	}
+
+}

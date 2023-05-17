@@ -1,0 +1,25 @@
+package listaJ;
+
+import javax.swing.JOptionPane;
+
+public class J6 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int idade, regiao,sexo;
+		
+		idade = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite sua idade", "Entrada", JOptionPane.QUESTION_MESSAGE));
+		String zona[] = {"Centro","Leste", "Norte","Norte","Oeste","Sul"};
+		
+		regiao = JOptionPane.showOptionDialog(null, "Qual o seu sexo", "Entrada", 0, 
+						  JOptionPane.QUESTION_MESSAGE,null,zona,zona[0]);
+		
+		String lersexo[] = {"Masculino","Feminino", "Sair"};
+		sexo = JOptionPane.showOptionDialog(null, "Qual o seu sexo", "Entrada", 0, 
+						  JOptionPane.QUESTION_MESSAGE,null,lersexo,lersexo[0]);
+		
+		System.out.println("Censo da Cidade de São Paulo");
+		System.out.println(idade);
+	}
+
+}

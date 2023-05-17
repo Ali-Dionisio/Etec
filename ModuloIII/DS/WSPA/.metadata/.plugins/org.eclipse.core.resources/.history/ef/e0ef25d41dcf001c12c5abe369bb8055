@@ -1,0 +1,19 @@
+package listaJ;
+
+import javax.swing.JOptionPane;
+
+public class J6 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int idade;
+		
+		idade = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite sua idade", "Entrada", JOptionPane.QUESTION_MESSAGE));
+		
+		
+		
+		System.out.println("Censo da Cidade de São Paulo");
+		System.out.println(idade);
+	}
+
+}

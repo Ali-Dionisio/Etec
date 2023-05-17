@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;tratEx.ExemplotryCatch&apos; to &apos;ExemploTryCatch&apos;&#x0D;&#x0A;- Original project: &apos;moduloII&apos;&#x0D;&#x0A;- Original element: &apos;tratEx.ExemplotryCatch&apos;&#x0D;&#x0A;- Renamed element: &apos;tratEx.ExemploTryCatch&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;ExemplotryCatch&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;tratEx{ExemplotryCatch.java[ExemplotryCatch" matchStrategy="1" name="ExemploTryCatch" qualified="false" references="true" similarDeclarations="false" stamp="1661470565546" textual="false" version="1.0"/>
+</session>

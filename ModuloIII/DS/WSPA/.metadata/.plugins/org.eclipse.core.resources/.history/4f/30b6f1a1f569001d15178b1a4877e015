@@ -1,0 +1,31 @@
+package thread;
+
+public class GameCarro extends Thread{
+	String veiculo, veiculo2;
+	long pausa, pausa2;
+	public GameCarro(String veiculo, long pausa){
+		this.veiculo = veiculo;
+		this.pausa = pausa;
+		this.veiculo2 = veiculo2;
+		this.pausa2 = pausa2;
+	}
+
+	public void run(){
+	try {
+		for(int i = 0; i < 8; i++){
+		System.out.println(veiculo);
+		Thread.sleep(pausa);
+		System.out.println(veiculo2);
+		Thread.sleep(pausa2);
+	}
+}	catch (InterruptedException e){
+	return;
+}
+	}
+	public static void main(String[] args){
+		new GameCarro("Veloster", 1500).start();
+		new GameCarro("Corola", 1000).start();	
+		new GameCarro("Veloster2", 1500).start();
+		new GameCarro("Corola2", 1000).start();
+}
+}
