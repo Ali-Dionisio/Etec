@@ -37,7 +37,9 @@
 
 <body>
     <?php include('../intranet/barraSuperiorInt.php'); ?>
-
+    <div class="barraLateral">
+        <?php include('../intranet/barraLateral.php'); ?>
+    </div>
     <div id="result"></div>
     <?php
     function validateCPF($number)

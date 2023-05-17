@@ -21,6 +21,9 @@
 </head>
 
 <body>
+    <div class="barraLateral">
+        <?php include('../intranet/barraLateral.php'); ?>
+    </div>
     <?php include('../intranet/barraSuperiorInt.php'); ?>
     <?php
     @session_start();

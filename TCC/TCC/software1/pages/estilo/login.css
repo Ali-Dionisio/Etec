@@ -68,3 +68,24 @@
         background-position: top;
         background-attachment: fixed;
     }
+
+    @media screen and (max-width: 481px) {
+        .ladoEsquerdo{
+            display: none;    
+        }
+        .ladoCima{
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+        .ladoDireito{
+            width: 100%;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+        }
+        .borda{
+            width: 100%;
+        }
+
+    }

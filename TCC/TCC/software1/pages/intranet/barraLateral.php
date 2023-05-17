@@ -44,27 +44,27 @@
         echo "<ul>";
         echo "  <li>";
         echo "    <a href =../intranet/meuCadastro.php?cpf=$moradores[cpf]>
-            <div class='p-2 mx-auto'>  <button type=button class='btn btn-dark style=width: 220px;'>Meu Cadastro</button></div> </a>";
+            <div class='p-2 mx-auto'>  <button type=button class='btn btn-primary style=width: 220px;'>Meu Cadastro</button></div> </a>";
         echo "  </li>";
         echo "  <li>";
         echo "    <a href =../intranet/moradores.php>
-            <div class='p-2 mx-auto'>  <button type=button class='btn btn-dark style=width: 220px;'>Moradores</button></div> </a>";
+            <div class='p-2 mx-auto'>  <button type=button class='btn btn-primary style=width: 220px;'>Moradores</button></div> </a>";
         echo "  </li>";
         echo "  <li>";
         echo "    <a href =../intranet/usuarios.php>
-          <div class='p-2 mx-auto'>  <button type=button class='btn btn-dark style=width: 220px;'>Usuários</button></div> </a>";
+          <div class='p-2 mx-auto'>  <button type=button class='btn btn-primary style=width: 220px;'>Usuários</button></div> </a>";
         echo "  </li>";
         echo "  <li>";
         echo "    <a href =../intranet/minhaVaga.php>
-          <div class='p-2 mx-auto'>  <button type=button class='btn btn-dark style=width: 220px;'>Minha Vaga</button></div> </a>";
+          <div class='p-2 mx-auto'>  <button type=button class='btn btn-primary style=width: 220px;'>Minha Vaga</button></div> </a>";
         echo "  </li>";
         echo "  <li>";
         echo "    <a href =../intranet/salao.php>
-          <div class='p-2 mx-auto'>  <button type=button class='btn btn-dark style=width: 220px;'>Salão</button></div> </a>";
+          <div class='p-2 mx-auto'>  <button type=button class='btn btn-primary style=width: 220px;'>Salão</button></div> </a>";
         echo "  </li>";
         echo "  <li>";
         echo "    <a href =../intranet/reclameAqui.php>
-          <div class='p-2 mx-auto'>  <button type=button class='btn btn-dark style=width: 220px;'>Reclame aqui</button></div> </a>";
+          <div class='p-2 mx-auto'>  <button type=button class='btn btn-primary style=width: 220px;'>Reclame aqui</button></div> </a>";
         echo "  </li>";
         echo "</ul>";
       }
@@ -76,9 +76,7 @@
       </button>
       <img src="" alt="">
       <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="../acoes/logoff.php">Sair</a></li>
-        <li><a class="dropdown-item" href="#">Another action</a></li>
-        <li><a class="dropdown-item" href="#">Something else here</a></li>
+        <li><a class="btn btn-primary" href="../acoes/logoff.php">Sair</a></li>
       </ul>
     </div>
 

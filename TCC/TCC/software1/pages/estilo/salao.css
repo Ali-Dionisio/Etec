@@ -93,3 +93,64 @@ ol,
 ul {
     padding-left: 0rem !important;
 }
+strong{
+    display: none;
+}
+@media screen and (max-width: 480px) {
+    .esquerda{
+        position:static;
+        text-align: center;
+    }
+    .direita{
+        margin-top: 2vw;
+        display: flex;
+        margin-right: -0%;  
+    }
+    #consuhisto{
+        display: flex;
+        float:unset;
+    }
+    .titSalao{
+        margin-top: 2vw;
+        display:inline;
+        justify-content: center;
+        justify-items: center;
+       
+    }
+    .marcaEvento, form {
+        display: unset;
+        justify-content: center;
+    }
+    .dataHora2{
+        margin-left: 0%;
+    }
+    #data, #horaInicio, #horaTermino{
+        width: 14rem;
+        border-color: #1484FC;
+    }
+
+
+    .salaoLista{
+        width: 100%;
+        margin: 0 auto;    
+    }
+    th{
+        display: none;
+    }
+    td{
+        font-size: small;
+        display: flex;
+        justify-content: center;
+    }
+    td .btn{
+        font-size: small;
+        width: 30%;
+        margin-left: 15px;
+
+    }
+    strong{
+        display: block;
+        position: absolute;
+        left: 10px;
+    }
+}

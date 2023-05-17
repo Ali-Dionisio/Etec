@@ -19,6 +19,9 @@
     
 </head>
 <body>
+<div class="barraLateral">
+        <?php include('../intranet/barraLateral.php'); ?>
+</div>
 <?php include('../intranet/barraSuperiorInt.php'); ?>
 
 <h1 class="titEventos">Historico de Eventos</h1>
@@ -44,15 +47,15 @@ echo "</tr >";
 while ($salao = mysqli_fetch_array($salaos)) {
     $moradores = mysqli_query($con, "Select * from `tb_morador` where cod_morador = $salao[cod_morador]");
     echo "<tr>";
-    echo "<td> $salao[num_hist_salao]  </td>";
-    echo "<td> $salao[cod_salao]  </td>";
-    echo "<td> $salao[data_reserva] </td>";
-    echo "<td> $salao[hora_inicio] </td>";
-    echo "<td> $salao[hora_fim] </td>";
+    echo "<td><strong>Cod.</strong> $salao[num_hist_salao]  </td>";
+    echo "<td><strong>Cod. Salão</strong> $salao[cod_salao]  </td>";
+    echo "<td><strong>Data Evento</strong> $salao[data_reserva] </td>";
+    echo "<td><strong>Hora Inicio</strong> $salao[hora_inicio] </td>";
+    echo "<td><strong>Hora Fim</strong> $salao[hora_fim] </td>";
     while ($morador = mysqli_fetch_array($moradores)) {
         $nome = strtoupper("$morador[nome_completo]");
         $verificador = $salao['cod_morador'];
-        echo "<td> $nome </td>";
+        echo "<td><strong>Morador</strong> $nome </td>";
     }
 }
 echo "</tr>";

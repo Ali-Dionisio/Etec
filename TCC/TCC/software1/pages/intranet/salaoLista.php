@@ -25,14 +25,14 @@ echo "</tr>";
 while ($salao = mysqli_fetch_array($salaos)) {
     $moradores = mysqli_query($con, "Select * from `tb_morador` where cod_morador = $salao[cod_morador]");
     echo "<tr>";
-    echo "<td> $salao[cod_salao]  </td>";
-    echo "<td> $salao[data_reserva] </td>";
-    echo "<td> $salao[hora_inicio] </td>";
-    echo "<td> $salao[hora_fim] </td>";
+    echo "<td><strong>#</strong> $salao[cod_salao]  </td>";
+    echo "<td><strong>Data do Evento: </strong> $salao[data_reserva] </td>";
+    echo "<td><strong>Horario Inicio: </strong> $salao[hora_inicio] </td>";
+    echo "<td><strong>Horario Fim: </strong> $salao[hora_fim] </td>";
     while ($morador = mysqli_fetch_array($moradores)) {
         $nome = strtoupper("$morador[primeiro_nome]");
         $verificador = $salao['cod_morador'];
-        echo "<td> $nome </td>";
+        echo "<td><strong>Nome Morador: </strong> $nome </td>";
 
         if (in_array($usuario, $morador)) {
             echo "<td>

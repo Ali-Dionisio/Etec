@@ -255,6 +255,9 @@ color: white;
     font-family: 'Federo', sans-serif;
   }
 @media screen and (max-width: 480px) {
+.barraLateral{
+  display: flex;
+}
 .links {
 padding-top: 5vw;
 padding-left: 0;

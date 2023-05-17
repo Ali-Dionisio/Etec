@@ -19,23 +19,23 @@ echo "<table class='table table-hover
          table-bordered'>";
 echo "<tr>";
 echo "<th>#</th>";
-echo "<th>Número da Vaga</th>";
-echo "<th>Tipo da Vaga</th>";
+echo "<th>Nº da Vaga</th>";
+echo "<th>Tipo Vaga</th>";
 echo "<th>Usuário</th>";
 echo "<th>Placa do Veículo</th>";
-echo "<th>Ações</th>";
+echo "<th class=acoes>Ações</th>";
 echo "</tr>";
 while ($vaga = mysqli_fetch_array($vagas)) {
     $usuarios = mysqli_query($con, "Select * from `tb_usuarios` where cod_usuario = $vaga[ocupada]");
-    echo "<tr>";
-    echo "<td> $vaga[cod_vaga] </td>";
-    echo "<td> $vaga[num_vaga] </td>";
-    echo "<td> $vaga[tipo_vaga] </td>";
+    echo "<tr class=reppet>";
+    echo "<td><strong>Vaga:  </strong> $vaga[cod_vaga] </td>";
+    echo "<td><strong>Número Vaga:  </strong> $vaga[num_vaga] </td>";
+    echo "<td><strong>Tipo Vaga:  </strong> $vaga[tipo_vaga] </td>";
     while ($usuario = mysqli_fetch_array($usuarios)) {
         $nome = strtoupper("$usuario[primeiro_nome]");
-        echo "<td>$vaga[ocupada] -  $nome </td>";
+        echo "<td><strong>Usuário:  </strong>$vaga[ocupada] -  $nome </td>";
     }
-    echo "<td> $vaga[placa_veiculo] </td>";
+    echo "<td><strong>Placa Veic:  </strong> $vaga[placa_veiculo] </td>";
 
     echo "<td class=$controleMorador>
                     <button onclick=\"location.href='alterarMinhaVaga.php?page=editar&cod=$vaga[cod_vaga]';\" class='btn btn-success'>Editar</button>

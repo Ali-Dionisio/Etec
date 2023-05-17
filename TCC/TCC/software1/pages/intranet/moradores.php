@@ -24,7 +24,11 @@
 </head>
 <body>
     <div class="msg"></div>
-<?php include('./barraSuperiorInt.php'); ?>    
+
+    <?php include('../intranet/barraSuperiorInt.php'); ?>
+    <div class="barraLateral">
+        <?php include('../intranet/barraLateral.php'); ?>
+    </div>   
 
     <div class="pesquisar">
         <p>Pesquisar <input type="text" onKeyup="pesquisa(this.value)"></p>

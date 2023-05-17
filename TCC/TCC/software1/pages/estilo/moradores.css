@@ -127,7 +127,23 @@ button{
     padding-top: 20px;
     margin-bottom: 20px;
 } */
+@media screen and (max-width: 480px) {
+    .cadastrar{
+        width: 60%;
+    }
+    .pesquisar{
+        margin-bottom: 20px;
+    }
+    .box1 {
+        width: 70%;
+        padding: 0px;
+    }
+    .excluir, .alterar{
+        padding: 10px 40px;
 
+    }
+
+}
 
 .paginacao{
     margin-bottom: 50px;
