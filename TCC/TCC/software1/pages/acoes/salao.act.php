@@ -43,7 +43,7 @@ VALUES (NULL,
     //var_dump($_FILES);
 
     $status = "true";
-    //header("location:../intranet/salao.php");
+    header("location:../intranet/salao.php");
 } else {
     include('../intranet/barraSuperiorInt.php');
 

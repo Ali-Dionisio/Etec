@@ -118,3 +118,32 @@ ul {
     display: flex;
     float: left;
 }
+strong{
+    display: none;
+}
+@media screen and (max-width: 480px) {
+    th{
+        display: none;
+    }
+    td{
+        font-size: small;
+        display: flex;
+        justify-content: center;
+    }
+    td .btn{
+        font-size: small;
+        width: 30%;
+        margin-left: 15px;
+
+    }
+    .acoes{
+        display: none;
+        justify-content: center;
+
+    }
+    strong{
+        display: block;
+        position: absolute;
+        left: 10px;
+    }
+}

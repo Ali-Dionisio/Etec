@@ -18,7 +18,9 @@
 
 <body>
     <?php include('../intranet/barraSuperiorInt.php'); ?>
-    <?php
+    <div class="barraLateral">
+        <?php include('../intranet/barraLateral.php'); ?>
+    </div>      <?php
     @session_start();
     if (isset($_SESSION['msg'])) {
         echo "<p class=alert>$_SESSION[msg]</p>";

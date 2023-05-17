@@ -48,4 +48,16 @@
     margin-top: 15px;
     border-top: 2px solid  #0056b3;
   }
-
+  @media screen and (max-width: 480px) {
+    .buttons {
+      margin: 0 auto;
+      width: 1200px;
+      display: block;
+        
+    }
+    
+    #button3, #button2, #button1{
+      margin-top: 15px;
+      border-top: 2px solid  #0056b3;
+    }
+  }

@@ -21,12 +21,22 @@
     width: 840px;
     height: auto;
 }
+@media screen and (max-width: 480px) {
+    #formulario{
+    margin: 50px  auto;
+    width: 440px;
+    height: auto;
+}
+
+}
 
 </style>
 <body>
 
+    <div class="barraLateral">
+        <?php include('../intranet/barraLateral.php'); ?>
+    </div>
     <?php include('../intranet/barraSuperiorInt.php'); ?>
-
     <div id="formulario">
         <div class="fale_conosco"><!--COMEÇO DA SESSÃO fALE CONOSCO-->
 
