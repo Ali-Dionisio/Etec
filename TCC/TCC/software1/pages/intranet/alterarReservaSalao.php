@@ -22,7 +22,9 @@
 
 <body>
     <?php include('../intranet/barraSuperiorInt.php'); ?>
-
+    <div class="barraLateral">
+        <?php include('../intranet/barraLateral.php'); ?>
+    </div>
     <?php
     @session_start();
     if (isset($_SESSION['msg'])) {

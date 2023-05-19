@@ -9,7 +9,8 @@
 <style>
     * {
         font-family: 'Ubuntu' !important;
-}
+    }
+
     * {
         box-sizing: border-box;
         margin: 0%;
@@ -42,6 +43,7 @@
         margin-left: 1vw;
         width: 10vw;
     }
+
     #barraDiv li {
         display: inline-block !important;
         text-decoration: underline !important;
@@ -50,13 +52,15 @@
     }
 
     #barraDiv ul {
-        width: 50vw;
+        /* width: 50vw; */
         display: flex;
-        justify-content: space-between;
+        
     }
 
     #barraDiv a {
         color: white;
+        margin-left: 2rem;
+
     }
 
     #barraDiv .sair img {
@@ -77,17 +81,20 @@
         /* font-size: 16pt; */
     }
 
-    .espaco a{
+    /* .espaco a {
         margin-left: 4vw;
+        display: flex;
+        justify-content:space-around;
 
-    }
+    } */
+
     @media screen and (max-width: 480px) {
 
-    #barraDiv{
-        display: none;
-    }
+        #barraDiv {
+            display: none;
+        }
 
-}
+    }
 </style>
 
 <div id="barraDiv">
@@ -111,7 +118,7 @@
             echo "    <a href =../intranet/meuCadastro.php?cpf=$moradores[cpf]>
             Meu Cadastro </a>";
             echo "  </li>";
-        echo "<div class=$controleMorador >";
+            echo "<div class=$controleMorador >";
             echo "  <li >";
             echo "    <a href =../intranet/moradores.php >
             Proprietarios </a>";
@@ -120,7 +127,7 @@
             echo "    <a href =../intranet/usuarios.php>
           Usuários </a>";
             echo "  </li>";
-        echo "</div>";
+            echo "</div>";
             echo "  <li>";
             echo "    <a href =../intranet/$minhaVaga>
           Minha Vaga </a>";

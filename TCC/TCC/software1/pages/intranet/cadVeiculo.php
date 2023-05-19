@@ -20,7 +20,9 @@
 </head>
 
 <body>
-    
+    <div class="barraLateral">
+        <?php include('../intranet/barraLateral.php'); ?>
+    </div>
     <?php include('../intranet/barraSuperiorInt.php'); ?>
 
     <?php
@@ -37,7 +39,9 @@
                 <div class="imglogo">
                     <label>
                         <h1>Cadastrar Vaga</h1>
-
+                        <div class="imagemPromocional">
+                            <img src="../imagens/timido.png" alt="" srcset="">
+                        </div>
                     </label>
                 </div>
             </div>
@@ -49,7 +53,7 @@
                     <div class="col-md-4">
 
                         <label for="placa_veiculo" class="form-label">Placa do Veículo</label>
-                        <input type="text" name="placa_veiculo" class="form-control">
+                        <input type="text" name="placa_veiculo" class="form-select2">
 
                     </div>
                     <hr>

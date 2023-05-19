@@ -42,7 +42,7 @@
     <?php 
     echo    "<div class=$controleMorador botoesVaga>";
     echo   "<button onclick=cancelarIntra() class=btn-cancel>Voltar</button>";
-    echo   "<button onclick=cadastrarVaga() class=btn-enviar>Cadastrar Vaga</button>";
+    echo   "<button onclick=cadastrarVaga() class=btn-enviar1>Cadastrar Vaga</button>";
     echo    "</div>";
     ?>
     <script src="../src/javascript.js"></script>

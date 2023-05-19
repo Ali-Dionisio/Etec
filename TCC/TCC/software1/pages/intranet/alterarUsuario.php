@@ -21,8 +21,11 @@
 </head>
 
 <body>
-    
+
     <?php include('../intranet/barraSuperiorInt.php'); ?>
+    <div class="barraLateral">
+        <?php include('../intranet/barraLateral.php'); ?>
+    </div>
 
     <?php
     @session_start();
@@ -41,17 +44,17 @@
         <div class="row ">
             <div class="col">
                 <!--  primeira coluna -->
-                
+
                 <div class="imagemPromocional">
-                    <h1>Login</h1>
-                        <img src="../imagens/timido.png" alt="" srcset="">
+                    <h1>Alterar Senha</h1>
+                    <img src="../imagens/timido.png" alt="" srcset="">
                 </div>
             </div>
-            <div class="cadastro col mt-3">
+            <div class="cadastro cad222 col mt-3">
                 <!--Segunda coluna -->
                 <h5 class="card-title"></h5>
 
-                <form class="mt-5 row g-3" action="../acoes/alterarUsuario.act.php" method="post" id="">
+                <form class="mt-5 form-row g-3" action="../acoes/alterarUsuario.act.php" method="post" id="">
                     <div class="col-md-4">
                         <label class="form-label"> Codigo Usuário <?php echo $usuario['cod_usuario']; ?></label>
                         <input type="text" name="codUsuario" class="form-control" value="<?php echo $usuario['cod_usuario'] ?>" disabled="">
@@ -65,13 +68,13 @@
                         <label for="primeiro_nome" class="form-label">Primeiro Nome</label>
                         <input type="text" name="primeiro_nome1" class="form-control" id="primeiro_nome" value="<?php echo $usuario['primeiro_nome']; ?>" disabled="">
                     </div>
-                    <div class="col-md-8">
+                    <div class="col-md-4">
                         <label for="senha" class="form-label">senha</label>
                         <input type="text" name="senha" class="form-control" id="senha" value="<?php echo $usuario['senha']; ?>">
                     </div>
                     <div class="col-md-4">
                         <label for="estadocivil" class="form-label">Função</label>
-                        <select type="text" id="funcao" class="form-select" disabled="">
+                        <select type="text" id="funcao" class="form-control" disabled="">
                             <option><?php echo $usuario['funcao']; ?></option>
 
                         </select>

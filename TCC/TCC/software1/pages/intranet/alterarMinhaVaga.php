@@ -19,6 +19,9 @@
 </head>
 
 <body>
+    <div class="barraLateral">
+        <?php include('../intranet/barraLateral.php'); ?>
+    </div>
     <?php include('../intranet/barraSuperiorInt.php'); ?>
 
     <?php
@@ -40,11 +43,13 @@
             <div class="cadastro col mt-3">
                 <!--  primeira coluna -->
                 <!-- <h5 class="card-title">Altere sua vaga</h5> -->
-
+                <div class="imagemPromocional">
+                    <h1>Altere sua vaga</h1>
+                    <img src="../imagens/timido.png" alt="" srcset="">
+                </div>
             </div>
             <div class="cadastro col mt-3">
                 <!--Segunda coluna -->
-                <h5 class="card-title">Altere sua vaga</h5>
 
                 <form class="mt-5 row g-3" action="../acoes/alterarMinhaVaga.act.php" method="post" id="">
                     <div class="col-md-4">
@@ -94,8 +99,8 @@
             </div>
         </div>
 
-        
-    </body>
-    <script src="../src/javascript.js"></script>
+
+</body>
+<script src="../src/javascript.js"></script>
 
 </html>

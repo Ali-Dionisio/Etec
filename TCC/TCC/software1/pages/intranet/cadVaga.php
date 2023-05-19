@@ -22,7 +22,9 @@
 
 <body>
     <?php include('../intranet/barraSuperiorInt.php'); ?>
-
+    <div class="barraLateral">
+        <?php include('../intranet/barraLateral.php'); ?>
+    </div>
     <?php
     @session_start();
     if (isset($_SESSION['msg'])) {
@@ -42,6 +44,9 @@
                 <div class="imglogo">
                     <label>
                         <h1>Cadastrar Vaga</h1>
+                        <div class="imagemPromocional">
+                            <img src="../imagens/timido.png" alt="" srcset="">
+                        </div>
 
                     </label>
                 </div>
@@ -83,7 +88,7 @@
                         <label for="ocupada " class="form-label">Código do Usuário</label>
                         <!-- <input type="number" name="ocupada" class="form-control" id="ocupada"> -->
 
-                        <select type="number" name="ocupada" class="form-control" id="ocupada">
+                        <select type="number" name="ocupada" class="form-select2" id="ocupada">
 
                             <?php
                             $sql = "SELECT * FROM tb_usuarios";
@@ -103,7 +108,7 @@
                     <hr>
                     <div class="col-md-4">
                         <label for="placaveiculo" class="form-label">Placa do Veículo</label>
-                        <select type="text" name="placa_veiculo" class="form-control" id="placaveiculo">
+                        <select type="text" name="placa_veiculo" class="form-select2" id="placaveiculo">
 
                             <?php
                             $sql = "SELECT * FROM tb_veiculo_morador";

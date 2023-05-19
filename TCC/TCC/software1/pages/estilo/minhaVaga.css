@@ -45,7 +45,7 @@ label {
 
 .form-select2 {
     display: block;
-    width: 600px;
+    width: 30rem;
     padding: 0.375rem 0.75rem;
     font-size: 1rem;
     font-weight: 400;
@@ -65,8 +65,19 @@ label {
     width: 138px;
     height: 38px;
     border-radius: 4px;
+    margin-top: 2rem !important;
     margin-bottom: 1rem!important;
-    margin-left: 2rem;
+}
+.btn-enviar1 {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #fff;
+    width: 138px;
+    height: 38px;
+    border-radius: 4px;
+    margin-top: 0rem !important;
+    margin-left: 1rem;
+    margin-bottom: 1rem !important;
 }
 
 .btn-enviar:hover {
@@ -100,6 +111,7 @@ hr{
     display: flex;
     justify-content: center;
 }
+
 ol,
 ul,
 dl {
@@ -121,9 +133,19 @@ ul {
 strong{
     display: none;
 }
+.imagemPromocional {
+    margin-top: 5rem;
+    
+}
+.imagemPromocional img {
+    width: 300px;
+    height: 300px;
+    margin-top: 5rem;
+}
 .barraLateral{
     display: none;
 }
+
 @media screen and (max-width: 480px) {
     .barraLateral{
         display: flex;
@@ -152,4 +174,11 @@ strong{
         position: absolute;
         left: 10px;
     }
+    .imagemPromocional img {
+        display: none;
+        margin-top: 0rem;
+    }
+        .form-select2 {
+            width: 25rem;
+        }
 }

@@ -52,18 +52,18 @@
     display: none;
 }
   @media screen and (max-width: 480px) {
+ 
     .barraLateral{
       display: flex;
   }
     .buttons {
       margin: 0 auto;
-      width: 1200px;
-      display: block;
-        
+      display:block;
     }
     
     #button3, #button2, #button1{
       margin-top: 15px;
       border-top: 2px solid  #0056b3;
     }
+  
   }
