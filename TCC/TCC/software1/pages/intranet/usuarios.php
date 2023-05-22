@@ -52,7 +52,7 @@
     $pagina = (isset($_GET['pagina'])) ?  $_GET['pagina'] : 1;   
 
     //Setar quantidade de itens por página
-    $total_pagina = 5;
+    $total_pagina = 2 ;
 
     //calcular o inicio da visualização
 
@@ -105,25 +105,31 @@
     <li>
         <?php 
             if($pagina_anterior != 0){  ?>
-                <li class="page-item disabled">
-                <a class="page-link" href="/software1/pages/intranet/usuarios.php?pagina=<?php echo $pagina_anterior?>">Anterior</a>
-              </li>
+                
+                <a class="link_pag" href="/software1/pages/intranet/usuarios.php?pagina=<?php echo $pagina_anterior?>">Anterior</a>
+              
            <?php }else{
-            
+           
            } ?>
         
     </li>
   
     <?php  
       //apresentar a páginação
-      for($i = 1; $i < $num_pagina + 1 ; $i++){  ?>
-        <a  href="/software1/pages/intranet/usuarios.php?pagina=<?php echo $i?>"><?php echo $i ?></a></li>
+    //  MANUTENÇÃO  
+    
+           $num_pagina = 4;
+
+    for($i = 1; $i < $num_pagina + 1 ; $i++){  ?>
+
+         <a  href="/software1/pages/intranet/usuarios.php?pagina=<?php  echo $i?>"><?php echo $i ?></a> 
      <?php  } ?>
 
      <?php 
-     var_dump($total_pagina);
-     var_dump($total_registro);
-     var_dump($num_pagina);
+    //  var_dump($pagina);
+    //  var_dump($total_pagina);
+    //  var_dump($total_registro);
+    //  var_dump($num_pagina);
     //  var_dump($num);
     //  var_dump($pagina_anterior);
     //  var_dump($num_pagina);
@@ -131,18 +137,17 @@
     //  ?>   
 
 
-        <li>
-        <?php 
-
-
-            if($pagina_posterior >= $num_pagina){  ?>
+<li>
+    <?php 
+            
+            
+            if($pagina_posterior <= $num_pagina){  ?>
                 
                 <a class="page-link" href="/software1/pages/intranet/usuarios.php?pagina=<?php echo $pagina_posterior?>">Próximo</a>
-              </li>
+                
+              
            <?php }else{ ?>
-            <li class="disabled">
-                <a class="page-link" href="/software1/pages/intranet/moradores.php?pagina="></a>
-              </li>
+            
         <?php   } ?>
         
          </li>

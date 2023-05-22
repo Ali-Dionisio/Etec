@@ -121,9 +121,9 @@
     <li>
         <?php 
             if($pagina_anterior != 0){  ?>
-                <li class="page-item disabled">
-                <a class="page-link" href="/software1/pages/intranet/moradores.php?pagina=<?php echo $pagina_anterior?>">Anterior</a>
-              </li>
+                
+                <a class="link_pag" href="/software1/pages/intranet/moradores.php?pagina=<?php echo $pagina_anterior?>">Anterior</a>
+             
            <?php }else{
             
            } ?>
@@ -132,9 +132,12 @@
   
     <?php  
       //apresentar a páginação
-      for($i = 1; $i < $num_pagina + 1 ; $i++){  ?>
-        <a  href="/software1/pages/intranet/moradores.php?pagina=<?php echo $i?>"><?php echo $i ?></a></li>
-     <?php  } ?>
+    //  MANUTENÇÃO  
+    
+    //for($i = 1; $i < $num_pagina + 1 ; $i++){  ?>
+
+        <!-- <a  href="/software1/pages/intranet/moradores.php?pagina=<?php // echo $i?>"><?php //echo $i ?></a> -->
+     <?php  //} ?>
 
      <?php 
     //  var_dump($num);
@@ -150,7 +153,7 @@
 
             if($pagina_posterior >= $num_pagina){  ?>
                 
-                <a class="page-link" href="/software1/pages/intranet/moradores.php?pagina=<?php echo $pagina_posterior?>">Próximo</a>
+                <a class="link_pag" href="/software1/pages/intranet/moradores.php?pagina=<?php echo $pagina_posterior?>">Próximo</a>
               </li>
            <?php }else{ ?>
             <li class="disabled">
