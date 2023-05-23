@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 17-Maio-2023 às 01:15
--- Versão do servidor: 8.0.27
+-- Tempo de geração: 23-Maio-2023 às 15:11
+-- Versão do servidor: 5.7.36
 -- versão do PHP: 7.4.26
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -31,10 +31,10 @@ USE `bd_condmind`;
 
 DROP TABLE IF EXISTS `tb_cor`;
 CREATE TABLE IF NOT EXISTS `tb_cor` (
-  `cod_cor` int NOT NULL AUTO_INCREMENT,
-  `descricao_cor` varchar(14) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `cod_cor` int(11) NOT NULL AUTO_INCREMENT,
+  `descricao_cor` varchar(14) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`cod_cor`)
-) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Extraindo dados da tabela `tb_cor`
@@ -60,15 +60,15 @@ INSERT INTO `tb_cor` (`cod_cor`, `descricao_cor`) VALUES
 
 DROP TABLE IF EXISTS `tb_fale_conosco`;
 CREATE TABLE IF NOT EXISTS `tb_fale_conosco` (
-  `cod_msg` int NOT NULL AUTO_INCREMENT,
-  `via` varchar(10) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `nome_completo` varchar(150) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `email` varchar(60) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `celular` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `assunto` varchar(25) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `mensagem` varchar(500) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `cod_msg` int(11) NOT NULL AUTO_INCREMENT,
+  `via` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
+  `nome_completo` varchar(150) COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(60) COLLATE utf8_unicode_ci NOT NULL,
+  `celular` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
+  `assunto` varchar(25) COLLATE utf8_unicode_ci NOT NULL,
+  `mensagem` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`cod_msg`)
-) ENGINE=MyISAM AUTO_INCREMENT=27 DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=27 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Extraindo dados da tabela `tb_fale_conosco`
@@ -98,10 +98,10 @@ INSERT INTO `tb_fale_conosco` (`cod_msg`, `via`, `nome_completo`, `email`, `celu
 
 DROP TABLE IF EXISTS `tb_funcao`;
 CREATE TABLE IF NOT EXISTS `tb_funcao` (
-  `cod_funcao` int NOT NULL AUTO_INCREMENT,
-  `descricao_funcao` varchar(18) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `cod_funcao` int(11) NOT NULL AUTO_INCREMENT,
+  `descricao_funcao` varchar(18) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`cod_funcao`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Extraindo dados da tabela `tb_funcao`
@@ -121,14 +121,14 @@ INSERT INTO `tb_funcao` (`cod_funcao`, `descricao_funcao`) VALUES
 
 DROP TABLE IF EXISTS `tb_hist_salao`;
 CREATE TABLE IF NOT EXISTS `tb_hist_salao` (
-  `num_hist_salao` int NOT NULL AUTO_INCREMENT,
-  `cod_salao` int NOT NULL DEFAULT '0',
+  `num_hist_salao` int(11) NOT NULL AUTO_INCREMENT,
+  `cod_salao` int(11) NOT NULL DEFAULT '0',
   `data_reserva` date NOT NULL,
   `hora_inicio` time NOT NULL,
   `hora_fim` time NOT NULL,
-  `cod_morador` int NOT NULL,
+  `cod_morador` int(11) NOT NULL,
   PRIMARY KEY (`num_hist_salao`)
-) ENGINE=MyISAM AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=20 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Extraindo dados da tabela `tb_hist_salao`
@@ -152,9 +152,7 @@ INSERT INTO `tb_hist_salao` (`num_hist_salao`, `cod_salao`, `data_reserva`, `hor
 (16, 24, '2023-05-12', '10:35:00', '10:36:00', 1),
 (17, 25, '2023-05-13', '10:22:00', '11:22:00', 1),
 (18, 27, '2023-05-13', '10:30:00', '11:30:00', 1),
-(19, 29, '2023-05-25', '08:30:00', '10:45:00', 1),
-(20, 30, '2024-01-20', '12:00:00', '16:00:00', 1),
-(21, 33, '2024-01-20', '12:00:00', '16:00:00', 1);
+(19, 29, '2023-05-25', '08:30:00', '10:45:00', 1);
 
 -- --------------------------------------------------------
 
@@ -164,29 +162,29 @@ INSERT INTO `tb_hist_salao` (`num_hist_salao`, `cod_salao`, `data_reserva`, `hor
 
 DROP TABLE IF EXISTS `tb_morador`;
 CREATE TABLE IF NOT EXISTS `tb_morador` (
-  `cod_morador` int NOT NULL AUTO_INCREMENT,
-  `primeiro_nome` varchar(15) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `nome_completo` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `email` varchar(40) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `cpf` varchar(15) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `rg` varchar(11) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `cod_morador` int(11) NOT NULL AUTO_INCREMENT,
+  `primeiro_nome` varchar(15) COLLATE utf8_unicode_ci NOT NULL,
+  `nome_completo` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
+  `cpf` varchar(15) COLLATE utf8_unicode_ci NOT NULL,
+  `rg` varchar(11) COLLATE utf8_unicode_ci NOT NULL,
   `dtnascimento` date NOT NULL,
-  `celular` varchar(13) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `estadocivil` varchar(15) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `bloco` varchar(5) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `numero_apartamento` varchar(5) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `foto` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `funcao` varchar(15) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `celular` varchar(13) COLLATE utf8_unicode_ci NOT NULL,
+  `estadocivil` varchar(15) COLLATE utf8_unicode_ci NOT NULL,
+  `bloco` varchar(5) COLLATE utf8_unicode_ci NOT NULL,
+  `numero_apartamento` varchar(5) COLLATE utf8_unicode_ci NOT NULL,
+  `foto` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `funcao` varchar(15) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`cod_morador`),
   UNIQUE KEY `cpf` (`cpf`)
-) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Extraindo dados da tabela `tb_morador`
 --
 
 INSERT INTO `tb_morador` (`cod_morador`, `primeiro_nome`, `nome_completo`, `email`, `cpf`, `rg`, `dtnascimento`, `celular`, `estadocivil`, `bloco`, `numero_apartamento`, `foto`, `funcao`) VALUES
-(1, 'alisson', 'alisson almeida', 'alisson.a-work@outlook.com', '44291300867', '111', '1999-01-20', '992325271', 'Casado(a)', '6', '1', '../imgs/1ac5fbea12c9dc646435a69daa443270.jpg', 'Administrador'),
+(1, 'alisson', 'alisson almeida', 'alisson.a-work@outlook.com', '44291300867', '111', '1999-01-20', '(99) 23252-71', 'Casado(a)', '6', '1 ', '../imgs/1ac5fbea12c9dc646435a69daa443270.jpg', 'Administrador'),
 (23, 'Gabriel', 'Gabriel Sena', '', '55182079840', '11111', '2023-03-14', '', 'Solteiro(a)', '2', '1', '../imgs/1ac5fbea12c9dc646435a69daa443270.jpg', 'Administrador'),
 (24, 'João', 'João Henrique', '', '53189636842', '1111111', '0000-00-00', '', 'Solteiro(a)', '3', '1', '../imgs/1ac5fbea12c9dc646435a69daa443270.jpg', 'Administrador'),
 (25, 'Eric', 'Eric Sanderson', '', '49098843867', '', '2023-03-14', '', '', '', '', '../imgs/1ac5fbea12c9dc646435a69daa443270.jpg', 'Administrador'),
@@ -225,23 +223,22 @@ DELIMITER ;
 
 DROP TABLE IF EXISTS `tb_salao`;
 CREATE TABLE IF NOT EXISTS `tb_salao` (
-  `cod_salao` int NOT NULL AUTO_INCREMENT,
+  `cod_salao` int(11) NOT NULL AUTO_INCREMENT,
   `data_reserva` date NOT NULL,
   `hora_inicio` time NOT NULL,
   `hora_fim` time NOT NULL,
-  `cod_morador` int NOT NULL,
+  `cod_morador` int(11) NOT NULL,
   PRIMARY KEY (`cod_salao`),
   UNIQUE KEY `cod_morador` (`cod_morador`),
   KEY `cod_morador_2` (`cod_morador`)
-) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Extraindo dados da tabela `tb_salao`
 --
 
 INSERT INTO `tb_salao` (`cod_salao`, `data_reserva`, `hora_inicio`, `hora_fim`, `cod_morador`) VALUES
-(18, '2023-07-30', '12:00:00', '23:00:00', 24),
-(33, '2024-01-20', '12:00:00', '16:00:00', 1);
+(18, '2023-07-30', '12:00:00', '23:00:00', 24);
 
 --
 -- Acionadores `tb_salao`
@@ -266,14 +263,14 @@ DELIMITER ;
 
 DROP TABLE IF EXISTS `tb_usuarios`;
 CREATE TABLE IF NOT EXISTS `tb_usuarios` (
-  `cod_usuario` int NOT NULL AUTO_INCREMENT,
-  `usuario` varchar(15) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `primeiro_nome` varchar(15) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `senha` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `funcao` varchar(15) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `cod_usuario` int(11) NOT NULL AUTO_INCREMENT,
+  `usuario` varchar(15) COLLATE utf8_unicode_ci NOT NULL,
+  `primeiro_nome` varchar(15) COLLATE utf8_unicode_ci NOT NULL,
+  `senha` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `funcao` varchar(15) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`cod_usuario`),
   UNIQUE KEY `usuario` (`usuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Extraindo dados da tabela `tb_usuarios`
@@ -296,15 +293,15 @@ INSERT INTO `tb_usuarios` (`cod_usuario`, `usuario`, `primeiro_nome`, `senha`, `
 
 DROP TABLE IF EXISTS `tb_vaga_garagem`;
 CREATE TABLE IF NOT EXISTS `tb_vaga_garagem` (
-  `cod_vaga` int NOT NULL AUTO_INCREMENT,
-  `num_vaga` int NOT NULL,
-  `tipo_vaga` varchar(15) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `cod_vaga` int(11) NOT NULL AUTO_INCREMENT,
+  `num_vaga` int(11) NOT NULL,
+  `tipo_vaga` varchar(15) COLLATE utf8_unicode_ci NOT NULL,
   `ocupada` tinyint(1) NOT NULL,
-  `placa_veiculo` varchar(7) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `placa_veiculo` varchar(7) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`cod_vaga`),
   UNIQUE KEY `placa_veiculo_2` (`placa_veiculo`),
   KEY `placa_veiculo` (`placa_veiculo`)
-) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Extraindo dados da tabela `tb_vaga_garagem`
@@ -323,10 +320,10 @@ INSERT INTO `tb_vaga_garagem` (`cod_vaga`, `num_vaga`, `tipo_vaga`, `ocupada`, `
 
 DROP TABLE IF EXISTS `tb_veiculo`;
 CREATE TABLE IF NOT EXISTS `tb_veiculo` (
-  `cod_veiculo` int NOT NULL AUTO_INCREMENT,
-  `modelo_veiculo` varchar(30) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `cod_veiculo` int(11) NOT NULL AUTO_INCREMENT,
+  `modelo_veiculo` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`cod_veiculo`)
-) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Extraindo dados da tabela `tb_veiculo`
@@ -354,15 +351,15 @@ INSERT INTO `tb_veiculo` (`cod_veiculo`, `modelo_veiculo`) VALUES
 
 DROP TABLE IF EXISTS `tb_veiculo_morador`;
 CREATE TABLE IF NOT EXISTS `tb_veiculo_morador` (
-  `placa_veiculo` varchar(7) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `placa_veiculo` varchar(7) COLLATE utf8_unicode_ci NOT NULL,
   `tipo_veiculo` varchar(7) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `modelo` varchar(15) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `ano` int NOT NULL,
-  `cor` varchar(10) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `cod_morador` int NOT NULL,
+  `modelo` varchar(15) COLLATE utf8_unicode_ci NOT NULL,
+  `ano` int(11) NOT NULL,
+  `cor` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
+  `cod_morador` int(11) NOT NULL,
   PRIMARY KEY (`placa_veiculo`),
   UNIQUE KEY `cod_morador` (`cod_morador`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Extraindo dados da tabela `tb_veiculo_morador`
@@ -381,10 +378,10 @@ INSERT INTO `tb_veiculo_morador` (`placa_veiculo`, `tipo_veiculo`, `modelo`, `an
 
 DROP TABLE IF EXISTS `vaga`;
 CREATE TABLE IF NOT EXISTS `vaga` (
-  `cod_vaga` int NOT NULL AUTO_INCREMENT,
-  `tipo_vaga` varchar(18) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `cod_vaga` int(11) NOT NULL AUTO_INCREMENT,
+  `tipo_vaga` varchar(18) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`cod_vaga`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Extraindo dados da tabela `vaga`
