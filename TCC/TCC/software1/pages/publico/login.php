@@ -28,7 +28,6 @@
     ?>
     <?php include('barraSuperiorPub.php'); ?>
     <div class="ladoCima">
-        <h2>Login</h2>
     </div>
     <div class="lados">
         <div class="ladoEsquerdo">
