@@ -34,19 +34,6 @@ if (isset($_SESSION['msg'])) {
 }
 require('../acoes/connect.php');
 
-          //Pegar o indice nna URL da página, caso não haja indice, atribua o valor 1
-          $pagina = (isset($_GET['pagina'])) ?  $_GET['pagina'] : 1;   
-
-          //Setar quantidade de itens por página
-          $total_pagina = 5;
-      
-          //calcular o inicio da visualização
-      
-          $inicio = ($total_pagina * $pagina)-$total_pagina;
-
- 
-
-
 $salaos = mysqli_query($con, "SELECT * FROM `tb_hist_salao` WHERE `DATA_RESERVA`  order by data_reserva ");
 echo "<table class='table table-hover table-bordered'>";
 echo "<tr class=tittabela>";
@@ -58,7 +45,7 @@ echo "<th class=tittabela>Horario do fim</th>";
 echo "<th class=tittabela>Nome do morador</th>";
 echo "</tr >";
 while ($salao = mysqli_fetch_array($salaos)) {
-    $moradores = mysqli_query($con, "Select * from `tb_morador` where cod_morador = $salao[cod_morador] ");
+    $moradores = mysqli_query($con, "Select * from `tb_morador` where cod_morador = $salao[cod_morador]");
     echo "<tr>";
     echo "<td><strong>Cod.</strong> $salao[num_hist_salao]  </td>";
     echo "<td><strong>Cod. Salão</strong> $salao[cod_salao]  </td>";
@@ -75,65 +62,6 @@ echo "</tr>";
 
 echo "</table>";
 ?>
-<?php 
-  //contar o total de registros no banco de dados 
-  $total_registro = mysqli_num_rows($salaos);
-    
-  //calcular o nuúmero de páginas necessárias para apresentar os registros;
-  $num_pagina = ceil($total_registro / $total_pagina);
-?>
-
-
-<div class="paginacao">
- <!-- <nav aria-label="Page navigation example">
-  <ul class="pagination justify-content-center"> -->
-    <?php 
-    //verificar a pagina anterior e posterior
-    $pagina_anterior = $pagina - 1;
-    $pagina_posterior = $pagina + 1;
-    ?>
-
-    <li>
-        <?php 
-            if($pagina_anterior != 0){  ?>
-                
-                <a class="link_pag" href="/software1/pages/intranet/consultarHistorico.php?pagina=<?php echo $pagina_anterior?>">Anterior</a>
-             
-           <?php }else{ ?>
-               <a class="disabled" href="# ">Anterior</a>
-          <?php } ?>
-        
-    </li>
-  
-    <?php  
-      //apresentar a páginação
-    //  MANUTENÇÃO  
-    
-    
-    $num_pagina = 4;
-
-    for($i = 1; $i < $num_pagina + 1 ; $i++){  ?>
-         <a  href="/software1/pages/intranet/consultarHistorico.php?pagina=<?php  echo $i?>"><?php echo $i ?></a> 
-     <?php  } ?>
-     <?php 
-    //  var_dump($num);
-    //  var_dump($pagina_anterior);
-    //  var_dump($num_pagina);
-    //  var_dump($pagina_posterior);
-    //  ?>   
-        <li>
-        <?php 
-            if($pagina_posterior <= $num_pagina){  ?>
-                <a class="link_pag" href="software1/pages/intranet/consultarHistorico.php?pagina=<?php echo $pagina_posterior?>">Próximo</a>
-              </li>
-           <?php }else{ ?>
-                <a class="disabled" href="#">Próximo</a>   
-            <?php   } ?>
-           </li>
-            </ul>
-    <!-- </nav> -->
-           </div>
-
 
 </body>
 </html>

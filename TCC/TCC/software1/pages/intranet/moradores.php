@@ -45,31 +45,26 @@
         unset($_SESSION['msg']);
     }
 
-   
-
       //Pegar o indice nna URL da página, caso não haja indice, atribua o valor 1
     $pagina = (isset($_GET['pagina'])) ?  $_GET['pagina'] : 1;   
 
-
     //Setar quantidade de itens por página
-    $total_pagina = 5;
+    $total_pagina = 3;
 
-    
     //calcular o inicio da visualização
-    
+
     $inicio = ($total_pagina * $pagina)-$total_pagina;
     
-    
+
     require('../acoes/connect.php');
     $moradores = mysqli_query($con, "Select * from `tb_morador` limit $inicio, $total_pagina");
     echo "<table id=dtBasicExample class=table table-striped table-bordered table-sm cellspacing=0 height=100% width=100%>";
-    
-    //contar o total de registros no banco de dados 
+
+   //contar o total de registros no banco de dados 
     $total_registro = mysqli_num_rows($moradores);
     
-    
-        //calcular o nuúmero de páginas necessárias para apresentar os registros;
-        $num_pagina = ceil($total_registro / $total_pagina);
+    //calcular o nuúmero de páginas necessárias para apresentar os registros;
+    $num_pagina = ceil($total_registro / $total_pagina);
 
     while($morador = mysqli_fetch_array($moradores)){
         echo "<div class=box1>";
@@ -129,49 +124,55 @@
                 
                 <a class="link_pag" href="/software1/pages/intranet/moradores.php?pagina=<?php echo $pagina_anterior?>">Anterior</a>
              
-           <?php }else{ ?>
-               <a class="disabled" href="# ">Anterior</a>
-          <?php } ?>
+           <?php }else{
+            
+           } ?>
         
     </li>
   
-    <li>
     <?php  
       //apresentar a páginação
     //  MANUTENÇÃO  
-     $num_pagina = 2;
-            
-    for($i = 1; $i < $num_pagina + 1 ; $i++){  ?>
+    
+    //for($i = 1; $i < $num_pagina + 1 ; $i++){  ?>
 
-         <a  class="num_pag" href="/software1/pages/intranet/moradores.php?pagina=<?php  echo $i?>"><?php echo $i ?></a> 
-     <?php  } ?>
+        <!-- <a  href="/software1/pages/intranet/moradores.php?pagina=<?php // echo $i?>"><?php //echo $i ?></a> -->
+     <?php  //} ?>
 
      <?php 
-
     //  var_dump($num);
     //  var_dump($pagina_anterior);
     //  var_dump($num_pagina);
     //  var_dump($pagina_posterior);
     //  ?>   
-    </li>
+
 
         <li>
         <?php 
 
 
-            if($pagina_posterior <= $num_pagina){  ?>
+            if($pagina_posterior >= $num_pagina){  ?>
                 
                 <a class="link_pag" href="/software1/pages/intranet/moradores.php?pagina=<?php echo $pagina_posterior?>">Próximo</a>
               </li>
            <?php }else{ ?>
-           
-                <a class="disabled" href="#">Próximo</a>
-              
-            <?php   } ?>
-           </li>
+            <li class="disabled">
+                <a class="page-link" href="/software1/pages/intranet/moradores.php?pagina="></a>
+              </li>
+        <?php   } ?>
+        
+         </li>
+    
             </ul>
     <!-- </nav> -->
            </div>
+
+
+
+
+
+
+
 
 
 <script>

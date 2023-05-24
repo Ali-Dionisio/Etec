@@ -18,6 +18,8 @@ button{
 .cadastro, .col .imglogo{
     padding: 30px;
 }
+.cadastro{
+    padding: 7rem 20px;}
 
 .imglogo{
     margin-top: 4vw;
@@ -62,13 +64,18 @@ ol, ul {
 }
 .imagemPromocional {
     margin-top: 5rem;
-
+}
+.imagemReserva img{
+    width: 300px;
+    height:300px;
+    margin-top: 0rem;
 }
 .imagemPromocional img{
     width: 300px;
     height:300px;
     margin-top: 5rem;
 }
+
 @media screen and (min-width: 481px) {
     .barraLateral{
         display: none;

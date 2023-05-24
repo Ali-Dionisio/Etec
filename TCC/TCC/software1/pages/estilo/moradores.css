@@ -159,49 +159,14 @@ button{
     text-align: center;
     text-decoration: none;
     list-style-type: none;
-    
+  
     
 }
 
-.link_pag{/*Links, próximo e anterior*/
+.link_pag{
     color: black;
     text-decoration: none;
-    margin: 0 5px;
-    padding: 5px;
-    border: solid 1px #1484FC   ;
-    
-}
-
-.disabled{/*Links desabilitados próximo e anterior*/
-    pointer-events: none;
-    color: black;
-    text-decoration: none;
-    padding: 5px;
-    border: solid 1px #1484FC;
-    margin: 5px;
-}
-
-.num_pag{/*Números de dentro do FOR*/
-    border: 1px solid #1484FC;
-    padding: 5px;
-    color: black;
-    text-decoration: none; 
-}
-
-.num_pag:hover{
-    background-color:  #1484FC;
-    color: white;
-}
-
-
-
-.link_pag:hover{
-    background-color: #1484FC;
-    color: white;
-}
-
-.disabled:hover{
-    background-color: #1484FC;
-    color: white;
+    margin: 0 auto;
+   padding: 10px;
 }
 

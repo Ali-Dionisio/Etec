@@ -45,7 +45,7 @@
                 <!-- <h5 class="card-title">Altere sua vaga</h5> -->
                 <div class="imagemPromocional">
                     <h1>Altere sua vaga</h1>
-                    <img src="../imagens/timido.png" alt="" srcset="">
+                    <img src="../imagens/avatarAlterarVaga.png" alt="" srcset="">
                 </div>
             </div>
             <div class="cadastro col mt-3">

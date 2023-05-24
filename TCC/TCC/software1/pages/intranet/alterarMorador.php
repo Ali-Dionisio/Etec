@@ -45,7 +45,7 @@
                 <div class="imglogo">
                     <div class="imagemPromocional">
                     <h1>Alterar usuário </h1>
-                        <img src="../imagens/timido.png" alt="" srcset="">
+                        <img src="../imagens/avatarAlterarProprietario.png" alt="" srcset="">
                     </div>
                 </div>
             </div>
