@@ -145,19 +145,7 @@ strong{
 .barraLateral{
     display: none;
 }
-.form-control{
-    width: 35rem !important;
-}
-.botaoCadastrarOpcao {
-    text-align: center;
-}
-.botaoCadastrarOpcao a{
-    background: #007bff;
-    padding: 10px 20px;
-    color: white;
-    border-radius: 4px;
-    text-decoration: none;
-}
+
 @media screen and (max-width: 480px) {
     .barraLateral{
         display: flex;

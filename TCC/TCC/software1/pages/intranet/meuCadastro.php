@@ -51,7 +51,7 @@
                     <label>
                         <h1>Meu Cadastro</h1>
                     <div class="imagemPromocional">
-                        <img src="../imagens/avatarMeuCadastro.png" alt="" srcset="">
+                        <img src="../imagens/timido.png" alt="" srcset="">
                     </div>
                     </label>
                 </div>

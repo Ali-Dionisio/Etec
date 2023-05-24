@@ -66,7 +66,6 @@
         echo "<nav class=sair>";
         echo "<a href=../acoes/logoff.php class=botoes> <img src=../imagens/porta-de-saida.png>  Sair</a>";
         echo "</nav>";
-        
     }
     ?>
 

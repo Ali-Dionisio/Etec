@@ -105,15 +105,15 @@
     <li>
         <?php 
             if($pagina_anterior != 0){  ?>
-                
                 <a class="link_pag" href="/software1/pages/intranet/usuarios.php?pagina=<?php echo $pagina_anterior?>">Anterior</a>
               
-           <?php }else{
-           
-           } ?>
+           <?php }else{ ?>
+            <a class="disabled" href="#">Anterior</a>
+         <?php  } ?>
         
     </li>
   
+    <li>
     <?php  
       //apresentar a páginação
     //  MANUTENÇÃO  
@@ -122,7 +122,7 @@
 
     for($i = 1; $i < $num_pagina + 1 ; $i++){  ?>
 
-         <a  href="/software1/pages/intranet/usuarios.php?pagina=<?php  echo $i?>"><?php echo $i ?></a> 
+         <a  class="num_pag" href="/software1/pages/intranet/usuarios.php?pagina=<?php  echo $i?>"><?php echo $i ?></a> 
      <?php  } ?>
 
      <?php 
@@ -135,7 +135,7 @@
     //  var_dump($num_pagina);
     //  var_dump($pagina_posterior);
     //  ?>   
-
+    </li>
 
 <li>
     <?php 
@@ -143,11 +143,11 @@
             
             if($pagina_posterior <= $num_pagina){  ?>
                 
-                <a class="page-link" href="/software1/pages/intranet/usuarios.php?pagina=<?php echo $pagina_posterior?>">Próximo</a>
+                <a class="link_pag" href="/software1/pages/intranet/usuarios.php?pagina=<?php echo $pagina_posterior?>">Próximo</a>
                 
               
            <?php }else{ ?>
-            
+            <a class="disabled" href="#">Próximo</a>            
         <?php   } ?>
         
          </li>

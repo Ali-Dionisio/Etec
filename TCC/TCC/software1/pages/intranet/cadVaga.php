@@ -45,7 +45,7 @@
                     <label>
                         <h1>Cadastrar Vaga</h1>
                         <div class="imagemPromocional">
-                            <img src="../imagens/avatarCadastrarVaga.png" alt="" srcset="">
+                            <img src="../imagens/timido.png" alt="" srcset="">
                         </div>
 
                     </label>

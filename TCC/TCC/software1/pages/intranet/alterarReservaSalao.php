@@ -44,9 +44,7 @@
             <div class="cadastro col mt-3">
                 <!--  primeira coluna -->
                 <!-- <h5 class="card-title">Altere sua reserva</h5> -->
-                <div class="imagemReserva ">
-                        <img src="../imagens/avatarSalao (opicional).png" alt="" srcset="">
-                    </div>
+
             </div>
             <div class="cadastro col mt-3">
                 <!--Segunda coluna -->

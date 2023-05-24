@@ -38,9 +38,9 @@
                 <!--  primeira coluna -->
                 <div class="imglogo">
                     <label>
-                        <h1>Cadastrar Veiculo</h1>
+                        <h1>Cadastrar Vaga</h1>
                         <div class="imagemPromocional">
-                            <img src="../imagens/avatarCadastrarVeiculo.png" alt="" srcset="">
+                            <img src="../imagens/timido.png" alt="" srcset="">
                         </div>
                     </label>
                 </div>
@@ -88,9 +88,6 @@
                         </select>
                     </div>
                     <hr>
-                    <?php
-                                echo "<div class=botaoCadastrarOpcao><a href =../intranet/cadmodeloVeiculo.php class=btn-enviar>Cadastrar Modelo</a></div>";
-                            ?>
                     <div class="col-md-4">
                         <label for="ano" class="form-label">Ano do Veículo</label>
                         <select type="text" name="ano" class="form-select2">
@@ -105,8 +102,9 @@
                     <hr>
                     <div class="col-md-4">
                         <label for="cor" class="form-label">Cor do Veículo</label>
-                        <select type="text" name="cor" class="form-select2">
+                        <select type="text" name="cor" class="form-select2" ">
                          <option select></option>
+
                             <?php
                             $sql = "SELECT * FROM tb_cor";
                             $result = $con->query($sql);
@@ -118,14 +116,11 @@
                             } else {
                                 echo "0 results";
                             }
-                            
+
                             ?>
                         </select>
                     </div>
                     <hr>
-                            <?php
-                                echo "<div class=botaoCadastrarOpcao><a href =../intranet/cadcor.php class=btn-enviar>Cadastrar Cor</a></div>";
-                            ?>
                     <div class=" col-md-4">
                             <label for="cod_morador" class="form-label">Código Proprietário</label>
                             <!-- <input type="text" name="cod_morador" class="form-control"> -->
