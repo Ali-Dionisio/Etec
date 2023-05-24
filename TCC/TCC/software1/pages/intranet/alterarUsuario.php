@@ -47,7 +47,7 @@
 
                 <div class="imagemPromocional">
                     <h1>Alterar Senha</h1>
-                    <img src="../imagens/timido.png" alt="" srcset="">
+                    <img src="../imagens/avatarAlterarUsuario.png" alt="" srcset="">
                 </div>
             </div>
             <div class="cadastro cad222 col mt-3">

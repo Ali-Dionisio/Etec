@@ -93,7 +93,7 @@
                     <label>
                         <h1>Cadastre-se</h1>
                     <div class="imagemPromocional">
-                        <img src="../imagens/timido.png" alt="" srcset="">
+                        <img src="../imagens/fotoReserva1.png" alt="" srcset="">
                     </div>
                     </label>
                 </div>

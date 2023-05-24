@@ -38,9 +38,9 @@
                 <!--  primeira coluna -->
                 <div class="imglogo">
                     <label>
-                        <h1>Cadastrar Vaga</h1>
+                        <h1>Cadastrar Veiculo</h1>
                         <div class="imagemPromocional">
-                            <img src="../imagens/timido.png" alt="" srcset="">
+                            <img src="../imagens/avatarCadastrarVeiculo.png" alt="" srcset="">
                         </div>
                     </label>
                 </div>
@@ -89,6 +89,9 @@
                     </div>
                     <hr>
                     <div class="col-md-4">
+                        <?php
+                            echo "";
+                        ?>
                         <label for="ano" class="form-label">Ano do Veículo</label>
                         <select type="text" name="ano" class="form-select2">
                             <option>Selecione um ano</option>
