@@ -88,10 +88,10 @@
                         </select>
                     </div>
                     <hr>
+                    <?php
+                                echo "<div class=botaoCadastrarOpcao><a href =../intranet/cadmodeloVeiculo.php class=btn-enviar>Cadastrar Modelo</a></div>";
+                            ?>
                     <div class="col-md-4">
-                        <?php
-                            echo "";
-                        ?>
                         <label for="ano" class="form-label">Ano do Veículo</label>
                         <select type="text" name="ano" class="form-select2">
                             <option>Selecione um ano</option>
@@ -105,9 +105,8 @@
                     <hr>
                     <div class="col-md-4">
                         <label for="cor" class="form-label">Cor do Veículo</label>
-                        <select type="text" name="cor" class="form-select2" ">
+                        <select type="text" name="cor" class="form-select2">
                          <option select></option>
-
                             <?php
                             $sql = "SELECT * FROM tb_cor";
                             $result = $con->query($sql);
@@ -119,11 +118,14 @@
                             } else {
                                 echo "0 results";
                             }
-
+                            
                             ?>
                         </select>
                     </div>
                     <hr>
+                            <?php
+                                echo "<div class=botaoCadastrarOpcao><a href =../intranet/cadcor.php class=btn-enviar>Cadastrar Cor</a></div>";
+                            ?>
                     <div class=" col-md-4">
                             <label for="cod_morador" class="form-label">Código Proprietário</label>
                             <!-- <input type="text" name="cod_morador" class="form-control"> -->
