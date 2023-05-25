@@ -42,10 +42,10 @@ button{
     color: white;
     text-decoration: none;
 }
-#result{
+/* #result{
     margin-left: 10rem;
     margin-right: 10rem;
-}
+} */
 
 .box{
     display: flex;
@@ -111,7 +111,8 @@ button{
     color: white;
 }
 #result .box1{
-    width: 39%;
+    /* width: 39%; */
+    background: ghostwhite;
 }
 /* #result img {
     max-width: 150px;
