@@ -122,7 +122,7 @@
         <?php 
             if($pagina_anterior != 0){  ?>
                 
-                <a class="link_pag" href="/software1/pages/intranet/moradores.php?pagina=<?php echo $pagina_anterior?>">Anterior</a>
+                <a class="link_pag" href="../intranet/moradores.php?pagina=<?php echo $pagina_anterior?>">Anterior</a>
              
            <?php }else{
             
@@ -153,11 +153,11 @@
 
             if($pagina_posterior >= $num_pagina){  ?>
                 
-                <a class="link_pag" href="/software1/pages/intranet/moradores.php?pagina=<?php echo $pagina_posterior?>">Próximo</a>
+                <a class="link_pag" href="../intranet/moradores.php?pagina=<?php echo $pagina_posterior?>">Próximo</a>
               </li>
            <?php }else{ ?>
             <li class="disabled">
-                <a class="page-link" href="/software1/pages/intranet/moradores.php?pagina="></a>
+                <a class="page-link" href="../intranet/moradores.php?pagina="></a>
               </li>
         <?php   } ?>
         

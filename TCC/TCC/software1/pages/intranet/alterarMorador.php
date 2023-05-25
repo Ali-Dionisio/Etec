@@ -44,7 +44,7 @@
                 <!--  primeira coluna -->
                 <div class="imglogo">
                     <div class="imagemPromocional">
-                    <h1>Alterar usuário </h1>
+                    <h1>Alterar Morador </h1>
                         <img src="../imagens/avatarAlterarProprietario.png" alt="" srcset="">
                     </div>
                 </div>
