@@ -57,7 +57,7 @@
 
                     <nav class="telefone">
                         <label for="celular">TELEFONE</label>
-                        <input type="number"  name="celular" id="celular" placeholder="(00) 00000-0000">
+                        <input type="text"  name="celular" id="celular" placeholder="(00) 00000-0000">
                     </nav>
                     
                     <nav class="assunto">
