@@ -11,6 +11,7 @@ if($busca->num_rows ==1){
         $_SESSION['login'] = true;
         $_SESSION['nome'] = $contato['primeiro_nome'];
         $_SESSION['usuarioLogin'] = $usuario;
+        $_SESSION['cod_usuario'] = $contato['cod_usuario'];
         $target = "location:../intranet/intranet.php";
         
     }else{
