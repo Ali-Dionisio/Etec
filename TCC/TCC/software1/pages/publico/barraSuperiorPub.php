@@ -16,5 +16,7 @@
     }
 </style>
 <div id="barra">
-    <img src="../imagens/logoCondMind.png" alt="" srcset="">
+    <a href="../index.php">
+        <img src="../imagens/logoCondMind.png" alt="" srcset="">
+    </a>
 </div>
