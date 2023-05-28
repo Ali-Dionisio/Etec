@@ -59,9 +59,7 @@ while ($garagem = mysqli_fetch_array($garagens)) {
         echo "<td><strong>Placa Veic:  </strong> $garagem[placa_veiculo] </td>";
         
         echo "<td class=> 
-                    <button onclick=\"location.href='alterarMinhaVaga.php?page=editar&cod=$garagem[cod_vaga]';\" class='btn btn-success'>Editar</button>
-
-                    <button onclick=\"if(confirm('Tem certeza que deseja excluir? id: $garagem[cod_vaga]')){location.href='../acoes/excluirMinhaVaga.act.php?cod=$garagem[cod_vaga]';}else{false;}\" class='btn btn-danger'>Excluir</button>           
+                    <button onclick=\"location.href='alterarMinhaVaga.php?page=editar&cod=$garagem[cod_vaga]';\" class='btn btn-success'>Mais Detalhes</button>
             </td>";
             
         echo "</tr>";
