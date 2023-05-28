@@ -54,24 +54,24 @@
                 <form class="mt-5 row g-3" action="../acoes/alterarMinhaVaga.act.php" method="post" id="">
                     <div class="col-md-4">
                         <label for="cod_vaga" class="form-label">Código da Vaga</label>
-                        <input type="number" name="cod_vaga" class="form-control" value="<?php echo $vaga['cod_vaga']; ?>">
+                        <input type="number" <?php echo "$campo"; ?> name="cod_vaga" class="form-control" value="<?php echo $vaga['cod_vaga']; ?>">
                     </div>
                     <hr>
                     <div class="col-md-4">
                         <label for="num_vaga" class="form-label">Número da Vaga</label>
-                        <input type="number" name="num_vaga" class="form-control" value="<?php echo $vaga['num_vaga']; ?>">
+                        <input type="number" <?php echo "$campo"; ?> name="num_vaga" class="form-control" value="<?php echo $vaga['num_vaga']; ?>">
                         <input type="hidden" name="cod_vaga" class="form-control" value="<?php echo $vaga['cod_vaga']; ?>">
                     </div>
                     <hr>
                     <div class="col-md-4">
                         <label for="tipo_vaga" class="form-label">Tipo da Vaga</label>
-                        <input type="text" name="tipo_vaga" class="form-control" value="<?php echo $vaga['tipo_vaga']; ?>">
+                        <input type="text" <?php echo "$campo"; ?> name="tipo_vaga" class="form-control" value="<?php echo $vaga['tipo_vaga']; ?>">
                         <input type="hidden" name="cod_vaga" class="form-control" value="<?php echo $vaga['cod_vaga']; ?>">
                     </div>
                     <hr>
                     <div class="col-md-4">
                         <label for="ocupada" class="form-label">Ocupação da Vaga</label>
-                        <input type="number" name="ocupada" class="form-control" value="<?php echo $vaga['ocupada']; ?>">
+                        <input type="number" <?php echo "$campo"; ?> name="ocupada" class="form-control" value="<?php echo $vaga['ocupada']; ?>">
                         <input type="hidden" name="cod_vaga" class="form-control" value="<?php echo $vaga['cod_vaga']; ?>">
                         <?php
                         $ocupada = 1; // valor da célula da tabela
@@ -86,7 +86,7 @@
                     <hr>
                     <div class="col-md-4">
                         <label for="placa_veiculo" class="form-label">Placa do Veículo</label>
-                        <input type="text" name="placa_veiculo" class="form-control" value="<?php echo $vaga['placa_veiculo']; ?>">
+                        <input type="text" <?php echo "$campo"; ?> name="placa_veiculo" class="form-control" value="<?php echo $vaga['placa_veiculo']; ?>">
                         <input type="hidden" name="cod_vaga" class="form-control" value="<?php echo $vaga['cod_vaga']; ?>">
                     </div>
 

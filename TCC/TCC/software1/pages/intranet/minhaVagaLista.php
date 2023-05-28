@@ -14,7 +14,6 @@ if (isset($_SESSION['msg'])) {
 require('../acoes/connect.php');
 $vagas = mysqli_query($con, "Select * from `tb_vaga_garagem` order by num_vaga ");
 $codusuario = $_SESSION['cod_usuario'];
-var_dump($codusuario);
 echo "<table class='table table-hover 
          table-bordered'>";
 echo "<tr>";
@@ -25,8 +24,8 @@ echo "<th>Usuário</th>";
 echo "<th>Placa do Veículo</th>";
 echo "<th class=acoes>Ações</th>";
 echo "</tr>";
-while ($vaga = mysqli_fetch_array($vagas)) {
-     if ($controle['funcao'] == 'Administrador') {
+if ($controle['funcao'] == 'Administrador') {
+    while ($vaga = mysqli_fetch_array($vagas)) {
     $usuarios = mysqli_query($con, "Select * from `tb_usuarios` where cod_usuario = $vaga[ocupada]");
     echo "<tr class=reppet>";
     echo "<td><strong>Vaga:  </strong> $vaga[cod_vaga] </td>";
@@ -45,29 +44,30 @@ while ($vaga = mysqli_fetch_array($vagas)) {
             </td>";
     echo "</tr>";
     } 
-    
-    else if ($controle['funcao'] == 'Morador'){
-        $usuarios = mysqli_query($con, "Select * from `tb_usuarios` where cod_usuario = $vaga[ocupada]");
-        $garagens = mysqli_query($con, "Select * from `tb_vaga_garagem` where ocupada = $codusuario");
-        while ($garagem = mysqli_fetch_array($garagens)) {
+}
+else if ($controle['funcao'] == 'Morador'){
+        $garagens = mysqli_query($con, "SELECT * 
+                                        FROM `tb_usuarios`
+                                        join `tb_vaga_garagem` on `tb_usuarios`.`cod_usuario` = `tb_vaga_garagem`.`ocupada`
+                                        where `tb_vaga_garagem`.`ocupada` = $codusuario");
+while ($garagem = mysqli_fetch_array($garagens)) {
         echo "<tr class=reppet>";
         echo "<td><strong>Vaga:  </strong> $garagem[cod_vaga] </td>";
         echo "<td><strong>Número Vaga:  </strong> $garagem[num_vaga] </td>";
         echo "<td><strong>Tipo Vaga:  </strong> $garagem[tipo_vaga] </td>";
-        while ($usuario = mysqli_fetch_array($usuarios)) {
-            $nome = strtoupper("$usuario[primeiro_nome]");
-            echo "<td><strong>Usuário:  </strong>$garagem[ocupada] -  $nome </td>";
-        }
+        echo "<td><strong>Usuário:  </strong>$garagem[ocupada] -  $garagem[primeiro_nome] </td>";
         echo "<td><strong>Placa Veic:  </strong> $garagem[placa_veiculo] </td>";
+        
         echo "<td class=> 
                     <button onclick=\"location.href='alterarMinhaVaga.php?page=editar&cod=$garagem[cod_vaga]';\" class='btn btn-success'>Editar</button>
 
                     <button onclick=\"if(confirm('Tem certeza que deseja excluir? id: $garagem[cod_vaga]')){location.href='../acoes/excluirMinhaVaga.act.php?cod=$garagem[cod_vaga]';}else{false;}\" class='btn btn-danger'>Excluir</button>           
             </td>";
+            
         echo "</tr>";
     }
     }
-}
+
 echo "</table>";
 //} 
 // else {

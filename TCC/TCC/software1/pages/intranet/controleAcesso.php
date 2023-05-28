@@ -25,7 +25,6 @@ $mor = array($morador);
 if ($controle['funcao'] == 'Morador' ) {
     $controleMorador = "morador";
     $campo = "disabled";
-
     
 }
 if ($controle['funcao'] == 'Morador') {

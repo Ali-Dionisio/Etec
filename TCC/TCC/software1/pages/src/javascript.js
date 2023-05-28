@@ -23,7 +23,7 @@ function cancelarIntra() {
     window.location.href = "../intranet/intranet.php";
 }
 function cancelarUsuario() {
-    window.location.href = "../intranet/usuarios.php";
+        window.location.href = "../intranet/intranet.php";
 }
 function cancelarSalao() {
     window.location.href = "../intranet/salao.php";

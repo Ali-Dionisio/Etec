@@ -36,7 +36,7 @@
 
             <a class="link" href="#home">Home</a>
             <a class="link" href="#titulo_sobre">Sobre a Shannon</a>
-            <a class="link" href="../pages/publico/login.php">CondMind</a>
+            <a class="link" href="../publico/login.php">CondMind</a>
             <a class="link" href="#titulo_fale">Fale conosco</a>
         </div><!--FIM DA DIV LINKS-->
     </div><!--FIM DA DIV NAV_BAR-->
@@ -113,7 +113,7 @@
             </p>
             <br>
 
-            <div class="saber_mais"><a class="saber_mais" href="../pages/publico/login.php">CLIQUE AQUI PARA SABER MAIS</a></div>
+            <div class="saber_mais"><a class="saber_mais" href="../publico/login.php">CLIQUE AQUI PARA SABER MAIS</a></div>
         </div>
 
         <div class="condmind_imagem">

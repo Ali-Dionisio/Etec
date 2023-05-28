@@ -39,6 +39,10 @@
     require('../acoes/connect.php');
     $busca = mysqli_query($con, "Select * from `tb_usuarios` where `cod_usuario` = '$codUsuario'");
     $usuario = mysqli_fetch_array($busca);
+    
+    $login = $_SESSION['usuarioLogin'];
+    $morador = mysqli_query($con, "SELECT * FROM `tb_morador` WHERE `cpf`=$login");
+    $moradores = mysqli_fetch_array($morador);
     ?>
     <div class="mt-5 container text-center">
         <div class="row ">
@@ -84,7 +88,14 @@
                     </div>
 
                 </form>
-                <button onclick="cancelarUsuario()" class="mt-4 p-2 px-5 btn btn-primary">Cancelar</button>
+                <?php
+                echo " <a href =../intranet/meuCadastro.php?cpf=$moradores[cpf]> <nav class=botao >";
+                ?>
+                <button class="mt-4 p-2 px-5 btn btn-primary">Cancelar</button>
+
+                <?php
+                echo "  </nav></a>";
+                ?>
             </div>
         </div>
 
