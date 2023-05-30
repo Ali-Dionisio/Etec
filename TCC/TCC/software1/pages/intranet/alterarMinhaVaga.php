@@ -44,7 +44,8 @@
                 <!--  primeira coluna -->
                 <!-- <h5 class="card-title">Altere sua vaga</h5> -->
                 <div class="imagemPromocional">
-                    <h1>Altere sua vaga</h1>
+                <?php    echo "<h1>Altere sua vaga, $_SESSION[nome] </h1>"; ?>
+
                     <img src="../imagens/avatarAlterarVaga.png" alt="" srcset="">
                 </div>
             </div>

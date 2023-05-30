@@ -12,14 +12,19 @@ if (isset($_SESSION['msg'])) {
 }
 require('../acoes/connect.php');
 
-$salaos = mysqli_query($con, "SELECT * FROM `tb_salao`");
+$salaos = mysqli_query($con, "SELECT * 
+                              FROM tb_salao
+                              JOIN tb_morador on tb_morador.cod_morador = tb_salao.cod_morador
+");
 echo "<table class='table table-hover table-bordered'>";
 echo "<tr>";
 echo "<th>#</th>";
 echo "<th>Data do Evento</th>";
 echo "<th>Horario de inicio</th>";
 echo "<th>Horario do fim</th>";
-echo "<th>Nome do morador</th>";
+echo "<th>Bloco</th>";
+echo "<th>Número</th>";
+echo "<th class=$controleMorador>Nome do morador</th>";
 echo "<th>Ações</th>";
 echo "</tr>";
 while ($salao = mysqli_fetch_array($salaos)) {
@@ -29,10 +34,12 @@ while ($salao = mysqli_fetch_array($salaos)) {
     echo "<td><strong>Data do Evento: </strong> $salao[data_reserva] </td>";
     echo "<td><strong>Horario Inicio: </strong> $salao[hora_inicio] </td>";
     echo "<td><strong>Horario Fim: </strong> $salao[hora_fim] </td>";
+    echo "<td><strong></strong> $salao[bloco] </td>";
+    echo "<td><strong></strong> $salao[numero_apartamento] </td>";
     while ($morador = mysqli_fetch_array($moradores)) {
         $nome = strtoupper("$morador[primeiro_nome]");
         $verificador = $salao['cod_morador'];
-        echo "<td><strong>Nome Morador: </strong> $nome </td>";
+        echo "<td class=$controleMorador><strong>Nome Morador: </strong> $nome </td>";
 
         if (in_array($usuario, $morador)) {
             echo "<td>

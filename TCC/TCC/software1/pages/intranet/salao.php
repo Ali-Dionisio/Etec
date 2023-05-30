@@ -94,7 +94,7 @@
                     <p> Horário de Termino </p>
                     <!-- <nav id="exibir" class="exibir"></nav> -->
                     <?php
-                    echo     "    <input type=time name=horaFim id=horaTermino min=$hora value=$hora >";
+                    echo     "    <input type=time name=horaFim id=horaTermino min=$hora max='22:59' value=$hora >";
 
                     echo     "   <input type=hidden name=cod_morador class=form-control value=$morador[cod_morador]> ";
                     ?>
