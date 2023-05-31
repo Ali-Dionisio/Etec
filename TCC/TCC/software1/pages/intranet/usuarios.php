@@ -32,6 +32,12 @@
         <?php include('../intranet/barraLateral.php'); ?>
     </div>  
 
+    <div class="legenda">
+        <h2>
+            Veja os usuários do nosso sistema
+        </h2>
+    </div>    
+
     <div class="pesquisar">
         <p>Pesquisar <input type="text" onKeyup="pesquisa(this.value)"></p>
     </div>
@@ -100,6 +106,7 @@
     //verificar a pagina anterior e posterior
     $pagina_anterior = $pagina - 1;
     $pagina_posterior = $pagina + 1;
+    $num_pagina = 4;
     ?>
 
     <li>
@@ -108,22 +115,15 @@
                 <a class="link_pag" href="../intranet/usuarios.php?pagina=<?php echo $pagina_anterior?>">Anterior</a>
               
            <?php }else{ ?>
-            <a class="disabled" href="#">Anterior</a>
-         <?php  } ?>
+            <!-- <li class="disabled">
+            <a class="page-link" href="#">Anterior</a>
+            </li> -->
+            <?php  } ?>
         
     </li>
   
     <li>
-    <?php  
-      //apresentar a páginação
-    //  MANUTENÇÃO  
-    
-           $num_pagina = 4;
-
-    for($i = 1; $i < $num_pagina + 1 ; $i++){  ?>
-
-         <a  class="num_pag" href="../intranet/usuarios.php?pagina=<?php  echo $i?>"><?php echo $i ?></a> 
-     <?php  } ?>
+   
 
      <?php 
     //  var_dump($pagina);
@@ -137,17 +137,19 @@
     //  ?>   
     </li>
 
+
 <li>
     <?php 
-            
-            
+
             if($pagina_posterior <= $num_pagina){  ?>
                 
                 <a class="link_pag" href="../intranet/usuarios.php?pagina=<?php echo $pagina_posterior?>">Próximo</a>
                 
               
            <?php }else{ ?>
-            <a class="disabled" href="#">Próximo</a>            
+            <!-- <li class="disabled">
+            <a class="page-link" href="#">Próximo</a>            
+            </li> -->
         <?php   } ?>
         
          </li>

@@ -50,6 +50,9 @@
                 <div class="imglogo">
                     <label>
                         <h1>Meu Cadastro</h1>
+                        <p>
+                            Confira suas informações
+                        </p>
                     <div class="imagemPromocional">
                         <img src="../imagens/avatarMeuCadastro.png" alt="" srcset="">
                     </div>

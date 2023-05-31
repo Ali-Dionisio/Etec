@@ -30,6 +30,12 @@
         <?php include('../intranet/barraLateral.php'); ?>
     </div>   
 
+    <div class="legenda">
+        <h2>
+            Veja os proprietários do nosso sistema
+        </h2>
+    </div> 
+
     <div class="pesquisar">
         <p>Pesquisar <input type="text" onKeyup="pesquisa(this.value)"></p>
     </div>

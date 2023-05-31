@@ -57,7 +57,7 @@
         echo "        <img src=../imagens/cartao-de-identidade.png alt=>";
         echo "        <h1>Minha Vaga</h1>";
         echo "  </nav></a>";
-        echo " <a href =../intranet/fale_conosco.php> <nav class=botao>";
+        echo " <a href =../intranet/faleConosco.php> <nav class=botao>";
         echo "        <img src=../imagens/megafone.png alt=>";
         echo "        <h1>Fale conosco</h1>";
         echo "  </nav></a>";

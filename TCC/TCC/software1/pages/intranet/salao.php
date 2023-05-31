@@ -44,6 +44,9 @@
     <div class="titSalao">
         <div class="esquerda">
             <h2>Agende o seu horário, <?php echo " $_SESSION[nome] "; ?> </h2><br>
+            <p>
+                Escolha a data da comemoração e agende um horário. Em nosso site é simples!
+            </p>
         </div>
         <div class="direita">
             <p> Em nosso Salão de festas você pode curtir todas as atrações.</p>

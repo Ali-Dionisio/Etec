@@ -35,6 +35,7 @@
     $morador = mysqli_fetch_array($busca);
     ?>
 
+
     <div class="buttons">
         <div class="btn1">
             <a class="button" id="button1" href="minhaVaga.php">

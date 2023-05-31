@@ -73,7 +73,8 @@
         right: 2vw;
         border: 1px solid white;
         border-radius: 5px;
-        padding: 5px 45px;
+        padding: 5px 45px 5px 10px;
+        
     }
 
     .sair a {
@@ -137,14 +138,14 @@
           Salão </a>";
             echo "  </li>";
             echo "  <li>";
-            echo "    <a href =../intranet/reclameAqui.php>
+            echo "    <a href =../intranet/faleConosco.php>
           Fale Conosco </a>";
             echo "  </li>";
             echo "</ul>";
             echo "</nav>";
 
             echo "<nav class=sair>";
-            echo "<a href=../acoes/logoff.php class=botaoSair> <img src=../imagens/porta-de-saida.png>  Sair</a>";
+            echo "<a href=../acoes/logoff.php> <img src=../imagens/porta-de-saida.png>Sair</a>";
             echo "</nav>";
         }
         ?>
