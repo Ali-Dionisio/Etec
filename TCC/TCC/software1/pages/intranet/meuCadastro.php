@@ -121,7 +121,7 @@
                         <input type="text" class="form-control" name="numero_apartamento" id="inputZip" <?php echo "$campo"; ?> value="<?php echo $morador['numero_apartamento']; ?> ">
                     </div>
                     <div class="col-12 ">
-                        <button type="submit" class="mt-4 p-2 px-5 btn btn-primary">Alterar Meus Dados</button>
+                        <button type="submit" class="mt-4 p-2 px-5 btn btn-primary">Salvar alterações</button>
                     </div>
                 </form>
                 <div class="col-12 ">

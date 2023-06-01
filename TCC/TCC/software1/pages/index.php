@@ -113,7 +113,7 @@
             </p>
             <br>
 
-            <div class="saber_mais"><a class="saber_mais" href="../publico/login.php">CLIQUE AQUI PARA SABER MAIS</a></div>
+            <div class="saber_mais"><a class="saber_mais" href="./publico/login.php">CLIQUE AQUI PARA SABER MAIS</a></div>
         </div>
 
         <div class="condmind_imagem">

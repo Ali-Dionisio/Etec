@@ -5,6 +5,15 @@
     .lados{
         display: flex;
     }
+    #cadastrar{
+        background-color: #1484FC;
+        padding: 9px 90px;
+        border: none;
+        color: white;
+        border-radius: 5px;
+        text-decoration-line: none;
+        cursor: pointer;
+    }
     .ladoDireito{
         width: 50%;
     }    
@@ -86,6 +95,9 @@
         }
         .borda{
             width: 100%;
+        }
+        #enter{
+            margin-bottom: 20px;
         }
 
     }

@@ -90,13 +90,8 @@
                         <input type="text" <?php echo "$campo"; ?> name="placa_veiculo" class="form-control" value="<?php echo $vaga['placa_veiculo']; ?>">
                         <input type="hidden" name="cod_vaga" class="form-control" value="<?php echo $vaga['cod_vaga']; ?>">
                     </div>
-
-                    <div class="col-12 ">
-                        <button type="submit" class="btn-enviar">Salvar</button>
-                    </div>
-
                 </form>
-                <button onclick="cancelarVaga()" class="btn-cancel">Cancelar</button>
+                <button onclick="cancelarVaga()" class="btn-cancel">Voltar</button>
             </div>
         </div>
 

@@ -53,6 +53,7 @@
                     </nav>
                     <p class="botoes">
                         <input type="submit" class="mt-4 p-2 px-5 btn btn-primary" id="enter" value="Entrar">
+                        <a href="../publico/cadMoradorPub.php" id="cadastrar">Cadastrar</a>
                     </p>
                 </form>
             </div>
@@ -63,7 +64,7 @@
                         É rápido e simples, basta informar alguns dados
                     </p>
                     <a href="../publico/esqueciMinhaSenha.php">Cadastre-se</a>
-                    </nav> -->
+                </nav> -->
             </div>
         </div>
     </div>
