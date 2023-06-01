@@ -37,10 +37,10 @@
 
 
     <div class="buttons">
-        <div class="btn1">
+        <div class="btn2">
             <a class="button" id="button1" href="minhaVaga.php">
                 <div class="icon">
-                    <i class="fa-solid fa-clipboard-user"></i>Minha Vaga
+                    <img class="icons" src="../imagens/icons8-person-ios-16-glyph-32.png"><br>Minha Vaga
                 </div>
             </a>
         </div>
@@ -51,7 +51,7 @@
         <div class="btn2">
             <a class="button" id="button2" href="cadVeiculo.php">
                 <div class="icon">
-                    <i class="fa-solid fa-car"></i>Cadastrar Veículo
+                <img class="icons" src="../imagens/icons8-station-wagon-ios-16-32.png"><br>Cadastrar Veículo
                 </div>
             </a>
         </div>
@@ -64,7 +64,7 @@
             <div class="btn3">
                 <a class="button" id="button3" href="cadVaga.php">
                     <div class="icon">
-                        <i class="fa-solid fa-warehouse"></i>Cadastrar Vaga
+                    <img class="icons" src="../imagens/icons8-outdoor-parking-ios-16-32.png"><br>Cadastrar Vaga
                     </div>
                 </a>
             </div>

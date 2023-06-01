@@ -37,6 +37,9 @@
       background-color: #0056b3;
       color: #fff;
   }
+  .icons{
+    margin-left: 43% !important;
+}
 
   .buttons .btn1 .icon{
     display: flex;
