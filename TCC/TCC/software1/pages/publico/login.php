@@ -37,7 +37,7 @@
             <div class="emCima">
                 <form action="../acoes/login.act.php" method="post">
                     <p>Seja Bem-Vindo(a)
-                    <p> Cadastre-se ou logue no sistema para comersarmos</p>
+                    <p> Cadastre-se ou logue no sistema para começarmos</p>
                     <nav>
                         <nav class="borda">
                             <p> USUÁRIO </p>
