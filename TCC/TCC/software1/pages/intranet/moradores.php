@@ -40,7 +40,7 @@
         <p>Pesquisar <input type="text" onKeyup="pesquisa(this.value)"></p>
     </div>
     <div class="cadastrar">
-        <a href="../intranet/cadMorador.php">Cadastrar novo proprietario</a>
+        <a href="../intranet/cadMorador.php">Cadastrar novo proprietário</a>
     </div>
     <div id="result"></div>
     

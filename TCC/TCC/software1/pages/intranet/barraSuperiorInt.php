@@ -122,7 +122,7 @@
             echo "<div class=$controleMorador >";
             echo "  <li >";
             echo "    <a href =../intranet/moradores.php >
-            Proprietarios </a>";
+            Proprietários </a>";
             echo "  </li>";
             echo "  <li class=espaco>";
             echo "    <a href =../intranet/usuarios.php>

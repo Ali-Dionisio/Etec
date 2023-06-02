@@ -148,7 +148,7 @@
 
                    <nav class="telefone">
                     <label for="celular">TELEFONE</label>
-                    <input type="text" class="celular"  name="celular" id="celular" placeholder="(00) 00000-0000">
+                    <input type="text" class="celular"  name="celular"  id="celular" placeholder="(00) 00000-0000">
                    </nav>
                    
                    <nav class="assunto">
@@ -204,16 +204,14 @@
     </script>
 
 
+        <script>
+                var $j = jQuery.noConflict();
+                // Use jQuery com a variavel $j para evitar conflitos
+                $j(document).ready(function(){
+                $j('#celular').mask("(99) 99999-9999"); // onde #telefone é o id do campo
 
-    <script>
-
-var $j = jQuery.noConflict();
-// Use jQuery com a variavel $j para evitar conflitos
-$j(document).ready(function(){
-$j('#celular').mask("(99) 99999-9999"); // onde #telefone é o id do campo
-
-});
-</script>
+                });
+        </script>
 
 
 

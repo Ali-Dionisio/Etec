@@ -11,8 +11,6 @@
     <script src="../src/javascript.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link rel="stylesheet" href="../estilo/cadastro.css">
-
-    <script src="../src/javascript.js"></script>
     <script src="../jquery/jquery-3.6.0.min.js"></script>
     <script src="../jquery/jquery.mask.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,6 +31,9 @@
             });
         };
     </script>
+
+        
+   
 </head>
 
 <body>
@@ -119,12 +120,12 @@
 
                     <div class="col-4">
                         <label for="cpf" class="form-label">CPF</label>
-                        <input type="text" class="cpf form-control" id="cpf" onKeyup="pesquisa(this.value)" name="cpf" placeholder="111.111.111.11" required>
+                        <input type="text" class="cpf form-control" id="cpf" onKeyup="pesquisa(this.value)" name="cpf" placeholder="12345678912" required>
 
                     </div>
                     <div class="col-4">
                         <label for="rg" class="form-label">RG</label>
-                        <input type="text" class="form-control" name="rg" id="validationDefault02" placeholder="11.111.111-1" required>
+                        <input type="text" class="form-control" name="rg" id="rg" placeholder="11.111.111-1" required>
                     </div>
                     <div class="col-md-4">
                         <label for="dtnascimento" class="form-label">Data de Nascimento</label>
@@ -132,7 +133,7 @@
                     </div>
                     <div class="col-md-4">
                         <label for="celular" class="form-label">Celular</label>
-                        <input type="text" class="form-control" name="celular" id="validationDefault02" required>
+                        <input type="text"  class="form-control" name="celular"  id="celular" required>
                     </div>
                     <div class="col-md-4 ">
                         <label for="estadocivil" class="form-label">Estado Civil</label>
@@ -177,16 +178,20 @@
 
 </body>
 
+
+
 </html>
 
 <script>
-    var $j = jQuery.noConflict();
-    // Use jQuery com a variavel $j para evitar conflitos
-    $j(document).ready(function() {
-        $j('#celular').mask("(00) 00000-0000");
-        $j('#cpf').mask("00000000000");
-        $j('#rg').mask("000000000");
-        // onde #telefone é o id do campo
 
-    });
+var $j = jQuery.noConflict();
+//Use jQuery com a variavel $j para evitar conflitos
+    $j(document).ready(function(){
+    $j('#cpf').mask("00000000000"); 
+    $j('#rg').mask("0000000000"); 
+    $j('#celular').mask("(00) 00000-0000");
+
+//onde #telefone é o id do campo
+
+});
 </script>

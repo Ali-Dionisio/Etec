@@ -51,7 +51,7 @@
         echo " <div class=direita>";
         echo " <a href =../intranet/moradores.php class=$controleMorador> <nav class=botao>";
         echo "        <img src=../imagens/varios-usuarios.png alt=>";
-        echo "        <h1>Proprietarios</h1>";
+        echo "        <h1>Proprietários</h1>";
         echo "  </nav></a>";
         echo " <a href =../intranet/$minhaVaga> <nav class=botao>";
         echo "        <img src=../imagens/cartao-de-identidade.png alt=>";
