@@ -11,6 +11,10 @@ body {
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
+.row button {
+    width: 200px !important;
+}
+
 .btn-cancel{
     margin-top: 4rem;
 }

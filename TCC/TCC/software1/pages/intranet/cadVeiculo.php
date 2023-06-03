@@ -15,6 +15,11 @@
     <!-- <script src="src/jquery-3.6.0.min.js"></script>
         <script src="src/jQuery-Mask-Plugin-master/src/jquery.mask.js"></script> -->
     <script src="../jquery/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
 
     <link rel="stylesheet" href="../estilo/minhaVaga.css">
 </head>
@@ -88,9 +93,10 @@
                         </select>
                     </div>
                     <hr>
-                    <?php
-                                echo "<div class=botaoCadastrarOpcao><a href =../intranet/cadmodeloVeiculo.php class=btn-enviar>Cadastrar Modelo</a></div>";
-                            ?>
+                    <!-- Botão para acionar modal -->
+                    <div class=botaoCadastrarOpcao>
+                        <button type="button" class="btn btn-primary" id="botaomodelo" data-toggle="modal" data-target="#modeloVeiculo">Cadastrar Modelo                   </button>
+                    </div>
                     <div class="col-md-4">
                         <label for="ano" class="form-label">Ano do Veículo</label>
                         <select type="text" name="ano" class="form-select2">
@@ -123,9 +129,9 @@
                         </select>
                     </div>
                     <hr>
-                            <?php
-                                echo "<div class=botaoCadastrarOpcao><a href =../intranet/cadcor.php class=btn-enviar>Cadastrar Cor</a></div>";
-                            ?>
+                    <div class=botaoCadastrarOpcao>
+                        <button type="button" class="btn btn-primary" id="botaomodelo" data-toggle="modal" data-target="#modeloCor">Cadastrar Cor                   </button>
+                    </div>
                     <div class=" col-md-4">
                             <label for="cod_morador" class="form-label">Código Proprietário</label>
                             <!-- <input type="text" name="cod_morador" class="form-control"> -->
@@ -148,6 +154,9 @@
                             </select>
                     </div>
                     <hr>
+                    <div class=botaoCadastrarOpcao>
+                        <button type="button" class="btn btn-primary" id="botaomodelo" data-toggle="modal" data-target="#proprietario">Buscar Proprietário                   </button>
+                    </div>
                     <div class=" col-12 ">
                         <button type=" submit" class="btn-enviar">Cadastrar</button>
                     </div>
@@ -155,6 +164,95 @@
             </div>
         </div>
     </div>
+
+
+    
+<!-- Modal Modelo-->
+<div class="modal fade" id="modeloVeiculo" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="TituloModalCentralizado">Modelo/Veiculo</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Cadastrar</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Alterar</a>
+  </li>
+</ul>
+<div class="tab-content" id="pills-tabContent">
+  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">.Cadastrar.</div>
+  <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">.Alterar.</div>
+</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        <button type="submit" class="btn btn-primary">Salvar mudanças</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal cor-->
+<div class="modal fade" id="modeloCor" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="TituloModalCentralizado">Cor do Veiculo</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Cadastrar</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Alterar</a>
+  </li>
+</ul>
+<div class="tab-content" id="pills-tabContent">
+  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">.Cadastrar.</div>
+  <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">.Alterar.</div>
+</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        <button type="submit" class="btn btn-primary">Salvar mudanças</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Escolher Proprietario-->
+<div class="modal fade" id="proprietario" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="TituloModalCentralizado">Escolha o Proprietário</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+                                .buscar.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        <button type="submit" class="btn btn-primary">Salvar mudanças</button>
+      </div>
+    </div>
+  </div>
+</div>
 </body>
 
 </html>

@@ -38,7 +38,10 @@
     <?php
     $usuarioLogin = $_GET['cpf'];
     require('../acoes/connect.php');
-    $busca = mysqli_query($con, "Select * from `tb_morador` where `cpf` = '$usuarioLogin'");
+    $busca = mysqli_query($con, "SELECT * 
+                                 FROM tb_morador mor
+                                 INNER JOIN tb_veiculo_morador vmor on vmor.cod_morador = mor.cod_morador
+                                 INNER JOIN tb_vaga_garagem vgar on vgar.placa_veiculo = vmor.placa_veiculo where `cpf` = '$usuarioLogin'");
     $buscaCodigoUsuarioLogado = mysqli_query($con, "Select * from `tb_usuarios` where `usuario` = '$usuarioLogin'");
     $UsuarioLogado = mysqli_fetch_array($buscaCodigoUsuarioLogado);
     $morador = mysqli_fetch_array($busca);
@@ -82,9 +85,13 @@
                         <label for="nomecompleto" class="form-label">Nome Completo</label>
                         <input type="nomecompleto" name="nome_completo" class="form-control" id="nomecompleto" value="<?php echo $morador['nome_completo']; ?>">
                     </div>
-                    <div class="col-md-12">
+                    <div class="col-md-8">
                         <label for="nomecompleto" class="form-label">E-mail</label>
                         <input type="nomecompleto" name="email" class="form-control" id="email" value="<?php echo $morador['email']; ?>">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="nomecompleto" class="form-label">Placa veiculo / Nº Vaga</label>
+                        <input type="nomecompleto" name="email" class="form-control" id="email" value="<?php echo  $morador['placa_veiculo']." / ".$morador['num_vaga']  ; ?>">
                     </div>
                     <div class="col-4">
                         <label for="cpf" class="form-label">CPF</label>

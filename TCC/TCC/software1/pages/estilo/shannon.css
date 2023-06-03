@@ -13,7 +13,15 @@ body {
 html{
   scroll-behavior: smooth;
 }
-
+/*App*/
+.app img{
+  max-width: 400px;
+}
+.app {
+  display: grid;
+  justify-items: center;
+  padding: 30px;
+}
 /*PARA QUEBRAR O FLOAT*/
 .clear {
   clear: both;
@@ -102,8 +110,8 @@ h4 {
 .condmind_imagem {
   background-color: white;
   padding-left: 100px;
-  height: 500px;
-  width: 691.2px;
+  max-height: 500px;
+  max-width: 691.2px;
   float: right;
 }
 
@@ -296,8 +304,9 @@ padding-left: 0;
 }
 
 .condmind_imagem img {
-  height: 500px;
-  width: 20rem;
-  margin-left: 18rem;
+  height: 300px;
+  width: 18rem;
+  margin-bottom: 18rem;
 }
+
 }
