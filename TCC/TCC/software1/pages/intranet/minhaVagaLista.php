@@ -2,9 +2,18 @@
 <?php require('controleAcesso.php') ?>
 
 <link rel="stylesheet" href="../estilo/minhaVaga.css">
-<div class="tituloVaga">
-    <h1>Minha Vaga</h1>
-</div>
+<?php
+if ($controle['funcao'] == 'Administrador') {
+    echo "<div class=tituloVaga>";
+    echo "<h1>Vagas Proprietários</h1>";
+    echo "</div>";
+}else{
+    echo "<div class=tituloVaga>";
+    echo "<h1>Minha Vaga</h1>";
+    echo "</div>";
+}
+?>
+
 <?php
 @session_start();
 if (isset($_SESSION['msg'])) {
@@ -35,7 +44,7 @@ if ($controle['funcao'] == 'Administrador') {
         $nome = strtoupper("$usuario[primeiro_nome]");
         echo "<td><strong>Usuário:  </strong>$vaga[ocupada] -  $nome </td>";
     }
-    echo "<td><strong>Placa Veic:  </strong> $vaga[placa_veiculo] </td>";
+    echo "<td><strong>Placa Veiculo:  </strong> $vaga[placa_veiculo] </td>";
 
     echo "<td class=$controleMorador>
                     <button onclick=\"location.href='alterarMinhaVaga.php?page=editar&cod=$vaga[cod_vaga]';\" class='btn btn-success'>Editar</button>

@@ -124,7 +124,7 @@
         <div class="clear"></div>
         <!--FINAL DA PÁGINA BODY-->
 
-        <h2 id="titulo_cond">Aplicativo CondMind</h2>
+        <h2 id="titulo_cond"></h2>
         <div class="app">
             <img src="./imagens/logoCondMind_preto.png" alt="" srcset="">
             <div class="saber_mais"> Gostou do nosso site? experimente usar nosso APP <a class="saber_mais" href="./publico/login.php"></a></div>

@@ -8,20 +8,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CondMind</title>
-    <script src="../src/javascript.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <!-- JavaScript Bundle with Popper -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script> -->
     <!-- <script src="src/jquery-3.6.0.min.js"></script>
         <script src="src/jQuery-Mask-Plugin-master/src/jquery.mask.js"></script> -->
     <script src="../jquery/jquery-3.6.0.min.js"></script>
+    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 
 
     <link rel="stylesheet" href="../estilo/minhaVaga.css">
+    <script>
+        function pesquisa(texto){
+            $.ajax({
+                type: "post",
+                url: "../acoes/pesquisaProprietario.act.php?texto="+texto,
+                success: function(response){
+                    $('#result').html(response);
+                }
+            });
+        };
+    </script>
 </head>
 
 <body>
@@ -134,24 +147,7 @@
                     </div>
                     <div class=" col-md-4">
                             <label for="cod_morador" class="form-label">Código Proprietário</label>
-                            <!-- <input type="text" name="cod_morador" class="form-control"> -->
-                            <select type="text" name="cod_morador" class="form-select2">
-                                <option select></option>
-
-                                <?php
-                                $sql = "SELECT * FROM tb_morador";
-                                $result = $con->query($sql);
-                                if ($result->num_rows > 0) {
-                                    // output data of each row
-                                    while ($row = $result->fetch_assoc()) {
-                                        echo "<option value=$row[cod_morador]> <br> Cod.: " .  $row["cod_morador"] . " - Nome: " . $row["primeiro_nome"] . "<br> </option>";
-                                    }
-                                } else {
-                                    echo "0 results";
-                                }
-
-                                ?>
-                            </select>
+                            <input type="text" name="cod_morador" id="cod_morador" class="form-select2">
                     </div>
                     <hr>
                     <div class=botaoCadastrarOpcao>
@@ -244,15 +240,28 @@
         </button>
       </div>
       <div class="modal-body">
-                                .buscar.
+
+    <div class="pesquisar">
+        <p>Pesquisar <input type="text" onKeyup="pesquisa(this.value)"></p>
+        <div id="result"></div>
+    </div>
+
+
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-        <button type="submit" class="btn btn-primary">Salvar mudanças</button>
+        <button type="submit" class="btn btn-primary" data-dismiss="modal" onclick="escolheMoradorVaga()" id="escolherMorador">Escolher Morador</button>
       </div>
     </div>
   </div>
 </div>
+<script>
+  function escolheMoradorVaga(){
+    const moradorvaga = document.getElementById("codmoradorvaga").value;
+    document.getElementById('cod_morador').value = moradorvaga;w
+}
+
+</script>
 </body>
 
 </html>
