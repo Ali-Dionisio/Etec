@@ -18,6 +18,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Federo&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <?php
@@ -156,6 +157,8 @@
                    
                     <select name="assunto" >
                     <option >Selecione uma opção</option>
+                        <option>Elogio</option>
+                        <option>Reclamação</option>
                         <option >Dúvida</option>
                         <option >Contrato</option>
                         <option >Softwares</option>
@@ -194,13 +197,24 @@
 
     <script>
         function clique(){
-                if(document.getElementById("nome").value=="" || document.getElementById("sobrenome").value=="" || document.getElementById("telefone").value=="" 
-                || document.getElementById("area_texto").value=="" || document.getElementById("email").value=="" ){
-                        document.getElementById("mensagem").innerHTML = "Preencha todos os campos!"
-                    }else{
-                        document.getElementById("mensagem").innerHTML = "Mensagem enviada!"
-                        }
-                    }
+            var nome = document.getElementById('nome').value
+            var mensagem = document.getElementById('area_texto').value
+            
+            if( nome === '' && mensagem ===''){
+                Swal.fire(
+                'Erro!',
+                'Por favor preencha todos os campos! ',
+                'error'
+                )  
+
+            }else{
+                Swal.fire(
+                'Obrigado!',
+                'Mensagem enviada! ',
+                'success'
+                )
+            }
+        }
     </script>
 
 

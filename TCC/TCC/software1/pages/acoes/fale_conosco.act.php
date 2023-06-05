@@ -28,6 +28,8 @@ $msg = "<p class=sucesso>Registro gravado com Sucesso</p>";
 session_start();
 $_SESSION['msg'] = $msg;
 
+
+sleep(2.5);
 header("location:../intranet/fale_conosco.php");                         
 
 

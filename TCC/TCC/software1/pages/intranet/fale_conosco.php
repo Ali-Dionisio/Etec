@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../estilo/shannon.css">
     <script src="../jquery/jquery-3.6.0.min.js"></script>
     <script src="../jquery/jquery.mask.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <title>Fale conosco</title>
 </head>
@@ -57,6 +58,8 @@
 
                         <select name="assunto">
                             <option>Selecione uma opção</option>
+                            <option>Elogio</option>
+                            <option>Reclamação</option>
                             <option>Dúvida</option>
                             <option>Contrato</option>
                             <option>Softwares</option>
@@ -90,7 +93,28 @@
             $j('#celular').mask("(99) 99999-9999"); // onde #telefone é o id do campo
 
         });
+
+        function clique(){
+            var nome = document.getElementById('nome').value
+            var mensagem = document.getElementById('area_texto').value
+            if( nome === '' && mensagem ===''){
+                Swal.fire(
+                'Erro!',
+                'Por favor preencha todos os campos! ',
+                'error'
+                )  
+
+            }else{
+                Swal.fire(
+                'Obrigado!',
+                'Mensagem enviada! ',
+                'success'
+                )
+            }
+        }
     </script>
+
+
 </body>
 
 </html>
