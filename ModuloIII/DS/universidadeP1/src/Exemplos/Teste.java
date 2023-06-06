@@ -1,4 +1,3 @@
-//Thais Lima de Oliveira Nobre 7163822
 package Exemplos;
 
 import java.io.File;
