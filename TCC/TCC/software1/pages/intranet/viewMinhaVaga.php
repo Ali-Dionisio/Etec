@@ -74,8 +74,8 @@
 <?php
     echo    "<div class=$controleMorador>";
 ?>
-        <div class="btn2">
-            <a class="button" id="button2" href="cadVeiculo.php">
+        <div class="btn3">
+            <a class="button" id="button3" href="cadVeiculo.php">
                 <div class="icon">
                 <img class="icons" src="../imagens/icons8-station-wagon-ios-16-32.png"><br>Cadastrar Veículo
                 </div>

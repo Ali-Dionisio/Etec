@@ -7,6 +7,8 @@
   .buttons {
     margin: 0 auto;
     width: 1200px;
+    height: 240px;
+
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -65,8 +67,14 @@
     }
     
     #button3, #button2, #button1{
-      margin-top: 15px;
+      /* margin-top: 15px; */
       border-top: 2px solid  #0056b3;
+    }
+    .button {
+        margin-top: 15px;
+        width: 316px;
+        height: 150px;
+
     }
   
   }

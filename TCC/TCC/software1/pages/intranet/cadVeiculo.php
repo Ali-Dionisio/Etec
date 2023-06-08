@@ -25,7 +25,7 @@
 
     <link rel="stylesheet" href="../estilo/minhaVaga.css">
     <script>
-        function pesquisa(texto){
+        function pesquisarProprietario(texto){
             $.ajax({
                 type: "post",
                 url: "../acoes/pesquisaProprietario.act.php?texto="+texto,
@@ -183,7 +183,23 @@
   </li>
 </ul>
 <div class="tab-content" id="pills-tabContent">
-  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">.Cadastrar.</div>
+  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+    
+                  
+                  <form class=" mt-5 row g-3 " action="../acoes/cadModelo.act.php" method="post" enctype="multipart/form-data">
+
+                <div class="modelo col-md-4">
+                    <label for="funcao" class="form-label">Modelo</label>
+                    <input type="text" class="form-control" name="modelo_veiculo" id="modelo">
+                </div>
+                <div class="col-12 ">
+                    <button type="submit" class="btn-enviar">Cadastrar</button>
+                </div>
+                </form>
+
+
+
+  </div>
   <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">.Alterar.</div>
 </div>
       </div>
@@ -241,8 +257,8 @@
       </div>
       <div class="modal-body">
 
-    <div class="pesquisar">
-        <p>Pesquisar <input type="text" onKeyup="pesquisa(this.value)"></p>
+    <div class="pesquisarProprietario">
+        <p>Pesquisar <input type="text" onKeyup="pesquisarProprietario(this.value)"></p>
         <div id="result"></div>
     </div>
 

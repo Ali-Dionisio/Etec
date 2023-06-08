@@ -1,4 +1,4 @@
-* {
+  * {
   box-sizing: border-box;
   margin: 0%;
   padding: 0%;
@@ -97,7 +97,7 @@ hr {
 .condmind_texto {
   background-color: white;
   height: 500px;
-  width: 50%;
+  width: 48%;
   float: left;
 }
 
@@ -112,7 +112,7 @@ h4 {
   background-color: white;
  margin-top: 3rem;
   max-height: 500px;
-  max-width: 511.2px;
+  max-width: 515.2px;
   float: right;
 }
 
@@ -184,7 +184,9 @@ input[type=number]::-webkit-inner-spin-button {
     border: none;
     outline: 0;
   }
-
+  .app img{
+    max-width: 70%;
+  }
 
 .email ,.telefone,.assunto{
     padding: 10px;
@@ -295,11 +297,6 @@ padding-left: 0;
   padding-right: 30px;
 
 }
-.condmind_texto {
-  height: 500px;
-  width: 10px;
-}
-
 .condmind_imagem img {
   height: 300px;
   width: 18rem;

@@ -15,9 +15,9 @@ body {
     width: 200px !important;
 }
 
-.btn-cancel{
+/* .btn-cancel{
     margin-top: 4rem;
-}
+} */
 p,
 h1,
 h2,
@@ -166,6 +166,9 @@ strong{
     border-radius: 4px;
     text-decoration: none;
 }
+.modelo .form-control{
+    width: 20rem !important;
+}
 @media screen and (max-width: 480px) {
     .barraLateral{
         display: flex;
@@ -194,6 +197,7 @@ strong{
         position: absolute;
         left: 10px;
     }
+
     .imagemPromocional img {
         display: none;
         margin-top: 0rem;
