@@ -200,12 +200,34 @@
 
 
   </div>
-  <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">.Alterar.</div>
+  <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                          
+          <?php
+            require('../acoes/connect.php');
+            $busca = mysqli_query($con, "Select * from `tb_veiculo`");
+            echo "<form action=../acoes/alterarVeiculo.act.php method=post id=>";
+            echo "<table class='table table-hover table-bordered'>";
+            echo "<tr class=tittabela>";
+            echo "<th class=tittabela>Cod.</th>";
+            echo "<th class=tittabela>Modelo Veiculo</th>";
+            echo "</tr >";
+            while ($veiculo = mysqli_fetch_array($busca)) {
+                echo "<tr>";
+                echo "<td><input type=radio name=cod_veiculo id=cod_veiculo value='$veiculo[cod_veiculo]'> $veiculo[cod_veiculo]  </td>";
+                echo "<td><input type=text name=modelo_veiculo id=modelo_veiculo value=$veiculo[modelo_veiculo]></td>";
+              }
+              echo "</tr>";
+              
+              echo "</table>";
+              echo"            <button type=submit class=btn-enviar>Alterar</button>";
+              echo"</form>";
+          
+          ?>
+  </div>
 </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-        <button type="submit" class="btn btn-primary">Salvar mudanças</button>
       </div>
     </div>
   </div>
@@ -213,10 +235,10 @@
 
 <!-- Modal cor-->
 <div class="modal fade" id="modeloCor" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
+<div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="TituloModalCentralizado">Cor do Veiculo</h5>
+        <h5 class="modal-title" id="TituloModalCentralizado">Modelo/Veiculo</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -231,13 +253,51 @@
   </li>
 </ul>
 <div class="tab-content" id="pills-tabContent">
-  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">.Cadastrar.</div>
-  <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">.Alterar.</div>
+  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+    
+                  
+                  <form class=" mt-5 row g-3 " action="../acoes/cadModelo.act.php" method="post" enctype="multipart/form-data">
+
+                <div class="modelo col-md-4">
+                    <label for="funcao" class="form-label">Modelo</label>
+                    <input type="text" class="form-control" name="modelo_veiculo" id="modelo">
+                </div>
+                <div class="col-12 ">
+                    <button type="submit" class="btn-enviar">Cadastrar</button>
+                </div>
+                </form>
+
+
+
+  </div>
+  <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                          
+          <?php
+            require('../acoes/connect.php');
+            $busca = mysqli_query($con, "Select * from `tb_veiculo`");
+            echo "<form action=../acoes/alterarVeiculo.act.php method=post id=>";
+            echo "<table class='table table-hover table-bordered'>";
+            echo "<tr class=tittabela>";
+            echo "<th class=tittabela>Cod.</th>";
+            echo "<th class=tittabela>Modelo Veiculo</th>";
+            echo "</tr >";
+            while ($veiculo = mysqli_fetch_array($busca)) {
+                echo "<tr>";
+                echo "<td><input type=radio name=cod_veiculo id=cod_veiculo value='$veiculo[cod_veiculo]'> $veiculo[cod_veiculo]  </td>";
+                echo "<td><input type=text name=modelo_veiculo id=modelo_veiculo value=$veiculo[modelo_veiculo]></td>";
+              }
+              echo "</tr>";
+              
+              echo "</table>";
+              echo"            <button type=submit class=btn-enviar>Alterar</button>";
+              echo"</form>";
+          
+          ?>
+  </div>
 </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-        <button type="submit" class="btn btn-primary">Salvar mudanças</button>
       </div>
     </div>
   </div>
@@ -274,7 +334,7 @@
 <script>
   function escolheMoradorVaga(){
     const moradorvaga = document.getElementById("codmoradorvaga").value;
-    document.getElementById('cod_morador').value = moradorvaga;w
+    document.getElementById('cod_morador').value = moradorvaga;
 }
 
 </script>

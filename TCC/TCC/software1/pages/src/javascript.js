@@ -31,6 +31,9 @@ function cancelarSalao() {
 function cancelarVaga() {
     window.location.href = "../intranet/minhaVaga.php";
 }
+function cadastrarVeiculo() {
+    window.location.href = "../intranet/cadVeiculo.php";
+}
 function consuhisto() {
     window.location.href = "../intranet/consultarHistorico.php";
 }

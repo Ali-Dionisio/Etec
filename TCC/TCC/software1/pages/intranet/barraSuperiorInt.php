@@ -138,7 +138,7 @@
           Salão </a>";
             echo "  </li>";
             echo "  <li>";
-            echo "    <a href =../intranet/faleConosco.php>
+            echo "    <a href =../intranet/fale_conosco.php>
           Fale Conosco </a>";
             echo "  </li>";
             echo "</ul>";

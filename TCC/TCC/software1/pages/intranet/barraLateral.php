@@ -1,4 +1,6 @@
 <?php require('sec.php') ?>
+<?php require('controleAcesso.php') ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -46,14 +48,16 @@
         echo "    <a href =../intranet/meuCadastro.php?cpf=$moradores[cpf]>
             <div class='p-2 mx-auto'>  <button type=button class='btn btn-primary style=width: 220px;'>Meu Cadastro</button></div> </a>";
         echo "  </li>";
+        echo "<div class=$controleMorador>";
         echo "  <li>";
         echo "    <a href =../intranet/moradores.php>
             <div class='p-2 mx-auto'>  <button type=button class='btn btn-primary style=width: 220px;'>Moradores</button></div> </a>";
         echo "  </li>";
-        echo "  <li>";
+        echo "  <li >";
         echo "    <a href =../intranet/usuarios.php>
           <div class='p-2 mx-auto'>  <button type=button class='btn btn-primary style=width: 220px;'>Usuários</button></div> </a>";
         echo "  </li>";
+        echo "</div>";
         echo "  <li>";
         echo "    <a href =../intranet/minhaVaga.php>
           <div class='p-2 mx-auto'>  <button type=button class='btn btn-primary style=width: 220px;'>Minha Vaga</button></div> </a>";
@@ -63,7 +67,7 @@
           <div class='p-2 mx-auto'>  <button type=button class='btn btn-primary style=width: 220px;'>Salão</button></div> </a>";
         echo "  </li>";
         echo "  <li>";
-        echo "    <a href =../intranet/reclameAqui.php>
+        echo "    <a href =../intranet/fale_conosco.php>
           <div class='p-2 mx-auto'>  <button type=button class='btn btn-primary style=width: 220px;'>Reclame aqui</button></div> </a>";
         echo "  </li>";
         echo "</ul>";

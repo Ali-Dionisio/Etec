@@ -5,7 +5,7 @@
 <?php
 if ($controle['funcao'] == 'Administrador') {
     echo "<div class=tituloVaga>";
-    echo "<h1>Vagas Proprietários</h1>";
+    echo "<h1>Veiculos Proprietários</h1>";
     echo "</div>";
 }else{
     echo "<div class=tituloVaga>";

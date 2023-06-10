@@ -13,7 +13,7 @@
      <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet"> 
-    <title >Minha Vaga</title>
+    <title >CondMind</title>
 </head>
 
 <body>
@@ -42,7 +42,7 @@
     <?php 
     echo    "<div class=$controleMorador botoesVaga>";
     echo   "<button onclick=cancelarIntra() class=btn-cancel>Voltar</button>";
-    echo   "<button onclick=cadastrarVaga() class=btn-enviar1>Cadastrar Vaga</button>";
+    echo   "<button onclick=cadastrarVeiculo() class=btn-enviar1>Cadastrar Veiculo</button>";
     echo    "</div>";
     ?>
     <script src="../src/javascript.js"></script>
