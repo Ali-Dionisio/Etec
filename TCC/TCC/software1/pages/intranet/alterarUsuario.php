@@ -17,6 +17,7 @@
 
     <link rel="stylesheet" href="../estilo/cadastro.css">
     <link rel="stylesheet" href="../estilo/cadUsuario.css">
+    <link rel="icon" type="image/png" href="../imagens/CondMind_arredondado.png"/>
 
 </head>
 

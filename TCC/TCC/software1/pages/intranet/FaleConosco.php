@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../estilo/shannon.css">
     <script src="../jquery/jquery-3.6.0.min.js"></script>
     <script src="../jquery/jquery.mask.js"></script>
-
+    <link rel="icon" type="image/png" href="../imagens/CondMind_arredondado.png"/>
     <title>Fale conosco</title>
 </head>
 

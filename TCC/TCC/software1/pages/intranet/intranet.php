@@ -13,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../imagens/CondMind_arredondado.png"/>
 </head>
 
 <body>
@@ -57,7 +58,7 @@
         echo "        <img src=../imagens/cartao-de-identidade.png alt=>";
         echo "        <h1>Minha Vaga</h1>";
         echo "  </nav></a>";
-        echo " <a href =../intranet/faleConosco.php> <nav class=botao>";
+        echo " <a href =../intranet/FaleConosco.php> <nav class=botao>";
         echo "        <img src=../imagens/megafone.png alt=>";
         echo "        <h1>Fale conosco</h1>";
         echo "  </nav></a>";

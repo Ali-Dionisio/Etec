@@ -14,6 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet"> 
     <title >CondMind</title>
+    <link rel="icon" type="image/png" href="../imagens/CondMind_arredondado.png"/>
 </head>
 
 <body>

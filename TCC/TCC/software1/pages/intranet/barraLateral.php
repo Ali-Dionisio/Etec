@@ -67,8 +67,8 @@
           <div class='p-2 mx-auto'>  <button type=button class='btn btn-primary style=width: 220px;'>Salão</button></div> </a>";
         echo "  </li>";
         echo "  <li>";
-        echo "    <a href =../intranet/fale_conosco.php>
-          <div class='p-2 mx-auto'>  <button type=button class='btn btn-primary style=width: 220px;'>Reclame aqui</button></div> </a>";
+        echo "    <a href =../intranet/FaleConosco.php>
+          <div class='p-2 mx-auto'>  <button type=button class='btn btn-primary style=width: 220px;'>Fale conosco</button></div> </a>";
         echo "  </li>";
         echo "</ul>";
       }
