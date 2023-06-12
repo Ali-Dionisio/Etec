@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastrar Veículo</title>
+    <title>CondMind</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <!-- JavaScript Bundle with Popper -->
@@ -22,7 +22,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 
-    <link rel="icon" type="image/png" href="../imagens/CondMind_arredondado.png"/>
 
     <link rel="stylesheet" href="../estilo/minhaVaga.css">
     <script>
@@ -144,7 +143,7 @@
                     </div>
                     <hr>
                     <div class=botaoCadastrarOpcao>
-                        <button type="button" class="btn btn-primary" id="botaomodelo" data-toggle="modal" data-target="#modeloCor">Cadastrar Cor                   </button>
+                        <button type="button" class="btn btn-primary" id="botaomodelo" data-toggle="modal" data-target="#modeloCor">Cadastrar Cor </button>
                     </div>
                     <div class=" col-md-4">
                             <label for="cod_morador" class="form-label">Código Proprietário</label>
@@ -152,7 +151,7 @@
                     </div>
                     <hr>
                     <div class=botaoCadastrarOpcao>
-                        <button type="button" class="btn btn-primary" id="botaomodelo" data-toggle="modal" data-target="#proprietario">Buscar Proprietário                   </button>
+                        <button type="button" class="btn btn-primary" id="botaomodelo" data-toggle="modal" data-target="#proprietario">Buscar Proprietário</button>
                     </div>
                     <div class=" col-12 ">
                         <button type=" submit" class="btn-enviar">Cadastrar</button>
@@ -235,7 +234,7 @@
 </div>
 
 <!-- Modal cor-->
-<div class="modal fade" id="modeloCor" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+<div class="modal fade" id="modeloCor1" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
 <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -332,6 +331,74 @@
     </div>
   </div>
 </div>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="modeloCor" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="TituloModalCentralizado">Título do modal</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item" role="presentation">
+    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Cadastrar</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Alterar</button>
+  </li>
+</ul>
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+          <form class=" mt-5 row g-3 " action="../acoes/cadCor.act.php" method="post" enctype="multipart/form-data">
+
+        <div class="modelo col-md-4">
+            <label for="funcao" class="form-label">Cor</label>
+            <input type="text" class="form-control" name="descricao_cor" id="modelo">
+        </div>
+        <div class="col-12 ">
+            <button type="submit" class="btn-enviar">Cadastrar</button>
+        </div>
+        </form>
+  </div>
+  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+  <?php
+            require('../acoes/connect.php');
+            $busca = mysqli_query($con, "Select * from `tb_cor`");
+            echo "<form action=../acoes/alterarCor.act.php method=post id=>";
+            echo "<table class='table table-hover table-bordered'>";
+            echo "<tr class=tittabela>";
+            echo "<th class=tittabela>Cod.</th>";
+            echo "<th class=tittabela>Cor</th>";
+            echo "</tr >";
+            while ($cor = mysqli_fetch_array($busca)) {
+                echo "<tr>";
+                echo "<td><input type=radio name=cod_cor id=cod_cor value='$cor[cod_cor]'> $cor[cod_cor]  </td>";
+                echo "<td><input type=text name=descricao_cor id=descricao_cor value=$cor[descricao_cor]></td>";
+              }
+              echo "</tr>";
+              
+              echo "</table>";
+              echo"            <button type=submit class=btn-enviar>Alterar</button>";
+              echo"</form>";
+          
+          ?>
+  </div>
+</div>      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 <script>
   function escolheMoradorVaga(){
     const moradorvaga = document.getElementById("codmoradorvaga").value;
