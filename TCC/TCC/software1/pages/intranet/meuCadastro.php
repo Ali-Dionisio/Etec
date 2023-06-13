@@ -41,8 +41,9 @@
     require('../acoes/connect.php');
     $busca = mysqli_query($con, "SELECT * 
                                  FROM tb_morador mor
-                                 INNER JOIN tb_veiculo_morador vmor on vmor.cod_morador = mor.cod_morador
-                                 INNER JOIN tb_vaga_garagem vgar on vgar.placa_veiculo = vmor.placa_veiculo where `cpf` = '$usuarioLogin'");
+                                 LEFT JOIN tb_veiculo_morador vmor on vmor.cod_morador = mor.cod_morador
+                                 LEFT JOIN tb_vaga_garagem vgar on vgar.placa_veiculo = vmor.placa_veiculo 
+                                 WHERE mor.cpf = '$usuarioLogin'");
     $buscaCodigoUsuarioLogado = mysqli_query($con, "Select * from `tb_usuarios` where `usuario` = '$usuarioLogin'");
     $UsuarioLogado = mysqli_fetch_array($buscaCodigoUsuarioLogado);
     $morador = mysqli_fetch_array($busca);
