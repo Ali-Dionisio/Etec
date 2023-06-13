@@ -94,7 +94,7 @@
         #barraDiv {
             display: none;
         }
-
+ 
     }
 </style>
 

@@ -27,7 +27,7 @@
 
         <div class="d-grid gap-3">
           <!-- Logo com link para tela inicial do intranet -->
-          <a href="../intranet/intranet">
+          <a href="../intranet/intranet.php">
             <div class="p-2  mx-auto"><img src="../imagens/CondMind.png" class="logo rounded float-top" alt="Inicio">
           </a>
         </div>
@@ -59,7 +59,7 @@
         echo "  </li>";
         echo "</div>";
         echo "  <li>";
-        echo "    <a href =../intranet/minhaVaga.php>
+        echo "    <a href =../intranet/$minhaVaga
           <div class='p-2 mx-auto'>  <button type=button class='btn btn-primary style=width: 220px;'>Minha Vaga</button></div> </a>";
         echo "  </li>";
         echo "  <li>";
