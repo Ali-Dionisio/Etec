@@ -36,9 +36,8 @@
     }
     ?>
     <?php
-    $codUsuario = $_GET['cod'];
     require('../acoes/connect.php');
-    $busca = mysqli_query($con, "Select * from `tb_usuarios` where `cod_usuario` = '$codUsuario'");
+    $busca = mysqli_query($con, "Select * from `tb_usuarios` ");
     $usuario = mysqli_fetch_array($busca);
     
     $login = $_SESSION['usuarioLogin'];

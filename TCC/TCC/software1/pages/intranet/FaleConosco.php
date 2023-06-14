@@ -1,109 +1,69 @@
+<?php require('sec.php') ?>
+
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../estilo/shannon.css">
-    <script src="../jquery/jquery-3.6.0.min.js"></script>
-    <script src="../jquery/jquery.mask.js"></script>
+    <link rel="stylesheet" href="../estilo/viewMinhaVaga.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="../imagens/CondMind_arredondado.png"/>
-    <title>Fale conosco</title>
+    <title>Minha vaga</title>
 </head>
 
-<style>
-    
-
-
-#formulario{
-    margin: 50px  auto;
-    width: 840px;
-    height: auto;
-}
-@media screen and (max-width: 480px) {
-    #formulario{
-    margin: 50px  auto;
-    width: 440px;
-    height: auto;
-}
-
-}
-
-</style>
 <body>
-
+    <?php include('../intranet/barraSuperiorInt.php'); ?>
     <div class="barraLateral">
         <?php include('../intranet/barraLateral.php'); ?>
     </div>
-    <?php include('../intranet/barraSuperiorInt.php'); ?>
+    <?php
+    @session_start();
+    if (isset($_SESSION['msg'])) {
+        echo "<p class=alert>$_SESSION[msg]</p>";
+
+        unset($_SESSION['msg']);
+    }
+
+    $codUsuario = $_SESSION['usuarioLogin'];
+    require('../acoes/connect.php');
+    $busca = mysqli_query($con, "Select * from `tb_morador` where `cpf` = '$codUsuario'");
+    $morador = mysqli_fetch_array($busca);
+    ?>
 
 
-    <div id="formulario">
-        <h1>Envie sua mensagem!</h1>
-        <p>Nossa empresa agradece a sua opinião!</p>
-        <div class="fale_conosco"><!--COMEÇO DA SESSÃO fALE CONOSCO-->
+    <div class="buttons">
+        <div class="btn2">
+            <a class="button" id="button1" href="NovoFaleConosco.php">
+                <div class="icon">
+                    <img class="icons" src="../imagens/icons8-person-ios-16-glyph-32.png"><br>Novo "Fale Conosco"
+                </div>
+            </a>
+        </div>
 
-            <form action="../acoes/fale_conosco.act.php" method="post">
-                <div class="forms">
-                        <nav class="nome">
-                            <label for="nome_completo">NOME COMPLETO</label>
-                            <input type="text" name="nome_completo" id="nome" placeholder="Digite seu nome">
-                            <input type="hidden" name="via" value="CondMind">
-                        </nav>
+<?php
+    echo    "<div class=$controleMorador>";
+?>
+        <div class="btn2">
+            <a class="button" id="button2" href="MeuFaleConosco.php">
+                <div class="icon">
+                <img class="icons" src="../imagens/icons8-station-wagon-ios-16-32.png"><br>Meu "Fale Conosco"
+                </div>
+            </a>
+        </div>
+<?php
+    echo    "</div>";
+?>
 
-                                <div class="clear"></div>
-
-                    <nav class="email">
-                            <label for="email">EMAIL</label>
-                            <input type="email" name="email" id="email" placeholder="Digite seu email">
-                    </nav>
-
-                    <nav class="telefone">
-                        <label for="celular">TELEFONE</label>
-                        <input type="text"  name="celular" id="celular" placeholder="(00) 00000-0000">
-                    </nav>
-                    
-                    <nav class="assunto">
-                        <p>ASSUNTO</p>
-                    
-                        <select name="assunto" >
-                        <option >Selecione uma opção</option>
-                            <option >Dúvida</option>
-                            <option >Contrato</option>
-                            <option >Softwares</option>
-                        
-                        </select>
-                    </nav>
-
-                    <nav class="mensagem">
-                    <p>MENSAGEM</p>
-                    <textarea name="mensagem"  placeholder="Digite a sua mensagem" id="area_texto" ></textarea>
-                        </nav>
-
-                    <input type="submit" value="ENVIAR" id="btn_contato" onclick="clique()">
-                        <div class="enviado">
-                        <p id=mensagem></p>
-                        </div>
-                 </div>
-
-             </form>
-
-         </div>
 
     </div>
 
-
+    <script src="https://kit.fontawesome.com/37e7af53fa.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
-
-<script>
-
-var $j = jQuery.noConflict();
-// Use jQuery com a variavel $j para evitar conflitos
-$j(document).ready(function(){
-$j('#celular').mask("(00) 00000-0000"); // onde #telefone é o id do campo
-
-});
-</script>
