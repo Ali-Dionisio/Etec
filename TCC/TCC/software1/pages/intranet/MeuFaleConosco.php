@@ -112,7 +112,7 @@ echo "</div>";
 
       <?php
             require('../acoes/connect.php');
-            $busca = mysqli_query($con, "Select * from `tb_fale_conosco`");
+            $busca = mysqli_query($con, "Select * from `tb_fale_conosco` fale $meuFaleConosco");
             echo "<form action=../acoes/responderMensagem.act.php method=post id=>";
             echo "<table class='table table-hover table-bordered'>";
             echo "<tr class=tittabela>";
