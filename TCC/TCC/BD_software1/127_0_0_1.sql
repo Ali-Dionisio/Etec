@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 30-Maio-2023 às 00:51
+-- Tempo de geração: 14-Jun-2023 às 23:16
 -- Versão do servidor: 8.0.27
 -- versão do PHP: 7.4.26
 
@@ -67,6 +67,7 @@ CREATE TABLE IF NOT EXISTS `tb_fale_conosco` (
   `celular` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `assunto` varchar(25) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `mensagem` varchar(500) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `cod_morador` int NOT NULL,
   PRIMARY KEY (`cod_msg`)
 ) ENGINE=MyISAM AUTO_INCREMENT=27 DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
 
@@ -74,21 +75,20 @@ CREATE TABLE IF NOT EXISTS `tb_fale_conosco` (
 -- Extraindo dados da tabela `tb_fale_conosco`
 --
 
-INSERT INTO `tb_fale_conosco` (`cod_msg`, `via`, `nome_completo`, `email`, `celular`, `assunto`, `mensagem`) VALUES
-(14, 'CondMind', 'teste', 'teste@teste', '5588585874', 'Contrato', 'testesetss'),
-(13, 'Shannon', 'João', 'joaohenriquert@outlook.com', '11998898989', 'Softwares', 'teste'),
-(8, '', 'Alisson', 'Alisson@etec.com', '1125641124', 'Dúvida', 'Q qui é?'),
-(15, 'CondMind', 'a', 'a@gmail.com', '1', 'Dúvida', 'a'),
-(12, 'Shannon', 'João', 'joaohenriquert@outlook.com', '11998898989', 'Softwares', 'teste'),
-(19, 'CondMind', 'jao jao', 'joao@gmail.com', '(11) 96467-3745', 'Contrato', 'Como funciona o contrato de voces?'),
-(20, 'CondMind', 'joao', 'joao@gmail.copm', '(22) 22', 'Dúvida', '222'),
-(18, 'Shannon', '', '', '(32) 23233-2322', 'Selecione uma opção', ''),
-(21, 'CondMind', '', '', '', 'Selecione uma opção', ''),
-(22, 'CondMind', 'joao', 'teste@gmail.com', '(11) 40028-9200', 'Softwares', 'testando banco de dados\r\n'),
-(23, 'Shannon', 'teste banco', 'teste@teste.com', '(11) 20053-3333', 'Contrato', 'Teste de banco de dados'),
-(24, 'Shannon', '', '', '(11) 99232-5271', 'Selecione uma opção', ''),
-(25, 'Shannon', 'bel ele', 'alisson.a-work@outlook.com', '(11) 99232-5271', 'Dúvida', 'bhbbbbbibhibihibhbih'),
-(26, 'Shannon', '', '', '() -', 'Selecione uma opção', '');
+INSERT INTO `tb_fale_conosco` (`cod_msg`, `via`, `nome_completo`, `email`, `celular`, `assunto`, `mensagem`, `cod_morador`) VALUES
+(14, 'CondMind', 'teste', 'teste@teste', '5588585874', 'Contrato', 'testesetss', 25),
+(13, 'Shannon', 'João', 'joaohenriquert@outlook.com', '11998898989', 'Softwares', 'teste', 24),
+(8, '', 'Alisson', 'Alisson@etec.com', '1125641124', 'Dúvida', 'Q qui é?', 1),
+(15, 'CondMind', 'a', 'a@gmail.com', '1', 'Dúvida', 'a', 1),
+(12, 'Shannon', 'João', 'joaohenriquert@outlook.com', '11998898989', 'Softwares', 'teste', 24),
+(19, 'CondMind', 'jao jao', 'joao@gmail.com', '(11) 96467-3745', 'Contrato', 'Como funciona o contrato de voces?', 24),
+(20, 'CondMind', 'joao', 'joao@gmail.copm', '(22) 22', 'Dúvida', '222', 24),
+(18, 'Shannon', '', '', '(32) 23233-2322', 'Selecione uma opção', '', 25),
+(21, 'CondMind', '', '', '', 'Selecione uma opção', '', 25),
+(22, 'CondMind', 'joao', 'teste@gmail.com', '(11) 40028-9200', 'Softwares', 'testando banco de dados\r\n', 24),
+(23, 'Shannon', 'teste banco', 'teste@teste.com', '(11) 20053-3333', 'Contrato', 'Teste de banco de dados', 25),
+(24, 'Shannon', '', '', '(11) 99232-5271', 'Selecione uma opção', '', 25),
+(25, 'Shannon', 'bel ele', 'alisson.a-work@outlook.com', '(11) 99232-5271', 'Dúvida', 'bhbbbbbibhibihibhbih', 1);
 
 -- --------------------------------------------------------
 

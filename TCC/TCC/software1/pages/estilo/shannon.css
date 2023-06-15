@@ -199,7 +199,6 @@ input[type=number]::-webkit-inner-spin-button {
    margin-top: 20px;
     border: #1484fc solid 1px;
   }
-
   textarea{
     resize: none;
     height: 150px;
@@ -289,6 +288,18 @@ color: white;
 .geral{
   margin: 0 auto;
   width: 80%;
+}
+.btnFaleConosco{
+  cursor: pointer;
+  border: none;
+  color: white;
+  margin: 0px 0 8px 0;
+  height: 50px;
+  width: 40rem;
+  margin-left: 15px;
+  align-items: center;
+  background-color: #1484fc;
+
 }
 @media screen and (max-width: 480px) {
   .barraLateral{

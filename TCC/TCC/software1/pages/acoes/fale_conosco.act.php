@@ -10,14 +10,16 @@ if(mysqli_query($con,"INSERT INTO `tb_fale_conosco`(
                                     `email`, 
                                     `celular`, 
                                     `assunto`, 
-                                    `mensagem`)
+                                    `mensagem`,
+                                    `cod_morador`)
  VALUES (null,
          '$via',
          '$nome_completo',
          '$email',
          '$celular',
          '$assunto',
-         '$mensagem');")){
+         '$mensagem',
+         '$cod_morador');")){
 $msg = "<p class=sucesso>Registro gravado com Sucesso</p>";
 
 } else {
@@ -30,7 +32,7 @@ $_SESSION['msg'] = $msg;
 
 
 sleep(2.5);
-header("location:../intranet/fale_conosco.php");                         
+header("location:../intranet/FaleConosco.php");                         
 
 
 

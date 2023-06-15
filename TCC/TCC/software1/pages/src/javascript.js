@@ -37,6 +37,9 @@ function cadastrarVeiculo() {
 function consuhisto() {
     window.location.href = "../intranet/consultarHistorico.php";
 }
+function consuFaleConosco() {
+    window.location.href = "../intranet/MeuFaleConosco.php";
+}
 function meuCadastro(){
     window.location.href = "meuCadastro.php";
 }
