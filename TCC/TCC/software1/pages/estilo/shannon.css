@@ -12,6 +12,16 @@ body {
 html{
   scroll-behavior: smooth;
 }
+.excluir{
+  background-color: #F70101;
+  padding: 10px 60px;
+  border-radius: 5px;
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+}
+.excluir{
+  color: white;
+}
 /*App*/
 .app img{
   max-width: 400px;
@@ -299,6 +309,18 @@ color: white;
   margin-left: 15px;
   align-items: center;
   background-color: #1484fc;
+
+}
+.btnExcluirFaleConosco{
+  cursor: pointer;
+  border: none;
+  color: white;
+  margin: 0px 0 8px 0;
+  height: 50px;
+  width: 40rem;
+  margin-left: 15px;
+  align-items: center;
+  background-color: #ff0000;
 
 }
 @media screen and (max-width: 480px) {

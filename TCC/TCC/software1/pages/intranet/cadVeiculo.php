@@ -213,8 +213,10 @@
             echo "</tr >";
             while ($veiculo = mysqli_fetch_array($busca)) {
                 echo "<tr>";
-                echo "<td><input type=radio name=cod_veiculo id=cod_veiculo value='$veiculo[cod_veiculo]'> $veiculo[cod_veiculo]  </td>";
-                echo "<td><input type=text name=modelo_veiculo id=modelo_veiculo value=$veiculo[modelo_veiculo]></td>";
+                echo "<td> $veiculo[cod_veiculo]  </td>";
+                echo "<td>$veiculo[modelo_veiculo]</td>";
+                echo "<td><p class=excluir> <a href =javascript:confirmarModelo($veiculo[cod_veiculo])>Excluir</a></p></td>";
+
               }
               echo "</tr>";
               
@@ -263,7 +265,6 @@
                     <input type="text" class="form-control" name="modelo_veiculo" id="modelo">
                 </div>
                 <div class="col-12 ">
-                    <button type="submit" class="btn-enviar">Cadastrar</button>
                 </div>
                 </form>
 
@@ -283,8 +284,10 @@
             echo "</tr >";
             while ($veiculo = mysqli_fetch_array($busca)) {
                 echo "<tr>";
-                echo "<td><input type=radio name=cod_veiculo id=cod_veiculo value='$veiculo[cod_veiculo]'> $veiculo[cod_veiculo]  </td>";
-                echo "<td><input type=text name=modelo_veiculo id=modelo_veiculo value=$veiculo[modelo_veiculo]></td>";
+                echo "<td> $veiculo[cod_veiculo]  </td>";
+                echo "<td>$veiculo[modelo_veiculo]</td>";
+                echo "<td><p class=excluir> <a href =javascript:confirmar($cor[cod_cor])>Excluir</a></p></td>";
+
               }
               echo "</tr>";
               
@@ -350,7 +353,7 @@
     <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Cadastrar</button>
   </li>
   <li class="nav-item" role="presentation">
-    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Alterar</button>
+    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Lista</button>
   </li>
 </ul>
 <div class="tab-content" id="myTabContent">
@@ -370,21 +373,22 @@
   <?php
             require('../acoes/connect.php');
             $busca = mysqli_query($con, "Select * from `tb_cor`");
+
             echo "<form action=../acoes/alterarCor.act.php method=post id=>";
             echo "<table class='table table-hover table-bordered'>";
             echo "<tr class=tittabela>";
             echo "<th class=tittabela>Cod.</th>";
             echo "<th class=tittabela>Cor</th>";
-            echo "</tr >";
+            echo "</tr>";
             while ($cor = mysqli_fetch_array($busca)) {
                 echo "<tr>";
-                echo "<td><input type=radio name=cod_cor id=cod_cor value='$cor[cod_cor]'> $cor[cod_cor]  </td>";
-                echo "<td><input type=text name=descricao_cor id=descricao_cor value=$cor[descricao_cor]></td>";
-              }
+                echo "<td> $cor[cod_cor]  </td>";
+                echo "<td>$cor[descricao_cor]</td>";
+                echo "<td><p class=excluir> <a href =javascript:confirmar($cor[cod_cor])>Excluir</a></p></td>";
+            }
               echo "</tr>";
               
               echo "</table>";
-              echo"            <button type=submit class=btn-enviar>Alterar</button>";
               echo"</form>";
           
           ?>
@@ -404,7 +408,18 @@
     const moradorvaga = document.getElementById("codmoradorvaga").value;
     document.getElementById('cod_morador').value = moradorvaga;
 }
-
+function confirmar(codigo) {
+            resposta = confirm("Deseja excluir o registro " + codigo + "?");
+            if (resposta == true) {
+                window.location = "../acoes/excluirCor.act.php?cod=" + codigo;
+            }
+        }
+function confirmarModelo(codigo) {
+    resposta = confirm("Deseja excluir o registro " + codigo + "?");
+    if (resposta == true) {
+        window.location = "../acoes/excluirModelo.act.php?cod=" + codigo;
+    }
+}
 </script>
 </body>
 

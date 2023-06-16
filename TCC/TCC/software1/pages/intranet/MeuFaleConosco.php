@@ -82,12 +82,18 @@ echo "<nav >";
 echo "</nav>";
 echo "<nav>";
 echo "<strong> Mensagem: </strong>";
-echo "<textarea name=mensagem id=msgFCaaa cols=30 rows=10>    $morador[mensagem]    </textarea>";
+echo "<textarea name=mensagem id=msgFCaaa cols=30 rows=10 disabled=>    $morador[mensagem]    </textarea>";
 echo "</nav>";
 echo "</div>";
-echo "<button type=button class=btnFaleConosco btn btn-primary data-toggle=modal data-target=#exampleModalCenter onclick=escolheMensagem()>
+echo "<button type=button onclick=teste($morador[cod_msg]) class=btnFaleConosco btn btn-primary data-toggle=modal data-target=#exampleModalCenter>
 Responder
 </button>";
+echo "
+<a href =javascript:confirmar($morador[cod_msg])>
+  <button type=button class=btnExcluirFaleConosco btn btn-danger data-toggle=modal data-target=# onclick=escolheMensagem()>
+    Excluir
+  </button>
+  </a>";
 }
 echo "</div>";
 ?>
@@ -138,13 +144,20 @@ echo "</div>";
     </div> 
   </div>
 </div>
-<!-- <script>
-  function escolheMensagem(){
-    var mensagem = document.getElementById("cod_msg").value;
-    //document.getElementById('cod_msg').value = mensagem;
-    console.log(mensagem);
-}
+<script>
 
-</script> -->
+function confirmar(codigo) {
+            resposta = confirm("Deseja excluir o registro " + codigo + "?");
+            if (resposta == true) {
+                window.location = "../acoes/excluirFaleConosco.act.php?cod=" + codigo;
+            }
+        }
+        function teste(codigo) {      
+            console.log(codigo);
+
+
+
+        }
+        </script>
 </body>
 </html>

@@ -15,4 +15,8 @@ if (mysqli_query($con, "UPDATE `tb_cor` SET
 session_start();
 $_SESSION['msg'] = $msg;
 $usuarioLogin = $_SESSION['usuarioLogin'];
+var_dump($descricao_cor);
+var_dump($cod_cor);
+
 header("location:../intranet/cadVeiculo.php");
+
