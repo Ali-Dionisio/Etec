@@ -31,7 +31,7 @@ if ($controle['funcao'] == 'Morador') {
     $minhaVaga = "minhaVaga.php";
 }else if($controle['funcao'] == 'Administrador'){
     $minhaVaga = "viewMinhaVaga.php";
-    $meuFaleConosco = " ";
+    @$meuFaleConosco = " ";
 }
         
     

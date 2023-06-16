@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="../estilo/shannon.css">
     <link rel="stylesheet" href="../estilo/cadastro.css">
     <script src="../src/javascript.js"></script>
-
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
     <script src="../jquery/jquery-3.6.0.min.js"></script>
     <script src="../jquery/jquery.mask.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
@@ -61,20 +62,20 @@ require('../acoes/connect.php');
                 <!--Segunda coluna -->
 <?php
     $busca = mysqli_query($con, "SELECT * FROM `tb_fale_conosco` fale
-    LEFT JOIN tb_morador mor on mor.cod_morador = fale.cod_morador
+    RIGHT JOIN tb_morador mor on mor.cod_morador = fale.cod_morador
     $meuFaleConosco
     ");
-while ($morador = mysqli_fetch_array($busca)) {
+while (@$morador = mysqli_fetch_array($busca)) {
 echo "<div class=textoImgFC>";
 echo "<nav class=ImgFC>";
 echo "<img src= $morador[foto] class=imgUsuario srcset=>";
 echo "</nav>";
 echo "<nav >";
 echo "<h5> <strong> Cod.: $morador[cod_msg]</strong>";
-echo "<input type=hidden id=cod_msg value=$morador[cod_msg]> ";
+echo "<input type=hidden id= value=$morador[cod_msg]> ";
 echo "<h5> <strong> Nome: $morador[nome_completo]</strong>";
-echo "<h5> <strong> E-mail: </strong>$morador[email]";
-echo "<h5> <strong> Celular: </strong>$morador[celular]";
+echo "<h5> <strong> E-mail: </strong>$morador[emailFale]";
+echo "<h5> <strong> Celular: </strong>$morador[celularFale]";
 echo "<h5> <strong> Via: </strong>$morador[via]";
 echo "<h5> <strong> Assunto: </strong>$morador[assunto]";
 echo "</nav>";
@@ -85,12 +86,18 @@ echo "<strong> Mensagem: </strong>";
 echo "<textarea name=mensagem id=msgFCaaa cols=30 rows=10 disabled=>    $morador[mensagem]    </textarea>";
 echo "</nav>";
 echo "</div>";
-echo "<button type=button onclick=teste($morador[cod_msg]) class=btnFaleConosco btn btn-primary data-toggle=modal data-target=#exampleModalCenter>
-Responder
-</button>";
+?>
+
+<a href =javascript:escolheMensagem(<?php echo $morador['cod_msg']?>)>
+  <?php
+  echo"      <button class=btnFaleConosco btn btn-primary data-toggle=modal data-target=#exampleModalCenter>
+          Responder
+        </button>
+        </a>";
+
 echo "
 <a href =javascript:confirmar($morador[cod_msg])>
-  <button type=button class=btnExcluirFaleConosco btn btn-danger data-toggle=modal data-target=# onclick=escolheMensagem()>
+  <button type=button class=btnExcluirFaleConosco btn btn-danger data-toggle=modal data-target=# >
     Excluir
   </button>
   </a>";
@@ -118,25 +125,29 @@ echo "</div>";
 
       <?php
             require('../acoes/connect.php');
-            $busca = mysqli_query($con, "Select * from `tb_fale_conosco` fale $meuFaleConosco");
-            echo "<form action=../acoes/responderMensagem.act.php method=post id=>";
-            echo "<table class='table table-hover table-bordered'>";
-            echo "<tr class=tittabela>";
-            echo "<th class=tittabela>Cod.</th>";
-            echo "<th class=tittabela>Mensagem</th>";
-            echo "</tr >";
-            while ($faleconosco = mysqli_fetch_array($busca)) {
-                echo "<tr>";
-                echo "<td><input type=radio name=cod_msg id=cod_msg value='$faleconosco[cod_msg]'> $faleconosco[cod_msg]  </td>";
-                echo "<td><textarea cols=30 rows=10 name=mensagem value=$faleconosco[mensagem]> $faleconosco[mensagem] </textarea></td>";
-              }
-              echo "</tr>";
+            $busca = mysqli_query($con, "Select * from `tb_fale_conosco` fale ");
+            
+            ?>
+            <input type="text" name="" id="cod_msg" class="form-select2">
+
+            <form action=../acoes/responderMensagem.act.php method=post id=>
+            <table class='table table-hover table-bordered'>
+            <tr class=tittabela>
+            <th class=tittabela>Cod.</th>
+            <th class=tittabela>Mensagem</th>
+            </tr >
+            <?php while ($faleconosco = mysqli_fetch_array($busca)) { ?>
+                <tr>
+                <td><input type=radio name=cod_msg id= value='<?php $faleconosco['cod_msg']?>'> <?php echo $faleconosco['cod_msg']?>  </td>
+                <td><textarea cols=30 rows=10 name=mensagem value=<?php $faleconosco['mensagem']?>> <?php echo $faleconosco['mensagem']?> </textarea></td>
+            <?php } ?>
+              </tr>
               
-              echo "</table>";
-              echo"            <button type=submit class=btn-enviar>Alterar</button>";
-              echo"</form>";
+              </table>
+                        <button type=submit class=btn-enviar>Alterar</button>
+            </form>
           
-          ?>
+         
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
@@ -152,12 +163,10 @@ function confirmar(codigo) {
                 window.location = "../acoes/excluirFaleConosco.act.php?cod=" + codigo;
             }
         }
-        function teste(codigo) {      
-            console.log(codigo);
-
-
-
-        }
+function escolheMensagem(valor){
+    document.getElementById('cod_msg').value = valor.value;
+    console.log("mensagem" = valor);
+}
         </script>
 </body>
 </html>
